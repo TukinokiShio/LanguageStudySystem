@@ -1,0 +1,31 @@
+# Embedded JDK runtime (platform-specific, large binary)
+jre-minimal/
+
+# Compiled Java class files
+*.class
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# WorkBuddy memory files
+.workbuddy/
+
+# Temp files
+JapStudySystem_temp/
+
+# Windows reserved file names
+JapStudySystem/nul
+
+# Windows shortcuts
+*.lnk
