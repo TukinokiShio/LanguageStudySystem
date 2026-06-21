@@ -1,0 +1,12 @@
+﻿[2026-06-18 21:09:55.607] [INFO] ========== 打包任务开始 ==========
+[2026-06-18 21:09:55.612] [INFO] 正在检测项目路径...
+[2026-06-18 21:09:55.615] [INFO] 项目根目录: E:\SHIO\LanguageStudySystem\JapStudySystem  ✓
+[2026-06-18 21:09:55.616] [INFO] 历史归档目录: E:\SHIO\LanguageStudySystem\JSS_history  ✓
+[2026-06-18 21:09:55.617] [INFO] Inno Setup 脚本文件: E:\SHIO\JapStudySystem_Setup.iss  ✓
+[2026-06-18 21:09:55.620] [INFO] 正在自动检测 Inno Setup 安装路径...
+[2026-06-18 21:09:55.622] [INFO] 在固定路径找到 Inno Setup: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-06-18 21:09:55.624] [SUCCESS] Inno Setup 路径: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-06-18 21:09:55.637] [INFO] 正在检测 Java 开发工具...
+[2026-06-18 21:09:55.643] [INFO] 从系统 PATH 找到 javac: C:\Program Files\Common Files\Oracle\Java\javapath\javac.exe
+[2026-06-18 21:09:55.651] [INFO] 从 .iss 文件读取版本号: 2.0.1
+[2026-06-18 21:09:55.652] [SUCCESS] 本次打包版本号: 2.0.1
