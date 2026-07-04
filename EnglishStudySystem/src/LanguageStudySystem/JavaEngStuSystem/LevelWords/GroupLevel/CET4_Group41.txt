@@ -1,0 +1,6 @@
+5	0
+settle	v. 解决；定居	1	0	0			0
+undertake	v. 承担；从事	1	0	0			0
+essential	adj. 必要的；本质的	1	0	0			0
+shift	n./v. 转变；轮班	1	0	0			0
+consume	v. 消费；消耗	1	0	0			0

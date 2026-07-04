@@ -1,0 +1,16 @@
+15	0
+levy	v. 征收 n. 税款	1	0	0			0
+authority	n. 权威；当局	1	0	0			0
+impose	v. 强加；征税	1	0	0			0
+implement	v. 实施 n. 工具	1	0	0			0
+dominate	v. 支配；主导	1	0	0			0
+speculate	v. 推测；投机	1	0	0			0
+resident	n. 居民 adj. 居住的	1	0	0			0
+reflect	v. 反映；反射	1	0	0			0
+converge	v. 聚集；汇合	1	0	0			0
+evade	v. 逃避；回避	1	0	0			0
+escalate	v. 升级；加剧	1	0	0			0
+robust	adj. 强健的；坚固的	1	0	0			0
+adverse	adj. 不利的；相反的	1	0	0			0
+envision	v. 想象；设想	1	0	0			0
+overwhelm	v. 压倒；淹没	1	0	0			0

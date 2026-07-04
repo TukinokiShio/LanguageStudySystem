@@ -1,0 +1,16 @@
+15	0
+contest	n. 比赛 v. 争辩	1	0	0			0
+trigger	n. 扳机 v. 触发	1	0	0			0
+ban	v. 禁止 n. 禁令	1	0	0			0
+election	n. 选举	1	0	0			0
+visual	adj. 视觉的；可视的	1	0	0			0
+channel	n. 频道；渠道	1	0	0			0
+interval	n. 间隔；间歇	1	0	0			0
+opportunity	n. 机会；时机	1	0	0			0
+absolute	adj. 绝对的；完全的	1	0	0			0
+diet	n. 饮食；节食	1	0	0			0
+inform	v. 通知；告知	1	0	0			0
+concern	n./v. 关心；担忧	1	0	0			0
+predict	v. 预测；预言	1	0	0			0
+emphasis	n. 重点；强调	1	0	0			0
+contract	n. 合同 v. 收缩	1	0	0			0

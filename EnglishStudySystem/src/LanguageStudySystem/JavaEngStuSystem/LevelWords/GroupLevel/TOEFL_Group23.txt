@@ -1,0 +1,16 @@
+15	0
+exceed	v. 超过；超越	1	0	0			0
+bolster	v. 支持；加强	1	0	0			0
+transition	n. 过渡；转变	1	0	0			0
+relevant	adj. 相关的；切题的	1	0	0			0
+dormant	adj. 休眠的；静止的	1	0	0			0
+highlight	v. 强调 n. 亮点	1	0	0			0
+affect	v. 影响；感动	1	0	0			0
+administer	v. 管理；执行	1	0	0			0
+ensue	v. 继而发生；随之而来	1	0	0			0
+interfere	v. 干涉；干扰	1	0	0			0
+adjacent	adj. 邻近的；毗连的	1	0	0			0
+diffuse	v. 扩散；传播 adj. 弥漫的	1	0	0			0
+embrace	v. 拥抱；包含	1	0	0			0
+versatile	adj. 多才多艺的；多功能的	1	0	0			0
+achieve	v. 达到；取得	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+participate	v. 参与；参加	1	0	0			0
+formal	adj. 正式的；形式上的	1	0	0			0
+pursue	v. 追求；追赶	1	0	0			0
+ensure	v. 确保；保证	1	0	0			0
+fulfill	v. 实现；履行	1	0	0			0
+imply	v. 暗示；意味着	1	0	0			0
+replace	v. 取代；替换	1	0	0			0
+staff	n. 工作人员；职员	1	0	0			0
+administration	n. 管理；行政	1	0	0			0
+military	adj. 军事的 n. 军队	1	0	0			0
+leisure	n. 闲暇；休闲	1	0	0			0
+companion	n. 同伴；伴侣	1	0	0			0
+engage	v. 从事；订婚	1	0	0			0
+psychological	adj. 心理的	1	0	0			0
+peer	n. 同龄人 v. 凝视	1	0	0			0

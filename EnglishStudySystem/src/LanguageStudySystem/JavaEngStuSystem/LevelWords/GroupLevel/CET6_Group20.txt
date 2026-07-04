@@ -1,0 +1,16 @@
+15	0
+retrieve	v. 取回；检索	1	0	0			0
+dominant	adj. 占优势的；支配的	1	0	0			0
+slash	v. 大幅度削减；砍	1	0	0			0
+literacy	n. 读写能力；有文化	1	0	0			0
+decisive	adj. 决定性的；果断的	1	0	0			0
+dual	adj. 双重的；二元的	1	0	0			0
+enrich	v. 丰富；使充实	1	0	0			0
+junction	n. 交叉点；连接处	1	0	0			0
+strategic	adj. 战略的；关键的	1	0	0			0
+warrant	n. 授权令 v. 保证	1	0	0			0
+obscure	adj. 模糊的 v. 使朦胧	1	0	0			0
+validity	n. 有效性；合法性	1	0	0			0
+premium	n. 保险费 adj. 优质的	1	0	0			0
+novelty	n. 新奇；新颖	1	0	0			0
+revive	v. 复兴；苏醒	1	0	0			0

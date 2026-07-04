@@ -1,0 +1,16 @@
+15	0
+desire	n./v. 渴望；欲望	1	0	0			0
+display	n./v. 展示；显示	1	0	0			0
+absorb	v. 吸收；吸引	1	0	0			0
+alert	adj. 警觉的 v. 警告	1	0	0			0
+exchange	n./v. 交换；兑换	1	0	0			0
+extraordinary	adj. 非凡的；特别的	1	0	0			0
+accommodate	v. 容纳；提供住宿	1	0	0			0
+external	adj. 外部的；外面的	1	0	0			0
+construct	v. 建造；构建	1	0	0			0
+abnormal	adj. 不正常的	1	0	0			0
+install	v. 安装；安置	1	0	0			0
+acknowledge	v. 承认；确认	1	0	0			0
+neutral	adj. 中立的；中性的	1	0	0			0
+precise	adj. 精确的；准确的	1	0	0			0
+security	n. 安全；证券	1	0	0			0

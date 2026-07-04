@@ -1,0 +1,16 @@
+15	0
+execute	v. 执行；处决	1	0	0			0
+council	n. 委员会；理事会	1	0	0			0
+offend	v. 冒犯；触怒	1	0	0			0
+enable	v. 使能够；启用	1	0	0			0
+transport	n./v. 运输；运送	1	0	0			0
+intimate	adj. 亲密的 v. 暗示	1	0	0			0
+range	n. 范围 v. 变化	1	0	0			0
+original	adj. 原始的；独创的	1	0	0			0
+behavior	n. 行为；举止	1	0	0			0
+virtual	adj. 虚拟的；实质上的	1	0	0			0
+vision	n. 视力；愿景	1	0	0			0
+exception	n. 例外；除外	1	0	0			0
+maximum	adj. 最大的 n. 最大值	1	0	0			0
+licence	n. 许可证；执照	1	0	0			0
+facility	n. 设施；便利	1	0	0			0

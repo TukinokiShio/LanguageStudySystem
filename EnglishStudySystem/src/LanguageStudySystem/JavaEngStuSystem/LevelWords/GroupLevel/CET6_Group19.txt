@@ -1,0 +1,16 @@
+15	0
+empirical	adj. 经验主义的	1	0	0			0
+avert	v. 避免；转移	1	0	0			0
+incredible	adj. 难以置信的	1	0	0			0
+mortgage	n. 抵押 v. 抵押	1	0	0			0
+ego	n. 自我；自尊	1	0	0			0
+repertoire	n. 全部节目；全部技能	1	0	0			0
+deliberate	adj. 故意的 v. 仔细考虑	1	0	0			0
+rap	n. 轻敲；说唱 v. 敲击	1	0	0			0
+glitter	v. 闪烁 n. 闪光	1	0	0			0
+vicious	adj. 恶毒的；凶猛的	1	0	0			0
+recipe	n. 食谱；秘诀	1	0	0			0
+recur	v. 复发；重现	1	0	0			0
+toxic	adj. 有毒的	1	0	0			0
+irony	n. 讽刺；反语	1	0	0			0
+uphold	v. 支持；维护	1	0	0			0

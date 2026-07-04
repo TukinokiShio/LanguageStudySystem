@@ -1,0 +1,16 @@
+15	0
+stable	adj. 稳定的 n. 马厩	1	0	0			0
+ultimate	adj. 最终的；根本的	1	0	0			0
+maintain	v. 维持；保养	1	0	0			0
+yield	v. 产生 n. 产量	1	0	0			0
+regulate	v. 调节；管理	1	0	0			0
+avoid	v. 避免；回避	1	0	0			0
+crisis	n. 危机	1	0	0			0
+reveal	v. 揭示；透露	1	0	0			0
+mental	adj. 精神的；心理的	1	0	0			0
+combine	v. 结合；联合	1	0	0			0
+signal	n. 信号 v. 发信号	1	0	0			0
+require	v. 需要；要求	1	0	0			0
+adopt	v. 采用；收养	1	0	0			0
+principle	n. 原则；原理	1	0	0			0
+budget	n. 预算 v. 编预算	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+deforestation	n. 森林砍伐；滥伐	1	0	0			0
+strategy	n. 战略；策略	1	0	0			0
+consolidate	v. 巩固；合并	1	0	0			0
+diminish	v. 减少；缩小	1	0	0			0
+append	v. 附加；添加	1	0	0			0
+analyze	v. 分析；解析	1	0	0			0
+delegate	v. 委托；选派 n. 代表	1	0	0			0
+evidence	n. 证据；迹象	1	0	0			0
+equivalent	adj. 等价的 n. 等价物	1	0	0			0
+regulate	v. 调节；管理	1	0	0			0
+ample	adj. 充足的；丰富的	1	0	0			0
+terminate	v. 结束；终止	1	0	0			0
+prompt	v. 促使 adj. 迅速的	1	0	0			0
+exclusive	adj. 独家的；排外的	1	0	0			0
+cope	v. 应对；处理	1	0	0			0

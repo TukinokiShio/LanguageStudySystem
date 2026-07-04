@@ -1,0 +1,16 @@
+15	0
+assist	v. 帮助；协助	1	0	0			0
+reconcile	v. 调和；使和解	1	0	0			0
+abundance	n. 丰富；充裕	1	0	0			0
+sufficient	adj. 足够的；充分的	1	0	0			0
+attribute	v. 归因于 n. 属性	1	0	0			0
+deem	v. 认为；视为	1	0	0			0
+foster	v. 培养；促进	1	0	0			0
+consume	v. 消费；消耗	1	0	0			0
+burgeon	v. 迅速发展；萌芽	1	0	0			0
+paradox	n. 矛盾；悖论	1	0	0			0
+somewhat	adv. 稍微；有点	1	0	0			0
+considerable	adj. 相当大的；重要的	1	0	0			0
+refine	v. 精炼；提炼	1	0	0			0
+context	n. 背景；上下文	1	0	0			0
+profound	adj. 深刻的；深邃的	1	0	0			0

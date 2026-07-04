@@ -1,0 +1,16 @@
+15	0
+entertainment	n. 娱乐；款待	1	0	0			0
+sustainability	n. 可持续性	1	0	0			0
+antibiotic	n. 抗生素 adj. 抗生的	1	0	0			0
+similarity	n. 相似；类似	1	0	0			0
+frustration	n. 挫折；沮丧	1	0	0			0
+resignation	n. 辞职；顺从	1	0	0			0
+catastrophic	adj. 灾难性的	1	0	0			0
+workmanship	n. 手艺；工艺	1	0	0			0
+arrangement	n. 安排；整理	1	0	0			0
+assistance	n. 帮助；援助	1	0	0			0
+arbitrary	adj. 任意的；武断的	1	0	0			0
+restoration	n. 恢复；修复	1	0	0			0
+assessment	n. 评估；评定	1	0	0			0
+permission	n. 允许；许可	1	0	0			0
+orientation	n. 方向；定位	1	0	0			0

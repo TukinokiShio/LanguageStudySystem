@@ -1,0 +1,16 @@
+15	0
+commonplace	adj. 平凡的 n. 常见的事	1	0	0			0
+bald	adj. 秃头的；单调的	1	0	0			0
+pave	v. 铺路；铺设	1	0	0			0
+enlighten	v. 启蒙；启发	1	0	0			0
+repel	v. 击退；排斥	1	0	0			0
+enroll	v. 登记；注册	1	0	0			0
+terrific	adj. 极好的；可怕的	1	0	0			0
+dispatch	v. 派遣 n. 急件	1	0	0			0
+exile	n./v. 流放；放逐	1	0	0			0
+mobilize	v. 动员；调动	1	0	0			0
+ideology	n. 意识形态	1	0	0			0
+confidential	adj. 机密的；保密的	1	0	0			0
+summit	n. 峰会；顶峰	1	0	0			0
+superficial	adj. 表面的；肤浅的	1	0	0			0
+flap	v. 拍打 n. 拍打声	1	0	0			0

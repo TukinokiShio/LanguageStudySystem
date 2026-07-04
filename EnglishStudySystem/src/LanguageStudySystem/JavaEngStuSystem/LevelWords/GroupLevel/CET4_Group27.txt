@@ -1,0 +1,16 @@
+15	0
+audience	n. 观众；听众	1	0	0			0
+scale	n. 规模；比例	1	0	0			0
+precious	adj. 珍贵的；宝贵的	1	0	0			0
+session	n. 会议；学期	1	0	0			0
+witness	n. 证人 v. 目击	1	0	0			0
+format	n. 格式 v. 格式化	1	0	0			0
+treat	v. 对待；治疗 n. 款待	1	0	0			0
+slight	adj. 轻微的；纤细的	1	0	0			0
+equivalent	adj. 等价的 n. 等价物	1	0	0			0
+community	n. 社区；团体	1	0	0			0
+available	adj. 可用的；有效的	1	0	0			0
+alternative	n. 替代方案 adj. 替代的	1	0	0			0
+sacrifice	n./v. 牺牲；献祭	1	0	0			0
+ruin	n./v. 毁灭；废墟	1	0	0			0
+source	n. 来源；出处	1	0	0			0

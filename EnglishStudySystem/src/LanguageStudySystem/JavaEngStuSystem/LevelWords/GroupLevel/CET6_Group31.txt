@@ -1,0 +1,16 @@
+15	0
+hurl	v. 猛投；摔	1	0	0			0
+census	n. 人口普查	1	0	0			0
+hug	v. 拥抱 n. 拥抱	1	0	0			0
+reside	v. 居住；存在	1	0	0			0
+momentum	n. 动力；势头	1	0	0			0
+oppress	v. 压迫；压制	1	0	0			0
+aspiration	n. 渴望；抱负	1	0	0			0
+persistent	adj. 坚持的；持续的	1	0	0			0
+gleam	n. 微光 v. 闪烁	1	0	0			0
+residential	adj. 住宅的；居住的	1	0	0			0
+surpass	v. 超越；胜过	1	0	0			0
+subsidy	n. 补贴；津贴	1	0	0			0
+degenerate	v. 退化；堕落	1	0	0			0
+unanimous	adj. 一致的；全票通过的	1	0	0			0
+tuition	n. 学费；教学	1	0	0			0

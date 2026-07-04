@@ -1,0 +1,16 @@
+15	0
+behalf	n. 代表；利益	1	0	0			0
+committee	n. 委员会	1	0	0			0
+horror	n. 恐怖；惊骇	1	0	0			0
+simplify	v. 简化	1	0	0			0
+opponent	n. 对手；反对者	1	0	0			0
+minister	n. 部长；大臣	1	0	0			0
+variety	n. 多样；种类	1	0	0			0
+recognize	v. 认出；承认	1	0	0			0
+motion	n. 运动；动议	1	0	0			0
+blame	v. 责备 n. 责任	1	0	0			0
+elaborate	adj. 精心制作的 v. 详细阐述	1	0	0			0
+origin	n. 起源；出身	1	0	0			0
+issue	n. 问题；议题 v. 发布	1	0	0			0
+conflict	n. 冲突 v. 抵触	1	0	0			0
+capacity	n. 能力；容量	1	0	0			0

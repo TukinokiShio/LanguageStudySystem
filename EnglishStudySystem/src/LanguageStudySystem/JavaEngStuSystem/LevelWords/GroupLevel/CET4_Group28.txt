@@ -1,0 +1,16 @@
+15	0
+command	n./v. 命令；指挥	1	0	0			0
+federal	adj. 联邦的	1	0	0			0
+indicate	v. 表明；显示	1	0	0			0
+possess	v. 拥有；具有	1	0	0			0
+draft	n. 草稿 v. 起草	1	0	0			0
+protest	n./v. 抗议；反对	1	0	0			0
+phenomenon	n. 现象；奇迹	1	0	0			0
+burst	v. 爆发；破裂	1	0	0			0
+vehicle	n. 车辆；工具	1	0	0			0
+orient	v. 使适应 n. 东方	1	0	0			0
+respond	v. 回答；回应	1	0	0			0
+appoint	v. 任命；指定	1	0	0			0
+category	n. 类别；种类	1	0	0			0
+invest	v. 投资；投入	1	0	0			0
+concentrate	v. 集中；浓缩	1	0	0			0

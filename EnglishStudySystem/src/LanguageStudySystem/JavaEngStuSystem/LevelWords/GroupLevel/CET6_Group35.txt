@@ -1,0 +1,16 @@
+15	0
+hospitality	n. 好客；款待	1	0	0			0
+frown	v. 皱眉 n. 皱眉	1	0	0			0
+rectify	v. 纠正；矫正	1	0	0			0
+adolescent	n. 青少年 adj. 青春期的	1	0	0			0
+extract	v. 提取 n. 摘录	1	0	0			0
+hostage	n. 人质	1	0	0			0
+manipulate	v. 操纵；操作	1	0	0			0
+prescription	n. 处方；药方	1	0	0			0
+disturbance	n. 打扰；骚乱	1	0	0			0
+indefinite	adj. 不确定的；模糊的	1	0	0			0
+obscene	adj. 猥亵的；淫秽的	1	0	0			0
+defy	v. 违抗；挑战	1	0	0			0
+submarine	n. 潜水艇 adj. 海底的	1	0	0			0
+retrospect	n. 回顾；回想	1	0	0			0
+undermine	v. 破坏；削弱	1	0	0			0

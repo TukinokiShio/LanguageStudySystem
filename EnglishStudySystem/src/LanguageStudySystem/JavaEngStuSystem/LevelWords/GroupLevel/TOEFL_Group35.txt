@@ -1,0 +1,16 @@
+15	0
+publish	v. 出版；发表	1	0	0			0
+corroborate	v. 证实；确证	1	0	0			0
+enforce	v. 执行；强制	1	0	0			0
+threshold	n. 门槛；界限	1	0	0			0
+domestic	adj. 国内的；家庭的	1	0	0			0
+justify	v. 证明…有理	1	0	0			0
+prescribe	v. 规定；开处方	1	0	0			0
+assemble	v. 集合；组装	1	0	0			0
+capacity	n. 能力；容量	1	0	0			0
+modify	v. 修改；调整	1	0	0			0
+exert	v. 施加；运用	1	0	0			0
+hypothesis	n. 假设；假说	1	0	0			0
+protocol	n. 协议；礼仪	1	0	0			0
+constrain	v. 限制；约束	1	0	0			0
+withstand	v. 承受；经受住	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+awareness	n. 意识；认识	1	0	0			0
+coordination	n. 协调；配合	1	0	0			0
+recommendation	n. 推荐；建议	1	0	0			0
+deforestation	n. 森林砍伐；滥伐	1	0	0			0
+abuse	n./v. 滥用；虐待	1	0	0			0
+preparation	n. 准备；预备	1	0	0			0
+exploration	n. 探索；勘探	1	0	0			0
+assumption	n. 假定；设想	1	0	0			0
+behaviour	n. 行为；举止	1	0	0			0
+circulation	n. 循环；发行量	1	0	0			0
+revolution	n. 革命；变革	1	0	0			0
+discrimination	n. 歧视；辨别	1	0	0			0
+immigration	n. 移民；移居	1	0	0			0
+manufacturing	n. 制造业 adj. 制造的	1	0	0			0
+observation	n. 观察；评论	1	0	0			0

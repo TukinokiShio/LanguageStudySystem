@@ -1,0 +1,16 @@
+15	0
+outcome	n. 结果；成果	1	0	0			0
+illegal	adj. 非法的	1	0	0			0
+status	n. 地位；状态	1	0	0			0
+attitude	n. 态度；看法	1	0	0			0
+initial	adj. 最初的 n. 首字母	1	0	0			0
+routine	n. 常规 adj. 常规的	1	0	0			0
+schedule	n. 时间表 v. 安排	1	0	0			0
+career	n. 职业；生涯	1	0	0			0
+normal	adj. 正常的；标准的	1	0	0			0
+resist	v. 抵抗；抗拒	1	0	0			0
+brief	adj. 简短的 n. 摘要	1	0	0			0
+digital	adj. 数字的	1	0	0			0
+supply	n./v. 供应；提供	1	0	0			0
+embrace	v. 拥抱；包含	1	0	0			0
+bound	adj. 必定的 v. 跳跃	1	0	0			0

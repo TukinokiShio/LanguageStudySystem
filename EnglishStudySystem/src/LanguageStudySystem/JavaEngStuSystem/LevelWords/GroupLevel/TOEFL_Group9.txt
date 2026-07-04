@@ -1,0 +1,16 @@
+15	0
+novel	adj. 新颖的 n. 小说	1	0	0			0
+approximately	adv. 大约；近似地	1	0	0			0
+convince	v. 说服；使确信	1	0	0			0
+innovate	v. 创新；革新	1	0	0			0
+implicit	adj. 含蓄的；内含的	1	0	0			0
+complement	v. 补充 n. 补足物	1	0	0			0
+quest	n./v. 寻求；探索	1	0	0			0
+friction	n. 摩擦；冲突	1	0	0			0
+correspond	v. 通信；对应	1	0	0			0
+generate	v. 产生；生成	1	0	0			0
+eminent	adj. 杰出的；著名的	1	0	0			0
+delicate	adj. 精致的；微妙的	1	0	0			0
+evolve	v. 进化；发展	1	0	0			0
+immense	adj. 巨大的；广大的	1	0	0			0
+entail	v. 需要；牵涉	1	0	0			0

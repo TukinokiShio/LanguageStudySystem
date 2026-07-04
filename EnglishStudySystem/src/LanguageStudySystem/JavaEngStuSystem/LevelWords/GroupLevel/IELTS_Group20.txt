@@ -1,0 +1,8 @@
+7	0
+participation	n. 参与；参加	1	0	0			0
+habitation	n. 居住；栖息地	1	0	0			0
+reputation	n. 名声；声誉	1	0	0			0
+satisfaction	n. 满足；满意	1	0	0			0
+supervision	n. 监督；管理	1	0	0			0
+complementary	adj. 补充的；互补的	1	0	0			0
+identification	n. 识别；身份证明	1	0	0			0

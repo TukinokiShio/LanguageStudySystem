@@ -1,0 +1,16 @@
+15	0
+exempt	v. 免除 adj. 被免除的	1	0	0			0
+administer	v. 管理；执行	1	0	0			0
+discriminate	v. 歧视；区别	1	0	0			0
+insane	adj. 疯狂的；精神错乱的	1	0	0			0
+anonymous	adj. 匿名的；无名的	1	0	0			0
+compensate	v. 补偿；赔偿	1	0	0			0
+transition	n. 过渡；转变	1	0	0			0
+heap	n. 堆 v. 堆积	1	0	0			0
+hysterical	adj. 歇斯底里的	1	0	0			0
+consecutive	adj. 连续的；连贯的	1	0	0			0
+fuse	v. 融合 n. 保险丝	1	0	0			0
+transcend	v. 超越；胜过	1	0	0			0
+mingle	v. 混合；交往	1	0	0			0
+epidemic	n. 流行病 adj. 流行的	1	0	0			0
+stun	v. 使震惊；使昏迷	1	0	0			0

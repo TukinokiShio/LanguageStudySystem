@@ -1,0 +1,16 @@
+15	0
+approximately	adv. 大约；近似地	1	0	0			0
+possession	n. 拥有；财产	1	0	0			0
+requirement	n. 要求；必要条件	1	0	0			0
+intervention	n. 干预；介入	1	0	0			0
+fragmentation	n. 分裂；碎片化	1	0	0			0
+urbanization	n. 城市化	1	0	0			0
+appropriate	adj. 适当的 v. 占用	1	0	0			0
+capability	n. 能力；才能	1	0	0			0
+reinforcement	n. 加强；加固	1	0	0			0
+competition	n. 竞争；比赛	1	0	0			0
+nutrition	n. 营养；营养学	1	0	0			0
+contribution	n. 贡献；捐献	1	0	0			0
+effectiveness	n. 有效性；效力	1	0	0			0
+efficiency	n. 效率；效能	1	0	0			0
+relationship	n. 关系；关联	1	0	0			0

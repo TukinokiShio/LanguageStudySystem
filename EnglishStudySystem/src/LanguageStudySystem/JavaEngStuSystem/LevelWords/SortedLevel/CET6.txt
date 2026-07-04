@@ -1,0 +1,783 @@
+782	0
+abnormal	adj. 不正常的；异常的	1	0	0			0	2
+abolish	v. 废除；取消	1	0	0			0	2
+abrupt	adj. 突然的；唐突的	1	0	0			0	2
+absurd	adj. 荒谬的；可笑的	1	0	0			0	2
+accessory	n. 附件；配件 adj. 附属的	1	0	0			0	2
+acquaint	v. 使认识；使了解	1	0	0			0	2
+activate	v. 激活；启动	1	0	0			0	2
+acute	adj. 急性的；敏锐的	1	0	0			0	2
+adhere	v. 粘附；坚持	1	0	0			0	2
+adjacent	adj. 邻近的；毗连的	1	0	0			0	2
+administer	v. 管理；执行	1	0	0			0	2
+adolescent	n. 青少年 adj. 青春期的	1	0	0			0	2
+advent	n. 到来；出现	1	0	0			0	2
+adverse	adj. 不利的；相反的	1	0	0			0	2
+aerial	adj. 空中的 n. 天线	1	0	0			0	2
+aesthetic	adj. 美学的；审美的	1	0	0			0	2
+affiliate	v. 使附属 n. 分支机构	1	0	0			0	2
+affirm	v. 断言；确认	1	0	0			0	2
+afflict	v. 使痛苦；折磨	1	0	0			0	2
+aggravate	v. 加重；恶化	1	0	0			0	2
+aggregate	n. 合计 v. 聚集	1	0	0			0	2
+agitate	v. 搅动；煽动	1	0	0			0	2
+agony	n. 极大痛苦；苦恼	1	0	0			0	2
+allege	v. 断言；宣称	1	0	0			0	2
+alleviate	v. 减轻；缓解	1	0	0			0	2
+allocate	v. 分配；拨出	1	0	0			0	2
+alloy	n. 合金 v. 使成合金	1	0	0			0	2
+alternate	adj. 交替的 v. 交替	1	0	0			0	2
+ambiguous	adj. 含糊的；模棱两可的	1	0	0			0	2
+ambitious	adj. 有雄心的	1	0	0			0	2
+amend	v. 修改；修订	1	0	0			0	2
+ample	adj. 充足的；丰富的	1	0	0			0	2
+amplify	v. 放大；增强	1	0	0			0	2
+analogy	n. 类比；相似	1	0	0			0	2
+anonymous	adj. 匿名的；无名的	1	0	0			0	2
+apparatus	n. 器械；装置	1	0	0			0	2
+applaud	v. 鼓掌；称赞	1	0	0			0	2
+appraisal	n. 评价；评估	1	0	0			0	2
+appreciable	adj. 可感知的；明显的	1	0	0			0	2
+apprehension	n. 理解；忧虑	1	0	0			0	2
+apt	adj. 恰当的；有…倾向的	1	0	0			0	2
+array	n. 数组；排列 v. 部署	1	0	0			0	2
+arrogant	adj. 傲慢的；自大的	1	0	0			0	2
+articulate	v. 清晰表达 adj. 口齿伶俐的	1	0	0			0	2
+ascend	v. 上升；攀登	1	0	0			0	2
+ascribe	v. 把…归因于	1	0	0			0	2
+aspiration	n. 渴望；抱负	1	0	0			0	2
+assault	n./v. 攻击；袭击	1	0	0			0	2
+assert	v. 断言；坚持	1	0	0			0	2
+assimilate	v. 吸收；同化	1	0	0			0	2
+assurance	n. 保证；保险	1	0	0			0	2
+astronomy	n. 天文学	1	0	0			0	2
+attendance	n. 出席；到场	1	0	0			0	2
+attendant	n. 服务员 adj. 伴随的	1	0	0			0	2
+authentic	adj. 真实的；可靠的	1	0	0			0	2
+authoritative	adj. 权威的；官方的	1	0	0			0	2
+authorize	v. 授权；批准	1	0	0			0	2
+autonomy	n. 自治；自主权	1	0	0			0	2
+avail	v. 有益于 n. 效用	1	0	0			0	2
+avert	v. 避免；转移	1	0	0			0	2
+aviation	n. 航空；飞行	1	0	0			0	2
+baffle	v. 使困惑；难住	1	0	0			0	2
+bald	adj. 秃头的；单调的	1	0	0			0	2
+bankrupt	adj. 破产的 v. 使破产	1	0	0			0	2
+barren	adj. 贫瘠的；不育的	1	0	0			0	2
+beforehand	adv. 预先；事先	1	0	0			0	2
+betray	v. 背叛；泄露	1	0	0			0	2
+bewilder	v. 使迷惑；使困惑	1	0	0			0	2
+bias	n. 偏见 v. 使有偏见	1	0	0			0	2
+bibliography	n. 参考书目	1	0	0			0	2
+bizarre	adj. 奇异的；古怪的	1	0	0			0	2
+blaze	n. 火焰 v. 燃烧	1	0	0			0	2
+bleak	adj. 荒凉的；暗淡的	1	0	0			0	2
+bless	v. 祝福；保佑	1	0	0			0	2
+blunder	n. 大错 v. 犯大错	1	0	0			0	2
+bonus	n. 奖金；红利	1	0	0			0	2
+boycott	n./v. 联合抵制	1	0	0			0	2
+breach	n. 违反 v. 打破	1	0	0			0	2
+breakdown	n. 崩溃；故障	1	0	0			0	2
+bribe	n. 贿赂 v. 行贿	1	0	0			0	2
+brisk	adj. 轻快的；兴隆的	1	0	0			0	2
+bruise	n. 瘀伤 v. 使受伤	1	0	0			0	2
+brutal	adj. 残忍的；野蛮的	1	0	0			0	2
+bulletin	n. 公告；简报	1	0	0			0	2
+bureaucracy	n. 官僚机构	1	0	0			0	2
+cabinet	n. 内阁；橱柜	1	0	0			0	2
+cater	v. 提供饮食；迎合	1	0	0			0	2
+caution	n. 谨慎；警告	1	0	0			0	2
+census	n. 人口普查	1	0	0			0	2
+certify	v. 证明；证实	1	0	0			0	2
+chronic	adj. 慢性的；长期的	1	0	0			0	2
+circulation	n. 循环；发行量	1	0	0			0	2
+clamp	n. 夹钳 v. 夹住	1	0	0			0	2
+climax	n. 高潮；顶点	1	0	0			0	2
+cling	v. 紧贴；坚持	1	0	0			0	2
+coincide	v. 同时发生；一致	1	0	0			0	2
+collaborate	v. 合作；勾结	1	0	0			0	2
+collide	v. 碰撞；冲突	1	0	0			0	2
+commence	v. 开始；着手	1	0	0			0	2
+commend	v. 表扬；推荐	1	0	0			0	2
+commodity	n. 商品；货物	1	0	0			0	2
+commonplace	adj. 平凡的 n. 常见的事	1	0	0			0	2
+compatible	adj. 兼容的；合得来的	1	0	0			0	2
+compensate	v. 补偿；赔偿	1	0	0			0	2
+compile	v. 编译；汇编	1	0	0			0	2
+complement	v. 补充 n. 补足物	1	0	0			0	2
+complication	n. 复杂；并发症	1	0	0			0	2
+compliment	n. 赞美 v. 称赞	1	0	0			0	2
+comply	v. 遵守；顺从	1	0	0			0	2
+compulsory	adj. 强制的；必修的	1	0	0			0	2
+conceive	v. 构想；怀孕	1	0	0			0	2
+conception	n. 概念；构想	1	0	0			0	2
+concise	adj. 简洁的；简明的	1	0	0			0	2
+confer	v. 授予；商议	1	0	0			0	2
+confidential	adj. 机密的；保密的	1	0	0			0	2
+configuration	n. 配置；结构	1	0	0			0	2
+conform	v. 遵守；符合	1	0	0			0	2
+confront	v. 面对；对抗	1	0	0			0	2
+consecutive	adj. 连续的；连贯的	1	0	0			0	2
+consensus	n. 共识；一致意见	1	0	0			0	2
+consequent	adj. 随之发生的	1	0	0			0	2
+conserve	v. 保存；节约	1	0	0			0	2
+consolidate	v. 巩固；合并	1	0	0			0	2
+conspicuous	adj. 显眼的；明显的	1	0	0			0	2
+constrain	v. 限制；约束	1	0	0			0	2
+consult	v. 咨询；查阅	1	0	0			0	2
+contaminate	v. 污染；玷污	1	0	0			0	2
+contemplate	v. 沉思；考虑	1	0	0			0	2
+contend	v. 竞争；主张	1	0	0			0	2
+contradict	v. 矛盾；反驳	1	0	0			0	2
+contrive	v. 发明；设法做到	1	0	0			0	2
+controversy	n. 争议；争论	1	0	0			0	2
+convene	v. 召集；集合	1	0	0			0	2
+converge	v. 聚集；汇合	1	0	0			0	2
+convict	v. 定罪 n. 囚犯	1	0	0			0	2
+conviction	n. 信念；定罪	1	0	0			0	2
+cordial	adj. 热诚的；友好的	1	0	0			0	2
+correlate	v. 使相关联	1	0	0			0	2
+corrode	v. 腐蚀；侵蚀	1	0	0			0	2
+criterion	n. 标准；准则	1	0	0			0	2
+crucial	adj. 至关重要的	1	0	0			0	2
+cumulative	adj. 累积的	1	0	0			0	2
+cynical	adj. 愤世嫉俗的	1	0	0			0	2
+dazzle	v. 使目眩 n. 耀眼	1	0	0			0	2
+decent	adj. 体面的；正派的	1	0	0			0	2
+decisive	adj. 决定性的；果断的	1	0	0			0	2
+declare	v. 宣布；声明	1	0	0			0	2
+decline	v. 下降；拒绝 n. 衰退	1	0	0			0	2
+dedicate	v. 奉献；致力于	1	0	0			0	2
+deem	v. 认为；视为	1	0	0			0	2
+deficiency	n. 缺乏；不足	1	0	0			0	2
+defy	v. 违抗；挑战	1	0	0			0	2
+degenerate	v. 退化；堕落	1	0	0			0	2
+degrade	v. 降低；贬低	1	0	0			0	2
+deliberate	adj. 故意的 v. 仔细考虑	1	0	0			0	2
+denial	n. 否认；拒绝	1	0	0			0	2
+denote	v. 表示；意味着	1	0	0			0	2
+depict	v. 描绘；描述	1	0	0			0	2
+deprive	v. 剥夺；使丧失	1	0	0			0	2
+descendant	n. 后代；子孙	1	0	0			0	2
+descent	n. 下降；血统	1	0	0			0	2
+designate	v. 指定；任命	1	0	0			0	2
+despise	v. 鄙视；看不起	1	0	0			0	2
+detach	v. 分离；派遣	1	0	0			0	2
+detain	v. 拘留；耽搁	1	0	0			0	2
+deteriorate	v. 恶化；退化	1	0	0			0	2
+deviate	v. 偏离；背离	1	0	0			0	2
+diagnose	v. 诊断；判断	1	0	0			0	2
+diffuse	v. 扩散；传播 adj. 弥漫的	1	0	0			0	2
+dilemma	n. 困境；进退两难	1	0	0			0	2
+dilute	v. 稀释；冲淡	1	0	0			0	2
+diminish	v. 减少；缩小	1	0	0			0	2
+diploma	n. 文凭；毕业证书	1	0	0			0	2
+disastrous	adj. 灾难性的	1	0	0			0	2
+discern	v. 辨别；识别	1	0	0			0	2
+disclose	v. 揭露；透露	1	0	0			0	2
+discourse	n. 论述；话语	1	0	0			0	2
+discrepancy	n. 差异；不一致	1	0	0			0	2
+discrete	adj. 离散的；分离的	1	0	0			0	2
+discriminate	v. 歧视；区别	1	0	0			0	2
+disguise	v. 伪装 n. 伪装品	1	0	0			0	2
+dismay	n. 沮丧 v. 使惊慌	1	0	0			0	2
+dispatch	v. 派遣 n. 急件	1	0	0			0	2
+disperse	v. 分散；驱散	1	0	0			0	2
+displace	v. 取代；置换	1	0	0			0	2
+disposition	n. 性情；处置	1	0	0			0	2
+disregard	v. 忽视 n. 漠视	1	0	0			0	2
+disrupt	v. 扰乱；中断	1	0	0			0	2
+dissolve	v. 溶解；解散	1	0	0			0	2
+distort	v. 扭曲；歪曲	1	0	0			0	2
+distract	v. 分心；分散注意力	1	0	0			0	2
+disturbance	n. 打扰；骚乱	1	0	0			0	2
+diversion	n. 转移；消遣	1	0	0			0	2
+divert	v. 转移；使分心	1	0	0			0	2
+dominant	adj. 占优势的；支配的	1	0	0			0	2
+donate	v. 捐赠；捐献	1	0	0			0	2
+doom	n. 命运 v. 注定	1	0	0			0	2
+drastic	adj. 激烈的；极端的	1	0	0			0	2
+drought	n. 干旱	1	0	0			0	2
+dual	adj. 双重的；二元的	1	0	0			0	2
+dubious	adj. 可疑的；含糊的	1	0	0			0	2
+duplicate	v. 复制 n. 副本	1	0	0			0	2
+dwell	v. 居住；细想	1	0	0			0	2
+eccentric	adj. 古怪的 n. 怪人	1	0	0			0	2
+eclipse	n. 日食 v. 使黯然失色	1	0	0			0	2
+ecology	n. 生态学	1	0	0			0	2
+edible	adj. 可食用的	1	0	0			0	2
+ego	n. 自我；自尊	1	0	0			0	2
+eject	v. 驱逐；弹出	1	0	0			0	2
+elapse	v. 消逝；流逝	1	0	0			0	2
+elicit	v. 引出；探出	1	0	0			0	2
+eligible	adj. 有资格的；合格的	1	0	0			0	2
+elite	n. 精英 adj. 精英的	1	0	0			0	2
+eloquent	adj. 有口才的；雄辩的	1	0	0			0	2
+embark	v. 着手；上船	1	0	0			0	2
+embed	v. 嵌入；植入	1	0	0			0	2
+embody	v. 体现；包含	1	0	0			0	2
+empirical	adj. 经验主义的	1	0	0			0	2
+endeavor	n./v. 努力；尽力	1	0	0			0	2
+endow	v. 赋予；捐赠	1	0	0			0	2
+endurance	n. 耐力；持久力	1	0	0			0	2
+energetic	adj. 精力充沛的	1	0	0			0	2
+enlighten	v. 启蒙；启发	1	0	0			0	2
+enrich	v. 丰富；使充实	1	0	0			0	2
+enroll	v. 登记；注册	1	0	0			0	2
+ensue	v. 继而发生；随之而来	1	0	0			0	2
+entail	v. 需要；牵涉	1	0	0			0	2
+entity	n. 实体；存在物	1	0	0			0	2
+entrepreneur	n. 企业家	1	0	0			0	2
+envisage	v. 想象；设想	1	0	0			0	2
+epidemic	n. 流行病 adj. 流行的	1	0	0			0	2
+epoch	n. 时代；纪元	1	0	0			0	2
+erase	v. 擦掉；清除	1	0	0			0	2
+erosion	n. 侵蚀；腐蚀	1	0	0			0	2
+erroneous	adj. 错误的；不正确的	1	0	0			0	2
+erupt	v. 爆发；喷发	1	0	0			0	2
+essence	n. 本质；精华	1	0	0			0	2
+esteem	n./v. 尊重；尊敬	1	0	0			0	2
+eternal	adj. 永恒的；永久的	1	0	0			0	2
+evacuate	v. 疏散；撤离	1	0	0			0	2
+evaporate	v. 蒸发；消失	1	0	0			0	2
+evoke	v. 唤起；引起	1	0	0			0	2
+excerpt	n. 摘录；选段	1	0	0			0	2
+execution	n. 执行；处决	1	0	0			0	2
+exempt	v. 免除 adj. 被免除的	1	0	0			0	2
+exile	n./v. 流放；放逐	1	0	0			0	2
+exotic	adj. 异国情调的	1	0	0			0	2
+expedition	n. 远征；探险队	1	0	0			0	2
+expel	v. 驱逐；开除	1	0	0			0	2
+expire	v. 到期；失效	1	0	0			0	2
+explicit	adj. 明确的；直白的	1	0	0			0	2
+exquisite	adj. 精致的；细腻的	1	0	0			0	2
+extinct	adj. 灭绝的；熄灭的	1	0	0			0	2
+extinguish	v. 熄灭；消灭	1	0	0			0	2
+extract	v. 提取 n. 摘录	1	0	0			0	2
+extravagant	adj. 奢侈的；过度的	1	0	0			0	2
+fabricate	v. 制造；捏造	1	0	0			0	2
+facet	n. 方面；刻面	1	0	0			0	2
+fake	adj. 假的 n. 赝品 v. 伪造	1	0	0			0	2
+fantastic	adj. 极好的；奇异的	1	0	0			0	2
+feast	n. 盛宴 v. 款待	1	0	0			0	2
+feeble	adj. 虚弱的；无力的	1	0	0			0	2
+feminine	adj. 女性的；阴性的	1	0	0			0	2
+ferry	n. 渡轮 v. 摆渡	1	0	0			0	2
+finite	adj. 有限的；限定的	1	0	0			0	2
+fitting	adj. 合适的 n. 配件	1	0	0			0	2
+fixture	n. 固定装置	1	0	0			0	2
+flap	v. 拍打 n. 拍打声	1	0	0			0	2
+flare	v. 闪耀 n. 闪光	1	0	0			0	2
+flaw	n. 缺陷；瑕疵	1	0	0			0	2
+fling	v. 猛扔；投身于	1	0	0			0	2
+flip	v. 轻弹；翻	1	0	0			0	2
+fluctuate	v. 波动；涨落	1	0	0			0	2
+flush	v. 冲洗 adj. 齐平的	1	0	0			0	2
+flutter	v. 拍翅；飘动	1	0	0			0	2
+foam	n. 泡沫 v. 起泡	1	0	0			0	2
+foil	n. 箔纸 v. 挫败	1	0	0			0	2
+foremost	adj. 最重要的；首先的	1	0	0			0	2
+foresee	v. 预见；预知	1	0	0			0	2
+formidable	adj. 可怕的；强大的	1	0	0			0	2
+formulate	v. 制定；规划	1	0	0			0	2
+fort	n. 堡垒；要塞	1	0	0			0	2
+forthcoming	adj. 即将来临的	1	0	0			0	2
+fossil	n. 化石 adj. 化石的	1	0	0			0	2
+foster	v. 培养；促进	1	0	0			0	2
+fracture	n. 骨折 v. 破裂	1	0	0			0	2
+fragile	adj. 脆弱的；易碎的	1	0	0			0	2
+friction	n. 摩擦；冲突	1	0	0			0	2
+frown	v. 皱眉 n. 皱眉	1	0	0			0	2
+furious	adj. 狂怒的；激烈的	1	0	0			0	2
+fuse	v. 融合 n. 保险丝	1	0	0			0	2
+futile	adj. 徒劳的；无效的	1	0	0			0	2
+galaxy	n. 星系；银河	1	0	0			0	2
+gasp	v. 喘气 n. 喘息	1	0	0			0	2
+gauge	n. 量规 v. 测量	1	0	0			0	2
+generalize	v. 概括；推广	1	0	0			0	2
+generate	v. 产生；生成	1	0	0			0	2
+gigantic	adj. 巨大的；庞大的	1	0	0			0	2
+glare	v. 怒视；闪耀 n. 强光	1	0	0			0	2
+gleam	n. 微光 v. 闪烁	1	0	0			0	2
+glide	v. 滑行；滑翔	1	0	0			0	2
+glimpse	n. 一瞥 v. 瞥见	1	0	0			0	2
+glitter	v. 闪烁 n. 闪光	1	0	0			0	2
+gloomy	adj. 阴暗的；忧郁的	1	0	0			0	2
+gorgeous	adj. 华丽的；极好的	1	0	0			0	2
+gossip	n. 流言蜚语 v. 说闲话	1	0	0			0	2
+gracious	adj. 亲切的；优雅的	1	0	0			0	2
+grieve	v. 使悲伤；哀悼	1	0	0			0	2
+grim	adj. 严峻的；阴森的	1	0	0			0	2
+grin	v. 露齿而笑 n. 咧嘴笑	1	0	0			0	2
+groan	v. 呻吟 n. 呻吟声	1	0	0			0	2
+grope	v. 摸索；探索	1	0	0			0	2
+guardian	n. 监护人；保护者	1	0	0			0	2
+hamper	v. 妨碍；阻碍	1	0	0			0	2
+handicap	n. 障碍 v. 妨碍	1	0	0			0	2
+haul	v. 拖；拉 n. 拖运	1	0	0			0	2
+haunt	v. 萦绕；常去	1	0	0			0	2
+heal	v. 治愈；愈合	1	0	0			0	2
+heap	n. 堆 v. 堆积	1	0	0			0	2
+heighten	v. 提高；增强	1	0	0			0	2
+heritage	n. 遗产；传统	1	0	0			0	2
+hierarchy	n. 等级制度；层级	1	0	0			0	2
+hinder	v. 阻碍；妨碍	1	0	0			0	2
+hitherto	adv. 迄今；至今	1	0	0			0	2
+hoist	v. 升起 n. 起重机	1	0	0			0	2
+hollow	adj. 中空的；空洞的	1	0	0			0	2
+homogeneous	adj. 同质的；同类的	1	0	0			0	2
+hose	n. 软管 v. 用软管冲洗	1	0	0			0	2
+hospitality	n. 好客；款待	1	0	0			0	2
+hostage	n. 人质	1	0	0			0	2
+hover	v. 盘旋；徘徊	1	0	0			0	2
+hug	v. 拥抱 n. 拥抱	1	0	0			0	2
+humanity	n. 人类；人性	1	0	0			0	2
+humidity	n. 湿度；潮湿	1	0	0			0	2
+hurl	v. 猛投；摔	1	0	0			0	2
+hypothesis	n. 假设；假说	1	0	0			0	2
+hysterical	adj. 歇斯底里的	1	0	0			0	2
+identification	n. 识别；身份证明	1	0	0			0	2
+ideology	n. 意识形态	1	0	0			0	2
+ignite	v. 点燃；起火	1	0	0			0	2
+illuminate	v. 照亮；阐明	1	0	0			0	2
+illusion	n. 幻觉；错觉	1	0	0			0	2
+imaginative	adj. 富有想象力的	1	0	0			0	2
+immerse	v. 沉浸；使陷入	1	0	0			0	2
+immune	adj. 免疫的；豁免的	1	0	0			0	2
+impair	v. 损害；削弱	1	0	0			0	2
+impart	v. 传授；告知	1	0	0			0	2
+imperative	adj. 必要的 n. 命令	1	0	0			0	2
+impetus	n. 动力；推动力	1	0	0			0	2
+implicit	adj. 含蓄的；内含的	1	0	0			0	2
+impulse	n. 冲动；推动力	1	0	0			0	2
+inaugurate	v. 开创；举行就职典礼	1	0	0			0	2
+incentive	n. 激励；刺激	1	0	0			0	2
+incidentally	adv. 顺便提及；偶然	1	0	0			0	2
+inclusive	adj. 包含的；包容的	1	0	0			0	2
+incorporate	v. 包含；合并	1	0	0			0	2
+incredible	adj. 难以置信的	1	0	0			0	2
+incur	v. 招致；遭受	1	0	0			0	2
+indefinite	adj. 不确定的；模糊的	1	0	0			0	2
+indicative	adj. 指示的；表明的	1	0	0			0	2
+indignant	adj. 愤慨的；愤怒的	1	0	0			0	2
+indignation	n. 愤怒；愤慨	1	0	0			0	2
+indispensable	adj. 不可或缺的	1	0	0			0	2
+induce	v. 引起；诱导	1	0	0			0	2
+indulge	v. 放纵；沉溺	1	0	0			0	2
+infectious	adj. 传染的；有感染力的	1	0	0			0	2
+infer	v. 推断；推论	1	0	0			0	2
+ingenious	adj. 巧妙的；有独创性的	1	0	0			0	2
+inhabit	v. 居住于；栖息于	1	0	0			0	2
+inhibit	v. 抑制；禁止	1	0	0			0	2
+initiate	v. 开始；发起	1	0	0			0	2
+inject	v. 注射；注入	1	0	0			0	2
+inland	adj. 内陆的 adv. 在内陆	1	0	0			0	2
+innovation	n. 创新；革新	1	0	0			0	2
+innumerable	adj. 无数的；数不清的	1	0	0			0	2
+insane	adj. 疯狂的；精神错乱的	1	0	0			0	2
+installment	n. 分期付款；一集	1	0	0			0	2
+instantaneous	adj. 瞬间的；即时的	1	0	0			0	2
+instrumental	adj. 起作用的；乐器的	1	0	0			0	2
+insulate	v. 绝缘；隔离	1	0	0			0	2
+intact	adj. 完好无损的；完整的	1	0	0			0	2
+integral	adj. 必需的；完整的	1	0	0			0	2
+integrity	n. 正直；完整	1	0	0			0	2
+intelligible	adj. 可理解的；明白的	1	0	0			0	2
+intensify	v. 强化；加剧	1	0	0			0	2
+intent	n. 意图 adj. 专注的	1	0	0			0	2
+intervene	v. 干涉；介入	1	0	0			0	2
+intricate	adj. 复杂精细的	1	0	0			0	2
+intrinsic	adj. 固有的；内在的	1	0	0			0	2
+intuition	n. 直觉	1	0	0			0	2
+invalid	adj. 无效的 n. 病人	1	0	0			0	2
+invaluable	adj. 无价的；极其宝贵的	1	0	0			0	2
+invariably	adv. 总是；不变地	1	0	0			0	2
+inventory	n. 清单；库存	1	0	0			0	2
+invert	v. 倒转；颠倒	1	0	0			0	2
+irony	n. 讽刺；反语	1	0	0			0	2
+irrespective	adj. 不论的；无关的	1	0	0			0	2
+irrigation	n. 灌溉	1	0	0			0	2
+irritate	v. 刺激；激怒	1	0	0			0	2
+jerk	n. 急拉 v. 猛拉	1	0	0			0	2
+jeopardize	v. 危及；危害	1	0	0			0	2
+jog	v. 慢跑 n. 轻推	1	0	0			0	2
+junction	n. 交叉点；连接处	1	0	0			0	2
+latent	adj. 潜在的；潜伏的	1	0	0			0	2
+latitude	n. 纬度；自由	1	0	0			0	2
+layman	n. 外行；门外汉	1	0	0			0	2
+leaflet	n. 传单；小册子	1	0	0			0	2
+legend	n. 传说；传奇	1	0	0			0	2
+legitimate	adj. 合法的；正当的	1	0	0			0	2
+liability	n. 责任；负债	1	0	0			0	2
+lick	v. 舔 n. 少量	1	0	0			0	2
+likelihood	n. 可能性	1	0	0			0	2
+limp	v. 跛行 adj. 软弱的	1	0	0			0	2
+linear	adj. 线性的；直线的	1	0	0			0	2
+linger	v. 逗留；徘徊	1	0	0			0	2
+literacy	n. 读写能力；有文化	1	0	0			0	2
+literal	adj. 字面意思的；逐字的	1	0	0			0	2
+litter	n. 垃圾 v. 乱扔	1	0	0			0	2
+lobby	n. 大厅 v. 游说	1	0	0			0	2
+locomotive	n. 火车头 adj. 移动的	1	0	0			0	2
+lofty	adj. 崇高的；高耸的	1	0	0			0	2
+lounge	n. 休息室 v. 懒坐	1	0	0			0	2
+lubricate	v. 润滑；使顺畅	1	0	0			0	2
+luminous	adj. 发光的；明亮的	1	0	0			0	2
+lure	v. 引诱 n. 诱惑物	1	0	0			0	2
+magnify	v. 放大；夸大	1	0	0			0	2
+manifest	v. 表明 adj. 明显的	1	0	0			0	2
+manipulate	v. 操纵；操作	1	0	0			0	2
+marshal	n. 元帅 v. 整理	1	0	0			0	2
+masculine	adj. 男性的；阳性的	1	0	0			0	2
+massacre	n. 大屠杀 v. 屠杀	1	0	0			0	2
+mediate	v. 调解；斡旋	1	0	0			0	2
+medieval	adj. 中世纪的	1	0	0			0	2
+menace	n. 威胁 v. 威胁	1	0	0			0	2
+merge	v. 合并；融合	1	0	0			0	2
+migrate	v. 迁移；移居	1	0	0			0	2
+militant	adj. 好战的 n. 激进分子	1	0	0			0	2
+mingle	v. 混合；交往	1	0	0			0	2
+miniature	adj. 微型的 n. 微型画	1	0	0			0	2
+minimal	adj. 最小的；最低限度的	1	0	0			0	2
+minimize	v. 最小化；降到最低	1	0	0			0	2
+misery	n. 痛苦；悲惨	1	0	0			0	2
+misfortune	n. 不幸；灾祸	1	0	0			0	2
+mobilize	v. 动员；调动	1	0	0			0	2
+mock	v. 嘲笑 adj. 模拟的	1	0	0			0	2
+momentum	n. 动力；势头	1	0	0			0	2
+monopoly	n. 垄断；独占	1	0	0			0	2
+mortal	adj. 凡人的；致命的	1	0	0			0	2
+mortgage	n. 抵押 v. 抵押	1	0	0			0	2
+multitude	n. 大量；群众	1	0	0			0	2
+municipal	adj. 市政的；市的	1	0	0			0	2
+murmur	v. 低语 n. 低语声	1	0	0			0	2
+naive	adj. 天真的；幼稚的	1	0	0			0	2
+narrative	n. 叙述 adj. 叙事的	1	0	0			0	2
+nasty	adj. 恶劣的；肮脏的	1	0	0			0	2
+necessitate	v. 使成为必要	1	0	0			0	2
+negligible	adj. 可以忽略的；微不足道的	1	0	0			0	2
+nominate	v. 提名；任命	1	0	0			0	2
+nonetheless	adv. 尽管如此	1	0	0			0	2
+notable	adj. 显著的 n. 名人	1	0	0			0	2
+notorious	adj. 臭名昭著的	1	0	0			0	2
+nourish	v. 滋养；养育	1	0	0			0	2
+novelty	n. 新奇；新颖	1	0	0			0	2
+nurture	v. 培育 n. 养育	1	0	0			0	2
+oath	n. 誓言；诅咒	1	0	0			0	2
+obedience	n. 服从；顺从	1	0	0			0	2
+obligation	n. 义务；责任	1	0	0			0	2
+obscene	adj. 猥亵的；淫秽的	1	0	0			0	2
+obscure	adj. 模糊的 v. 使朦胧	1	0	0			0	2
+odor	n. 气味；臭味	1	0	0			0	2
+offspring	n. 后代；子孙	1	0	0			0	2
+opaque	adj. 不透明的；难以理解的	1	0	0			0	2
+oppress	v. 压迫；压制	1	0	0			0	2
+opt	v. 选择；抉择	1	0	0			0	2
+optimism	n. 乐观；乐观主义	1	0	0			0	2
+orbit	n. 轨道 v. 绕轨道运行	1	0	0			0	2
+oriental	adj. 东方的	1	0	0			0	2
+originate	v. 起源；产生	1	0	0			0	2
+ornament	n. 装饰品 v. 装饰	1	0	0			0	2
+outbreak	n. 爆发；突然发生	1	0	0			0	2
+overflow	v. 溢出 n. 泛滥	1	0	0			0	2
+overhear	v. 无意中听到	1	0	0			0	2
+overlap	v. 重叠 n. 重叠部分	1	0	0			0	2
+overt	adj. 公开的；明显的	1	0	0			0	2
+overthrow	v. 推翻 n. 推翻	1	0	0			0	2
+overwhelm	v. 压倒；淹没	1	0	0			0	2
+paradox	n. 矛盾；悖论	1	0	0			0	2
+paralyze	v. 使瘫痪；使无效	1	0	0			0	2
+pastime	n. 消遣；娱乐	1	0	0			0	2
+patent	n. 专利 adj. 专利的	1	0	0			0	2
+pathetic	adj. 可怜的；悲哀的	1	0	0			0	2
+patriotic	adj. 爱国的	1	0	0			0	2
+patrol	n./v. 巡逻；巡查	1	0	0			0	2
+pave	v. 铺路；铺设	1	0	0			0	2
+pearl	n. 珍珠	1	0	0			0	2
+peculiar	adj. 奇怪的；独特的	1	0	0			0	2
+pedestrian	n. 行人 adj. 平淡的	1	0	0			0	2
+peel	v. 剥皮 n. 果皮	1	0	0			0	2
+pendulum	n. 钟摆；摇摆不定	1	0	0			0	2
+pension	n. 养老金；退休金	1	0	0			0	2
+perception	n. 感知；理解	1	0	0			0	2
+perfume	n. 香水 v. 使散发香气	1	0	0			0	2
+periodic	adj. 周期性的	1	0	0			0	2
+perish	v. 死亡；毁灭	1	0	0			0	2
+permanent	adj. 永久的；持久的	1	0	0			0	2
+permeate	v. 渗透；弥漫	1	0	0			0	2
+permissible	adj. 允许的；许可的	1	0	0			0	2
+perpetual	adj. 永久的；持续的	1	0	0			0	2
+perplex	v. 使困惑；使复杂	1	0	0			0	2
+persistent	adj. 坚持的；持续的	1	0	0			0	2
+pessimistic	adj. 悲观的	1	0	0			0	2
+petition	n. 请愿书 v. 请愿	1	0	0			0	2
+petty	adj. 琐碎的；小气的	1	0	0			0	2
+plague	n. 瘟疫 v. 困扰	1	0	0			0	2
+plead	v. 恳求；辩护	1	0	0			0	2
+pledge	n. 誓言 v. 承诺	1	0	0			0	2
+poke	v. 戳；捅	1	0	0			0	2
+polar	adj. 极地的；完全相反的	1	0	0			0	2
+ponder	v. 沉思；考虑	1	0	0			0	2
+portray	v. 描绘；扮演	1	0	0			0	2
+precede	v. 在…之前；先于	1	0	0			0	2
+precedent	n. 先例；前例	1	0	0			0	2
+preclude	v. 排除；阻止	1	0	0			0	2
+predominant	adj. 占优势的；主要的	1	0	0			0	2
+pregnant	adj. 怀孕的；富有意义的	1	0	0			0	2
+premature	adj. 过早的；不成熟的	1	0	0			0	2
+premium	n. 保险费 adj. 优质的	1	0	0			0	2
+prescription	n. 处方；药方	1	0	0			0	2
+preside	v. 主持；掌管	1	0	0			0	2
+prestige	n. 威望；声望	1	0	0			0	2
+presumably	adv. 大概；可能	1	0	0			0	2
+presume	v. 推测；假定	1	0	0			0	2
+prevalent	adj. 普遍的；流行的	1	0	0			0	2
+prey	n. 猎物 v. 捕食	1	0	0			0	2
+probe	n./v. 探测；调查	1	0	0			0	2
+proceeding	n. 程序；诉讼	1	0	0			0	2
+proclaim	v. 宣布；宣告	1	0	0			0	2
+productive	adj. 多产的；富有成效的	1	0	0			0	2
+proficiency	n. 熟练；精通	1	0	0			0	2
+profound	adj. 深刻的；深邃的	1	0	0			0	2
+prolong	v. 延长；拉长	1	0	0			0	2
+promising	adj. 有前途的；有希望的	1	0	0			0	2
+prone	adj. 有…倾向的；俯卧的	1	0	0			0	2
+propaganda	n. 宣传；鼓吹	1	0	0			0	2
+propel	v. 推进；推动	1	0	0			0	2
+prophet	n. 先知；预言者	1	0	0			0	2
+prosecute	v. 起诉；控告	1	0	0			0	2
+provoke	v. 激怒；引起	1	0	0			0	2
+proximity	n. 接近；邻近	1	0	0			0	2
+purify	v. 净化；提纯	1	0	0			0	2
+pursuit	n. 追求；追赶	1	0	0			0	2
+quest	n./v. 寻求；探索	1	0	0			0	2
+questionnaire	n. 问卷；调查表	1	0	0			0	2
+quota	n. 配额；限额	1	0	0			0	2
+radiant	adj. 辐射的；容光焕发的	1	0	0			0	2
+random	adj. 随机的；任意的	1	0	0			0	2
+rap	n. 轻敲；说唱 v. 敲击	1	0	0			0	2
+rape	n./v. 强奸；掠夺	1	0	0			0	2
+rash	adj. 轻率的 n. 皮疹	1	0	0			0	2
+reassure	v. 使安心；再保证	1	0	0			0	2
+rebellion	n. 叛乱；反抗	1	0	0			0	2
+recession	n. 经济衰退；后退	1	0	0			0	2
+recipe	n. 食谱；秘诀	1	0	0			0	2
+reckon	v. 认为；计算	1	0	0			0	2
+reclaim	v. 回收；开垦	1	0	0			0	2
+reconcile	v. 调和；使和解	1	0	0			0	2
+recreation	n. 娱乐；消遣	1	0	0			0	2
+rectify	v. 纠正；矫正	1	0	0			0	2
+recur	v. 复发；重现	1	0	0			0	2
+redundant	adj. 多余的；冗长的	1	0	0			0	2
+refrain	v. 克制；避免 n. 副歌	1	0	0			0	2
+refute	v. 驳斥；反驳	1	0	0			0	2
+regime	n. 政权；制度	1	0	0			0	2
+rehearsal	n. 排练；预演	1	0	0			0	2
+reign	n. 统治 v. 统治	1	0	0			0	2
+rein	n. 缰绳 v. 控制	1	0	0			0	2
+rejoice	v. 欣喜；高兴	1	0	0			0	2
+relay	v. 转播 n. 接力赛	1	0	0			0	2
+reliance	n. 依赖；信赖	1	0	0			0	2
+remainder	n. 剩余部分；余数	1	0	0			0	2
+remedy	n. 补救办法 v. 补救	1	0	0			0	2
+remnant	n. 残余；剩余物	1	0	0			0	2
+renaissance	n. 文艺复兴；复兴	1	0	0			0	2
+repel	v. 击退；排斥	1	0	0			0	2
+repertoire	n. 全部节目；全部技能	1	0	0			0	2
+repression	n. 压抑；压制	1	0	0			0	2
+reproach	n./v. 责备；批评	1	0	0			0	2
+resemblance	n. 相似；类似	1	0	0			0	2
+resent	v. 怨恨；愤恨	1	0	0			0	2
+reside	v. 居住；存在	1	0	0			0	2
+residential	adj. 住宅的；居住的	1	0	0			0	2
+resignation	n. 辞职；顺从	1	0	0			0	2
+resistant	adj. 抵抗的；抗…的	1	0	0			0	2
+resolution	n. 决心；决议	1	0	0			0	2
+respective	adj. 各自的；分别的	1	0	0			0	2
+retort	n./v. 反驳；回嘴	1	0	0			0	2
+retrieve	v. 取回；检索	1	0	0			0	2
+retrospect	n. 回顾；回想	1	0	0			0	2
+revenge	n./v. 报复；复仇	1	0	0			0	2
+revive	v. 复兴；苏醒	1	0	0			0	2
+revolve	v. 旋转；围绕	1	0	0			0	2
+rigorous	adj. 严格的；严密的	1	0	0			0	2
+ritual	n. 仪式 adj. 仪式的	1	0	0			0	2
+robust	adj. 强健的；坚固的	1	0	0			0	2
+rot	v. 腐烂 n. 腐烂	1	0	0			0	2
+rupture	n. 破裂 v. 使破裂	1	0	0			0	2
+sacred	adj. 神圣的；宗教的	1	0	0			0	2
+safeguard	n./v. 保护；防护	1	0	0			0	2
+salute	n./v. 敬礼；致敬	1	0	0			0	2
+sanction	n. 制裁 v. 批准	1	0	0			0	2
+saturate	v. 饱和；浸透	1	0	0			0	2
+savage	adj. 野蛮的 n. 野蛮人	1	0	0			0	2
+scandal	n. 丑闻；诽谤	1	0	0			0	2
+scorn	n./v. 轻蔑；蔑视	1	0	0			0	2
+scrap	n. 碎片 v. 废弃	1	0	0			0	2
+scrutiny	n. 详细审查；细看	1	0	0			0	2
+seemingly	adv. 表面上；似乎	1	0	0			0	2
+sentiment	n. 感情；情绪	1	0	0			0	2
+shatter	v. 粉碎；破灭	1	0	0			0	2
+shrewd	adj. 精明的；狡猾的	1	0	0			0	2
+shrug	n./v. 耸肩	1	0	0			0	2
+shuttle	n. 穿梭；航天飞机	1	0	0			0	2
+siege	n. 包围；围攻	1	0	0			0	2
+signify	v. 表示；意味着	1	0	0			0	2
+simulate	v. 模拟；假装	1	0	0			0	2
+simultaneous	adj. 同时发生的	1	0	0			0	2
+skeptical	adj. 怀疑的；怀疑论的	1	0	0			0	2
+slack	adj. 松弛的 n. 松弛部分	1	0	0			0	2
+slash	v. 大幅度削减；砍	1	0	0			0	2
+slaughter	n./v. 屠杀；屠宰	1	0	0			0	2
+slim	adj. 苗条的；微小的	1	0	0			0	2
+slogan	n. 口号；标语	1	0	0			0	2
+slump	v. 暴跌 n. 暴跌	1	0	0			0	2
+smuggle	v. 走私；偷运	1	0	0			0	2
+snatch	v. 抢夺；抓住	1	0	0			0	2
+sober	adj. 清醒的；严肃的	1	0	0			0	2
+solicitor	n. 律师；推销员	1	0	0			0	2
+solidarity	n. 团结一致	1	0	0			0	2
+solitary	adj. 孤独的；单个的	1	0	0			0	2
+sovereign	n. 君主 adj. 至高无上的	1	0	0			0	2
+sparkle	v. 闪耀 n. 闪光	1	0	0			0	2
+specialty	n. 专业；专长	1	0	0			0	2
+specification	n. 规格；规范	1	0	0			0	2
+spectacle	n. 景象；奇观	1	0	0			0	2
+spectator	n. 观众；旁观者	1	0	0			0	2
+spectrum	n. 光谱；范围	1	0	0			0	2
+speculate	v. 推测；投机	1	0	0			0	2
+spiral	adj. 螺旋的 n. 螺旋	1	0	0			0	2
+splash	v. 溅；泼 n. 飞溅声	1	0	0			0	2
+spontaneous	adj. 自发的；自然的	1	0	0			0	2
+spouse	n. 配偶	1	0	0			0	2
+stabilize	v. 使稳定	1	0	0			0	2
+stagger	v. 蹒跚；使震惊	1	0	0			0	2
+stalk	v. 跟踪 n. 茎秆	1	0	0			0	2
+stall	n. 摊位 v. 拖延	1	0	0			0	2
+startle	v. 使吃惊；惊吓	1	0	0			0	2
+stationary	adj. 静止的；不变的	1	0	0			0	2
+stereotype	n. 刻板印象 v. 使模式化	1	0	0			0	2
+stimulus	n. 刺激；激励	1	0	0			0	2
+stitch	n. 一针 v. 缝	1	0	0			0	2
+straightforward	adj. 直截了当的	1	0	0			0	2
+strand	n. 线；缕 v. 使搁浅	1	0	0			0	2
+strategic	adj. 战略的；关键的	1	0	0			0	2
+streamline	v. 精简；使流线型	1	0	0			0	2
+stride	n. 大步 v. 大步走	1	0	0			0	2
+strive	v. 努力；奋斗	1	0	0			0	2
+stubborn	adj. 顽固的；倔强的	1	0	0			0	2
+stun	v. 使震惊；使昏迷	1	0	0			0	2
+subjective	adj. 主观的	1	0	0			0	2
+submarine	n. 潜水艇 adj. 海底的	1	0	0			0	2
+subordinate	adj. 下级的 n. 下属	1	0	0			0	2
+subscribe	v. 订阅；同意	1	0	0			0	2
+subsidiary	adj. 辅助的 n. 子公司	1	0	0			0	2
+subsidy	n. 补贴；津贴	1	0	0			0	2
+subtle	adj. 微妙的；精细的	1	0	0			0	2
+successor	n. 继任者；接班人	1	0	0			0	2
+sue	v. 起诉；控告	1	0	0			0	2
+suffice	v. 足够；充足	1	0	0			0	2
+suite	n. 套房；一套	1	0	0			0	2
+summit	n. 峰会；顶峰	1	0	0			0	2
+summon	v. 召唤；召集	1	0	0			0	2
+superb	adj. 极好的；卓越的	1	0	0			0	2
+superficial	adj. 表面的；肤浅的	1	0	0			0	2
+supersonic	adj. 超音速的	1	0	0			0	2
+suppress	v. 压制；抑制	1	0	0			0	2
+surge	n. 激增 v. 汹涌	1	0	0			0	2
+surpass	v. 超越；胜过	1	0	0			0	2
+susceptible	adj. 易受影响的；敏感的	1	0	0			0	2
+suspension	n. 暂停；悬挂	1	0	0			0	2
+suspicious	adj. 可疑的；怀疑的	1	0	0			0	2
+swamp	n. 沼泽 v. 淹没	1	0	0			0	2
+symmetry	n. 对称；匀称	1	0	0			0	2
+symphony	n. 交响乐	1	0	0			0	2
+symposium	n. 研讨会；讨论会	1	0	0			0	2
+symptom	n. 症状；征兆	1	0	0			0	2
+synthesis	n. 合成；综合	1	0	0			0	2
+tablet	n. 药片；平板	1	0	0			0	2
+tackle	v. 处理 n. 装备	1	0	0			0	2
+tangle	v. 纠缠 n. 混乱	1	0	0			0	2
+tariff	n. 关税；税率	1	0	0			0	2
+tease	v. 戏弄；取笑	1	0	0			0	2
+tedious	adj. 乏味的；冗长的	1	0	0			0	2
+temperament	n. 气质；性格	1	0	0			0	2
+tempt	v. 诱惑；引诱	1	0	0			0	2
+tenant	n. 租户；房客	1	0	0			0	2
+tentative	adj. 试探性的；暂定的	1	0	0			0	2
+terminate	v. 结束；终止	1	0	0			0	2
+terrace	n. 梯田；露台	1	0	0			0	2
+terrain	n. 地形；地势	1	0	0			0	2
+terrific	adj. 极好的；可怕的	1	0	0			0	2
+testify	v. 作证；证明	1	0	0			0	2
+testimony	n. 证词；证据	1	0	0			0	2
+texture	n. 质地；纹理	1	0	0			0	2
+threshold	n. 门槛；界限	1	0	0			0	2
+thrill	n. 激动 v. 使兴奋	1	0	0			0	2
+thrive	v. 繁荣；兴旺	1	0	0			0	2
+token	n. 象征；代币	1	0	0			0	2
+toss	v. 抛；扔	1	0	0			0	2
+tow	v. 拖；牵引 n. 拖曳	1	0	0			0	2
+toxic	adj. 有毒的	1	0	0			0	2
+trait	n. 特征；特性	1	0	0			0	2
+transaction	n. 交易；业务	1	0	0			0	2
+transcend	v. 超越；胜过	1	0	0			0	2
+transient	adj. 短暂的；临时的	1	0	0			0	2
+transit	n. 运输；过境	1	0	0			0	2
+transition	n. 过渡；转变	1	0	0			0	2
+transplant	v. 移植 n. 移植	1	0	0			0	2
+traverse	v. 横穿；穿过	1	0	0			0	2
+trench	n. 沟渠；战壕	1	0	0			0	2
+tribe	n. 部落；种族	1	0	0			0	2
+tribute	n. 贡品；致敬	1	0	0			0	2
+trifle	n. 琐事 v. 怠慢	1	0	0			0	2
+triple	adj. 三倍的 v. 成为三倍	1	0	0			0	2
+trivial	adj. 琐碎的；不重要的	1	0	0			0	2
+tuck	v. 塞进；卷起	1	0	0			0	2
+tug	v. 用力拉 n. 拖船	1	0	0			0	2
+tuition	n. 学费；教学	1	0	0			0	2
+tumble	v. 跌倒；暴跌	1	0	0			0	2
+turbulent	adj. 动荡的；湍急的	1	0	0			0	2
+turnover	n. 营业额；人员流动	1	0	0			0	2
+ultraviolet	adj. 紫外线的	1	0	0			0	2
+unanimous	adj. 一致的；全票通过的	1	0	0			0	2
+underestimate	v. 低估 n. 低估	1	0	0			0	2
+underlying	adj. 潜在的；根本的	1	0	0			0	2
+undermine	v. 破坏；削弱	1	0	0			0	2
+unify	v. 统一；联合	1	0	0			0	2
+update	v. 更新 n. 最新信息	1	0	0			0	2
+upgrade	v. 升级 n. 升级	1	0	0			0	2
+uphold	v. 支持；维护	1	0	0			0	2
+utilize	v. 利用；使用	1	0	0			0	2
+utmost	adj. 极度的 n. 最大可能	1	0	0			0	2
+vacant	adj. 空着的；空缺的	1	0	0			0	2
+vaccine	n. 疫苗	1	0	0			0	2
+vague	adj. 模糊的；含糊的	1	0	0			0	2
+validity	n. 有效性；合法性	1	0	0			0	2
+veil	n. 面纱 v. 遮掩	1	0	0			0	2
+ventilate	v. 通风；公开讨论	1	0	0			0	2
+verbal	adj. 口头的；言语的	1	0	0			0	2
+verdict	n. 裁决；结论	1	0	0			0	2
+verge	n. 边缘 v. 接近	1	0	0			0	2
+versatile	adj. 多才多艺的；多功能的	1	0	0			0	2
+verse	n. 诗；韵文	1	0	0			0	2
+veto	n./v. 否决	1	0	0			0	2
+vicinity	n. 附近；邻近	1	0	0			0	2
+vicious	adj. 恶毒的；凶猛的	1	0	0			0	2
+violate	v. 违反；侵犯	1	0	0			0	2
+vocal	adj. 发声的；直言不讳的	1	0	0			0	2
+vocational	adj. 职业的	1	0	0			0	2
+void	adj. 空的 n. 空白；空虚	1	0	0			0	2
+vulgar	adj. 粗俗的；庸俗的	1	0	0			0	2
+vulnerable	adj. 脆弱的；易受伤的	1	0	0			0	2
+ward	n. 病房 v. 避开	1	0	0			0	2
+warfare	n. 战争；冲突	1	0	0			0	2
+warrant	n. 授权令 v. 保证	1	0	0			0	2
+watertight	adj. 不漏水的；无懈可击的	1	0	0			0	2
+weary	adj. 疲倦的 v. 使疲倦	1	0	0			0	2
+weird	adj. 奇怪的；怪异的	1	0	0			0	2
+whirl	v. 旋转 n. 旋转	1	0	0			0	2
+withhold	v. 扣留；保留	1	0	0			0	2
+wreck	n. 残骸 v. 破坏	1	0	0			0	2
+wrench	v. 猛扭 n. 扳手	1	0	0			0	2
+wrinkle	n. 皱纹 v. 起皱	1	0	0			0	2

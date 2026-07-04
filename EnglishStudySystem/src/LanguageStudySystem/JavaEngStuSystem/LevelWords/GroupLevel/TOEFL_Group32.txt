@@ -1,0 +1,16 @@
+15	0
+impact	n./v. 影响；冲击	1	0	0			0
+component	n. 组成部分；部件	1	0	0			0
+empathy	n. 共情；同情	1	0	0			0
+conjecture	n./v. 推测；猜测	1	0	0			0
+nonetheless	adv. 尽管如此	1	0	0			0
+reform	n./v. 改革；改良	1	0	0			0
+persist	v. 坚持；持续	1	0	0			0
+uniform	adj. 统一的 n. 制服	1	0	0			0
+occur	v. 发生；出现	1	0	0			0
+tangible	adj. 有形的；可触摸的	1	0	0			0
+indigenous	adj. 本土的；土著的	1	0	0			0
+prevalent	adj. 普遍的；流行的	1	0	0			0
+commission	n. 委员会；佣金 v. 委托	1	0	0			0
+render	v. 使成为；提供	1	0	0			0
+hamper	v. 妨碍；阻碍	1	0	0			0

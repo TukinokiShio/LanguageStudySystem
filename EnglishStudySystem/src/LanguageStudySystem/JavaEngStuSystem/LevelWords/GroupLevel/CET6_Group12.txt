@@ -1,0 +1,16 @@
+15	0
+permanent	adj. 永久的；持久的	1	0	0			0
+veto	n./v. 否决	1	0	0			0
+discrepancy	n. 差异；不一致	1	0	0			0
+aggregate	n. 合计 v. 聚集	1	0	0			0
+entail	v. 需要；牵涉	1	0	0			0
+declare	v. 宣布；声明	1	0	0			0
+rebellion	n. 叛乱；反抗	1	0	0			0
+evacuate	v. 疏散；撤离	1	0	0			0
+endeavor	n./v. 努力；尽力	1	0	0			0
+stride	n. 大步 v. 大步走	1	0	0			0
+assault	n./v. 攻击；袭击	1	0	0			0
+rein	n. 缰绳 v. 控制	1	0	0			0
+inland	adj. 内陆的 adv. 在内陆	1	0	0			0
+underlying	adj. 潜在的；根本的	1	0	0			0
+sue	v. 起诉；控告	1	0	0			0

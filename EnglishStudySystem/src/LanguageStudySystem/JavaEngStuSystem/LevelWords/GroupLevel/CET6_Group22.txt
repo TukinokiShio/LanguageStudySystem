@@ -1,0 +1,16 @@
+15	0
+trench	n. 沟渠；战壕	1	0	0			0
+dazzle	v. 使目眩 n. 耀眼	1	0	0			0
+barren	adj. 贫瘠的；不育的	1	0	0			0
+misery	n. 痛苦；悲惨	1	0	0			0
+precedent	n. 先例；前例	1	0	0			0
+texture	n. 质地；纹理	1	0	0			0
+ignite	v. 点燃；起火	1	0	0			0
+underestimate	v. 低估 n. 低估	1	0	0			0
+duplicate	v. 复制 n. 副本	1	0	0			0
+endurance	n. 耐力；持久力	1	0	0			0
+diversion	n. 转移；消遣	1	0	0			0
+transient	adj. 短暂的；临时的	1	0	0			0
+avail	v. 有益于 n. 效用	1	0	0			0
+disclose	v. 揭露；透露	1	0	0			0
+toss	v. 抛；扔	1	0	0			0

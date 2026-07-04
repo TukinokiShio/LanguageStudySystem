@@ -1,0 +1,16 @@
+15	0
+derive	v. 源自；获得	1	0	0			0
+discount	n. 折扣 v. 不考虑	1	0	0			0
+philosophy	n. 哲学；人生观	1	0	0			0
+aware	adj. 意识到的	1	0	0			0
+apparent	adj. 明显的；表面上的	1	0	0			0
+beyond	prep. 超越	1	0	0			0
+amount	n. 数量；总额	1	0	0			0
+argue	v. 争论；辩论	1	0	0			0
+impression	n. 印象；感觉	1	0	0			0
+confirm	v. 确认；证实	1	0	0			0
+apply	v. 申请；适用	1	0	0			0
+reputation	n. 名声；声誉	1	0	0			0
+significant	adj. 重要的；显著的	1	0	0			0
+abuse	n./v. 滥用；虐待	1	0	0			0
+initiative	n. 主动性 adj. 主动的	1	0	0			0

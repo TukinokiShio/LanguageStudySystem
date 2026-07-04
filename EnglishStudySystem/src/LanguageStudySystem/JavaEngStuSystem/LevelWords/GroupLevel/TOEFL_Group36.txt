@@ -1,0 +1,16 @@
+15	0
+merge	v. 合并；融合	1	0	0			0
+prior	adj. 先前的；优先的	1	0	0			0
+reject	v. 拒绝；排斥	1	0	0			0
+abbreviation	n. 缩写；缩写词	1	0	0			0
+retrieve	v. 取回；检索	1	0	0			0
+emit	v. 发出；散发	1	0	0			0
+conspicuous	adj. 显眼的；明显的	1	0	0			0
+conserve	v. 保存；节约	1	0	0			0
+boon	n. 恩惠；福利	1	0	0			0
+transform	v. 改变；转换	1	0	0			0
+resemble	v. 像；类似	1	0	0			0
+inhabit	v. 居住于；栖息于	1	0	0			0
+moreover	adv. 此外；而且	1	0	0			0
+conscientious	adj. 认真负责的	1	0	0			0
+ambitious	adj. 有雄心的	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+indulge	v. 放纵；沉溺	1	0	0			0
+recession	n. 经济衰退；后退	1	0	0			0
+imaginative	adj. 富有想象力的	1	0	0			0
+infectious	adj. 传染的；有感染力的	1	0	0			0
+excerpt	n. 摘录；选段	1	0	0			0
+manifest	v. 表明 adj. 明显的	1	0	0			0
+necessitate	v. 使成为必要	1	0	0			0
+furious	adj. 狂怒的；激烈的	1	0	0			0
+induce	v. 引起；诱导	1	0	0			0
+cabinet	n. 内阁；橱柜	1	0	0			0
+deviate	v. 偏离；背离	1	0	0			0
+terrace	n. 梯田；露台	1	0	0			0
+fragile	adj. 脆弱的；易碎的	1	0	0			0
+intervene	v. 干涉；介入	1	0	0			0
+advent	n. 到来；出现	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+adjust	v. 调整；适应	1	0	0			0
+academic	adj. 学术的	1	0	0			0
+policy	n. 政策；保险单	1	0	0			0
+revenue	n. 收入；税收	1	0	0			0
+prefer	v. 更喜欢；偏好	1	0	0			0
+domestic	adj. 国内的；家庭的	1	0	0			0
+impose	v. 强加；征税	1	0	0			0
+instinct	n. 本能；直觉	1	0	0			0
+revolution	n. 革命；变革	1	0	0			0
+charity	n. 慈善；施舍	1	0	0			0
+manufacture	n./v. 制造；生产	1	0	0			0
+negative	adj. 消极的；否定的	1	0	0			0
+independent	adj. 独立的	1	0	0			0
+ambition	n. 雄心；抱负	1	0	0			0
+abandon	v. 放弃；抛弃	1	0	0			0

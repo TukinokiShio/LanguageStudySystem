@@ -1,0 +1,16 @@
+15	0
+integrate	v. 整合；融合	1	0	0			0
+profit	n. 利润 v. 受益	1	0	0			0
+behave	v. 表现；行为	1	0	0			0
+avenue	n. 大街；途径	1	0	0			0
+agreement	n. 协议；一致	1	0	0			0
+obvious	adj. 明显的	1	0	0			0
+attempt	n./v. 尝试；企图	1	0	0			0
+trace	n. 痕迹 v. 追踪	1	0	0			0
+cease	v. 停止；终止	1	0	0			0
+battle	n. 战斗 v. 斗争	1	0	0			0
+aboard	adv./prep. 在船上/车上	1	0	0			0
+reasonable	adj. 合理的；通情达理的	1	0	0			0
+launch	n./v. 发射；启动	1	0	0			0
+aid	n./v. 帮助；援助	1	0	0			0
+attain	v. 达到；获得	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+embody	v. 体现；包含	1	0	0			0
+symmetry	n. 对称；匀称	1	0	0			0
+jeopardize	v. 危及；危害	1	0	0			0
+literal	adj. 字面意思的；逐字的	1	0	0			0
+terrain	n. 地形；地势	1	0	0			0
+contradict	v. 矛盾；反驳	1	0	0			0
+permissible	adj. 允许的；许可的	1	0	0			0
+warfare	n. 战争；冲突	1	0	0			0
+splash	v. 溅；泼 n. 飞溅声	1	0	0			0
+heal	v. 治愈；愈合	1	0	0			0
+patent	n. 专利 adj. 专利的	1	0	0			0
+prestige	n. 威望；声望	1	0	0			0
+pedestrian	n. 行人 adj. 平淡的	1	0	0			0
+divert	v. 转移；使分心	1	0	0			0
+prevalent	adj. 普遍的；流行的	1	0	0			0

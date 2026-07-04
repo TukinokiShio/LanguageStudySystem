@@ -1,0 +1,16 @@
+15	0
+rehearsal	n. 排练；预演	1	0	0			0
+caution	n. 谨慎；警告	1	0	0			0
+legend	n. 传说；传奇	1	0	0			0
+limp	v. 跛行 adj. 软弱的	1	0	0			0
+autonomy	n. 自治；自主权	1	0	0			0
+articulate	v. 清晰表达 adj. 口齿伶俐的	1	0	0			0
+pathetic	adj. 可怜的；悲哀的	1	0	0			0
+bribe	n. 贿赂 v. 行贿	1	0	0			0
+displace	v. 取代；置换	1	0	0			0
+ample	adj. 充足的；丰富的	1	0	0			0
+generalize	v. 概括；推广	1	0	0			0
+preclude	v. 排除；阻止	1	0	0			0
+appraisal	n. 评价；评估	1	0	0			0
+refute	v. 驳斥；反驳	1	0	0			0
+whirl	v. 旋转 n. 旋转	1	0	0			0

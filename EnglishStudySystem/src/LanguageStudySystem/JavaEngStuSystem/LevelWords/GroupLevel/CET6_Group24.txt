@@ -1,0 +1,16 @@
+15	0
+pursuit	n. 追求；追赶	1	0	0			0
+presume	v. 推测；假定	1	0	0			0
+sanction	n. 制裁 v. 批准	1	0	0			0
+poke	v. 戳；捅	1	0	0			0
+feast	n. 盛宴 v. 款待	1	0	0			0
+oath	n. 誓言；诅咒	1	0	0			0
+consequent	adj. 随之发生的	1	0	0			0
+contemplate	v. 沉思；考虑	1	0	0			0
+suspicious	adj. 可疑的；怀疑的	1	0	0			0
+eligible	adj. 有资格的；合格的	1	0	0			0
+verbal	adj. 口头的；言语的	1	0	0			0
+erupt	v. 爆发；喷发	1	0	0			0
+tug	v. 用力拉 n. 拖船	1	0	0			0
+strive	v. 努力；奋斗	1	0	0			0
+reconcile	v. 调和；使和解	1	0	0			0

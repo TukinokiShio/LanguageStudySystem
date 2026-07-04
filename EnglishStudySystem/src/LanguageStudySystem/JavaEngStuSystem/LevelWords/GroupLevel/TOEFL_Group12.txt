@@ -1,0 +1,16 @@
+15	0
+nevertheless	adv. 尽管如此	1	0	0			0
+maintain	v. 维持；保养	1	0	0			0
+subordinate	adj. 下级的 n. 下属	1	0	0			0
+articulate	v. 清晰表达 adj. 口齿伶俐的	1	0	0			0
+philosophy	n. 哲学；人生观	1	0	0			0
+fabricate	v. 制造；捏造	1	0	0			0
+analogy	n. 类比；相似	1	0	0			0
+scrutiny	n. 详细审查；细看	1	0	0			0
+aggregate	v. 聚集 n. 总计	1	0	0			0
+apparent	adj. 明显的；表面上的	1	0	0			0
+random	adj. 随机的；任意的	1	0	0			0
+confront	v. 面对；对抗	1	0	0			0
+realm	n. 领域；范围	1	0	0			0
+sole	adj. 唯一的；单独的	1	0	0			0
+drastic	adj. 激烈的；极端的	1	0	0			0

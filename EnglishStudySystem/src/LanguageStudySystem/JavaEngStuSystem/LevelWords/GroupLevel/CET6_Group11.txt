@@ -1,0 +1,16 @@
+15	0
+handicap	n. 障碍 v. 妨碍	1	0	0			0
+disrupt	v. 扰乱；中断	1	0	0			0
+likelihood	n. 可能性	1	0	0			0
+rash	adj. 轻率的 n. 皮疹	1	0	0			0
+criterion	n. 标准；准则	1	0	0			0
+veil	n. 面纱 v. 遮掩	1	0	0			0
+spectacle	n. 景象；奇观	1	0	0			0
+ascend	v. 上升；攀登	1	0	0			0
+hover	v. 盘旋；徘徊	1	0	0			0
+glare	v. 怒视；闪耀 n. 强光	1	0	0			0
+nonetheless	adv. 尽管如此	1	0	0			0
+denial	n. 否认；拒绝	1	0	0			0
+compulsory	adj. 强制的；必修的	1	0	0			0
+vulgar	adj. 粗俗的；庸俗的	1	0	0			0
+cling	v. 紧贴；坚持	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+rape	n./v. 强奸；掠夺	1	0	0			0
+revolve	v. 旋转；围绕	1	0	0			0
+latent	adj. 潜在的；潜伏的	1	0	0			0
+municipal	adj. 市政的；市的	1	0	0			0
+resemblance	n. 相似；类似	1	0	0			0
+minimal	adj. 最小的；最低限度的	1	0	0			0
+confer	v. 授予；商议	1	0	0			0
+fossil	n. 化石 adj. 化石的	1	0	0			0
+summon	v. 召唤；召集	1	0	0			0
+disposition	n. 性情；处置	1	0	0			0
+compliment	n. 赞美 v. 称赞	1	0	0			0
+inhabit	v. 居住于；栖息于	1	0	0			0
+deprive	v. 剥夺；使丧失	1	0	0			0
+spectator	n. 观众；旁观者	1	0	0			0
+allocate	v. 分配；拨出	1	0	0			0

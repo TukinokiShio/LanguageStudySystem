@@ -1,0 +1,16 @@
+15	0
+conform	v. 遵守；符合	1	0	0			0
+suffice	v. 足够；充足	1	0	0			0
+ascribe	v. 把…归因于	1	0	0			0
+tribe	n. 部落；种族	1	0	0			0
+recreation	n. 娱乐；消遣	1	0	0			0
+homogeneous	adj. 同质的；同类的	1	0	0			0
+incidentally	adv. 顺便提及；偶然	1	0	0			0
+simulate	v. 模拟；假装	1	0	0			0
+notorious	adj. 臭名昭著的	1	0	0			0
+commend	v. 表扬；推荐	1	0	0			0
+hollow	adj. 中空的；空洞的	1	0	0			0
+certify	v. 证明；证实	1	0	0			0
+insulate	v. 绝缘；隔离	1	0	0			0
+innumerable	adj. 无数的；数不清的	1	0	0			0
+initiate	v. 开始；发起	1	0	0			0

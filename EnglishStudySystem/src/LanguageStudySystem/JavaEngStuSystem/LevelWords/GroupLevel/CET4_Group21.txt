@@ -1,0 +1,16 @@
+15	0
+occasion	n. 场合；时机	1	0	0			0
+target	n. 目标 v. 瞄准	1	0	0			0
+abundant	adj. 丰富的；充裕的	1	0	0			0
+modify	v. 修改；调整	1	0	0			0
+request	n./v. 请求；要求	1	0	0			0
+conscious	adj. 有意识的	1	0	0			0
+consequence	n. 结果；后果	1	0	0			0
+exclude	v. 排除；排斥	1	0	0			0
+personnel	n. 人员；人事部门	1	0	0			0
+threat	n. 威胁；恐吓	1	0	0			0
+label	n. 标签 v. 标注	1	0	0			0
+eliminate	v. 消除；淘汰	1	0	0			0
+eventually	adv. 最终；终于	1	0	0			0
+amuse	v. 使娱乐；逗笑	1	0	0			0
+instrument	n. 工具；乐器	1	0	0			0

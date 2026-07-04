@@ -1,0 +1,16 @@
+15	0
+trivial	adj. 琐碎的；不重要的	1	0	0			0
+vocal	adj. 发声的；直言不讳的	1	0	0			0
+ambitious	adj. 有雄心的	1	0	0			0
+slim	adj. 苗条的；微小的	1	0	0			0
+rot	v. 腐烂 n. 腐烂	1	0	0			0
+thrive	v. 繁荣；兴旺	1	0	0			0
+periodic	adj. 周期性的	1	0	0			0
+entrepreneur	n. 企业家	1	0	0			0
+essence	n. 本质；精华	1	0	0			0
+endow	v. 赋予；捐赠	1	0	0			0
+foremost	adj. 最重要的；首先的	1	0	0			0
+surge	n. 激增 v. 汹涌	1	0	0			0
+regime	n. 政权；制度	1	0	0			0
+radiant	adj. 辐射的；容光焕发的	1	0	0			0
+envisage	v. 想象；设想	1	0	0			0

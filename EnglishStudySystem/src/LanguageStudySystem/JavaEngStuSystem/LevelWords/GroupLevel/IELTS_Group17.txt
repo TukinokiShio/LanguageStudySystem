@@ -1,0 +1,16 @@
+15	0
+unemployment	n. 失业；失业率	1	0	0			0
+enforcement	n. 执行；强制	1	0	0			0
+occupation	n. 职业；占领	1	0	0			0
+employment	n. 就业；雇佣	1	0	0			0
+reduction	n. 减少；缩减	1	0	0			0
+promotion	n. 促进；晋升	1	0	0			0
+agriculture	n. 农业；农学	1	0	0			0
+performance	n. 表现；性能	1	0	0			0
+controversial	adj. 有争议的	1	0	0			0
+conventional	adj. 传统的；常规的	1	0	0			0
+congratulation	n. 祝贺；贺词	1	0	0			0
+adequate	adj. 足够的；适当的	1	0	0			0
+systematic	adj. 系统的；有组织的	1	0	0			0
+calculation	n. 计算；估计	1	0	0			0
+curriculum	n. 课程；全部课程	1	0	0			0

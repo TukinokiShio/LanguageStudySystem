@@ -1,0 +1,16 @@
+15	0
+impede	v. 阻碍；妨碍	1	0	0			0
+contradict	v. 矛盾；反驳	1	0	0			0
+investigate	v. 调查；研究	1	0	0			0
+negotiate	v. 谈判；协商	1	0	0			0
+scope	n. 范围；领域	1	0	0			0
+enrich	v. 丰富；使充实	1	0	0			0
+resolve	v. 解决；决心	1	0	0			0
+disrupt	v. 扰乱；中断	1	0	0			0
+hierarchy	n. 等级制度；层级	1	0	0			0
+mechanism	n. 机制；机械装置	1	0	0			0
+coincide	v. 同时发生；一致	1	0	0			0
+catalyst	n. 催化剂；促进因素	1	0	0			0
+objective	n. 目标 adj. 客观的	1	0	0			0
+dedicate	v. 奉献；致力于	1	0	0			0
+guarantee	n./v. 保证；担保	1	0	0			0

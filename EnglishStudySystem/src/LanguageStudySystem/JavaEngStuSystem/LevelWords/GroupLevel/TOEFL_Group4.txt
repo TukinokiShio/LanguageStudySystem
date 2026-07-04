@@ -1,0 +1,16 @@
+15	0
+demographic	adj. 人口统计的	1	0	0			0
+catastrophe	n. 大灾难；灾祸	1	0	0			0
+ensure	v. 确保；保证	1	0	0			0
+eloquent	adj. 有口才的；雄辩的	1	0	0			0
+domain	n. 领域；范围	1	0	0			0
+ongoing	adj. 持续的；进行中的	1	0	0			0
+restore	v. 恢复；修复	1	0	0			0
+assign	v. 分配；指派	1	0	0			0
+decompose	v. 分解；腐烂	1	0	0			0
+volatile	adj. 不稳定的；易挥发的	1	0	0			0
+consequent	adj. 随之发生的	1	0	0			0
+notion	n. 概念；想法	1	0	0			0
+accurate	adj. 准确的；精确的	1	0	0			0
+target	n. 目标 v. 瞄准	1	0	0			0
+obscure	adj. 模糊的 v. 使朦胧	1	0	0			0

@@ -1,0 +1,565 @@
+564	0
+abandon	v. 放弃；遗弃	1	0	0			0	4
+abbreviation	n. 缩写；缩写词	1	0	0			0	4
+abolish	v. 废除；取消	1	0	0			0	4
+abrupt	adj. 突然的；唐突的	1	0	0			0	4
+abstract	adj. 抽象的 n. 摘要	1	0	0			0	4
+absurd	adj. 荒谬的；可笑的	1	0	0			0	4
+abundance	n. 丰富；充裕	1	0	0			0	4
+abuse	n./v. 滥用；虐待	1	0	0			0	4
+academy	n. 学院；研究院	1	0	0			0	4
+accelerate	v. 加速；促进	1	0	0			0	4
+accessible	adj. 可接近的；易理解的	1	0	0			0	4
+accommodate	v. 容纳；适应	1	0	0			0	4
+accompany	v. 陪伴；伴随	1	0	0			0	4
+accomplish	v. 完成；实现	1	0	0			0	4
+accumulate	v. 积累；积聚	1	0	0			0	4
+accurate	adj. 准确的；精确的	1	0	0			0	4
+achieve	v. 达到；取得	1	0	0			0	4
+acknowledge	v. 承认；确认	1	0	0			0	4
+acquire	v. 获得；学到	1	0	0			0	4
+adapt	v. 适应；改编	1	0	0			0	4
+adequate	adj. 足够的；适当的	1	0	0			0	4
+adhere	v. 粘附；坚持	1	0	0			0	4
+adjacent	adj. 邻近的；毗连的	1	0	0			0	4
+adjust	v. 调整；适应	1	0	0			0	4
+administer	v. 管理；执行	1	0	0			0	4
+adolescent	n. 青少年 adj. 青春期的	1	0	0			0	4
+advance	n./v. 前进；进步	1	0	0			0	4
+adverse	adj. 不利的；相反的	1	0	0			0	4
+advocate	v. 提倡；主张 n. 倡导者	1	0	0			0	4
+aesthetic	adj. 美学的；审美的	1	0	0			0	4
+affect	v. 影响；感动	1	0	0			0	4
+aggregate	v. 聚集 n. 总计	1	0	0			0	4
+agitate	v. 搅动；煽动	1	0	0			0	4
+albeit	conj. 虽然；即使	1	0	0			0	4
+allocate	v. 分配；拨出	1	0	0			0	4
+alter	v. 改变；修改	1	0	0			0	4
+alternative	n. 替代方案 adj. 替代的	1	0	0			0	4
+ambiguous	adj. 含糊的；模棱两可的	1	0	0			0	4
+ambitious	adj. 有雄心的	1	0	0			0	4
+ameliorate	v. 改善；改良	1	0	0			0	4
+amend	v. 修改；修订	1	0	0			0	4
+ample	adj. 充足的；丰富的	1	0	0			0	4
+analogy	n. 类比；相似	1	0	0			0	4
+analyze	v. 分析；解析	1	0	0			0	4
+ancestor	n. 祖先；祖宗	1	0	0			0	4
+anecdote	n. 轶事；趣闻	1	0	0			0	4
+annihilate	v. 消灭；歼灭	1	0	0			0	4
+annual	adj. 每年的 n. 年刊	1	0	0			0	4
+antagonism	n. 对抗；敌对	1	0	0			0	4
+anticipate	v. 预期；期望	1	0	0			0	4
+apparent	adj. 明显的；表面上的	1	0	0			0	4
+appeal	n./v. 呼吁；吸引	1	0	0			0	4
+append	v. 附加；添加	1	0	0			0	4
+appreciate	v. 欣赏；感激	1	0	0			0	4
+approach	v. 接近 n. 方法	1	0	0			0	4
+appropriate	adj. 适当的 v. 占用	1	0	0			0	4
+approximately	adv. 大约；近似地	1	0	0			0	4
+arbitrary	adj. 任意的；武断的	1	0	0			0	4
+articulate	v. 清晰表达 adj. 口齿伶俐的	1	0	0			0	4
+ascribe	v. 把…归因于	1	0	0			0	4
+aspect	n. 方面；外貌	1	0	0			0	4
+assemble	v. 集合；组装	1	0	0			0	4
+assert	v. 断言；坚持	1	0	0			0	4
+assess	v. 评估；评定	1	0	0			0	4
+assign	v. 分配；指派	1	0	0			0	4
+assist	v. 帮助；协助	1	0	0			0	4
+assume	v. 假定；承担	1	0	0			0	4
+attain	v. 达到；获得	1	0	0			0	4
+attitude	n. 态度；看法	1	0	0			0	4
+attribute	v. 归因于 n. 属性	1	0	0			0	4
+augment	v. 增加；扩大	1	0	0			0	4
+authentic	adj. 真实的；可靠的	1	0	0			0	4
+authority	n. 权威；当局	1	0	0			0	4
+autonomous	adj. 自治的；自主的	1	0	0			0	4
+avail	v. 有益于 n. 效用	1	0	0			0	4
+avert	v. 避免；转移	1	0	0			0	4
+barrier	n. 障碍；屏障	1	0	0			0	4
+behalf	n. 代表；利益	1	0	0			0	4
+belittle	v. 贬低；轻视	1	0	0			0	4
+beneficial	adj. 有益的；有利的	1	0	0			0	4
+bias	n. 偏见 v. 使有偏见	1	0	0			0	4
+bizarre	adj. 奇异的；古怪的	1	0	0			0	4
+bolster	v. 支持；加强	1	0	0			0	4
+boom	n. 繁荣 v. 激增	1	0	0			0	4
+boon	n. 恩惠；福利	1	0	0			0	4
+brevity	n. 简洁；短暂	1	0	0			0	4
+bulk	n. 大量；大部分	1	0	0			0	4
+burgeon	v. 迅速发展；萌芽	1	0	0			0	4
+capable	adj. 有能力的	1	0	0			0	4
+capacity	n. 能力；容量	1	0	0			0	4
+catalyst	n. 催化剂；促进因素	1	0	0			0	4
+catastrophe	n. 大灾难；灾祸	1	0	0			0	4
+cease	v. 停止；终止	1	0	0			0	4
+channel	n. 频道；渠道	1	0	0			0	4
+chronic	adj. 慢性的；长期的	1	0	0			0	4
+circumvent	v. 规避；绕过	1	0	0			0	4
+cite	v. 引用；引证	1	0	0			0	4
+clarify	v. 澄清；阐明	1	0	0			0	4
+coerce	v. 强迫；强制	1	0	0			0	4
+coherent	adj. 连贯的；一致的	1	0	0			0	4
+coincide	v. 同时发生；一致	1	0	0			0	4
+collapse	v./n. 倒塌；崩溃	1	0	0			0	4
+commence	v. 开始；着手	1	0	0			0	4
+commission	n. 委员会；佣金 v. 委托	1	0	0			0	4
+commit	v. 犯（罪）；承诺	1	0	0			0	4
+commodity	n. 商品；货物	1	0	0			0	4
+compatible	adj. 兼容的；合得来的	1	0	0			0	4
+compensate	v. 补偿；赔偿	1	0	0			0	4
+compile	v. 编译；汇编	1	0	0			0	4
+complement	v. 补充 n. 补足物	1	0	0			0	4
+comply	v. 遵守；顺从	1	0	0			0	4
+component	n. 组成部分；部件	1	0	0			0	4
+comprehensive	adj. 全面的；综合的	1	0	0			0	4
+comprise	v. 包含；由…组成	1	0	0			0	4
+compulsory	adj. 强制的；必修的	1	0	0			0	4
+conceive	v. 构想；怀孕	1	0	0			0	4
+concentrate	v. 集中；浓缩	1	0	0			0	4
+concise	adj. 简洁的；简明的	1	0	0			0	4
+conclusive	adj. 决定性的；结论性的	1	0	0			0	4
+concurrent	adj. 同时发生的	1	0	0			0	4
+condone	v. 宽恕；容忍	1	0	0			0	4
+confine	v. 限制；禁闭	1	0	0			0	4
+confirm	v. 确认；证实	1	0	0			0	4
+conform	v. 遵守；符合	1	0	0			0	4
+confront	v. 面对；对抗	1	0	0			0	4
+congregate	v. 聚集；集合	1	0	0			0	4
+conjecture	n./v. 推测；猜测	1	0	0			0	4
+conscientious	adj. 认真负责的	1	0	0			0	4
+consensus	n. 共识；一致意见	1	0	0			0	4
+consequent	adj. 随之发生的	1	0	0			0	4
+conserve	v. 保存；节约	1	0	0			0	4
+considerable	adj. 相当大的；重要的	1	0	0			0	4
+consist	v. 由…组成；在于	1	0	0			0	4
+consistent	adj. 一致的；始终如一的	1	0	0			0	4
+consolidate	v. 巩固；合并	1	0	0			0	4
+conspicuous	adj. 显眼的；明显的	1	0	0			0	4
+constant	adj. 不变的；持续的	1	0	0			0	4
+constitute	v. 构成；组成	1	0	0			0	4
+constrain	v. 限制；约束	1	0	0			0	4
+construct	v. 建造；构建	1	0	0			0	4
+consult	v. 咨询；查阅	1	0	0			0	4
+consume	v. 消费；消耗	1	0	0			0	4
+contaminate	v. 污染；玷污	1	0	0			0	4
+contemporary	adj. 当代的；同时代的	1	0	0			0	4
+contend	v. 竞争；主张	1	0	0			0	4
+context	n. 背景；上下文	1	0	0			0	4
+contradict	v. 矛盾；反驳	1	0	0			0	4
+contribute	v. 贡献；捐献	1	0	0			0	4
+controversy	n. 争议；争论	1	0	0			0	4
+convene	v. 召集；集合	1	0	0			0	4
+conventional	adj. 传统的；常规的	1	0	0			0	4
+converge	v. 聚集；汇合	1	0	0			0	4
+converse	v. 交谈 adj. 相反的	1	0	0			0	4
+convert	v. 转换；转变	1	0	0			0	4
+convey	v. 传达；运送	1	0	0			0	4
+convince	v. 说服；使确信	1	0	0			0	4
+cooperate	v. 合作；协作	1	0	0			0	4
+coordinate	v. 协调 n. 坐标	1	0	0			0	4
+cope	v. 应对；处理	1	0	0			0	4
+correlate	v. 使相关联	1	0	0			0	4
+correspond	v. 通信；对应	1	0	0			0	4
+corroborate	v. 证实；确证	1	0	0			0	4
+counterpart	n. 对应物；职位相同的人	1	0	0			0	4
+crucial	adj. 至关重要的	1	0	0			0	4
+cumulative	adj. 累积的；渐增的	1	0	0			0	4
+curtail	v. 削减；缩短	1	0	0			0	4
+cynical	adj. 愤世嫉俗的；怀疑的	1	0	0			0	4
+debilitate	v. 使虚弱；削弱	1	0	0			0	4
+decipher	v. 破译；解读	1	0	0			0	4
+decline	n./v. 下降；衰退	1	0	0			0	4
+decompose	v. 分解；腐烂	1	0	0			0	4
+dedicate	v. 奉献；致力于	1	0	0			0	4
+deem	v. 认为；视为	1	0	0			0	4
+deficiency	n. 缺乏；不足	1	0	0			0	4
+definitive	adj. 确定的；决定性的	1	0	0			0	4
+deflect	v. 使偏转；转移	1	0	0			0	4
+deforestation	n. 森林砍伐；滥伐	1	0	0			0	4
+degradation	n. 退化；降级	1	0	0			0	4
+delegate	v. 委托；选派 n. 代表	1	0	0			0	4
+deliberate	adj. 故意的 v. 仔细考虑	1	0	0			0	4
+delicate	adj. 精致的；微妙的	1	0	0			0	4
+demographic	adj. 人口统计的	1	0	0			0	4
+demonstrate	v. 证明；示范	1	0	0			0	4
+denote	v. 表示；意味着	1	0	0			0	4
+depict	v. 描绘；描述	1	0	0			0	4
+deplete	v. 耗尽；大量减少	1	0	0			0	4
+deploy	v. 部署；利用	1	0	0			0	4
+depreciate	v. 贬值；贬低	1	0	0			0	4
+depress	v. 使沮丧；压低	1	0	0			0	4
+derive	v. 源自；获得	1	0	0			0	4
+designate	v. 指定；任命	1	0	0			0	4
+deter	v. 阻止；威慑	1	0	0			0	4
+deteriorate	v. 恶化；退化	1	0	0			0	4
+detrimental	adj. 有害的；不利的	1	0	0			0	4
+devastate	v. 毁灭；摧毁	1	0	0			0	4
+deviate	v. 偏离；背离	1	0	0			0	4
+devise	v. 设计；发明	1	0	0			0	4
+differentiate	v. 区分；辨别	1	0	0			0	4
+diffuse	v. 扩散；传播 adj. 弥漫的	1	0	0			0	4
+dilemma	n. 困境；进退两难	1	0	0			0	4
+diminish	v. 减少；缩小	1	0	0			0	4
+discern	v. 辨别；识别	1	0	0			0	4
+discourse	n. 论述；话语	1	0	0			0	4
+discrepancy	n. 差异；不一致	1	0	0			0	4
+discrete	adj. 离散的；分离的	1	0	0			0	4
+discriminate	v. 歧视；区别	1	0	0			0	4
+disdain	n./v. 蔑视；鄙视	1	0	0			0	4
+disperse	v. 分散；驱散	1	0	0			0	4
+displace	v. 取代；置换	1	0	0			0	4
+dispose	v. 处理；安排	1	0	0			0	4
+dispute	n./v. 争论；争执	1	0	0			0	4
+disrupt	v. 扰乱；中断	1	0	0			0	4
+disseminate	v. 传播；散布	1	0	0			0	4
+dissolve	v. 溶解；解散	1	0	0			0	4
+distinct	adj. 截然不同的；清楚的	1	0	0			0	4
+distort	v. 扭曲；歪曲	1	0	0			0	4
+distribute	v. 分配；分发	1	0	0			0	4
+diverse	adj. 多样的；不同的	1	0	0			0	4
+document	v. 记录 n. 文件	1	0	0			0	4
+domain	n. 领域；范围	1	0	0			0	4
+domestic	adj. 国内的；家庭的	1	0	0			0	4
+dominate	v. 支配；主导	1	0	0			0	4
+dormant	adj. 休眠的；静止的	1	0	0			0	4
+draft	n. 草稿 v. 起草	1	0	0			0	4
+drastic	adj. 激烈的；极端的	1	0	0			0	4
+drawback	n. 缺点；不利条件	1	0	0			0	4
+drought	n. 干旱	1	0	0			0	4
+duration	n. 持续时间；期间	1	0	0			0	4
+dynamic	adj. 动态的；有活力的	1	0	0			0	4
+eclipse	n. 日食 v. 使黯然失色	1	0	0			0	4
+ecology	n. 生态学	1	0	0			0	4
+elaborate	adj. 精心制作的 v. 详细阐述	1	0	0			0	4
+elevate	v. 提升；提高	1	0	0			0	4
+elicit	v. 引出；探出	1	0	0			0	4
+eliminate	v. 消除；淘汰	1	0	0			0	4
+eloquent	adj. 有口才的；雄辩的	1	0	0			0	4
+elusive	adj. 难以捉摸的；逃避的	1	0	0			0	4
+emanate	v. 发出；散发	1	0	0			0	4
+embark	v. 着手；上船	1	0	0			0	4
+embed	v. 嵌入；植入	1	0	0			0	4
+embrace	v. 拥抱；包含	1	0	0			0	4
+emerge	v. 出现；浮现	1	0	0			0	4
+eminent	adj. 杰出的；著名的	1	0	0			0	4
+emit	v. 发出；散发	1	0	0			0	4
+empathy	n. 共情；同情	1	0	0			0	4
+empirical	adj. 经验主义的	1	0	0			0	4
+empower	v. 授权；赋予权力	1	0	0			0	4
+enable	v. 使能够；启用	1	0	0			0	4
+encompass	v. 包含；包围	1	0	0			0	4
+encounter	n./v. 遭遇；邂逅	1	0	0			0	4
+endeavor	n./v. 努力；尽力	1	0	0			0	4
+endorse	v. 支持；背书	1	0	0			0	4
+endure	v. 忍受；持续	1	0	0			0	4
+enforce	v. 执行；强制	1	0	0			0	4
+engage	v. 从事；订婚	1	0	0			0	4
+enhance	v. 增强；提高	1	0	0			0	4
+enormous	adj. 巨大的；庞大的	1	0	0			0	4
+enrich	v. 丰富；使充实	1	0	0			0	4
+ensue	v. 继而发生；随之而来	1	0	0			0	4
+ensure	v. 确保；保证	1	0	0			0	4
+entail	v. 需要；牵涉	1	0	0			0	4
+entity	n. 实体；存在物	1	0	0			0	4
+entrepreneur	n. 企业家	1	0	0			0	4
+envision	v. 想象；设想	1	0	0			0	4
+episode	n. 插曲；一段经历	1	0	0			0	4
+equitable	adj. 公平的；公正的	1	0	0			0	4
+equivalent	adj. 等价的 n. 等价物	1	0	0			0	4
+eradicate	v. 根除；消灭	1	0	0			0	4
+erode	v. 侵蚀；腐蚀	1	0	0			0	4
+erupt	v. 爆发；喷发	1	0	0			0	4
+escalate	v. 升级；加剧	1	0	0			0	4
+essence	n. 本质；精华	1	0	0			0	4
+establish	v. 建立；确立	1	0	0			0	4
+estimate	n./v. 估计；估算	1	0	0			0	4
+evade	v. 逃避；回避	1	0	0			0	4
+evaluate	v. 评估；评价	1	0	0			0	4
+eventually	adv. 最终；终于	1	0	0			0	4
+evidence	n. 证据；迹象	1	0	0			0	4
+evolve	v. 进化；发展	1	0	0			0	4
+exacerbate	v. 加重；恶化	1	0	0			0	4
+exceed	v. 超过；超越	1	0	0			0	4
+exclude	v. 排除；排斥	1	0	0			0	4
+exclusive	adj. 独家的；排外的	1	0	0			0	4
+execute	v. 执行；处决	1	0	0			0	4
+exemplify	v. 举例说明	1	0	0			0	4
+exert	v. 施加；运用	1	0	0			0	4
+exhaust	v. 耗尽；使筋疲力尽	1	0	0			0	4
+exhibit	n./v. 展览；展示	1	0	0			0	4
+expand	v. 扩张；扩展	1	0	0			0	4
+expedite	v. 加速；促进	1	0	0			0	4
+expenditure	n. 支出；花费	1	0	0			0	4
+expertise	n. 专长；专门知识	1	0	0			0	4
+exploit	v. 开发；剥削	1	0	0			0	4
+exponential	adj. 指数的；指数增长的	1	0	0			0	4
+expose	v. 暴露；揭露	1	0	0			0	4
+expound	v. 阐述；解释	1	0	0			0	4
+extensive	adj. 广泛的；大量的	1	0	0			0	4
+external	adj. 外部的；外面的	1	0	0			0	4
+extinguish	v. 熄灭；消灭	1	0	0			0	4
+extract	v. 提取 n. 摘录	1	0	0			0	4
+extrapolate	v. 推断；外推	1	0	0			0	4
+fabricate	v. 制造；捏造	1	0	0			0	4
+facilitate	v. 促进；使便利	1	0	0			0	4
+factor	n. 因素；因子	1	0	0			0	4
+feasible	adj. 可行的；可能的	1	0	0			0	4
+fluctuate	v. 波动；涨落	1	0	0			0	4
+formulate	v. 制定；规划	1	0	0			0	4
+foster	v. 培养；促进	1	0	0			0	4
+foundation	n. 基础；基金会	1	0	0			0	4
+framework	n. 框架；结构	1	0	0			0	4
+friction	n. 摩擦；冲突	1	0	0			0	4
+fundamental	adj. 基本的 n. 基础	1	0	0			0	4
+furthermore	adv. 此外；而且	1	0	0			0	4
+generate	v. 产生；生成	1	0	0			0	4
+gradual	adj. 逐渐的；逐步的	1	0	0			0	4
+grant	v. 授予 n. 拨款	1	0	0			0	4
+guarantee	n./v. 保证；担保	1	0	0			0	4
+hamper	v. 妨碍；阻碍	1	0	0			0	4
+hence	adv. 因此；所以	1	0	0			0	4
+hierarchy	n. 等级制度；层级	1	0	0			0	4
+highlight	v. 强调 n. 亮点	1	0	0			0	4
+hinder	v. 阻碍；妨碍	1	0	0			0	4
+hypothesis	n. 假设；假说	1	0	0			0	4
+identical	adj. 相同的；同一的	1	0	0			0	4
+identify	v. 识别；鉴定	1	0	0			0	4
+ideology	n. 意识形态	1	0	0			0	4
+ignorance	n. 无知；愚昧	1	0	0			0	4
+illuminate	v. 照亮；阐明	1	0	0			0	4
+illustrate	v. 说明；举例	1	0	0			0	4
+immense	adj. 巨大的；广大的	1	0	0			0	4
+immerse	v. 沉浸；使陷入	1	0	0			0	4
+impact	n./v. 影响；冲击	1	0	0			0	4
+impair	v. 损害；削弱	1	0	0			0	4
+impede	v. 阻碍；妨碍	1	0	0			0	4
+implement	v. 实施 n. 工具	1	0	0			0	4
+implication	n. 含义；暗示	1	0	0			0	4
+implicit	adj. 含蓄的；内含的	1	0	0			0	4
+impose	v. 强加；征税	1	0	0			0	4
+impoverish	v. 使贫困；使贫瘠	1	0	0			0	4
+incentive	n. 激励；刺激	1	0	0			0	4
+incidence	n. 发生率；影响范围	1	0	0			0	4
+incorporate	v. 包含；合并	1	0	0			0	4
+indigenous	adj. 本土的；土著的	1	0	0			0	4
+indispensable	adj. 不可或缺的	1	0	0			0	4
+induce	v. 引起；诱导	1	0	0			0	4
+inevitable	adj. 不可避免的	1	0	0			0	4
+inferior	adj. 低劣的；下级的	1	0	0			0	4
+infrastructure	n. 基础设施	1	0	0			0	4
+inhabit	v. 居住于；栖息于	1	0	0			0	4
+inherent	adj. 固有的；内在的	1	0	0			0	4
+inhibit	v. 抑制；禁止	1	0	0			0	4
+initiate	v. 开始；发起	1	0	0			0	4
+innovate	v. 创新；革新	1	0	0			0	4
+insight	n. 洞察力；深刻见解	1	0	0			0	4
+integral	adj. 必需的；完整的	1	0	0			0	4
+integrate	v. 整合；融合	1	0	0			0	4
+interact	v. 互动；相互作用	1	0	0			0	4
+interfere	v. 干涉；干扰	1	0	0			0	4
+interpret	v. 解释；口译	1	0	0			0	4
+intervene	v. 干涉；介入	1	0	0			0	4
+intrinsic	adj. 固有的；内在的	1	0	0			0	4
+investigate	v. 调查；研究	1	0	0			0	4
+invoke	v. 调用；援引	1	0	0			0	4
+involve	v. 涉及；包含	1	0	0			0	4
+isolate	v. 隔离；孤立	1	0	0			0	4
+justify	v. 证明…有理	1	0	0			0	4
+launch	n./v. 发射；启动	1	0	0			0	4
+legislate	v. 立法；制定法律	1	0	0			0	4
+levy	v. 征收 n. 税款	1	0	0			0	4
+liberal	adj. 自由的；开明的	1	0	0			0	4
+likewise	adv. 同样地；也	1	0	0			0	4
+magnitude	n. 大小；重要性	1	0	0			0	4
+maintain	v. 维持；保养	1	0	0			0	4
+manifest	v. 表明 adj. 明显的	1	0	0			0	4
+manipulate	v. 操纵；操作	1	0	0			0	4
+margin	n. 边缘；利润	1	0	0			0	4
+maximize	v. 最大化	1	0	0			0	4
+mechanism	n. 机制；机械装置	1	0	0			0	4
+mediate	v. 调解；斡旋	1	0	0			0	4
+merge	v. 合并；融合	1	0	0			0	4
+methodology	n. 方法论；方法	1	0	0			0	4
+migrate	v. 迁移；移居	1	0	0			0	4
+minimize	v. 最小化；降到最低	1	0	0			0	4
+modify	v. 修改；调整	1	0	0			0	4
+monitor	n./v. 监控；监视	1	0	0			0	4
+moreover	adv. 此外；而且	1	0	0			0	4
+motivate	v. 激励；激发	1	0	0			0	4
+navigate	v. 导航；航行	1	0	0			0	4
+negate	v. 否定；取消	1	0	0			0	4
+negotiate	v. 谈判；协商	1	0	0			0	4
+nevertheless	adv. 尽管如此	1	0	0			0	4
+nonetheless	adv. 尽管如此	1	0	0			0	4
+notion	n. 概念；想法	1	0	0			0	4
+novel	adj. 新颖的 n. 小说	1	0	0			0	4
+objective	n. 目标 adj. 客观的	1	0	0			0	4
+oblige	v. 迫使；施恩于	1	0	0			0	4
+obscure	adj. 模糊的 v. 使朦胧	1	0	0			0	4
+obtain	v. 获得；取得	1	0	0			0	4
+occur	v. 发生；出现	1	0	0			0	4
+offset	v. 抵消 n. 补偿	1	0	0			0	4
+ongoing	adj. 持续的；进行中的	1	0	0			0	4
+optimize	v. 优化；充分利用	1	0	0			0	4
+orient	v. 使适应 n. 东方	1	0	0			0	4
+outline	n. 大纲 v. 概述	1	0	0			0	4
+output	n./v. 输出；产量	1	0	0			0	4
+overall	adj. 总体的；全面的	1	0	0			0	4
+overlap	v. 重叠 n. 重叠部分	1	0	0			0	4
+overwhelm	v. 压倒；淹没	1	0	0			0	4
+paradigm	n. 范式；范例	1	0	0			0	4
+paradox	n. 矛盾；悖论	1	0	0			0	4
+parameter	n. 参数；规范	1	0	0			0	4
+participate	v. 参与；参加	1	0	0			0	4
+perceive	v. 感知；察觉	1	0	0			0	4
+persist	v. 坚持；持续	1	0	0			0	4
+perspective	n. 视角；观点	1	0	0			0	4
+pertinent	adj. 相关的；恰当的	1	0	0			0	4
+phenomenon	n. 现象；奇迹	1	0	0			0	4
+philosophy	n. 哲学；人生观	1	0	0			0	4
+plausible	adj. 貌似合理的	1	0	0			0	4
+policy	n. 政策；保险单	1	0	0			0	4
+portray	v. 描绘；扮演	1	0	0			0	4
+potential	adj. 潜在的 n. 潜力	1	0	0			0	4
+precede	v. 在…之前；先于	1	0	0			0	4
+predominant	adj. 占优势的；主要的	1	0	0			0	4
+preliminary	adj. 初步的；预备的	1	0	0			0	4
+prescribe	v. 规定；开处方	1	0	0			0	4
+preserve	v. 保存；保护	1	0	0			0	4
+presumably	adv. 大概；可能	1	0	0			0	4
+prevail	v. 流行；占优势	1	0	0			0	4
+prevalent	adj. 普遍的；流行的	1	0	0			0	4
+primarily	adv. 主要地；根本地	1	0	0			0	4
+principal	adj. 主要的 n. 校长	1	0	0			0	4
+principle	n. 原则；原理	1	0	0			0	4
+prior	adj. 先前的；优先的	1	0	0			0	4
+priority	n. 优先；优先权	1	0	0			0	4
+probe	n./v. 探测；调查	1	0	0			0	4
+proceed	v. 继续；进行	1	0	0			0	4
+proclaim	v. 宣布；宣告	1	0	0			0	4
+profound	adj. 深刻的；深邃的	1	0	0			0	4
+prohibit	v. 禁止；阻止	1	0	0			0	4
+prominent	adj. 突出的；著名的	1	0	0			0	4
+promote	v. 促进；晋升	1	0	0			0	4
+prompt	v. 促使 adj. 迅速的	1	0	0			0	4
+proportion	n. 比例；部分	1	0	0			0	4
+propose	v. 建议；提议	1	0	0			0	4
+prospect	n. 前景；可能性	1	0	0			0	4
+protocol	n. 协议；礼仪	1	0	0			0	4
+provoke	v. 激怒；引起	1	0	0			0	4
+publish	v. 出版；发表	1	0	0			0	4
+pursue	v. 追求；追赶	1	0	0			0	4
+qualitative	adj. 定性的	1	0	0			0	4
+quantitative	adj. 定量的	1	0	0			0	4
+quest	n./v. 寻求；探索	1	0	0			0	4
+radical	adj. 激进的；根本的	1	0	0			0	4
+random	adj. 随机的；任意的	1	0	0			0	4
+rational	adj. 理性的；合理的	1	0	0			0	4
+readily	adv. 容易地；乐意地	1	0	0			0	4
+realm	n. 领域；范围	1	0	0			0	4
+reconcile	v. 调和；使和解	1	0	0			0	4
+refine	v. 精炼；提炼	1	0	0			0	4
+reflect	v. 反映；反射	1	0	0			0	4
+reform	n./v. 改革；改良	1	0	0			0	4
+regulate	v. 调节；管理	1	0	0			0	4
+reinforce	v. 加强；增强	1	0	0			0	4
+reject	v. 拒绝；排斥	1	0	0			0	4
+release	n./v. 释放；发布	1	0	0			0	4
+relevant	adj. 相关的；切题的	1	0	0			0	4
+reluctant	adj. 不情愿的	1	0	0			0	4
+render	v. 使成为；提供	1	0	0			0	4
+renowned	adj. 著名的；有名的	1	0	0			0	4
+replenish	v. 补充；再装满	1	0	0			0	4
+resemble	v. 像；类似	1	0	0			0	4
+resident	n. 居民 adj. 居住的	1	0	0			0	4
+resolve	v. 解决；决心	1	0	0			0	4
+restore	v. 恢复；修复	1	0	0			0	4
+restrain	v. 抑制；约束	1	0	0			0	4
+restrict	v. 限制；约束	1	0	0			0	4
+retain	v. 保持；保留	1	0	0			0	4
+retrieve	v. 取回；检索	1	0	0			0	4
+reveal	v. 揭示；透露	1	0	0			0	4
+revenue	n. 收入；税收	1	0	0			0	4
+reverse	v. 逆转 adj. 相反的	1	0	0			0	4
+revolution	n. 革命；变革	1	0	0			0	4
+rigorous	adj. 严格的；严密的	1	0	0			0	4
+robust	adj. 强健的；坚固的	1	0	0			0	4
+scheme	n. 计划；方案	1	0	0			0	4
+scope	n. 范围；领域	1	0	0			0	4
+scrutiny	n. 详细审查；细看	1	0	0			0	4
+segment	n. 部分；片段	1	0	0			0	4
+sequence	n. 顺序；序列	1	0	0			0	4
+shift	n./v. 转变；轮班	1	0	0			0	4
+significant	adj. 重要的；显著的	1	0	0			0	4
+simulate	v. 模拟；假装	1	0	0			0	4
+simultaneous	adj. 同时发生的	1	0	0			0	4
+sole	adj. 唯一的；单独的	1	0	0			0	4
+solicit	v. 恳求；招揽	1	0	0			0	4
+somewhat	adv. 稍微；有点	1	0	0			0	4
+sophisticated	adj. 复杂的；精致的	1	0	0			0	4
+specify	v. 指定；明确说明	1	0	0			0	4
+speculate	v. 推测；投机	1	0	0			0	4
+sphere	n. 领域；范围；球体	1	0	0			0	4
+spontaneous	adj. 自发的；自然的	1	0	0			0	4
+stable	adj. 稳定的 n. 马厩	1	0	0			0	4
+statistics	n. 统计学；统计数字	1	0	0			0	4
+status	n. 地位；状态	1	0	0			0	4
+stimulate	v. 刺激；激励	1	0	0			0	4
+straightforward	adj. 直截了当的	1	0	0			0	4
+strategy	n. 战略；策略	1	0	0			0	4
+stress	n. 压力 v. 强调	1	0	0			0	4
+structure	n. 结构 v. 构建	1	0	0			0	4
+subordinate	adj. 下级的 n. 下属	1	0	0			0	4
+subsequent	adj. 随后的；后来的	1	0	0			0	4
+subsidy	n. 补贴；津贴	1	0	0			0	4
+substantial	adj. 大量的；实质的	1	0	0			0	4
+substitute	n. 替代品 v. 替代	1	0	0			0	4
+sufficient	adj. 足够的；充分的	1	0	0			0	4
+summarize	v. 总结；概括	1	0	0			0	4
+superior	adj. 上级的；优越的	1	0	0			0	4
+supplement	n. 补充物 v. 补充	1	0	0			0	4
+surpass	v. 超越；胜过	1	0	0			0	4
+surplus	n. 盈余 adj. 过剩的	1	0	0			0	4
+survey	n./v. 调查；测量	1	0	0			0	4
+suspend	v. 暂停；悬挂	1	0	0			0	4
+sustain	v. 维持；支撑	1	0	0			0	4
+synthesis	n. 合成；综合	1	0	0			0	4
+systematic	adj. 系统的；有组织的	1	0	0			0	4
+tangible	adj. 有形的；可触摸的	1	0	0			0	4
+target	n. 目标 v. 瞄准	1	0	0			0	4
+temporary	adj. 临时的；暂时的	1	0	0			0	4
+terminate	v. 结束；终止	1	0	0			0	4
+thereby	adv. 因此；从而	1	0	0			0	4
+thesis	n. 论文；论题	1	0	0			0	4
+thorough	adj. 彻底的；周密的	1	0	0			0	4
+threshold	n. 门槛；界限	1	0	0			0	4
+trace	n. 痕迹 v. 追踪	1	0	0			0	4
+transform	v. 改变；转换	1	0	0			0	4
+transition	n. 过渡；转变	1	0	0			0	4
+trigger	n. 扳机 v. 触发	1	0	0			0	4
+ultimate	adj. 最终的；根本的	1	0	0			0	4
+undergo	v. 经历；遭受	1	0	0			0	4
+underlying	adj. 潜在的；根本的	1	0	0			0	4
+undermine	v. 破坏；削弱	1	0	0			0	4
+undertake	v. 承担；从事	1	0	0			0	4
+uniform	adj. 统一的 n. 制服	1	0	0			0	4
+unique	adj. 独特的；唯一的	1	0	0			0	4
+universal	adj. 普遍的；全体的	1	0	0			0	4
+utilize	v. 利用；使用	1	0	0			0	4
+valid	adj. 有效的；合理的	1	0	0			0	4
+vanish	v. 消失；突然不见	1	0	0			0	4
+variable	n. 变量 adj. 可变的	1	0	0			0	4
+vast	adj. 广阔的；巨大的	1	0	0			0	4
+versatile	adj. 多才多艺的；多功能的	1	0	0			0	4
+via	prep. 通过；经由	1	0	0			0	4
+virtual	adj. 虚拟的；实质上的	1	0	0			0	4
+visible	adj. 可见的；明显的	1	0	0			0	4
+vital	adj. 至关重要的	1	0	0			0	4
+volatile	adj. 不稳定的；易挥发的	1	0	0			0	4
+volume	n. 体积；音量	1	0	0			0	4
+voluntary	adj. 自愿的；志愿的	1	0	0			0	4
+vulnerable	adj. 脆弱的；易受伤的	1	0	0			0	4
+whereas	conj. 然而；鉴于	1	0	0			0	4
+widespread	adj. 广泛的；普遍的	1	0	0			0	4
+withstand	v. 承受；经受住	1	0	0			0	4
+yield	v. 产生 n. 产量	1	0	0			0	4

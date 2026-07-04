@@ -1,0 +1,16 @@
+15	0
+implement	v. 实施 n. 工具	1	0	0			0
+structure	n. 结构 v. 构建	1	0	0			0
+gradual	adj. 逐渐的	1	0	0			0
+household	n. 家庭 adj. 家用的	1	0	0			0
+previous	adj. 先前的；以前的	1	0	0			0
+adapt	v. 适应；改编	1	0	0			0
+minimum	adj. 最小的 n. 最小值	1	0	0			0
+convention	n. 惯例；大会	1	0	0			0
+dramatic	adj. 戏剧性的	1	0	0			0
+comment	n./v. 评论；意见	1	0	0			0
+accompany	v. 陪伴；伴随	1	0	0			0
+compare	v. 比较；对比	1	0	0			0
+widespread	adj. 广泛的；普遍的	1	0	0			0
+medium	n. 媒介 adj. 中等的	1	0	0			0
+tendency	n. 趋势；倾向	1	0	0			0

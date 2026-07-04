@@ -1,0 +1,16 @@
+15	0
+belief	n. 信念；信仰	1	0	0			0
+situation	n. 情况；形势	1	0	0			0
+contact	n./v. 接触；联系	1	0	0			0
+insight	n. 洞察力；深刻见解	1	0	0			0
+evaluate	v. 评估；评价	1	0	0			0
+rely	v. 依赖；信赖	1	0	0			0
+analyze	v. 分析；解析	1	0	0			0
+loan	n./v. 贷款；借出	1	0	0			0
+burden	n. 负担 v. 使负重	1	0	0			0
+colleague	n. 同事；同僚	1	0	0			0
+arise	v. 出现；产生	1	0	0			0
+demonstrate	v. 证明；示范	1	0	0			0
+alter	v. 改变；修改	1	0	0			0
+logical	adj. 逻辑的	1	0	0			0
+volume	n. 体积；音量	1	0	0			0

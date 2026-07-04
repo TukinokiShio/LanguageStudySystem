@@ -1,0 +1,16 @@
+15	0
+cooperate	v. 合作；协作	1	0	0			0
+correlate	v. 使相关联	1	0	0			0
+structure	n. 结构 v. 构建	1	0	0			0
+appeal	n./v. 呼吁；吸引	1	0	0			0
+compile	v. 编译；汇编	1	0	0			0
+utilize	v. 利用；使用	1	0	0			0
+alternative	n. 替代方案 adj. 替代的	1	0	0			0
+foundation	n. 基础；基金会	1	0	0			0
+underlying	adj. 潜在的；根本的	1	0	0			0
+retain	v. 保持；保留	1	0	0			0
+deliberate	adj. 故意的 v. 仔细考虑	1	0	0			0
+academy	n. 学院；研究院	1	0	0			0
+widespread	adj. 广泛的；普遍的	1	0	0			0
+acknowledge	v. 承认；确认	1	0	0			0
+substantial	adj. 大量的；实质的	1	0	0			0

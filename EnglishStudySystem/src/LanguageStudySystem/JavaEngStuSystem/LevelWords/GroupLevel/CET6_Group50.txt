@@ -1,0 +1,16 @@
+15	0
+coincide	v. 同时发生；一致	1	0	0			0
+transaction	n. 交易；业务	1	0	0			0
+installment	n. 分期付款；一集	1	0	0			0
+inject	v. 注射；注入	1	0	0			0
+convene	v. 召集；集合	1	0	0			0
+snatch	v. 抢夺；抓住	1	0	0			0
+allege	v. 断言；宣称	1	0	0			0
+embark	v. 着手；上船	1	0	0			0
+betray	v. 背叛；泄露	1	0	0			0
+diminish	v. 减少；缩小	1	0	0			0
+streamline	v. 精简；使流线型	1	0	0			0
+assimilate	v. 吸收；同化	1	0	0			0
+ventilate	v. 通风；公开讨论	1	0	0			0
+prolong	v. 延长；拉长	1	0	0			0
+jerk	n. 急拉 v. 猛拉	1	0	0			0

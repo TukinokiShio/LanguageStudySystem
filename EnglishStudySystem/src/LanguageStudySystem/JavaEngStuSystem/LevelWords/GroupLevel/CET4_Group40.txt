@@ -1,0 +1,16 @@
+15	0
+breath	n. 呼吸	1	0	0			0
+terminal	n. 终端 adj. 末期的	1	0	0			0
+fundamental	adj. 基本的 n. 基础	1	0	0			0
+positive	adj. 积极的；肯定的	1	0	0			0
+blank	adj. 空白的 n. 空白	1	0	0			0
+appeal	n./v. 呼吁；吸引	1	0	0			0
+focus	n./v. 集中；焦点	1	0	0			0
+retire	v. 退休；撤退	1	0	0			0
+frank	adj. 坦白的；直率的	1	0	0			0
+superior	adj. 上级的；优越的	1	0	0			0
+retain	v. 保持；保留	1	0	0			0
+involve	v. 涉及；包含	1	0	0			0
+preserve	v. 保存；保护	1	0	0			0
+characteristic	n. 特征 adj. 特有的	1	0	0			0
+defense	n. 防御；辩护	1	0	0			0

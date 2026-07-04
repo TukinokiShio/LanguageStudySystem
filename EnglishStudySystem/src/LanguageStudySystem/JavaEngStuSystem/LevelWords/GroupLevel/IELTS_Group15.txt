@@ -1,0 +1,16 @@
+15	0
+constitutional	adj. 宪法的；体制的	1	0	0			0
+administration	n. 管理；行政	1	0	0			0
+basically	adv. 基本上；主要地	1	0	0			0
+ambiguous	adj. 含糊的；模棱两可的	1	0	0			0
+bibliography	n. 参考书目	1	0	0			0
+motivation	n. 动机；积极性	1	0	0			0
+notification	n. 通知；通告	1	0	0			0
+commodity	n. 商品；货物	1	0	0			0
+acknowledge	v. 承认；确认	1	0	0			0
+reproduction	n. 繁殖；复制	1	0	0			0
+cooperation	n. 合作；协作	1	0	0			0
+consciousness	n. 意识；知觉	1	0	0			0
+assignment	n. 任务；作业	1	0	0			0
+institution	n. 机构；制度	1	0	0			0
+availability	n. 可用性；有效性	1	0	0			0

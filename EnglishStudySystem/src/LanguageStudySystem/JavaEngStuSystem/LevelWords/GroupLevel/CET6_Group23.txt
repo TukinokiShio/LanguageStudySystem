@@ -1,0 +1,16 @@
+15	0
+menace	n. 威胁 v. 威胁	1	0	0			0
+spiral	adj. 螺旋的 n. 螺旋	1	0	0			0
+dedicate	v. 奉献；致力于	1	0	0			0
+authoritative	adj. 权威的；官方的	1	0	0			0
+subscribe	v. 订阅；同意	1	0	0			0
+pearl	n. 珍珠	1	0	0			0
+heritage	n. 遗产；传统	1	0	0			0
+propaganda	n. 宣传；鼓吹	1	0	0			0
+masculine	adj. 男性的；阳性的	1	0	0			0
+utmost	adj. 极度的 n. 最大可能	1	0	0			0
+configuration	n. 配置；结构	1	0	0			0
+hoist	v. 升起 n. 起重机	1	0	0			0
+resolution	n. 决心；决议	1	0	0			0
+saturate	v. 饱和；浸透	1	0	0			0
+cynical	adj. 愤世嫉俗的	1	0	0			0

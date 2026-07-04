@@ -1,0 +1,16 @@
+15	0
+rational	adj. 理性的；合理的	1	0	0			0
+furthermore	adv. 此外；而且	1	0	0			0
+convey	v. 传达；运送	1	0	0			0
+ancestor	n. 祖先；祖宗	1	0	0			0
+crucial	adj. 至关重要的	1	0	0			0
+curtail	v. 削减；缩短	1	0	0			0
+exemplify	v. 举例说明	1	0	0			0
+inevitable	adj. 不可避免的	1	0	0			0
+legislate	v. 立法；制定法律	1	0	0			0
+yield	v. 产生 n. 产量	1	0	0			0
+launch	n./v. 发射；启动	1	0	0			0
+cite	v. 引用；引证	1	0	0			0
+fundamental	adj. 基本的 n. 基础	1	0	0			0
+probe	n./v. 探测；调查	1	0	0			0
+converse	v. 交谈 adj. 相反的	1	0	0			0

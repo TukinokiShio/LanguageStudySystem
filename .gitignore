@@ -1,5 +1,6 @@
 # Embedded JDK runtime (platform-specific, large binary)
 jre-minimal/
+jdk-24/
 
 # Compiled Java class files
 *.class

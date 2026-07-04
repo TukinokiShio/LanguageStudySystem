@@ -1,0 +1,16 @@
+15	0
+shelter	n. 庇护所 v. 保护	1	0	0			0
+attract	v. 吸引；引起	1	0	0			0
+standard	n. 标准 adj. 标准的	1	0	0			0
+campus	n. 校园	1	0	0			0
+specific	adj. 特定的；具体的	1	0	0			0
+content	n. 内容 adj. 满足的	1	0	0			0
+compensate	v. 补偿；赔偿	1	0	0			0
+approve	v. 批准；赞成	1	0	0			0
+textile	n. 纺织品 adj. 纺织的	1	0	0			0
+senior	adj. 高级的 n. 年长者	1	0	0			0
+automatic	adj. 自动的	1	0	0			0
+correspond	v. 通信；对应	1	0	0			0
+appliance	n. 电器；器具	1	0	0			0
+universal	adj. 普遍的；全体的	1	0	0			0
+resign	v. 辞职；放弃	1	0	0			0

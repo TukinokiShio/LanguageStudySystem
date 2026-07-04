@@ -1,0 +1,16 @@
+15	0
+converge	v. 聚集；汇合	1	0	0			0
+spectrum	n. 光谱；范围	1	0	0			0
+implicit	adj. 含蓄的；内含的	1	0	0			0
+array	n. 数组；排列 v. 部署	1	0	0			0
+siege	n. 包围；围攻	1	0	0			0
+brutal	adj. 残忍的；野蛮的	1	0	0			0
+symphony	n. 交响乐	1	0	0			0
+complement	v. 补充 n. 补足物	1	0	0			0
+turbulent	adj. 动荡的；湍急的	1	0	0			0
+fantastic	adj. 极好的；奇异的	1	0	0			0
+hypothesis	n. 假设；假说	1	0	0			0
+disregard	v. 忽视 n. 漠视	1	0	0			0
+consult	v. 咨询；查阅	1	0	0			0
+update	v. 更新 n. 最新信息	1	0	0			0
+solidarity	n. 团结一致	1	0	0			0

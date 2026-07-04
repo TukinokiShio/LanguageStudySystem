@@ -1,0 +1,16 @@
+15	0
+bureaucracy	n. 官僚机构	1	0	0			0
+lure	v. 引诱 n. 诱惑物	1	0	0			0
+conceive	v. 构想；怀孕	1	0	0			0
+abnormal	adj. 不正常的；异常的	1	0	0			0
+negligible	adj. 可以忽略的；微不足道的	1	0	0			0
+prosecute	v. 起诉；控告	1	0	0			0
+gigantic	adj. 巨大的；庞大的	1	0	0			0
+sober	adj. 清醒的；严肃的	1	0	0			0
+detain	v. 拘留；耽搁	1	0	0			0
+renaissance	n. 文艺复兴；复兴	1	0	0			0
+savage	adj. 野蛮的 n. 野蛮人	1	0	0			0
+nourish	v. 滋养；养育	1	0	0			0
+tackle	v. 处理 n. 装备	1	0	0			0
+despise	v. 鄙视；看不起	1	0	0			0
+tariff	n. 关税；税率	1	0	0			0

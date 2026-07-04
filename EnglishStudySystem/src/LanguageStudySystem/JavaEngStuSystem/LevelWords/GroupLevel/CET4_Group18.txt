@@ -1,0 +1,16 @@
+15	0
+resource	n. 资源；财力	1	0	0			0
+organ	n. 器官；机构	1	0	0			0
+enormous	adj. 巨大的；庞大的	1	0	0			0
+complain	v. 抱怨；投诉	1	0	0			0
+justify	v. 证明…有理	1	0	0			0
+artificial	adj. 人工的；人造的	1	0	0			0
+determine	v. 决定；确定	1	0	0			0
+angle	n. 角度；观点	1	0	0			0
+discipline	n. 纪律；学科	1	0	0			0
+consider	v. 考虑；认为	1	0	0			0
+objective	n. 目标 adj. 客观的	1	0	0			0
+recommend	v. 推荐；建议	1	0	0			0
+investigate	v. 调查；研究	1	0	0			0
+venture	n./v. 冒险；企业	1	0	0			0
+distinguish	v. 区分；辨别	1	0	0			0

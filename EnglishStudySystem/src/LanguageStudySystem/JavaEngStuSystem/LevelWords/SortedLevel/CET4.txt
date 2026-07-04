@@ -1,0 +1,606 @@
+605	0
+abandon	v. 放弃；抛弃	1	0	0			0	1
+ability	n. 能力；才能	1	0	0			0	1
+abnormal	adj. 不正常的	1	0	0			0	1
+aboard	adv./prep. 在船上/车上	1	0	0			0	1
+abroad	adv. 在国外	1	0	0			0	1
+absence	n. 缺席；缺乏	1	0	0			0	1
+absolute	adj. 绝对的；完全的	1	0	0			0	1
+absorb	v. 吸收；吸引	1	0	0			0	1
+abstract	adj. 抽象的 n. 摘要	1	0	0			0	1
+abundant	adj. 丰富的；充裕的	1	0	0			0	1
+abuse	n./v. 滥用；虐待	1	0	0			0	1
+academic	adj. 学术的	1	0	0			0	1
+accelerate	v. 加速；促进	1	0	0			0	1
+accent	n. 口音；重音	1	0	0			0	1
+access	n. 进入；通道 v. 访问	1	0	0			0	1
+accommodate	v. 容纳；提供住宿	1	0	0			0	1
+accompany	v. 陪伴；伴随	1	0	0			0	1
+accomplish	v. 完成；实现	1	0	0			0	1
+account	n. 账户；说明 v. 解释	1	0	0			0	1
+accumulate	v. 积累；积聚	1	0	0			0	1
+accurate	adj. 准确的	1	0	0			0	1
+accuse	v. 指责；控告	1	0	0			0	1
+achieve	v. 达到；取得	1	0	0			0	1
+acknowledge	v. 承认；确认	1	0	0			0	1
+acquire	v. 获得；学到	1	0	0			0	1
+adapt	v. 适应；改编	1	0	0			0	1
+addition	n. 增加；加法	1	0	0			0	1
+adequate	adj. 足够的；适当的	1	0	0			0	1
+adjust	v. 调整；适应	1	0	0			0	1
+administration	n. 管理；行政	1	0	0			0	1
+admire	v. 钦佩；赞赏	1	0	0			0	1
+admission	n. 准许进入；承认	1	0	0			0	1
+adopt	v. 采用；收养	1	0	0			0	1
+advance	n./v. 前进；进步	1	0	0			0	1
+advantage	n. 优势；有利条件	1	0	0			0	1
+advertise	v. 做广告	1	0	0			0	1
+advocate	v. 提倡 n. 倡导者	1	0	0			0	1
+affair	n. 事务；事件	1	0	0			0	1
+affect	v. 影响；感动	1	0	0			0	1
+afford	v. 负担得起	1	0	0			0	1
+aggressive	adj. 侵略的；好斗的	1	0	0			0	1
+agreement	n. 协议；一致	1	0	0			0	1
+aid	n./v. 帮助；援助	1	0	0			0	1
+alarm	n. 警报；闹钟	1	0	0			0	1
+alert	adj. 警觉的 v. 警告	1	0	0			0	1
+allocate	v. 分配；拨出	1	0	0			0	1
+allowance	n. 津贴；零用钱	1	0	0			0	1
+alter	v. 改变；修改	1	0	0			0	1
+alternative	n. 替代方案 adj. 替代的	1	0	0			0	1
+amateur	n. 业余爱好者	1	0	0			0	1
+ambition	n. 雄心；抱负	1	0	0			0	1
+amount	n. 数量；总额	1	0	0			0	1
+amuse	v. 使娱乐；逗笑	1	0	0			0	1
+analyze	v. 分析；解析	1	0	0			0	1
+ancestor	n. 祖先；祖宗	1	0	0			0	1
+angle	n. 角度；观点	1	0	0			0	1
+anniversary	n. 周年纪念日	1	0	0			0	1
+announce	v. 宣布；通告	1	0	0			0	1
+annual	adj. 每年的 n. 年刊	1	0	0			0	1
+anticipate	v. 预期；期望	1	0	0			0	1
+anxiety	n. 焦虑；忧虑	1	0	0			0	1
+apparent	adj. 明显的；表面上的	1	0	0			0	1
+appeal	n./v. 呼吁；吸引	1	0	0			0	1
+appetite	n. 食欲；胃口	1	0	0			0	1
+appliance	n. 电器；器具	1	0	0			0	1
+application	n. 申请；应用	1	0	0			0	1
+apply	v. 申请；适用	1	0	0			0	1
+appoint	v. 任命；指定	1	0	0			0	1
+appreciate	v. 欣赏；感激	1	0	0			0	1
+approach	v. 接近 n. 方法	1	0	0			0	1
+appropriate	adj. 适当的 v. 占用	1	0	0			0	1
+approve	v. 批准；赞成	1	0	0			0	1
+argue	v. 争论；辩论	1	0	0			0	1
+arise	v. 出现；产生	1	0	0			0	1
+arrange	v. 安排；整理	1	0	0			0	1
+arrest	n./v. 逮捕；拘留	1	0	0			0	1
+artificial	adj. 人工的；人造的	1	0	0			0	1
+aspect	n. 方面；外貌	1	0	0			0	1
+assemble	v. 集合；组装	1	0	0			0	1
+assess	v. 评估；评定	1	0	0			0	1
+asset	n. 资产；优点	1	0	0			0	1
+assign	v. 分配；指派	1	0	0			0	1
+assist	v. 帮助；协助	1	0	0			0	1
+associate	v. 联系 n. 同事	1	0	0			0	1
+assume	v. 假定；承担	1	0	0			0	1
+atmosphere	n. 气氛；大气	1	0	0			0	1
+attach	v. 附上；连接	1	0	0			0	1
+attain	v. 达到；获得	1	0	0			0	1
+attempt	n./v. 尝试；企图	1	0	0			0	1
+attend	v. 参加；出席	1	0	0			0	1
+attitude	n. 态度；看法	1	0	0			0	1
+attract	v. 吸引；引起	1	0	0			0	1
+attribute	v. 归因于 n. 属性	1	0	0			0	1
+audience	n. 观众；听众	1	0	0			0	1
+authority	n. 权威；当局	1	0	0			0	1
+automatic	adj. 自动的	1	0	0			0	1
+available	adj. 可用的；有效的	1	0	0			0	1
+avenue	n. 大街；途径	1	0	0			0	1
+avoid	v. 避免；回避	1	0	0			0	1
+award	n. 奖品 v. 授予	1	0	0			0	1
+aware	adj. 意识到的	1	0	0			0	1
+background	n. 背景	1	0	0			0	1
+balance	n. 平衡 v. 使平衡	1	0	0			0	1
+ban	v. 禁止 n. 禁令	1	0	0			0	1
+barrier	n. 障碍；屏障	1	0	0			0	1
+basis	n. 基础；根据	1	0	0			0	1
+battle	n. 战斗 v. 斗争	1	0	0			0	1
+behalf	n. 代表；利益	1	0	0			0	1
+behave	v. 表现；行为	1	0	0			0	1
+behavior	n. 行为；举止	1	0	0			0	1
+belief	n. 信念；信仰	1	0	0			0	1
+benefit	n. 利益 v. 有益于	1	0	0			0	1
+bet	n./v. 打赌	1	0	0			0	1
+beyond	prep. 超越	1	0	0			0	1
+blame	v. 责备 n. 责任	1	0	0			0	1
+blank	adj. 空白的 n. 空白	1	0	0			0	1
+bond	n. 纽带；债券	1	0	0			0	1
+boom	n. 繁荣 v. 激增	1	0	0			0	1
+border	n. 边界；边境	1	0	0			0	1
+bother	v. 打扰；烦恼	1	0	0			0	1
+bound	adj. 必定的 v. 跳跃	1	0	0			0	1
+brand	n. 品牌；商标	1	0	0			0	1
+breath	n. 呼吸	1	0	0			0	1
+brief	adj. 简短的 n. 摘要	1	0	0			0	1
+budget	n. 预算 v. 编预算	1	0	0			0	1
+burden	n. 负担 v. 使负重	1	0	0			0	1
+burst	v. 爆发；破裂	1	0	0			0	1
+campaign	n. 运动；战役	1	0	0			0	1
+campus	n. 校园	1	0	0			0	1
+cancel	v. 取消；撤销	1	0	0			0	1
+candidate	n. 候选人	1	0	0			0	1
+capacity	n. 能力；容量	1	0	0			0	1
+capture	v. 捕获；俘获	1	0	0			0	1
+career	n. 职业；生涯	1	0	0			0	1
+category	n. 类别；种类	1	0	0			0	1
+cease	v. 停止；终止	1	0	0			0	1
+challenge	n./v. 挑战	1	0	0			0	1
+channel	n. 频道；渠道	1	0	0			0	1
+chapter	n. 章；回	1	0	0			0	1
+characteristic	n. 特征 adj. 特有的	1	0	0			0	1
+charity	n. 慈善；施舍	1	0	0			0	1
+chemical	adj. 化学的 n. 化学品	1	0	0			0	1
+chief	adj. 主要的 n. 首领	1	0	0			0	1
+circumstance	n. 环境；情况	1	0	0			0	1
+civil	adj. 公民的；文明的	1	0	0			0	1
+claim	n./v. 声称；要求	1	0	0			0	1
+classic	adj. 经典的	1	0	0			0	1
+climate	n. 气候；风气	1	0	0			0	1
+colleague	n. 同事；同僚	1	0	0			0	1
+combine	v. 结合；联合	1	0	0			0	1
+command	n./v. 命令；指挥	1	0	0			0	1
+comment	n./v. 评论；意见	1	0	0			0	1
+commerce	n. 商业；贸易	1	0	0			0	1
+commission	n. 委员会；佣金 v. 委托	1	0	0			0	1
+commit	v. 犯（罪）；承诺	1	0	0			0	1
+committee	n. 委员会	1	0	0			0	1
+communicate	v. 交流；沟通	1	0	0			0	1
+community	n. 社区；团体	1	0	0			0	1
+companion	n. 同伴；伴侣	1	0	0			0	1
+compare	v. 比较；对比	1	0	0			0	1
+compensate	v. 补偿；赔偿	1	0	0			0	1
+compete	v. 竞争；比赛	1	0	0			0	1
+complain	v. 抱怨；投诉	1	0	0			0	1
+complex	adj. 复杂的 n. 综合体	1	0	0			0	1
+component	n. 组成部分	1	0	0			0	1
+compose	v. 组成；创作	1	0	0			0	1
+concentrate	v. 集中；浓缩	1	0	0			0	1
+concept	n. 概念；观念	1	0	0			0	1
+concern	n./v. 关心；担忧	1	0	0			0	1
+conclude	v. 总结；结束	1	0	0			0	1
+conduct	v. 进行 n. 行为	1	0	0			0	1
+conference	n. 会议；讨论会	1	0	0			0	1
+confidence	n. 信心；信任	1	0	0			0	1
+confirm	v. 确认；证实	1	0	0			0	1
+conflict	n. 冲突 v. 抵触	1	0	0			0	1
+confuse	v. 使困惑；混淆	1	0	0			0	1
+congress	n. 国会；大会	1	0	0			0	1
+connect	v. 连接；联系	1	0	0			0	1
+conscious	adj. 有意识的	1	0	0			0	1
+consequence	n. 结果；后果	1	0	0			0	1
+conservative	adj. 保守的 n. 保守派	1	0	0			0	1
+consider	v. 考虑；认为	1	0	0			0	1
+consist	v. 由…组成；在于	1	0	0			0	1
+constant	adj. 不变的；持续的	1	0	0			0	1
+constitute	v. 构成；组成	1	0	0			0	1
+construct	v. 建造；构建	1	0	0			0	1
+consume	v. 消费；消耗	1	0	0			0	1
+contact	n./v. 接触；联系	1	0	0			0	1
+contain	v. 包含；容纳	1	0	0			0	1
+contemporary	adj. 当代的	1	0	0			0	1
+content	n. 内容 adj. 满足的	1	0	0			0	1
+contest	n. 比赛 v. 争辩	1	0	0			0	1
+context	n. 背景；上下文	1	0	0			0	1
+contract	n. 合同 v. 收缩	1	0	0			0	1
+contrast	n./v. 对比；对照	1	0	0			0	1
+contribute	v. 贡献；捐献	1	0	0			0	1
+controversial	adj. 有争议的	1	0	0			0	1
+convenient	adj. 方便的	1	0	0			0	1
+convention	n. 惯例；大会	1	0	0			0	1
+convince	v. 说服；使确信	1	0	0			0	1
+cooperate	v. 合作；协作	1	0	0			0	1
+corporation	n. 公司；企业	1	0	0			0	1
+correspond	v. 通信；对应	1	0	0			0	1
+council	n. 委员会；理事会	1	0	0			0	1
+county	n. 县；郡	1	0	0			0	1
+crash	n./v. 碰撞；崩溃	1	0	0			0	1
+create	v. 创造；创建	1	0	0			0	1
+credit	n. 信用；学分 v. 归功于	1	0	0			0	1
+criminal	adj. 犯罪的 n. 罪犯	1	0	0			0	1
+crisis	n. 危机	1	0	0			0	1
+critical	adj. 批评的；关键的	1	0	0			0	1
+cultivate	v. 培养；耕种	1	0	0			0	1
+culture	n. 文化；教养	1	0	0			0	1
+current	adj. 当前的 n. 水流	1	0	0			0	1
+cycle	n. 循环；周期	1	0	0			0	1
+damage	n./v. 损害；毁坏	1	0	0			0	1
+debate	n./v. 辩论；争论	1	0	0			0	1
+decade	n. 十年	1	0	0			0	1
+decline	n./v. 下降；衰退	1	0	0			0	1
+defense	n. 防御；辩护	1	0	0			0	1
+define	v. 定义；界定	1	0	0			0	1
+definite	adj. 明确的；肯定的	1	0	0			0	1
+deliver	v. 递送；发表	1	0	0			0	1
+demand	n./v. 要求；需求	1	0	0			0	1
+demonstrate	v. 证明；示范	1	0	0			0	1
+deny	v. 否认；拒绝	1	0	0			0	1
+depart	v. 离开；出发	1	0	0			0	1
+dependent	adj. 依赖的；取决于	1	0	0			0	1
+deposit	n./v. 存款；押金	1	0	0			0	1
+depress	v. 使沮丧；压低	1	0	0			0	1
+derive	v. 源自；获得	1	0	0			0	1
+deserve	v. 值得；应得	1	0	0			0	1
+desire	n./v. 渴望；欲望	1	0	0			0	1
+desperate	adj. 绝望的；拼命的	1	0	0			0	1
+destination	n. 目的地	1	0	0			0	1
+determine	v. 决定；确定	1	0	0			0	1
+device	n. 设备；装置	1	0	0			0	1
+diet	n. 饮食；节食	1	0	0			0	1
+differ	v. 不同；相异	1	0	0			0	1
+digital	adj. 数字的	1	0	0			0	1
+discipline	n. 纪律；学科	1	0	0			0	1
+discount	n. 折扣 v. 不考虑	1	0	0			0	1
+display	n./v. 展示；显示	1	0	0			0	1
+dispose	v. 处理；安排	1	0	0			0	1
+distinguish	v. 区分；辨别	1	0	0			0	1
+distribute	v. 分配；分发	1	0	0			0	1
+domestic	adj. 国内的；家庭的	1	0	0			0	1
+draft	n. 草稿 v. 起草	1	0	0			0	1
+dramatic	adj. 戏剧性的	1	0	0			0	1
+economy	n. 经济；节约	1	0	0			0	1
+edition	n. 版本；版次	1	0	0			0	1
+efficient	adj. 高效的	1	0	0			0	1
+elaborate	adj. 精心制作的 v. 详细阐述	1	0	0			0	1
+election	n. 选举	1	0	0			0	1
+element	n. 元素；要素	1	0	0			0	1
+eliminate	v. 消除；淘汰	1	0	0			0	1
+embrace	v. 拥抱；包含	1	0	0			0	1
+emerge	v. 出现；浮现	1	0	0			0	1
+emotion	n. 情感；情绪	1	0	0			0	1
+emphasis	n. 重点；强调	1	0	0			0	1
+employ	v. 雇用；使用	1	0	0			0	1
+enable	v. 使能够；启用	1	0	0			0	1
+encounter	n./v. 遭遇；邂逅	1	0	0			0	1
+engage	v. 从事；订婚	1	0	0			0	1
+enormous	adj. 巨大的；庞大的	1	0	0			0	1
+ensure	v. 确保；保证	1	0	0			0	1
+enterprise	n. 企业；事业	1	0	0			0	1
+enthusiasm	n. 热情；热衷	1	0	0			0	1
+environment	n. 环境	1	0	0			0	1
+equivalent	adj. 等价的 n. 等价物	1	0	0			0	1
+essential	adj. 必要的；本质的	1	0	0			0	1
+establish	v. 建立；确立	1	0	0			0	1
+estate	n. 房地产；财产	1	0	0			0	1
+evaluate	v. 评估；评价	1	0	0			0	1
+eventually	adv. 最终；终于	1	0	0			0	1
+evidence	n. 证据；迹象	1	0	0			0	1
+evolve	v. 进化；发展	1	0	0			0	1
+exaggerate	v. 夸大；夸张	1	0	0			0	1
+exceed	v. 超过；超越	1	0	0			0	1
+exception	n. 例外；除外	1	0	0			0	1
+excess	n. 过度 adj. 过量的	1	0	0			0	1
+exchange	n./v. 交换；兑换	1	0	0			0	1
+exclude	v. 排除；排斥	1	0	0			0	1
+execute	v. 执行；处决	1	0	0			0	1
+exhibit	n./v. 展览；展示	1	0	0			0	1
+expand	v. 扩张；扩展	1	0	0			0	1
+expense	n. 花费；代价	1	0	0			0	1
+export	n./v. 出口；输出	1	0	0			0	1
+expose	v. 暴露；揭露	1	0	0			0	1
+extend	v. 延伸；扩展	1	0	0			0	1
+extensive	adj. 广泛的；大量的	1	0	0			0	1
+external	adj. 外部的；外面的	1	0	0			0	1
+extraordinary	adj. 非凡的；特别的	1	0	0			0	1
+extreme	adj. 极端的 n. 极端	1	0	0			0	1
+facility	n. 设施；便利	1	0	0			0	1
+factor	n. 因素；因子	1	0	0			0	1
+faculty	n. 能力；全体教员	1	0	0			0	1
+fashion	n. 时尚；方式	1	0	0			0	1
+fatal	adj. 致命的	1	0	0			0	1
+fate	n. 命运；宿命	1	0	0			0	1
+feature	n. 特征 v. 以…为特色	1	0	0			0	1
+federal	adj. 联邦的	1	0	0			0	1
+finance	n. 金融；财政 v. 资助	1	0	0			0	1
+focus	n./v. 集中；焦点	1	0	0			0	1
+forbid	v. 禁止；不许	1	0	0			0	1
+forecast	n./v. 预测；预报	1	0	0			0	1
+formal	adj. 正式的；形式上的	1	0	0			0	1
+format	n. 格式 v. 格式化	1	0	0			0	1
+former	adj. 从前的 n. 前者	1	0	0			0	1
+formula	n. 公式；配方	1	0	0			0	1
+foundation	n. 基础；基金会	1	0	0			0	1
+frank	adj. 坦白的；直率的	1	0	0			0	1
+frequency	n. 频率；频繁	1	0	0			0	1
+fulfill	v. 实现；履行	1	0	0			0	1
+function	n. 功能；函数 v. 运行	1	0	0			0	1
+fundamental	adj. 基本的 n. 基础	1	0	0			0	1
+genius	n. 天才	1	0	0			0	1
+genuine	adj. 真正的；真诚的	1	0	0			0	1
+globe	n. 地球；球体	1	0	0			0	1
+gradual	adj. 逐渐的	1	0	0			0	1
+guarantee	n./v. 保证；担保	1	0	0			0	1
+guideline	n. 指导方针	1	0	0			0	1
+highlight	v. 强调 n. 亮点	1	0	0			0	1
+horror	n. 恐怖；惊骇	1	0	0			0	1
+hostile	adj. 敌对的；怀敌意的	1	0	0			0	1
+household	n. 家庭 adj. 家用的	1	0	0			0	1
+humble	adj. 谦逊的；卑微的	1	0	0			0	1
+identify	v. 识别；鉴定	1	0	0			0	1
+illegal	adj. 非法的	1	0	0			0	1
+illustrate	v. 说明；举例	1	0	0			0	1
+image	n. 形象；图像	1	0	0			0	1
+immigrant	n. 移民 adj. 移民的	1	0	0			0	1
+impact	n./v. 影响；冲击	1	0	0			0	1
+implement	v. 实施 n. 工具	1	0	0			0	1
+imply	v. 暗示；意味着	1	0	0			0	1
+import	n./v. 进口；输入	1	0	0			0	1
+impose	v. 强加；征税	1	0	0			0	1
+impression	n. 印象；感觉	1	0	0			0	1
+incident	n. 事件；事变	1	0	0			0	1
+incorporate	v. 包含；合并	1	0	0			0	1
+independent	adj. 独立的	1	0	0			0	1
+indicate	v. 表明；显示	1	0	0			0	1
+individual	n. 个人 adj. 个别的	1	0	0			0	1
+influence	n./v. 影响	1	0	0			0	1
+inform	v. 通知；告知	1	0	0			0	1
+initial	adj. 最初的 n. 首字母	1	0	0			0	1
+initiative	n. 主动性 adj. 主动的	1	0	0			0	1
+innocent	adj. 无罪的；天真的	1	0	0			0	1
+input	n./v. 输入	1	0	0			0	1
+insight	n. 洞察力；深刻见解	1	0	0			0	1
+inspect	v. 检查；视察	1	0	0			0	1
+install	v. 安装；安置	1	0	0			0	1
+instance	n. 实例；情况	1	0	0			0	1
+instinct	n. 本能；直觉	1	0	0			0	1
+institute	n. 学院；机构 v. 建立	1	0	0			0	1
+instrument	n. 工具；乐器	1	0	0			0	1
+insurance	n. 保险；保险费	1	0	0			0	1
+integrate	v. 整合；融合	1	0	0			0	1
+intellectual	adj. 智力的 n. 知识分子	1	0	0			0	1
+intense	adj. 强烈的；紧张的	1	0	0			0	1
+interact	v. 互动；相互作用	1	0	0			0	1
+interfere	v. 干涉；干扰	1	0	0			0	1
+internal	adj. 内部的；国内的	1	0	0			0	1
+interpret	v. 解释；口译	1	0	0			0	1
+interval	n. 间隔；间歇	1	0	0			0	1
+intimate	adj. 亲密的 v. 暗示	1	0	0			0	1
+invade	v. 入侵；侵略	1	0	0			0	1
+invest	v. 投资；投入	1	0	0			0	1
+investigate	v. 调查；研究	1	0	0			0	1
+involve	v. 涉及；包含	1	0	0			0	1
+isolate	v. 隔离；孤立	1	0	0			0	1
+issue	n. 问题；议题 v. 发布	1	0	0			0	1
+journal	n. 期刊；日志	1	0	0			0	1
+justice	n. 正义；司法	1	0	0			0	1
+justify	v. 证明…有理	1	0	0			0	1
+label	n. 标签 v. 标注	1	0	0			0	1
+launch	n./v. 发射；启动	1	0	0			0	1
+layer	n. 层；层次	1	0	0			0	1
+leisure	n. 闲暇；休闲	1	0	0			0	1
+liberal	adj. 自由的；开明的	1	0	0			0	1
+licence	n. 许可证；执照	1	0	0			0	1
+limit	n./v. 限制；限度	1	0	0			0	1
+link	n./v. 联系；链接	1	0	0			0	1
+loan	n./v. 贷款；借出	1	0	0			0	1
+locate	v. 定位；位于	1	0	0			0	1
+logical	adj. 逻辑的	1	0	0			0	1
+maintain	v. 维持；保养	1	0	0			0	1
+major	adj. 主要的 n. 专业	1	0	0			0	1
+manual	adj. 手工的 n. 手册	1	0	0			0	1
+manufacture	n./v. 制造；生产	1	0	0			0	1
+margin	n. 边缘；利润	1	0	0			0	1
+maximum	adj. 最大的 n. 最大值	1	0	0			0	1
+mechanism	n. 机制；机械装置	1	0	0			0	1
+medium	n. 媒介 adj. 中等的	1	0	0			0	1
+mental	adj. 精神的；心理的	1	0	0			0	1
+military	adj. 军事的 n. 军队	1	0	0			0	1
+minimum	adj. 最小的 n. 最小值	1	0	0			0	1
+minister	n. 部长；大臣	1	0	0			0	1
+minor	adj. 较小的 n. 未成年人	1	0	0			0	1
+minority	n. 少数；少数民族	1	0	0			0	1
+mission	n. 任务；使命	1	0	0			0	1
+modify	v. 修改；调整	1	0	0			0	1
+monitor	n./v. 监控；监视	1	0	0			0	1
+moral	adj. 道德的 n. 寓意	1	0	0			0	1
+motion	n. 运动；动议	1	0	0			0	1
+motivate	v. 激励；激发	1	0	0			0	1
+mystery	n. 神秘；奥秘	1	0	0			0	1
+navigate	v. 导航；航行	1	0	0			0	1
+negative	adj. 消极的；否定的	1	0	0			0	1
+negotiate	v. 谈判；协商	1	0	0			0	1
+network	n. 网络；关系网	1	0	0			0	1
+neutral	adj. 中立的；中性的	1	0	0			0	1
+normal	adj. 正常的；标准的	1	0	0			0	1
+notion	n. 概念；想法	1	0	0			0	1
+numerous	adj. 许多的	1	0	0			0	1
+objective	n. 目标 adj. 客观的	1	0	0			0	1
+obtain	v. 获得；得到	1	0	0			0	1
+obvious	adj. 明显的	1	0	0			0	1
+occasion	n. 场合；时机	1	0	0			0	1
+offend	v. 冒犯；触怒	1	0	0			0	1
+operate	v. 操作；经营	1	0	0			0	1
+opponent	n. 对手；反对者	1	0	0			0	1
+opportunity	n. 机会；时机	1	0	0			0	1
+oppose	v. 反对；对抗	1	0	0			0	1
+option	n. 选择；选项	1	0	0			0	1
+organ	n. 器官；机构	1	0	0			0	1
+orient	v. 使适应 n. 东方	1	0	0			0	1
+origin	n. 起源；出身	1	0	0			0	1
+original	adj. 原始的；独创的	1	0	0			0	1
+outcome	n. 结果；成果	1	0	0			0	1
+output	n./v. 输出；产量	1	0	0			0	1
+overcome	v. 克服；战胜	1	0	0			0	1
+overlook	v. 俯瞰；忽略	1	0	0			0	1
+overseas	adv. 在海外 adj. 海外的	1	0	0			0	1
+panel	n. 面板；专家组	1	0	0			0	1
+participate	v. 参与；参加	1	0	0			0	1
+passion	n. 激情；热情	1	0	0			0	1
+passive	adj. 被动的；消极的	1	0	0			0	1
+pattern	n. 模式；图案	1	0	0			0	1
+peak	n. 顶峰 adj. 最高的	1	0	0			0	1
+peer	n. 同龄人 v. 凝视	1	0	0			0	1
+penalty	n. 惩罚；罚款	1	0	0			0	1
+perceive	v. 感知；察觉	1	0	0			0	1
+performance	n. 表现；性能	1	0	0			0	1
+personnel	n. 人员；人事部门	1	0	0			0	1
+perspective	n. 视角；观点	1	0	0			0	1
+phenomenon	n. 现象；奇迹	1	0	0			0	1
+philosophy	n. 哲学；人生观	1	0	0			0	1
+policy	n. 政策；保险单	1	0	0			0	1
+polish	v. 磨光；润色	1	0	0			0	1
+portion	n. 部分；一份	1	0	0			0	1
+pose	v. 摆姿势；造成 n. 姿势	1	0	0			0	1
+positive	adj. 积极的；肯定的	1	0	0			0	1
+possess	v. 拥有；具有	1	0	0			0	1
+potential	adj. 潜在的 n. 潜力	1	0	0			0	1
+precious	adj. 珍贵的；宝贵的	1	0	0			0	1
+precise	adj. 精确的；准确的	1	0	0			0	1
+predict	v. 预测；预言	1	0	0			0	1
+prefer	v. 更喜欢；偏好	1	0	0			0	1
+preserve	v. 保存；保护	1	0	0			0	1
+pressure	n. 压力；压迫	1	0	0			0	1
+previous	adj. 先前的；以前的	1	0	0			0	1
+primary	adj. 主要的；初级的	1	0	0			0	1
+principle	n. 原则；原理	1	0	0			0	1
+priority	n. 优先；优先权	1	0	0			0	1
+procedure	n. 程序；步骤	1	0	0			0	1
+process	n. 过程 v. 处理	1	0	0			0	1
+professional	adj. 专业的 n. 专业人士	1	0	0			0	1
+profit	n. 利润 v. 受益	1	0	0			0	1
+promote	v. 促进；晋升	1	0	0			0	1
+proportion	n. 比例；部分	1	0	0			0	1
+prospect	n. 前景；可能性	1	0	0			0	1
+protest	n./v. 抗议；反对	1	0	0			0	1
+provision	n. 规定；供应	1	0	0			0	1
+psychological	adj. 心理的	1	0	0			0	1
+purchase	n./v. 购买	1	0	0			0	1
+pursue	v. 追求；追赶	1	0	0			0	1
+qualify	v. 使合格；限定	1	0	0			0	1
+quote	n./v. 引用；报价	1	0	0			0	1
+range	n. 范围 v. 变化	1	0	0			0	1
+rank	n. 等级 v. 排名	1	0	0			0	1
+rate	n. 比率 v. 评价	1	0	0			0	1
+react	v. 反应；回应	1	0	0			0	1
+reasonable	adj. 合理的；通情达理的	1	0	0			0	1
+recognize	v. 认出；承认	1	0	0			0	1
+recommend	v. 推荐；建议	1	0	0			0	1
+recover	v. 恢复；康复	1	0	0			0	1
+recruit	n./v. 招募；招聘	1	0	0			0	1
+refer	v. 参考；提到	1	0	0			0	1
+reflect	v. 反映；反射	1	0	0			0	1
+reform	n./v. 改革；改良	1	0	0			0	1
+regulate	v. 调节；管理	1	0	0			0	1
+reject	v. 拒绝；排斥	1	0	0			0	1
+relate	v. 关联；叙述	1	0	0			0	1
+release	n./v. 释放；发布	1	0	0			0	1
+relevant	adj. 相关的；切题的	1	0	0			0	1
+relief	n. 减轻；救济	1	0	0			0	1
+rely	v. 依赖；信赖	1	0	0			0	1
+remove	v. 移除；消除	1	0	0			0	1
+replace	v. 取代；替换	1	0	0			0	1
+represent	v. 代表；表示	1	0	0			0	1
+reputation	n. 名声；声誉	1	0	0			0	1
+request	n./v. 请求；要求	1	0	0			0	1
+require	v. 需要；要求	1	0	0			0	1
+reserve	v. 保留；预订	1	0	0			0	1
+resident	n. 居民 adj. 居住的	1	0	0			0	1
+resign	v. 辞职；放弃	1	0	0			0	1
+resist	v. 抵抗；抗拒	1	0	0			0	1
+resolve	v. 解决；决心	1	0	0			0	1
+resource	n. 资源；财力	1	0	0			0	1
+respond	v. 回答；回应	1	0	0			0	1
+restore	v. 恢复；修复	1	0	0			0	1
+restrict	v. 限制；约束	1	0	0			0	1
+retain	v. 保持；保留	1	0	0			0	1
+retire	v. 退休；撤退	1	0	0			0	1
+reveal	v. 揭示；透露	1	0	0			0	1
+revenue	n. 收入；税收	1	0	0			0	1
+reverse	v. 逆转 adj. 相反的	1	0	0			0	1
+revolution	n. 革命；变革	1	0	0			0	1
+risk	n./v. 冒险；风险	1	0	0			0	1
+rival	n. 对手 v. 竞争	1	0	0			0	1
+route	n. 路线；航线	1	0	0			0	1
+routine	n. 常规 adj. 常规的	1	0	0			0	1
+ruin	n./v. 毁灭；废墟	1	0	0			0	1
+sacrifice	n./v. 牺牲；献祭	1	0	0			0	1
+satisfaction	n. 满足；满意	1	0	0			0	1
+scale	n. 规模；比例	1	0	0			0	1
+scan	v. 扫描；浏览	1	0	0			0	1
+schedule	n. 时间表 v. 安排	1	0	0			0	1
+scheme	n. 计划；方案	1	0	0			0	1
+scope	n. 范围；领域	1	0	0			0	1
+security	n. 安全；证券	1	0	0			0	1
+senior	adj. 高级的 n. 年长者	1	0	0			0	1
+session	n. 会议；学期	1	0	0			0	1
+settle	v. 解决；定居	1	0	0			0	1
+severe	adj. 严重的；严厉的	1	0	0			0	1
+shelter	n. 庇护所 v. 保护	1	0	0			0	1
+shift	n./v. 转变；轮班	1	0	0			0	1
+signal	n. 信号 v. 发信号	1	0	0			0	1
+significant	adj. 重要的；显著的	1	0	0			0	1
+similar	adj. 相似的；类似的	1	0	0			0	1
+simplify	v. 简化	1	0	0			0	1
+site	n. 地点；场所	1	0	0			0	1
+situation	n. 情况；形势	1	0	0			0	1
+slight	adj. 轻微的；纤细的	1	0	0			0	1
+source	n. 来源；出处	1	0	0			0	1
+specific	adj. 特定的；具体的	1	0	0			0	1
+stable	adj. 稳定的 n. 马厩	1	0	0			0	1
+staff	n. 工作人员；职员	1	0	0			0	1
+standard	n. 标准 adj. 标准的	1	0	0			0	1
+status	n. 地位；状态	1	0	0			0	1
+strategy	n. 战略；策略	1	0	0			0	1
+structure	n. 结构 v. 构建	1	0	0			0	1
+submit	v. 提交；服从	1	0	0			0	1
+sufficient	adj. 足够的；充分的	1	0	0			0	1
+summarize	v. 总结；概括	1	0	0			0	1
+superior	adj. 上级的；优越的	1	0	0			0	1
+supply	n./v. 供应；提供	1	0	0			0	1
+survey	n./v. 调查；测量	1	0	0			0	1
+survive	v. 幸存；存活	1	0	0			0	1
+suspect	v. 怀疑 n. 嫌疑人	1	0	0			0	1
+suspend	v. 暂停；悬挂	1	0	0			0	1
+sustain	v. 维持；支撑	1	0	0			0	1
+symbol	n. 象征；符号	1	0	0			0	1
+target	n. 目标 v. 瞄准	1	0	0			0	1
+tendency	n. 趋势；倾向	1	0	0			0	1
+terminal	n. 终端 adj. 末期的	1	0	0			0	1
+textile	n. 纺织品 adj. 纺织的	1	0	0			0	1
+theme	n. 主题；题目	1	0	0			0	1
+threat	n. 威胁；恐吓	1	0	0			0	1
+tolerance	n. 容忍；宽容	1	0	0			0	1
+trace	n. 痕迹 v. 追踪	1	0	0			0	1
+tradition	n. 传统；惯例	1	0	0			0	1
+transfer	n./v. 转移；调动	1	0	0			0	1
+transform	v. 改变；转换	1	0	0			0	1
+transport	n./v. 运输；运送	1	0	0			0	1
+treat	v. 对待；治疗 n. 款待	1	0	0			0	1
+trend	n. 趋势；潮流	1	0	0			0	1
+trigger	n. 扳机 v. 触发	1	0	0			0	1
+ultimate	adj. 最终的；根本的	1	0	0			0	1
+undergo	v. 经历；遭受	1	0	0			0	1
+undertake	v. 承担；从事	1	0	0			0	1
+unique	adj. 独特的；唯一的	1	0	0			0	1
+universal	adj. 普遍的；全体的	1	0	0			0	1
+urban	adj. 城市的；都市的	1	0	0			0	1
+urge	v. 催促 n. 强烈欲望	1	0	0			0	1
+valid	adj. 有效的；合理的	1	0	0			0	1
+variety	n. 多样；种类	1	0	0			0	1
+vehicle	n. 车辆；工具	1	0	0			0	1
+venture	n./v. 冒险；企业	1	0	0			0	1
+version	n. 版本；说法	1	0	0			0	1
+victim	n. 受害者；牺牲品	1	0	0			0	1
+violence	n. 暴力；猛烈	1	0	0			0	1
+virtual	adj. 虚拟的；实质上的	1	0	0			0	1
+virtue	n. 美德；优点	1	0	0			0	1
+visible	adj. 可见的	1	0	0			0	1
+vision	n. 视力；愿景	1	0	0			0	1
+visual	adj. 视觉的；可视的	1	0	0			0	1
+vital	adj. 至关重要的	1	0	0			0	1
+volume	n. 体积；音量	1	0	0			0	1
+voluntary	adj. 自愿的；志愿的	1	0	0			0	1
+welfare	n. 福利；幸福	1	0	0			0	1
+widespread	adj. 广泛的；普遍的	1	0	0			0	1
+witness	n. 证人 v. 目击	1	0	0			0	1
+yield	v. 产生 n. 产量	1	0	0			0	1

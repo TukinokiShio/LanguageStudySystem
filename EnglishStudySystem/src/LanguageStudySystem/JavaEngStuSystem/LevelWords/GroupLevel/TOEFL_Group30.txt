@@ -1,0 +1,16 @@
+15	0
+erode	v. 侵蚀；腐蚀	1	0	0			0
+attain	v. 达到；获得	1	0	0			0
+endure	v. 忍受；持续	1	0	0			0
+factor	n. 因素；因子	1	0	0			0
+gradual	adj. 逐渐的；逐步的	1	0	0			0
+ignorance	n. 无知；愚昧	1	0	0			0
+undermine	v. 破坏；削弱	1	0	0			0
+deficiency	n. 缺乏；不足	1	0	0			0
+impoverish	v. 使贫困；使贫瘠	1	0	0			0
+stable	adj. 稳定的 n. 马厩	1	0	0			0
+priority	n. 优先；优先权	1	0	0			0
+induce	v. 引起；诱导	1	0	0			0
+preserve	v. 保存；保护	1	0	0			0
+confirm	v. 确认；证实	1	0	0			0
+avail	v. 有益于 n. 效用	1	0	0			0

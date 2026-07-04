@@ -1,0 +1,16 @@
+15	0
+elevate	v. 提升；提高	1	0	0			0
+consensus	n. 共识；一致意见	1	0	0			0
+proportion	n. 比例；部分	1	0	0			0
+inhibit	v. 抑制；禁止	1	0	0			0
+dispute	n./v. 争论；争执	1	0	0			0
+accelerate	v. 加速；促进	1	0	0			0
+elaborate	adj. 精心制作的 v. 详细阐述	1	0	0			0
+prohibit	v. 禁止；阻止	1	0	0			0
+reveal	v. 揭示；透露	1	0	0			0
+draft	n. 草稿 v. 起草	1	0	0			0
+deviate	v. 偏离；背离	1	0	0			0
+reverse	v. 逆转 adj. 相反的	1	0	0			0
+abrupt	adj. 突然的；唐突的	1	0	0			0
+devastate	v. 毁灭；摧毁	1	0	0			0
+adolescent	n. 青少年 adj. 青春期的	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+compensation	n. 补偿；赔偿	1	0	0			0
+proportion	n. 比例；部分	1	0	0			0
+breakthrough	n. 突破；重大进展	1	0	0			0
+investment	n. 投资；投入	1	0	0			0
+organization	n. 组织；机构	1	0	0			0
+collaboration	n. 合作；协作	1	0	0			0
+earthquake	n. 地震	1	0	0			0
+adapt	v. 适应；改编	1	0	0			0
+anticipate	v. 预期；期望	1	0	0			0
+programming	n. 编程；程序设计	1	0	0			0
+modification	n. 修改；调整	1	0	0			0
+variability	n. 可变性；变化性	1	0	0			0
+implementation	n. 实施；执行	1	0	0			0
+creativity	n. 创造力；创造性	1	0	0			0
+attainment	n. 达到；成就	1	0	0			0

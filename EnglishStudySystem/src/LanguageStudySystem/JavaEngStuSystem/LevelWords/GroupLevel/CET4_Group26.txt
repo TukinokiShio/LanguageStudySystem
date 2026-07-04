@@ -1,0 +1,16 @@
+15	0
+fashion	n. 时尚；方式	1	0	0			0
+rank	n. 等级 v. 排名	1	0	0			0
+cycle	n. 循环；周期	1	0	0			0
+reserve	v. 保留；预订	1	0	0			0
+access	n. 进入；通道 v. 访问	1	0	0			0
+refer	v. 参考；提到	1	0	0			0
+absence	n. 缺席；缺乏	1	0	0			0
+application	n. 申请；应用	1	0	0			0
+cultivate	v. 培养；耕种	1	0	0			0
+identify	v. 识别；鉴定	1	0	0			0
+input	n./v. 输入	1	0	0			0
+contrast	n./v. 对比；对照	1	0	0			0
+anticipate	v. 预期；期望	1	0	0			0
+accelerate	v. 加速；促进	1	0	0			0
+output	n./v. 输出；产量	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+invariably	adv. 总是；不变地	1	0	0			0
+flip	v. 轻弹；翻	1	0	0			0
+alternate	adj. 交替的 v. 交替	1	0	0			0
+explicit	adj. 明确的；直白的	1	0	0			0
+stalk	v. 跟踪 n. 茎秆	1	0	0			0
+redundant	adj. 多余的；冗长的	1	0	0			0
+fluctuate	v. 波动；涨落	1	0	0			0
+overlap	v. 重叠 n. 重叠部分	1	0	0			0
+foster	v. 培养；促进	1	0	0			0
+mortal	adj. 凡人的；致命的	1	0	0			0
+diagnose	v. 诊断；判断	1	0	0			0
+cumulative	adj. 累积的	1	0	0			0
+stitch	n. 一针 v. 缝	1	0	0			0
+absurd	adj. 荒谬的；可笑的	1	0	0			0
+liability	n. 责任；负债	1	0	0			0

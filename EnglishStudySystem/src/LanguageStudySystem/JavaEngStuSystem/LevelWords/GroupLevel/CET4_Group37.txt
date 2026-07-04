@@ -1,0 +1,16 @@
+15	0
+deposit	n./v. 存款；押金	1	0	0			0
+option	n. 选择；选项	1	0	0			0
+convince	v. 说服；使确信	1	0	0			0
+manual	adj. 手工的 n. 手册	1	0	0			0
+theme	n. 主题；题目	1	0	0			0
+humble	adj. 谦逊的；卑微的	1	0	0			0
+isolate	v. 隔离；孤立	1	0	0			0
+suspend	v. 暂停；悬挂	1	0	0			0
+excess	n. 过度 adj. 过量的	1	0	0			0
+chief	adj. 主要的 n. 首领	1	0	0			0
+confidence	n. 信心；信任	1	0	0			0
+victim	n. 受害者；牺牲品	1	0	0			0
+fate	n. 命运；宿命	1	0	0			0
+major	adj. 主要的 n. 专业	1	0	0			0
+deserve	v. 值得；应得	1	0	0			0

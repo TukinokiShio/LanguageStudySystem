@@ -1,0 +1,16 @@
+15	0
+naive	adj. 天真的；幼稚的	1	0	0			0
+transit	n. 运输；过境	1	0	0			0
+vague	adj. 模糊的；含糊的	1	0	0			0
+correlate	v. 使相关联	1	0	0			0
+ecology	n. 生态学	1	0	0			0
+afflict	v. 使痛苦；折磨	1	0	0			0
+multitude	n. 大量；群众	1	0	0			0
+plead	v. 恳求；辩护	1	0	0			0
+illuminate	v. 照亮；阐明	1	0	0			0
+utilize	v. 利用；使用	1	0	0			0
+commence	v. 开始；着手	1	0	0			0
+medieval	adj. 中世纪的	1	0	0			0
+ponder	v. 沉思；考虑	1	0	0			0
+bulletin	n. 公告；简报	1	0	0			0
+depict	v. 描绘；描述	1	0	0			0

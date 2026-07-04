@@ -1,0 +1,16 @@
+15	0
+convenient	adj. 方便的	1	0	0			0
+cancel	v. 取消；撤销	1	0	0			0
+restrict	v. 限制；约束	1	0	0			0
+advocate	v. 提倡 n. 倡导者	1	0	0			0
+accurate	adj. 准确的	1	0	0			0
+ability	n. 能力；才能	1	0	0			0
+create	v. 创造；创建	1	0	0			0
+complex	adj. 复杂的 n. 综合体	1	0	0			0
+exceed	v. 超过；超越	1	0	0			0
+moral	adj. 道德的 n. 寓意	1	0	0			0
+interact	v. 互动；相互作用	1	0	0			0
+purchase	n./v. 购买	1	0	0			0
+dependent	adj. 依赖的；取决于	1	0	0			0
+background	n. 背景	1	0	0			0
+credit	n. 信用；学分 v. 归功于	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+statistics	n. 统计学；统计数字	1	0	0			0
+accelerate	v. 加速；促进	1	0	0			0
+concentration	n. 集中；专注	1	0	0			0
+transportation	n. 运输；交通	1	0	0			0
+productivity	n. 生产力；生产率	1	0	0			0
+legislation	n. 立法；法规	1	0	0			0
+withdrawal	n. 撤回；提款	1	0	0			0
+harmonious	adj. 和谐的；和睦的	1	0	0			0
+management	n. 管理；经营	1	0	0			0
+comprehensive	adj. 全面的；综合的	1	0	0			0
+adjust	v. 调整；适应	1	0	0			0
+undergraduate	n. 本科生 adj. 本科的	1	0	0			0
+advantageous	adj. 有利的；有益的	1	0	0			0
+justification	n. 正当理由；辩护	1	0	0			0
+reliability	n. 可靠性；可信度	1	0	0			0

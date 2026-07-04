@@ -1,0 +1,16 @@
+15	0
+correspondence	n. 通信；对应	1	0	0			0
+specialization	n. 专业化；专长	1	0	0			0
+celebration	n. 庆祝；庆典	1	0	0			0
+stimulation	n. 刺激；激励	1	0	0			0
+rehabilitation	n. 康复；修复	1	0	0			0
+infrastructure	n. 基础设施	1	0	0			0
+standardization	n. 标准化	1	0	0			0
+globalization	n. 全球化	1	0	0			0
+intelligence	n. 智力；情报	1	0	0			0
+approach	v. 接近 n. 方法	1	0	0			0
+circumstance	n. 环境；情况	1	0	0			0
+absorb	v. 吸收；吸引	1	0	0			0
+separation	n. 分离；分开	1	0	0			0
+contradiction	n. 矛盾；反驳	1	0	0			0
+maintenance	n. 维持；保养	1	0	0			0

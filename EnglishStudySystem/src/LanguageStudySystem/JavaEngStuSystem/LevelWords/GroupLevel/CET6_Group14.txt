@@ -1,0 +1,16 @@
+15	0
+paradox	n. 矛盾；悖论	1	0	0			0
+distort	v. 扭曲；歪曲	1	0	0			0
+complication	n. 复杂；并发症	1	0	0			0
+generate	v. 产生；生成	1	0	0			0
+galaxy	n. 星系；银河	1	0	0			0
+contend	v. 竞争；主张	1	0	0			0
+marshal	n. 元帅 v. 整理	1	0	0			0
+commodity	n. 商品；货物	1	0	0			0
+prey	n. 猎物 v. 捕食	1	0	0			0
+intuition	n. 直觉	1	0	0			0
+inventory	n. 清单；库存	1	0	0			0
+indignant	adj. 愤慨的；愤怒的	1	0	0			0
+fracture	n. 骨折 v. 破裂	1	0	0			0
+perplex	v. 使困惑；使复杂	1	0	0			0
+peculiar	adj. 奇怪的；独特的	1	0	0			0

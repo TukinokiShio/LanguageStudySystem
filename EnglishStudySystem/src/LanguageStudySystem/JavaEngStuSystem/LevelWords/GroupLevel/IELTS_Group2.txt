@@ -1,0 +1,16 @@
+15	0
+understanding	n. 理解；谅解 adj. 通情达理的	1	0	0			0
+phenomenon	n. 现象；奇迹	1	0	0			0
+exploitation	n. 开发；剥削	1	0	0			0
+proliferation	n. 扩散；激增	1	0	0			0
+accurate	adj. 准确的；精确的	1	0	0			0
+allocate	v. 分配；拨出	1	0	0			0
+confrontation	n. 对抗；对峙	1	0	0			0
+commentary	n. 评论；解说	1	0	0			0
+civilization	n. 文明；文化	1	0	0			0
+protection	n. 保护；防护	1	0	0			0
+foundation	n. 基础；基金会	1	0	0			0
+publication	n. 出版；出版物	1	0	0			0
+characteristic	n. 特征 adj. 特有的	1	0	0			0
+anxiety	n. 焦虑；忧虑	1	0	0			0
+retirement	n. 退休；退役	1	0	0			0

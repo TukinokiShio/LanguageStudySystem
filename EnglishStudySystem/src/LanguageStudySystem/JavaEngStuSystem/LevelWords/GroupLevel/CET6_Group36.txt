@@ -1,0 +1,16 @@
+15	0
+tangle	v. 纠缠 n. 混乱	1	0	0			0
+turnover	n. 营业额；人员流动	1	0	0			0
+intrinsic	adj. 固有的；内在的	1	0	0			0
+reign	n. 统治 v. 统治	1	0	0			0
+offspring	n. 后代；子孙	1	0	0			0
+slaughter	n./v. 屠杀；屠宰	1	0	0			0
+overt	adj. 公开的；明显的	1	0	0			0
+amend	v. 修改；修订	1	0	0			0
+amplify	v. 放大；增强	1	0	0			0
+sentiment	n. 感情；情绪	1	0	0			0
+symposium	n. 研讨会；讨论会	1	0	0			0
+clamp	n. 夹钳 v. 夹住	1	0	0			0
+compile	v. 编译；汇编	1	0	0			0
+preside	v. 主持；掌管	1	0	0			0
+conserve	v. 保存；节约	1	0	0			0

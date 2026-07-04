@@ -1,0 +1,16 @@
+15	0
+criminal	adj. 犯罪的 n. 罪犯	1	0	0			0
+amateur	n. 业余爱好者	1	0	0			0
+mystery	n. 神秘；奥秘	1	0	0			0
+asset	n. 资产；优点	1	0	0			0
+destination	n. 目的地	1	0	0			0
+guideline	n. 指导方针	1	0	0			0
+expand	v. 扩张；扩展	1	0	0			0
+factor	n. 因素；因子	1	0	0			0
+severe	adj. 严重的；严厉的	1	0	0			0
+benefit	n. 利益 v. 有益于	1	0	0			0
+cooperate	v. 合作；协作	1	0	0			0
+expose	v. 暴露；揭露	1	0	0			0
+operate	v. 操作；经营	1	0	0			0
+appropriate	adj. 适当的 v. 占用	1	0	0			0
+depart	v. 离开；出发	1	0	0			0

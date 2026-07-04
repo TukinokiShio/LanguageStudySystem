@@ -1,0 +1,16 @@
+15	0
+denote	v. 表示；意味着	1	0	0			0
+patriotic	adj. 爱国的	1	0	0			0
+spouse	n. 配偶	1	0	0			0
+deem	v. 认为；视为	1	0	0			0
+stimulus	n. 刺激；激励	1	0	0			0
+orbit	n. 轨道 v. 绕轨道运行	1	0	0			0
+stereotype	n. 刻板印象 v. 使模式化	1	0	0			0
+agony	n. 极大痛苦；苦恼	1	0	0			0
+energetic	adj. 精力充沛的	1	0	0			0
+weary	adj. 疲倦的 v. 使疲倦	1	0	0			0
+hierarchy	n. 等级制度；层级	1	0	0			0
+random	adj. 随机的；任意的	1	0	0			0
+weird	adj. 奇怪的；怪异的	1	0	0			0
+superb	adj. 极好的；卓越的	1	0	0			0
+perception	n. 感知；理解	1	0	0			0

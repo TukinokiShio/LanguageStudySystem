@@ -1,0 +1,16 @@
+15	0
+deliver	v. 递送；发表	1	0	0			0
+assemble	v. 集合；组装	1	0	0			0
+performance	n. 表现；性能	1	0	0			0
+similar	adj. 相似的；类似的	1	0	0			0
+alarm	n. 警报；闹钟	1	0	0			0
+pose	v. 摆姿势；造成 n. 姿势	1	0	0			0
+definite	adj. 明确的；肯定的	1	0	0			0
+assign	v. 分配；指派	1	0	0			0
+classic	adj. 经典的	1	0	0			0
+submit	v. 提交；服从	1	0	0			0
+resident	n. 居民 adj. 居住的	1	0	0			0
+confuse	v. 使困惑；混淆	1	0	0			0
+foundation	n. 基础；基金会	1	0	0			0
+chemical	adj. 化学的 n. 化学品	1	0	0			0
+anniversary	n. 周年纪念日	1	0	0			0

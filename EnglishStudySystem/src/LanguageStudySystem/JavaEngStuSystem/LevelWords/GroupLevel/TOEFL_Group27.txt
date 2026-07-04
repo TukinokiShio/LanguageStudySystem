@@ -1,0 +1,16 @@
+15	0
+phenomenon	n. 现象；奇迹	1	0	0			0
+abuse	n./v. 滥用；虐待	1	0	0			0
+trace	n. 痕迹 v. 追踪	1	0	0			0
+circumvent	v. 规避；绕过	1	0	0			0
+prominent	adj. 突出的；著名的	1	0	0			0
+ascribe	v. 把…归因于	1	0	0			0
+enormous	adj. 巨大的；庞大的	1	0	0			0
+embed	v. 嵌入；植入	1	0	0			0
+depreciate	v. 贬值；贬低	1	0	0			0
+orient	v. 使适应 n. 东方	1	0	0			0
+restrict	v. 限制；约束	1	0	0			0
+mediate	v. 调解；斡旋	1	0	0			0
+perceive	v. 感知；察觉	1	0	0			0
+incidence	n. 发生率；影响范围	1	0	0			0
+arbitrary	adj. 任意的；武断的	1	0	0			0

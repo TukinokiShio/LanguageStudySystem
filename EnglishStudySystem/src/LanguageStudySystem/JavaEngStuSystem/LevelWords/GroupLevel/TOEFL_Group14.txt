@@ -1,0 +1,16 @@
+15	0
+identify	v. 识别；鉴定	1	0	0			0
+eliminate	v. 消除；淘汰	1	0	0			0
+illustrate	v. 说明；举例	1	0	0			0
+elusive	adj. 难以捉摸的；逃避的	1	0	0			0
+annihilate	v. 消灭；歼灭	1	0	0			0
+antagonism	n. 对抗；敌对	1	0	0			0
+comprehensive	adj. 全面的；综合的	1	0	0			0
+appropriate	adj. 适当的 v. 占用	1	0	0			0
+segment	n. 部分；片段	1	0	0			0
+sophisticated	adj. 复杂的；精致的	1	0	0			0
+obtain	v. 获得；取得	1	0	0			0
+disseminate	v. 传播；散布	1	0	0			0
+suspend	v. 暂停；悬挂	1	0	0			0
+depict	v. 描绘；描述	1	0	0			0
+precede	v. 在…之前；先于	1	0	0			0

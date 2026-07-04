@@ -1,0 +1,16 @@
+15	0
+proclaim	v. 宣布；宣告	1	0	0			0
+disperse	v. 分散；驱散	1	0	0			0
+pledge	n. 誓言 v. 承诺	1	0	0			0
+oriental	adj. 东方的	1	0	0			0
+scrap	n. 碎片 v. 废弃	1	0	0			0
+distract	v. 分心；分散注意力	1	0	0			0
+premature	adj. 过早的；不成熟的	1	0	0			0
+exquisite	adj. 精致的；细腻的	1	0	0			0
+abolish	v. 废除；取消	1	0	0			0
+acute	adj. 急性的；敏锐的	1	0	0			0
+execution	n. 执行；处决	1	0	0			0
+eclipse	n. 日食 v. 使黯然失色	1	0	0			0
+misfortune	n. 不幸；灾祸	1	0	0			0
+nominate	v. 提名；任命	1	0	0			0
+extinguish	v. 熄灭；消灭	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+navigate	v. 导航；航行	1	0	0			0
+challenge	n./v. 挑战	1	0	0			0
+differ	v. 不同；相异	1	0	0			0
+exaggerate	v. 夸大；夸张	1	0	0			0
+dispose	v. 处理；安排	1	0	0			0
+connect	v. 连接；联系	1	0	0			0
+admission	n. 准许进入；承认	1	0	0			0
+adequate	adj. 足够的；适当的	1	0	0			0
+admire	v. 钦佩；赞赏	1	0	0			0
+quote	n./v. 引用；报价	1	0	0			0
+institute	n. 学院；机构 v. 建立	1	0	0			0
+passion	n. 激情；热情	1	0	0			0
+damage	n./v. 损害；毁坏	1	0	0			0
+edition	n. 版本；版次	1	0	0			0
+react	v. 反应；回应	1	0	0			0

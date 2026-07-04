@@ -1,0 +1,16 @@
+15	0
+revenge	n./v. 报复；复仇	1	0	0			0
+suppress	v. 压制；抑制	1	0	0			0
+conspicuous	adj. 显眼的；明显的	1	0	0			0
+stationary	adj. 静止的；不变的	1	0	0			0
+watertight	adj. 不漏水的；无懈可击的	1	0	0			0
+dismay	n. 沮丧 v. 使惊慌	1	0	0			0
+presumably	adv. 大概；可能	1	0	0			0
+stall	n. 摊位 v. 拖延	1	0	0			0
+litter	n. 垃圾 v. 乱扔	1	0	0			0
+wreck	n. 残骸 v. 破坏	1	0	0			0
+adverse	adj. 不利的；相反的	1	0	0			0
+invert	v. 倒转；颠倒	1	0	0			0
+merge	v. 合并；融合	1	0	0			0
+legitimate	adj. 合法的；正当的	1	0	0			0
+resignation	n. 辞职；顺从	1	0	0			0

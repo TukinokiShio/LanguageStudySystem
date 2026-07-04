@@ -1,0 +1,16 @@
+15	0
+layer	n. 层；层次	1	0	0			0
+boom	n. 繁荣 v. 激增	1	0	0			0
+demand	n./v. 要求；需求	1	0	0			0
+constant	adj. 不变的；持续的	1	0	0			0
+invade	v. 入侵；侵略	1	0	0			0
+evolve	v. 进化；发展	1	0	0			0
+congress	n. 国会；大会	1	0	0			0
+economy	n. 经济；节约	1	0	0			0
+aspect	n. 方面；外貌	1	0	0			0
+intense	adj. 强烈的；紧张的	1	0	0			0
+accumulate	v. 积累；积聚	1	0	0			0
+professional	adj. 专业的 n. 专业人士	1	0	0			0
+voluntary	adj. 自愿的；志愿的	1	0	0			0
+inspect	v. 检查；视察	1	0	0			0
+accuse	v. 指责；控告	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+maximize	v. 最大化	1	0	0			0
+systematic	adj. 系统的；有组织的	1	0	0			0
+adjust	v. 调整；适应	1	0	0			0
+liberal	adj. 自由的；开明的	1	0	0			0
+inherent	adj. 固有的；内在的	1	0	0			0
+paradigm	n. 范式；范例	1	0	0			0
+compensate	v. 补偿；赔偿	1	0	0			0
+advocate	v. 提倡；主张 n. 倡导者	1	0	0			0
+rigorous	adj. 严格的；严密的	1	0	0			0
+assume	v. 假定；承担	1	0	0			0
+distort	v. 扭曲；歪曲	1	0	0			0
+bias	n. 偏见 v. 使有偏见	1	0	0			0
+accommodate	v. 容纳；适应	1	0	0			0
+specify	v. 指定；明确说明	1	0	0			0
+visible	adj. 可见的；明显的	1	0	0			0

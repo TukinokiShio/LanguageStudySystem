@@ -1,0 +1,16 @@
+15	0
+pregnant	adj. 怀孕的；富有意义的	1	0	0			0
+relay	v. 转播 n. 接力赛	1	0	0			0
+impart	v. 传授；告知	1	0	0			0
+retort	n./v. 反驳；回嘴	1	0	0			0
+contaminate	v. 污染；玷污	1	0	0			0
+instrumental	adj. 起作用的；乐器的	1	0	0			0
+symptom	n. 症状；征兆	1	0	0			0
+tuck	v. 塞进；卷起	1	0	0			0
+eloquent	adj. 有口才的；雄辩的	1	0	0			0
+outbreak	n. 爆发；突然发生	1	0	0			0
+sparkle	v. 闪耀 n. 闪光	1	0	0			0
+intent	n. 意图 adj. 专注的	1	0	0			0
+applaud	v. 鼓掌；称赞	1	0	0			0
+conception	n. 概念；构想	1	0	0			0
+imperative	adj. 必要的 n. 命令	1	0	0			0

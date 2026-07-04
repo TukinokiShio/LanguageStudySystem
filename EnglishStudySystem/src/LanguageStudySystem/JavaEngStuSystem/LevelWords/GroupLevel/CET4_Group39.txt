@@ -1,0 +1,16 @@
+15	0
+achieve	v. 达到；取得	1	0	0			0
+sustain	v. 维持；支撑	1	0	0			0
+incident	n. 事件；事变	1	0	0			0
+perceive	v. 感知；察觉	1	0	0			0
+conservative	adj. 保守的 n. 保守派	1	0	0			0
+genius	n. 天才	1	0	0			0
+affair	n. 事务；事件	1	0	0			0
+context	n. 背景；上下文	1	0	0			0
+aggressive	adj. 侵略的；好斗的	1	0	0			0
+journal	n. 期刊；日志	1	0	0			0
+evidence	n. 证据；迹象	1	0	0			0
+claim	n./v. 声称；要求	1	0	0			0
+bond	n. 纽带；债券	1	0	0			0
+qualify	v. 使合格；限定	1	0	0			0
+image	n. 形象；图像	1	0	0			0

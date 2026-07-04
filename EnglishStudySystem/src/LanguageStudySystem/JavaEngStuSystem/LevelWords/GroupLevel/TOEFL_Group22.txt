@@ -1,0 +1,16 @@
+15	0
+potential	adj. 潜在的 n. 潜力	1	0	0			0
+status	n. 地位；状态	1	0	0			0
+valid	adj. 有效的；合理的	1	0	0			0
+depress	v. 使沮丧；压低	1	0	0			0
+eventually	adv. 最终；终于	1	0	0			0
+intrinsic	adj. 固有的；内在的	1	0	0			0
+immerse	v. 沉浸；使陷入	1	0	0			0
+thesis	n. 论文；论题	1	0	0			0
+empirical	adj. 经验主义的	1	0	0			0
+erupt	v. 爆发；喷发	1	0	0			0
+consistent	adj. 一致的；始终如一的	1	0	0			0
+vanish	v. 消失；突然不见	1	0	0			0
+subsidy	n. 补贴；津贴	1	0	0			0
+contaminate	v. 污染；玷污	1	0	0			0
+contemporary	adj. 当代的；同时代的	1	0	0			0

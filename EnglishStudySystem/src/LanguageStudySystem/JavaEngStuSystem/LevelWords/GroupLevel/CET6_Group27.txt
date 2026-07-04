@@ -1,0 +1,16 @@
+15	0
+impetus	n. 动力；推动力	1	0	0			0
+bizarre	adj. 奇异的；古怪的	1	0	0			0
+inhibit	v. 抑制；禁止	1	0	0			0
+slack	adj. 松弛的 n. 松弛部分	1	0	0			0
+descent	n. 下降；血统	1	0	0			0
+temperament	n. 气质；性格	1	0	0			0
+tow	v. 拖；牵引 n. 拖曳	1	0	0			0
+obedience	n. 服从；顺从	1	0	0			0
+precede	v. 在…之前；先于	1	0	0			0
+identification	n. 识别；身份证明	1	0	0			0
+trifle	n. 琐事 v. 怠慢	1	0	0			0
+consensus	n. 共识；一致意见	1	0	0			0
+disastrous	adj. 灾难性的	1	0	0			0
+gracious	adj. 亲切的；优雅的	1	0	0			0
+glimpse	n. 一瞥 v. 瞥见	1	0	0			0

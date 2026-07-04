@@ -1,0 +1,16 @@
+15	0
+beneficial	adj. 有益的；有利的	1	0	0			0
+involvement	n. 参与；卷入	1	0	0			0
+irrigation	n. 灌溉	1	0	0			0
+imagination	n. 想象力；创造	1	0	0			0
+establishment	n. 建立；机构	1	0	0			0
+recycling	n. 回收利用	1	0	0			0
+recognition	n. 认出；承认	1	0	0			0
+possibility	n. 可能性；可能	1	0	0			0
+construction	n. 建设；建筑	1	0	0			0
+apparently	adv. 显然；表面上	1	0	0			0
+generalization	n. 概括；普遍化	1	0	0			0
+perception	n. 感知；理解	1	0	0			0
+responsibility	n. 责任；职责	1	0	0			0
+academy	n. 学院；研究院	1	0	0			0
+configuration	n. 配置；结构	1	0	0			0

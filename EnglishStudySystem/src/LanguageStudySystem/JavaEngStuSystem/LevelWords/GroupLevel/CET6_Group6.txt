@@ -1,0 +1,16 @@
+15	0
+compatible	adj. 兼容的；合得来的	1	0	0			0
+dilemma	n. 困境；进退两难	1	0	0			0
+reclaim	v. 回收；开垦	1	0	0			0
+incur	v. 招致；遭受	1	0	0			0
+constrain	v. 限制；约束	1	0	0			0
+acquaint	v. 使认识；使了解	1	0	0			0
+exotic	adj. 异国情调的	1	0	0			0
+verse	n. 诗；韵文	1	0	0			0
+bonus	n. 奖金；红利	1	0	0			0
+circulation	n. 循环；发行量	1	0	0			0
+reckon	v. 认为；计算	1	0	0			0
+sacred	adj. 神圣的；宗教的	1	0	0			0
+jog	v. 慢跑 n. 轻推	1	0	0			0
+apparatus	n. 器械；装置	1	0	0			0
+subordinate	adj. 下级的 n. 下属	1	0	0			0

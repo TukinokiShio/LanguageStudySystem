@@ -1,0 +1,16 @@
+15	0
+accompany	v. 陪伴；伴随	1	0	0			0
+regulation	n. 规则；管理	1	0	0			0
+probability	n. 可能性；概率	1	0	0			0
+innovation	n. 创新；革新	1	0	0			0
+revelation	n. 揭示；启示	1	0	0			0
+adolescent	n. 青少年 adj. 青春期的	1	0	0			0
+professionalism	n. 专业精神；职业水准	1	0	0			0
+evaluation	n. 评估；评价	1	0	0			0
+eligibility	n. 资格；合格	1	0	0			0
+production	n. 生产；产量	1	0	0			0
+biological	adj. 生物的；生物学的	1	0	0			0
+visualization	n. 可视化；形象化	1	0	0			0
+attendance	n. 出席；到场	1	0	0			0
+wilderness	n. 荒野；荒原	1	0	0			0
+preservation	n. 保存；保护	1	0	0			0

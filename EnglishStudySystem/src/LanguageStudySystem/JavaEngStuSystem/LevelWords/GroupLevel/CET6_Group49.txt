@@ -1,0 +1,16 @@
+15	0
+specialty	n. 专业；专长	1	0	0			0
+reliance	n. 依赖；信赖	1	0	0			0
+suspension	n. 暂停；悬挂	1	0	0			0
+resent	v. 怨恨；愤恨	1	0	0			0
+skeptical	adj. 怀疑的；怀疑论的	1	0	0			0
+prophet	n. 先知；预言者	1	0	0			0
+eject	v. 驱逐；弹出	1	0	0			0
+quest	n./v. 寻求；探索	1	0	0			0
+overhear	v. 无意中听到	1	0	0			0
+proximity	n. 接近；邻近	1	0	0			0
+feminine	adj. 女性的；阴性的	1	0	0			0
+immerse	v. 沉浸；使陷入	1	0	0			0
+climax	n. 高潮；顶点	1	0	0			0
+tumble	v. 跌倒；暴跌	1	0	0			0
+tease	v. 戏弄；取笑	1	0	0			0

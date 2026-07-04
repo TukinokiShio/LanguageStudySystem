@@ -1,0 +1,16 @@
+15	0
+deflect	v. 使偏转；转移	1	0	0			0
+isolate	v. 隔离；孤立	1	0	0			0
+commence	v. 开始；着手	1	0	0			0
+derive	v. 源自；获得	1	0	0			0
+anticipate	v. 预期；期望	1	0	0			0
+endeavor	n./v. 努力；尽力	1	0	0			0
+consist	v. 由…组成；在于	1	0	0			0
+abolish	v. 废除；取消	1	0	0			0
+propose	v. 建议；提议	1	0	0			0
+construct	v. 建造；构建	1	0	0			0
+adhere	v. 粘附；坚持	1	0	0			0
+expose	v. 暴露；揭露	1	0	0			0
+debilitate	v. 使虚弱；削弱	1	0	0			0
+accessible	adj. 可接近的；易理解的	1	0	0			0
+ultimate	adj. 最终的；根本的	1	0	0			0

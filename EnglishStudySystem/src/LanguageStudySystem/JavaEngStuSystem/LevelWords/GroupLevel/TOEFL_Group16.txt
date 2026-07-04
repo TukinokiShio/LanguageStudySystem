@@ -1,0 +1,16 @@
+15	0
+deplete	v. 耗尽；大量减少	1	0	0			0
+virtual	adj. 虚拟的；实质上的	1	0	0			0
+detrimental	adj. 有害的；不利的	1	0	0			0
+expertise	n. 专长；专门知识	1	0	0			0
+margin	n. 边缘；利润	1	0	0			0
+substitute	n. 替代品 v. 替代	1	0	0			0
+portray	v. 描绘；扮演	1	0	0			0
+concentrate	v. 集中；浓缩	1	0	0			0
+grant	v. 授予 n. 拨款	1	0	0			0
+cease	v. 停止；终止	1	0	0			0
+coordinate	v. 协调 n. 坐标	1	0	0			0
+negate	v. 否定；取消	1	0	0			0
+acquire	v. 获得；学到	1	0	0			0
+albeit	conj. 虽然；即使	1	0	0			0
+eradicate	v. 根除；消灭	1	0	0			0

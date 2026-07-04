@@ -1,0 +1,16 @@
+15	0
+robust	adj. 强健的；坚固的	1	0	0			0
+luminous	adj. 发光的；明亮的	1	0	0			0
+nasty	adj. 恶劣的；肮脏的	1	0	0			0
+solicitor	n. 律师；推销员	1	0	0			0
+tempt	v. 诱惑；引诱	1	0	0			0
+obligation	n. 义务；责任	1	0	0			0
+immune	adj. 免疫的；豁免的	1	0	0			0
+straightforward	adj. 直截了当的	1	0	0			0
+assert	v. 断言；坚持	1	0	0			0
+conviction	n. 信念；定罪	1	0	0			0
+attendance	n. 出席；到场	1	0	0			0
+tablet	n. 药片；平板	1	0	0			0
+controversy	n. 争议；争论	1	0	0			0
+safeguard	n./v. 保护；防护	1	0	0			0
+bankrupt	adj. 破产的 v. 使破产	1	0	0			0

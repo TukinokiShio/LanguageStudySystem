@@ -1,0 +1,16 @@
+15	0
+endorse	v. 支持；背书	1	0	0			0
+deploy	v. 部署；利用	1	0	0			0
+beneficial	adj. 有益的；有利的	1	0	0			0
+avert	v. 避免；转移	1	0	0			0
+universal	adj. 普遍的；全体的	1	0	0			0
+whereas	conj. 然而；鉴于	1	0	0			0
+accumulate	v. 积累；积聚	1	0	0			0
+minimize	v. 最小化；降到最低	1	0	0			0
+ecology	n. 生态学	1	0	0			0
+exacerbate	v. 加重；恶化	1	0	0			0
+revolution	n. 革命；变革	1	0	0			0
+radical	adj. 激进的；根本的	1	0	0			0
+surplus	n. 盈余 adj. 过剩的	1	0	0			0
+diverse	adj. 多样的；不同的	1	0	0			0
+thereby	adv. 因此；从而	1	0	0			0

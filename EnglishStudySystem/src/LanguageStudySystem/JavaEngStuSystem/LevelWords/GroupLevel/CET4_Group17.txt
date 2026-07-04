@@ -1,0 +1,16 @@
+15	0
+internal	adj. 内部的；国内的	1	0	0			0
+limit	n./v. 限制；限度	1	0	0			0
+depress	v. 使沮丧；压低	1	0	0			0
+network	n. 网络；关系网	1	0	0			0
+urge	v. 催促 n. 强烈欲望	1	0	0			0
+minor	adj. 较小的 n. 未成年人	1	0	0			0
+provision	n. 规定；供应	1	0	0			0
+current	adj. 当前的 n. 水流	1	0	0			0
+intellectual	adj. 智力的 n. 知识分子	1	0	0			0
+atmosphere	n. 气氛；大气	1	0	0			0
+visible	adj. 可见的	1	0	0			0
+guarantee	n./v. 保证；担保	1	0	0			0
+summarize	v. 总结；概括	1	0	0			0
+welfare	n. 福利；幸福	1	0	0			0
+illustrate	v. 说明；举例	1	0	0			0

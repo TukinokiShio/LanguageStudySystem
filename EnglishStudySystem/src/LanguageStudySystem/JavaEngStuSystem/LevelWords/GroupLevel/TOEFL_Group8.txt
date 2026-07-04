@@ -1,0 +1,16 @@
+15	0
+conform	v. 遵守；符合	1	0	0			0
+intervene	v. 干涉；介入	1	0	0			0
+summarize	v. 总结；概括	1	0	0			0
+navigate	v. 导航；航行	1	0	0			0
+convene	v. 召集；集合	1	0	0			0
+superior	adj. 上级的；优越的	1	0	0			0
+vulnerable	adj. 脆弱的；易受伤的	1	0	0			0
+principle	n. 原则；原理	1	0	0			0
+policy	n. 政策；保险单	1	0	0			0
+eclipse	n. 日食 v. 使黯然失色	1	0	0			0
+shift	n./v. 转变；轮班	1	0	0			0
+indispensable	adj. 不可或缺的	1	0	0			0
+collapse	v./n. 倒塌；崩溃	1	0	0			0
+embark	v. 着手；上船	1	0	0			0
+contribute	v. 贡献；捐献	1	0	0			0

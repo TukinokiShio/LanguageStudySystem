@@ -1,0 +1,16 @@
+15	0
+haul	v. 拖；拉 n. 拖运	1	0	0			0
+petty	adj. 琐碎的；小气的	1	0	0			0
+aggravate	v. 加重；恶化	1	0	0			0
+blaze	n. 火焰 v. 燃烧	1	0	0			0
+gorgeous	adj. 华丽的；极好的	1	0	0			0
+ornament	n. 装饰品 v. 装饰	1	0	0			0
+polar	adj. 极地的；完全相反的	1	0	0			0
+shrug	n./v. 耸肩	1	0	0			0
+productive	adj. 多产的；富有成效的	1	0	0			0
+opt	v. 选择；抉择	1	0	0			0
+indicative	adj. 指示的；表明的	1	0	0			0
+perfume	n. 香水 v. 使散发香气	1	0	0			0
+optimism	n. 乐观；乐观主义	1	0	0			0
+alleviate	v. 减轻；缓解	1	0	0			0
+abrupt	adj. 突然的；唐突的	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+optimize	v. 优化；充分利用	1	0	0			0
+formulate	v. 制定；规划	1	0	0			0
+dissolve	v. 溶解；解散	1	0	0			0
+document	v. 记录 n. 文件	1	0	0			0
+participate	v. 参与；参加	1	0	0			0
+variable	n. 变量 adj. 可变的	1	0	0			0
+parameter	n. 参数；规范	1	0	0			0
+cumulative	adj. 累积的；渐增的	1	0	0			0
+trigger	n. 扳机 v. 触发	1	0	0			0
+disdain	n./v. 蔑视；鄙视	1	0	0			0
+adapt	v. 适应；改编	1	0	0			0
+assess	v. 评估；评定	1	0	0			0
+constant	adj. 不变的；持续的	1	0	0			0
+conceive	v. 构想；怀孕	1	0	0			0
+commodity	n. 商品；货物	1	0	0			0

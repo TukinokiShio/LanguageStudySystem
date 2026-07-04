@@ -1,0 +1,241 @@
+﻿[2026-07-03 23:07:56.337] [INFO] ========== 打包任务开始 ==========
+[2026-07-03 23:07:56.344] [INFO] 正在检测项目路径...
+[2026-07-03 23:07:56.348] [INFO] 项目根目录: E:\SHIO\LanguageStudySystem\EnglishStudySystem  ✓
+[2026-07-03 23:07:56.349] [INFO] 历史归档目录: E:\SHIO\LanguageStudySystem\ESS_history  ✓
+[2026-07-03 23:07:56.351] [INFO] Inno Setup 脚本文件: E:\SHIO\EnglishStudySystem_Setup.iss  ✓
+[2026-07-03 23:07:56.355] [INFO] 正在自动检测 Inno Setup 安装路径...
+[2026-07-03 23:07:56.357] [INFO] 在固定路径找到 Inno Setup: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-07-03 23:07:56.360] [SUCCESS] Inno Setup 路径: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-07-03 23:07:56.373] [INFO] 正在检测 Java 开发工具...
+[2026-07-03 23:07:56.376] [INFO] 从嵌入式 JDK 找到 javac: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jdk-24\bin\javac.exe
+[2026-07-03 23:07:56.383] [INFO] 从 .iss 文件读取版本号: 2.1.0
+[2026-07-03 23:07:56.385] [SUCCESS] 本次打包版本号: 2.1.0
+[2026-07-03 23:08:01.034] [INFO] 弹窗确认结束，使用版本: 2.1.0, 输出目录: E:\SHIO\LanguageStudySystem\ESS_history
+[2026-07-03 23:08:01.037] [INFO] 主项目源码目录: E:\SHIO\LanguageStudySystem\EnglishStudySystem\src\LanguageStudySystem\JavaEngStuSystem
+[2026-07-03 23:08:01.040] [INFO] 使用源码目录: E:\SHIO\LanguageStudySystem\EnglishStudySystem\src\LanguageStudySystem\JavaEngStuSystem
+[2026-07-03 23:08:01.047] [INFO] 正在编译 Java 源文件...
+[2026-07-03 23:08:01.048] [INFO] 源文件目录: E:\SHIO\LanguageStudySystem\EnglishStudySystem\src\LanguageStudySystem\JavaEngStuSystem
+[2026-07-03 23:08:01.050] [INFO] 输出目录: E:\SHIO\LanguageStudySystem\EnglishStudySystem\bin\classes
+[2026-07-03 23:08:01.387] [INFO] javac 版本: javac 24.0.2
+[2026-07-03 23:08:01.389] [INFO] 编译命令: "E:\SHIO\LanguageStudySystem\EnglishStudySystem\jdk-24\bin\javac.exe" -d "E:\SHIO\LanguageStudySystem\EnglishStudySystem\bin\classes" -encoding UTF-8 @"C:\Users\d8502\AppData\Local\Temp\javac_sources_20260703_230756.txt"
+[2026-07-03 23:08:02.560] [SUCCESS] Java 编译完成
+[2026-07-03 23:08:02.563] [INFO] 编译输出: 注: E:\SHIO\LanguageStudySystem\EnglishStudySystem\src\LanguageStudySystem\JavaEngStuSystem\EngImageRecognition.java使用或覆盖了已过时的 API。 注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[2026-07-03 23:08:02.567] [INFO] 正在打包 JAR 文件...
+[2026-07-03 23:08:02.572] [INFO] 打包命令: "E:\SHIO\LanguageStudySystem\EnglishStudySystem\jdk-24\bin\jar.exe" cfm "E:\SHIO\LanguageStudySystem\EnglishStudySystem\bin\EnglishStudySystem.jar" "C:\Users\d8502\AppData\Local\Temp\manifest_20260703_230756\MANIFEST.MF" .
+[2026-07-03 23:08:02.918] [SUCCESS] JAR 文件已生成: E:\SHIO\LanguageStudySystem\EnglishStudySystem\bin\EnglishStudySystem.jar
+[2026-07-03 23:08:02.925] [INFO] 正在通过 Inno Setup 编译安装包...
+[2026-07-03 23:08:02.927] [INFO] ISCC 命令: "E:\SHIO\inno\Inno Setup 6\ISCC.exe" "E:\SHIO\EnglishStudySystem_Setup.iss" /DMyAppVersion=2.1.0
+[2026-07-03 23:08:09.953] [INFO] Inno Setup 编译耗时: 7.0196696 秒
+[2026-07-03 23:08:09.957] [INFO] ISCC: Inno Setup 6 Command-Line Compiler
+[2026-07-03 23:08:09.959] [INFO] ISCC: Copyright (C) 1997-2026 Jordan Russell. All rights reserved.
+[2026-07-03 23:08:09.960] [INFO] ISCC: Portions Copyright (C) 2000-2026 Martijn Laan. All rights reserved.
+[2026-07-03 23:08:09.962] [INFO] ISCC: Portions Copyright (C) 2001-2004 Alex Yackimoff. All rights reserved.
+[2026-07-03 23:08:09.964] [INFO] ISCC: https://www.innosetup.com
+[2026-07-03 23:08:09.965] [INFO] ISCC: 
+[2026-07-03 23:08:09.966] [INFO] ISCC: Compiler engine version: Inno Setup 6.7.1
+[2026-07-03 23:08:09.987] [INFO] ISCC: Non-commercial use only
+[2026-07-03 23:08:09.990] [INFO] ISCC: 
+[2026-07-03 23:08:09.992] [INFO] ISCC: Preprocessing
+[2026-07-03 23:08:09.994] [INFO] ISCC:    Reading file: E:\SHIO\inno\Inno Setup 6\ISPPBuiltins.iss
+[2026-07-03 23:08:09.995] [INFO] ISCC: Parsing [Setup] section, line 16
+[2026-07-03 23:08:09.996] [INFO] ISCC: Parsing [Setup] section, line 17
+[2026-07-03 23:08:09.998] [INFO] ISCC: Parsing [Setup] section, line 18
+[2026-07-03 23:08:10.000] [INFO] ISCC: Parsing [Setup] section, line 20
+[2026-07-03 23:08:10.001] [INFO] ISCC: Parsing [Setup] section, line 21
+[2026-07-03 23:08:10.001] [INFO] ISCC: Parsing [Setup] section, line 22
+[2026-07-03 23:08:10.002] [INFO] ISCC: Parsing [Setup] section, line 23
+[2026-07-03 23:08:10.005] [INFO] ISCC: Parsing [Setup] section, line 24
+[2026-07-03 23:08:10.006] [INFO] ISCC: Parsing [Setup] section, line 25
+[2026-07-03 23:08:10.007] [INFO] ISCC: Parsing [Setup] section, line 26
+[2026-07-03 23:08:10.009] [INFO] ISCC: Parsing [Setup] section, line 29
+[2026-07-03 23:08:10.010] [INFO] ISCC: Parsing [Setup] section, line 30
+[2026-07-03 23:08:10.011] [INFO] ISCC: Parsing [Setup] section, line 31
+[2026-07-03 23:08:10.012] [INFO] ISCC: Parsing [Setup] section, line 32
+[2026-07-03 23:08:10.014] [INFO] ISCC: Parsing [Setup] section, line 33
+[2026-07-03 23:08:10.014] [INFO] ISCC: Reading file (WizardImageFile)
+[2026-07-03 23:08:10.017] [INFO] ISCC: Reading file (WizardSmallImageFile)
+[2026-07-03 23:08:10.018] [INFO] ISCC: Reading file (WizardImageFileDynamicDark)
+[2026-07-03 23:08:10.019] [INFO] ISCC: Reading file (WizardSmallImageFileDynamicDark)
+[2026-07-03 23:08:10.020] [INFO] ISCC: Preparing Setup program executable
+[2026-07-03 23:08:10.021] [INFO] ISCC:    Verification successful
+[2026-07-03 23:08:10.024] [INFO] ISCC:    Updating icons and style (SetupCustomStyle.e32)
+[2026-07-03 23:08:10.025] [INFO] ISCC:    Updating version info (SetupCustomStyle.e32)
+[2026-07-03 23:08:10.026] [INFO] ISCC: Determining language code pages
+[2026-07-03 23:08:10.027] [INFO] ISCC: Parsing [Languages] section, line 36
+[2026-07-03 23:08:10.028] [INFO] ISCC:    Reading file: E:\SHIO\inno\Inno Setup 6\Default.isl
+[2026-07-03 23:08:10.030] [INFO] ISCC:    Messages in script file
+[2026-07-03 23:08:10.031] [INFO] ISCC: Reading default messages from Default.isl
+[2026-07-03 23:08:10.032] [INFO] ISCC: Parsing [Languages] section, line 36
+[2026-07-03 23:08:10.034] [INFO] ISCC:    Reading file: E:\SHIO\inno\Inno Setup 6\Default.isl
+[2026-07-03 23:08:10.036] [INFO] ISCC: Parsing [LangOptions], [Messages], and [CustomMessages] sections
+[2026-07-03 23:08:10.036] [INFO] ISCC:    Messages in script file
+[2026-07-03 23:08:10.038] [INFO] ISCC: Reading [Code] section
+[2026-07-03 23:08:10.039] [INFO] ISCC: Parsing [Tasks] section, line 39
+[2026-07-03 23:08:10.041] [INFO] ISCC: Parsing [Icons] section, line 50
+[2026-07-03 23:08:10.042] [INFO] ISCC: Parsing [Icons] section, line 51
+[2026-07-03 23:08:10.043] [INFO] ISCC: Parsing [Run] section, line 54
+[2026-07-03 23:08:10.045] [INFO] ISCC: Parsing [Files] section, line 42
+[2026-07-03 23:08:10.046] [INFO] ISCC: Parsing [Files] section, line 43
+[2026-07-03 23:08:10.047] [INFO] ISCC: Parsing [Files] section, line 44
+[2026-07-03 23:08:10.048] [INFO] ISCC: Parsing [Files] section, line 45
+[2026-07-03 23:08:10.049] [INFO] ISCC: Parsing [Files] section, line 46
+[2026-07-03 23:08:10.050] [INFO] ISCC: Creating setup files
+[2026-07-03 23:08:10.051] [INFO] ISCC:    Verification successful
+[2026-07-03 23:08:10.052] [INFO] ISCC:    Updating icons (Setup.exe)
+[2026-07-03 23:08:10.055] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\Eng鍚姩.bat
+[2026-07-03 23:08:10.056] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\run.vbs
+[2026-07-03 23:08:10.057] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\app.ico
+[2026-07-03 23:08:10.057] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\bin\EnglishStudySystem.jar
+[2026-07-03 23:08:10.060] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\release
+[2026-07-03 23:08:10.061] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-console-l1-1-0.dll
+[2026-07-03 23:08:10.062] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-console-l1-2-0.dll
+[2026-07-03 23:08:10.063] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-datetime-l1-1-0.dll
+[2026-07-03 23:08:10.065] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-debug-l1-1-0.dll
+[2026-07-03 23:08:10.067] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-errorhandling-l1-1-0.dll
+[2026-07-03 23:08:10.068] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-fibers-l1-1-0.dll
+[2026-07-03 23:08:10.069] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-file-l1-1-0.dll
+[2026-07-03 23:08:10.070] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-file-l1-2-0.dll
+[2026-07-03 23:08:10.071] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-file-l2-1-0.dll
+[2026-07-03 23:08:10.072] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-handle-l1-1-0.dll
+[2026-07-03 23:08:10.074] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-heap-l1-1-0.dll
+[2026-07-03 23:08:10.075] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-interlocked-l1-1-0.dll
+[2026-07-03 23:08:10.076] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-libraryloader-l1-1-0.dll
+[2026-07-03 23:08:10.078] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-localization-l1-2-0.dll
+[2026-07-03 23:08:10.079] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-memory-l1-1-0.dll
+[2026-07-03 23:08:10.081] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-namedpipe-l1-1-0.dll
+[2026-07-03 23:08:10.082] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-processenvironment-l1-1-0.dll
+[2026-07-03 23:08:10.083] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-processthreads-l1-1-0.dll
+[2026-07-03 23:08:10.084] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-processthreads-l1-1-1.dll
+[2026-07-03 23:08:10.085] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-profile-l1-1-0.dll
+[2026-07-03 23:08:10.086] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-rtlsupport-l1-1-0.dll
+[2026-07-03 23:08:10.088] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-string-l1-1-0.dll
+[2026-07-03 23:08:10.089] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-synch-l1-1-0.dll
+[2026-07-03 23:08:10.091] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-synch-l1-2-0.dll
+[2026-07-03 23:08:10.092] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-sysinfo-l1-1-0.dll
+[2026-07-03 23:08:10.093] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-timezone-l1-1-0.dll
+[2026-07-03 23:08:10.094] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-core-util-l1-1-0.dll
+[2026-07-03 23:08:10.095] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-conio-l1-1-0.dll
+[2026-07-03 23:08:10.098] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-convert-l1-1-0.dll
+[2026-07-03 23:08:10.098] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-environment-l1-1-0.dll
+[2026-07-03 23:08:10.100] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+[2026-07-03 23:08:10.101] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-heap-l1-1-0.dll
+[2026-07-03 23:08:10.102] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-locale-l1-1-0.dll
+[2026-07-03 23:08:10.103] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-math-l1-1-0.dll
+[2026-07-03 23:08:10.105] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+[2026-07-03 23:08:10.106] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-private-l1-1-0.dll
+[2026-07-03 23:08:10.107] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-process-l1-1-0.dll
+[2026-07-03 23:08:10.108] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-runtime-l1-1-0.dll
+[2026-07-03 23:08:10.110] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-stdio-l1-1-0.dll
+[2026-07-03 23:08:10.111] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-string-l1-1-0.dll
+[2026-07-03 23:08:10.112] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-time-l1-1-0.dll
+[2026-07-03 23:08:10.113] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\api-ms-win-crt-utility-l1-1-0.dll
+[2026-07-03 23:08:10.114] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\awt.dll
+[2026-07-03 23:08:10.116] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\fontmanager.dll
+[2026-07-03 23:08:10.117] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\freetype.dll
+[2026-07-03 23:08:10.119] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\java.dll
+[2026-07-03 23:08:10.120] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\java.exe
+[2026-07-03 23:08:10.121] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\javajpeg.dll
+[2026-07-03 23:08:10.123] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\javaw.exe
+[2026-07-03 23:08:10.124] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\jawt.dll
+[2026-07-03 23:08:10.125] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\jimage.dll
+[2026-07-03 23:08:10.127] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\jli.dll
+[2026-07-03 23:08:10.128] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\jsound.dll
+[2026-07-03 23:08:10.129] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\keytool.exe
+[2026-07-03 23:08:10.130] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\lcms.dll
+[2026-07-03 23:08:10.132] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\mlib_image.dll
+[2026-07-03 23:08:10.133] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\msvcp140.dll
+[2026-07-03 23:08:10.134] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\net.dll
+[2026-07-03 23:08:10.136] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\nio.dll
+[2026-07-03 23:08:10.138] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\prefs.dll
+[2026-07-03 23:08:10.139] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\splashscreen.dll
+[2026-07-03 23:08:10.140] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\syslookup.dll
+[2026-07-03 23:08:10.141] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\ucrtbase.dll
+[2026-07-03 23:08:10.142] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\vcruntime140.dll
+[2026-07-03 23:08:10.145] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\vcruntime140_1.dll
+[2026-07-03 23:08:10.146] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\verify.dll
+[2026-07-03 23:08:10.147] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\zip.dll
+[2026-07-03 23:08:10.148] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\bin\server\jvm.dll
+[2026-07-03 23:08:10.149] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\jaxp-strict.properties.template
+[2026-07-03 23:08:10.150] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\jaxp.properties
+[2026-07-03 23:08:10.152] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\net.properties
+[2026-07-03 23:08:10.153] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\sound.properties
+[2026-07-03 23:08:10.155] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\java.security
+[2026-07-03 23:08:10.156] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\README.txt
+[2026-07-03 23:08:10.158] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\limited\default_local.policy
+[2026-07-03 23:08:10.159] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\limited\default_US_export.policy
+[2026-07-03 23:08:10.160] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\limited\exempt_local.policy
+[2026-07-03 23:08:10.161] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\unlimited\default_local.policy
+[2026-07-03 23:08:10.163] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\conf\security\policy\unlimited\default_US_export.policy
+[2026-07-03 23:08:10.164] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\aes.md
+[2026-07-03 23:08:10.165] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\asm.md
+[2026-07-03 23:08:10.166] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\c-libutl.md
+[2026-07-03 23:08:10.167] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\cldr.md
+[2026-07-03 23:08:10.169] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\COPYRIGHT
+[2026-07-03 23:08:10.171] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\icu.md
+[2026-07-03 23:08:10.172] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\LICENSE
+[2026-07-03 23:08:10.174] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\public_suffix.md
+[2026-07-03 23:08:10.175] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\siphash.md
+[2026-07-03 23:08:10.176] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\unicode.md
+[2026-07-03 23:08:10.178] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\wepoll.md
+[2026-07-03 23:08:10.179] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.base\zlib.md
+[2026-07-03 23:08:10.181] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.datatransfer\COPYRIGHT
+[2026-07-03 23:08:10.182] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.datatransfer\LICENSE
+[2026-07-03 23:08:10.183] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\colorimaging.md
+[2026-07-03 23:08:10.184] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\COPYRIGHT
+[2026-07-03 23:08:10.186] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\freetype.md
+[2026-07-03 23:08:10.187] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\giflib.md
+[2026-07-03 23:08:10.189] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\harfbuzz.md
+[2026-07-03 23:08:10.190] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\jpeg.md
+[2026-07-03 23:08:10.192] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\lcms.md
+[2026-07-03 23:08:10.193] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\libpng.md
+[2026-07-03 23:08:10.194] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\LICENSE
+[2026-07-03 23:08:10.196] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.desktop\mesa3d.md
+[2026-07-03 23:08:10.198] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.prefs\COPYRIGHT
+[2026-07-03 23:08:10.199] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.prefs\LICENSE
+[2026-07-03 23:08:10.201] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\bcel.md
+[2026-07-03 23:08:10.202] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\COPYRIGHT
+[2026-07-03 23:08:10.203] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\dom.md
+[2026-07-03 23:08:10.205] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\jcup.md
+[2026-07-03 23:08:10.206] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\LICENSE
+[2026-07-03 23:08:10.207] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\schema10part1.md
+[2026-07-03 23:08:10.208] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\schema10part2.md
+[2026-07-03 23:08:10.209] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xalan.md
+[2026-07-03 23:08:10.210] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xerces.md
+[2026-07-03 23:08:10.211] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xhtml10.md
+[2026-07-03 23:08:10.214] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xhtml10schema.md
+[2026-07-03 23:08:10.215] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xhtml11.md
+[2026-07-03 23:08:10.216] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xhtml11schema.md
+[2026-07-03 23:08:10.217] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xmlspec.md
+[2026-07-03 23:08:10.219] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\legal\java.xml\xmlxsd.md
+[2026-07-03 23:08:10.220] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\classlist
+[2026-07-03 23:08:10.221] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\fontconfig.bfc
+[2026-07-03 23:08:10.222] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\fontconfig.properties.src
+[2026-07-03 23:08:10.223] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\jawt.lib
+[2026-07-03 23:08:10.225] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\jrt-fs.jar
+[2026-07-03 23:08:10.226] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\jvm.cfg
+[2026-07-03 23:08:10.228] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\jvm.lib
+[2026-07-03 23:08:10.229] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\modules
+[2026-07-03 23:08:10.231] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\psfont.properties.ja
+[2026-07-03 23:08:10.232] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\psfontj2d.properties
+[2026-07-03 23:08:10.234] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\tzdb.dat
+[2026-07-03 23:08:10.235] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\tzmappings
+[2026-07-03 23:08:10.236] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\security\blocked.certs
+[2026-07-03 23:08:10.238] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\security\cacerts
+[2026-07-03 23:08:10.239] [INFO] ISCC:    Compressing: E:\SHIO\LanguageStudySystem\EnglishStudySystem\jre-minimal\lib\security\public_suffix_list.dat
+[2026-07-03 23:08:10.240] [INFO] ISCC:    Compressing Setup program executable
+[2026-07-03 23:08:10.241] [INFO] ISCC:    Updating version info (Setup.exe)
+[2026-07-03 23:08:10.242] [INFO] ISCC:    Updating manifest (Setup.exe)
+[2026-07-03 23:08:10.243] [INFO] ISCC: 
+[2026-07-03 23:08:10.245] [INFO] ISCC: 
+[2026-07-03 23:08:10.245] [INFO] ISCC: Successful compile (6.968 sec). Resulting Setup program filename is:
+[2026-07-03 23:08:10.248] [INFO] ISCC: C:\ESS\鑻辫瀛︿範绯荤粺_2.1.0_Setup.exe
+[2026-07-03 23:08:10.249] [SUCCESS] Inno Setup 编译完成
+[2026-07-03 23:08:10.252] [INFO] 正在查找 Inno Setup 输出文件...
+[2026-07-03 23:08:10.257] [INFO] 找到安装包: C:\ESS\英语学习系统_2.1.0_Setup.exe (修改时间: 07/03/2026 23:08:09)
+[2026-07-03 23:08:10.263] [INFO] 正在归档安装包到历史目录...
+[2026-07-03 23:08:10.289] [SUCCESS] 安装包已复制: E:\SHIO\LanguageStudySystem\ESS_history\英语学习系统_2.1.0_Setup.exe
+[2026-07-03 23:08:10.291] [INFO] 正在生成 ZIP 归档...
+[2026-07-03 23:08:11.546] [SUCCESS] ZIP 归档已生成: E:\SHIO\LanguageStudySystem\ESS_history\EnglishStudySystemV2.1.0.zip
+[2026-07-03 23:08:11.549] [INFO] 已更新归档索引: [20260703_230810] Version=2.1.0 | 安装包: 英语学习系统_2.1.0_Setup.exe | ZIP: EnglishStudySystemV2.1.0.zip
+[2026-07-03 23:08:11.551] [INFO] 正在清理临时文件...
+[2026-07-03 23:08:11.572] [INFO] ========== 打包任务完成 (总耗时: 15.2400258F 秒) ==========

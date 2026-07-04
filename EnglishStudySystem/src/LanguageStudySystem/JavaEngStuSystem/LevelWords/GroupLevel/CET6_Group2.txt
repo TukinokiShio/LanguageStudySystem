@@ -1,0 +1,16 @@
+15	0
+facet	n. 方面；刻面	1	0	0			0
+activate	v. 激活；启动	1	0	0			0
+migrate	v. 迁移；移居	1	0	0			0
+synthesis	n. 合成；综合	1	0	0			0
+cordial	adj. 热诚的；友好的	1	0	0			0
+flush	v. 冲洗 adj. 齐平的	1	0	0			0
+deficiency	n. 缺乏；不足	1	0	0			0
+hose	n. 软管 v. 用软管冲洗	1	0	0			0
+fort	n. 堡垒；要塞	1	0	0			0
+infer	v. 推断；推论	1	0	0			0
+authorize	v. 授权；批准	1	0	0			0
+refrain	v. 克制；避免 n. 副歌	1	0	0			0
+dissolve	v. 溶解；解散	1	0	0			0
+apt	adj. 恰当的；有…倾向的	1	0	0			0
+detach	v. 分离；派遣	1	0	0			0

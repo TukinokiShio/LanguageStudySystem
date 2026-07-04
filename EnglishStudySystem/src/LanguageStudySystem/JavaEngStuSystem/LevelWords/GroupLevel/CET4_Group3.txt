@@ -1,0 +1,16 @@
+15	0
+tolerance	n. 容忍；宽容	1	0	0			0
+individual	n. 个人 adj. 个别的	1	0	0			0
+scope	n. 范围；领域	1	0	0			0
+highlight	v. 强调 n. 亮点	1	0	0			0
+expense	n. 花费；代价	1	0	0			0
+overcome	v. 克服；战胜	1	0	0			0
+negotiate	v. 谈判；协商	1	0	0			0
+abstract	adj. 抽象的 n. 摘要	1	0	0			0
+pressure	n. 压力；压迫	1	0	0			0
+obtain	v. 获得；得到	1	0	0			0
+link	n./v. 联系；链接	1	0	0			0
+approach	v. 接近 n. 方法	1	0	0			0
+assess	v. 评估；评定	1	0	0			0
+restore	v. 恢复；修复	1	0	0			0
+relief	n. 减轻；救济	1	0	0			0

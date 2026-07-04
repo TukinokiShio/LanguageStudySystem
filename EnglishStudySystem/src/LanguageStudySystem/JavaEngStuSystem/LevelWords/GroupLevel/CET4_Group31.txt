@@ -1,0 +1,16 @@
+15	0
+undergo	v. 经历；遭受	1	0	0			0
+forecast	n./v. 预测；预报	1	0	0			0
+county	n. 县；郡	1	0	0			0
+symbol	n. 象征；符号	1	0	0			0
+suspect	v. 怀疑 n. 嫌疑人	1	0	0			0
+culture	n. 文化；教养	1	0	0			0
+formula	n. 公式；配方	1	0	0			0
+decline	n./v. 下降；衰退	1	0	0			0
+enthusiasm	n. 热情；热衷	1	0	0			0
+annual	adj. 每年的 n. 年刊	1	0	0			0
+reform	n./v. 改革；改良	1	0	0			0
+acquire	v. 获得；学到	1	0	0			0
+associate	v. 联系 n. 同事	1	0	0			0
+liberal	adj. 自由的；开明的	1	0	0			0
+attend	v. 参加；出席	1	0	0			0

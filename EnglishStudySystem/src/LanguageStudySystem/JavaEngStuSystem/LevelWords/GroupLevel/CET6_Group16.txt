@@ -1,0 +1,16 @@
+15	0
+traverse	v. 横穿；穿过	1	0	0			0
+withhold	v. 扣留；保留	1	0	0			0
+expire	v. 到期；失效	1	0	0			0
+grieve	v. 使悲伤；哀悼	1	0	0			0
+supersonic	adj. 超音速的	1	0	0			0
+edible	adj. 可食用的	1	0	0			0
+originate	v. 起源；产生	1	0	0			0
+upgrade	v. 升级 n. 升级	1	0	0			0
+magnify	v. 放大；夸大	1	0	0			0
+seemingly	adv. 表面上；似乎	1	0	0			0
+appreciable	adj. 可感知的；明显的	1	0	0			0
+spontaneous	adj. 自发的；自然的	1	0	0			0
+extinct	adj. 灭绝的；熄灭的	1	0	0			0
+pessimistic	adj. 悲观的	1	0	0			0
+miniature	adj. 微型的 n. 微型画	1	0	0			0

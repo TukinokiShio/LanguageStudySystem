@@ -1,0 +1,16 @@
+15	0
+interpretation	n. 解释；口译	1	0	0			0
+ambitious	adj. 有雄心的；野心勃勃的	1	0	0			0
+biodiversity	n. 生物多样性	1	0	0			0
+commitment	n. 承诺；投入	1	0	0			0
+violation	n. 违反；侵犯	1	0	0			0
+affordable	adj. 负担得起的；价格合理的	1	0	0			0
+environment	n. 环境	1	0	0			0
+registration	n. 登记；注册	1	0	0			0
+pollution	n. 污染；玷污	1	0	0			0
+apparatus	n. 器械；装置	1	0	0			0
+prevention	n. 预防；阻止	1	0	0			0
+confederation	n. 联盟；联邦	1	0	0			0
+medication	n. 药物；药物治疗	1	0	0			0
+methodology	n. 方法论；方法	1	0	0			0
+alternative	n. 替代方案 adj. 替代的	1	0	0			0

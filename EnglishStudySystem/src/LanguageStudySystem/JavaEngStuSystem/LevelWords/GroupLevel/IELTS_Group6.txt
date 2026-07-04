@@ -1,0 +1,16 @@
+15	0
+advertise	v. 做广告；宣传	1	0	0			0
+resolution	n. 决心；决议	1	0	0			0
+negotiation	n. 谈判；协商	1	0	0			0
+classification	n. 分类；分级	1	0	0			0
+journalism	n. 新闻业；新闻学	1	0	0			0
+restriction	n. 限制；约束	1	0	0			0
+mechanism	n. 机制；机械装置	1	0	0			0
+equipment	n. 设备；装备	1	0	0			0
+transformation	n. 转变；变形	1	0	0			0
+independence	n. 独立；自主	1	0	0			0
+ventilation	n. 通风；通风设备	1	0	0			0
+relocation	n. 搬迁；重新安置	1	0	0			0
+implication	n. 含义；暗示	1	0	0			0
+volunteer	n. 志愿者 adj. 志愿的	1	0	0			0
+utilization	n. 利用；使用	1	0	0			0

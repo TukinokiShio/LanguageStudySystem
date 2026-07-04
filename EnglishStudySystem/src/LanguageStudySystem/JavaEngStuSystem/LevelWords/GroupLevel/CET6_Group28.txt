@@ -1,0 +1,16 @@
+15	0
+incentive	n. 激励；刺激	1	0	0			0
+vicinity	n. 附近；邻近	1	0	0			0
+shrewd	adj. 精明的；狡猾的	1	0	0			0
+flaw	n. 缺陷；瑕疵	1	0	0			0
+impair	v. 损害；削弱	1	0	0			0
+slump	v. 暴跌 n. 暴跌	1	0	0			0
+remainder	n. 剩余部分；余数	1	0	0			0
+accessory	n. 附件；配件 adj. 附属的	1	0	0			0
+illusion	n. 幻觉；错觉	1	0	0			0
+terminate	v. 结束；终止	1	0	0			0
+repression	n. 压抑；压制	1	0	0			0
+instantaneous	adj. 瞬间的；即时的	1	0	0			0
+plague	n. 瘟疫 v. 困扰	1	0	0			0
+signify	v. 表示；意味着	1	0	0			0
+doom	n. 命运 v. 注定	1	0	0			0

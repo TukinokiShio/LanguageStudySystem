@@ -1,0 +1,16 @@
+15	0
+cynical	adj. 愤世嫉俗的；怀疑的	1	0	0			0
+sphere	n. 领域；范围；球体	1	0	0			0
+dispose	v. 处理；安排	1	0	0			0
+agitate	v. 搅动；煽动	1	0	0			0
+supplement	n. 补充物 v. 补充	1	0	0			0
+sustain	v. 维持；支撑	1	0	0			0
+consult	v. 咨询；查阅	1	0	0			0
+hinder	v. 阻碍；妨碍	1	0	0			0
+attitude	n. 态度；看法	1	0	0			0
+involve	v. 涉及；包含	1	0	0			0
+comply	v. 遵守；顺从	1	0	0			0
+external	adj. 外部的；外面的	1	0	0			0
+overall	adj. 总体的；全面的	1	0	0			0
+establish	v. 建立；确立	1	0	0			0
+scheme	n. 计划；方案	1	0	0			0

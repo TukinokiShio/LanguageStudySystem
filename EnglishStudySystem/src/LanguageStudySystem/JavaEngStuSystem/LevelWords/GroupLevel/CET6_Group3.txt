@@ -1,0 +1,16 @@
+15	0
+tribute	n. 贡品；致敬	1	0	0			0
+consolidate	v. 巩固；合并	1	0	0			0
+odor	n. 气味；臭味	1	0	0			0
+perpetual	adj. 永久的；持续的	1	0	0			0
+decline	v. 下降；拒绝 n. 衰退	1	0	0			0
+brisk	adj. 轻快的；兴隆的	1	0	0			0
+proceeding	n. 程序；诉讼	1	0	0			0
+fake	adj. 假的 n. 赝品 v. 伪造	1	0	0			0
+concise	adj. 简洁的；简明的	1	0	0			0
+sovereign	n. 君主 adj. 至高无上的	1	0	0			0
+epoch	n. 时代；纪元	1	0	0			0
+crucial	adj. 至关重要的	1	0	0			0
+grim	adj. 严峻的；阴森的	1	0	0			0
+militant	adj. 好战的 n. 激进分子	1	0	0			0
+astronomy	n. 天文学	1	0	0			0

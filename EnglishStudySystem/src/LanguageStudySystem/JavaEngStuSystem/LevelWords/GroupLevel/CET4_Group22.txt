@@ -1,0 +1,16 @@
+15	0
+immigrant	n. 移民 adj. 移民的	1	0	0			0
+globe	n. 地球；球体	1	0	0			0
+locate	v. 定位；位于	1	0	0			0
+conclude	v. 总结；结束	1	0	0			0
+extreme	adj. 极端的 n. 极端	1	0	0			0
+emotion	n. 情感；情绪	1	0	0			0
+numerous	adj. 许多的	1	0	0			0
+promote	v. 促进；晋升	1	0	0			0
+advance	n./v. 前进；进步	1	0	0			0
+define	v. 定义；界定	1	0	0			0
+commission	n. 委员会；佣金 v. 委托	1	0	0			0
+incorporate	v. 包含；合并	1	0	0			0
+border	n. 边界；边境	1	0	0			0
+component	n. 组成部分	1	0	0			0
+crash	n./v. 碰撞；崩溃	1	0	0			0

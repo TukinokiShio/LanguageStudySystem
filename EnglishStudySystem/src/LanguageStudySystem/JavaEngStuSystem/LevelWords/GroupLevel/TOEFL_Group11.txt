@@ -1,0 +1,16 @@
+15	0
+expound	v. 阐述；解释	1	0	0			0
+emerge	v. 出现；浮现	1	0	0			0
+comprise	v. 包含；由…组成	1	0	0			0
+pertinent	adj. 相关的；恰当的	1	0	0			0
+entity	n. 实体；存在物	1	0	0			0
+discern	v. 辨别；识别	1	0	0			0
+discriminate	v. 歧视；区别	1	0	0			0
+enable	v. 使能够；启用	1	0	0			0
+perspective	n. 视角；观点	1	0	0			0
+inferior	adj. 低劣的；下级的	1	0	0			0
+designate	v. 指定；任命	1	0	0			0
+outline	n. 大纲 v. 概述	1	0	0			0
+emanate	v. 发出；散发	1	0	0			0
+vital	adj. 至关重要的	1	0	0			0
+authentic	adj. 真实的；可靠的	1	0	0			0

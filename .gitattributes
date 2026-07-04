@@ -1,2 +1,4 @@
 JSS_history/*.zip filter=lfs diff=lfs merge=lfs -text
 JSS_history/*.exe filter=lfs diff=lfs merge=lfs -text
+ESS_history/*.zip filter=lfs diff=lfs merge=lfs -text
+ESS_history/*.exe filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,16 @@
+15	0
+integrity	n. 正直；完整	1	0	0			0
+analogy	n. 类比；相似	1	0	0			0
+mediate	v. 调解；斡旋	1	0	0			0
+futile	adj. 徒劳的；无效的	1	0	0			0
+gloomy	adj. 阴暗的；忧郁的	1	0	0			0
+vocational	adj. 职业的	1	0	0			0
+bruise	n. 瘀伤 v. 使受伤	1	0	0			0
+simultaneous	adj. 同时发生的	1	0	0			0
+rigorous	adj. 严格的；严密的	1	0	0			0
+scorn	n./v. 轻蔑；蔑视	1	0	0			0
+breach	n. 违反 v. 打破	1	0	0			0
+assurance	n. 保证；保险	1	0	0			0
+layman	n. 外行；门外汉	1	0	0			0
+adhere	v. 粘附；坚持	1	0	0			0
+lofty	adj. 崇高的；高耸的	1	0	0			0

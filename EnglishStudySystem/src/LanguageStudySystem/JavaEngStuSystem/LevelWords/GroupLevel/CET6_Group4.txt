@@ -1,0 +1,16 @@
+15	0
+strand	n. 线；缕 v. 使搁浅	1	0	0			0
+locomotive	n. 火车头 adj. 移动的	1	0	0			0
+boycott	n./v. 联合抵制	1	0	0			0
+aerial	adj. 空中的 n. 天线	1	0	0			0
+hamper	v. 妨碍；阻碍	1	0	0			0
+wrench	v. 猛扭 n. 扳手	1	0	0			0
+lubricate	v. 润滑；使顺畅	1	0	0			0
+ritual	n. 仪式 adj. 仪式的	1	0	0			0
+elapse	v. 消逝；流逝	1	0	0			0
+evoke	v. 唤起；引起	1	0	0			0
+discrete	adj. 离散的；分离的	1	0	0			0
+authentic	adj. 真实的；可靠的	1	0	0			0
+tentative	adj. 试探性的；暂定的	1	0	0			0
+rejoice	v. 欣喜；高兴	1	0	0			0
+transplant	v. 移植 n. 移植	1	0	0			0

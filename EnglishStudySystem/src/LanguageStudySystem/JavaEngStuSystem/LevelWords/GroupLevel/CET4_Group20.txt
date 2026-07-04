@@ -1,0 +1,16 @@
+15	0
+transfer	n./v. 转移；调动	1	0	0			0
+minority	n. 少数；少数民族	1	0	0			0
+urban	adj. 城市的；都市的	1	0	0			0
+insurance	n. 保险；保险费	1	0	0			0
+reverse	v. 逆转 adj. 相反的	1	0	0			0
+concept	n. 概念；观念	1	0	0			0
+valid	adj. 有效的；合理的	1	0	0			0
+violence	n. 暴力；猛烈	1	0	0			0
+overseas	adv. 在海外 adj. 海外的	1	0	0			0
+efficient	adj. 高效的	1	0	0			0
+communicate	v. 交流；沟通	1	0	0			0
+advertise	v. 做广告	1	0	0			0
+decade	n. 十年	1	0	0			0
+pattern	n. 模式；图案	1	0	0			0
+attribute	v. 归因于 n. 属性	1	0	0			0

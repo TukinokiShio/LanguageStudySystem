@@ -1,0 +1,16 @@
+15	0
+mechanism	n. 机制；机械装置	1	0	0			0
+risk	n./v. 冒险；风险	1	0	0			0
+rival	n. 对手 v. 竞争	1	0	0			0
+priority	n. 优先；优先权	1	0	0			0
+debate	n./v. 辩论；争论	1	0	0			0
+polish	v. 磨光；润色	1	0	0			0
+influence	n./v. 影响	1	0	0			0
+finance	n. 金融；财政 v. 资助	1	0	0			0
+forbid	v. 禁止；不许	1	0	0			0
+extend	v. 延伸；扩展	1	0	0			0
+contemporary	adj. 当代的	1	0	0			0
+former	adj. 从前的 n. 前者	1	0	0			0
+distribute	v. 分配；分发	1	0	0			0
+allowance	n. 津贴；零用钱	1	0	0			0
+release	n./v. 释放；发布	1	0	0			0

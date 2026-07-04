@@ -1,0 +1,16 @@
+15	0
+scholarship	n. 奖学金；学问	1	0	0			0
+educational	adj. 教育的；有教育意义的	1	0	0			0
+significance	n. 重要性；意义	1	0	0			0
+fascinating	adj. 迷人的；极有吸引力的	1	0	0			0
+fluctuation	n. 波动；起伏	1	0	0			0
+contemporary	adj. 当代的；同时代的	1	0	0			0
+psychology	n. 心理学；心理	1	0	0			0
+interaction	n. 互动；相互作用	1	0	0			0
+fundamental	adj. 基本的 n. 基础	1	0	0			0
+association	n. 协会；联系	1	0	0			0
+vaccination	n. 疫苗接种	1	0	0			0
+qualification	n. 资格；条件	1	0	0			0
+pronunciation	n. 发音；读法	1	0	0			0
+dissertation	n. 论文；专题论文	1	0	0			0
+acquire	v. 获得；学到	1	0	0			0

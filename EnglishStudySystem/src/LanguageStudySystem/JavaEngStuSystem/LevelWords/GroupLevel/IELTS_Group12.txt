@@ -1,0 +1,16 @@
+15	0
+chronological	adj. 按时间顺序的	1	0	0			0
+measurement	n. 测量；大小	1	0	0			0
+illustration	n. 说明；插图	1	0	0			0
+analysis	n. 分析；解析	1	0	0			0
+inequality	n. 不平等；不平均	1	0	0			0
+distribution	n. 分配；分布	1	0	0			0
+knowledge	n. 知识；学问	1	0	0			0
+migration	n. 迁移；移民	1	0	0			0
+investigation	n. 调查；研究	1	0	0			0
+automatically	adv. 自动地	1	0	0			0
+verification	n. 验证；核实	1	0	0			0
+architecture	n. 建筑学；结构	1	0	0			0
+consumption	n. 消费；消耗	1	0	0			0
+monitoring	n. 监测；监控	1	0	0			0
+examination	n. 考试；检查	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+approach	v. 接近 n. 方法	1	0	0			0
+spontaneous	adj. 自发的；自然的	1	0	0			0
+allocate	v. 分配；拨出	1	0	0			0
+aspect	n. 方面；外貌	1	0	0			0
+exploit	v. 开发；剥削	1	0	0			0
+estimate	n./v. 估计；估算	1	0	0			0
+voluntary	adj. 自愿的；志愿的	1	0	0			0
+integrate	v. 整合；融合	1	0	0			0
+encompass	v. 包含；包围	1	0	0			0
+displace	v. 取代；置换	1	0	0			0
+annual	adj. 每年的 n. 年刊	1	0	0			0
+appreciate	v. 欣赏；感激	1	0	0			0
+empower	v. 授权；赋予权力	1	0	0			0
+extract	v. 提取 n. 摘录	1	0	0			0
+convert	v. 转换；转变	1	0	0			0

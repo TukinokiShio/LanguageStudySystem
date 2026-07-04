@@ -1,0 +1,16 @@
+15	0
+appetite	n. 食欲；胃口	1	0	0			0
+environment	n. 环境	1	0	0			0
+compose	v. 组成；创作	1	0	0			0
+trend	n. 趋势；潮流	1	0	0			0
+overlook	v. 俯瞰；忽略	1	0	0			0
+rate	n. 比率 v. 评价	1	0	0			0
+critical	adj. 批评的；关键的	1	0	0			0
+ancestor	n. 祖先；祖宗	1	0	0			0
+candidate	n. 候选人	1	0	0			0
+element	n. 元素；要素	1	0	0			0
+basis	n. 基础；根据	1	0	0			0
+penalty	n. 惩罚；罚款	1	0	0			0
+abroad	adv. 在国外	1	0	0			0
+hostile	adj. 敌对的；怀敌意的	1	0	0			0
+barrier	n. 障碍；屏障	1	0	0			0

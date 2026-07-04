@@ -1,0 +1,16 @@
+15	0
+thorough	adj. 彻底的；周密的	1	0	0			0
+offset	v. 抵消 n. 补偿	1	0	0			0
+primarily	adv. 主要地；根本地	1	0	0			0
+commit	v. 犯（罪）；承诺	1	0	0			0
+degradation	n. 退化；降级	1	0	0			0
+ideology	n. 意识形态	1	0	0			0
+autonomous	adj. 自治的；自主的	1	0	0			0
+replenish	v. 补充；再装满	1	0	0			0
+hence	adv. 因此；所以	1	0	0			0
+insight	n. 洞察力；深刻见解	1	0	0			0
+dynamic	adj. 动态的；有活力的	1	0	0			0
+entrepreneur	n. 企业家	1	0	0			0
+dilemma	n. 困境；进退两难	1	0	0			0
+extrapolate	v. 推断；外推	1	0	0			0
+clarify	v. 澄清；阐明	1	0	0			0

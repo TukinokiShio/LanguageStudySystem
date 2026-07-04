@@ -1,0 +1,16 @@
+15	0
+discourse	n. 论述；话语	1	0	0			0
+duration	n. 持续时间；期间	1	0	0			0
+extinguish	v. 熄灭；消灭	1	0	0			0
+methodology	n. 方法论；方法	1	0	0			0
+concurrent	adj. 同时发生的	1	0	0			0
+straightforward	adj. 直截了当的	1	0	0			0
+capable	adj. 有能力的	1	0	0			0
+interpret	v. 解释；口译	1	0	0			0
+discrete	adj. 离散的；分离的	1	0	0			0
+vast	adj. 广阔的；巨大的	1	0	0			0
+counterpart	n. 对应物；职位相同的人	1	0	0			0
+behalf	n. 代表；利益	1	0	0			0
+essence	n. 本质；精华	1	0	0			0
+drought	n. 干旱	1	0	0			0
+unique	adj. 独特的；唯一的	1	0	0			0

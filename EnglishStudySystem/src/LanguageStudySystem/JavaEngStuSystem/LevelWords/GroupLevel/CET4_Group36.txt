@@ -1,0 +1,16 @@
+15	0
+circumstance	n. 环境；情况	1	0	0			0
+assist	v. 帮助；协助	1	0	0			0
+resolve	v. 解决；决心	1	0	0			0
+mission	n. 任务；使命	1	0	0			0
+recover	v. 恢复；康复	1	0	0			0
+tradition	n. 传统；惯例	1	0	0			0
+fatal	adj. 致命的	1	0	0			0
+satisfaction	n. 满足；满意	1	0	0			0
+assume	v. 假定；承担	1	0	0			0
+interfere	v. 干涉；干扰	1	0	0			0
+addition	n. 增加；加法	1	0	0			0
+anxiety	n. 焦虑；忧虑	1	0	0			0
+arrange	v. 安排；整理	1	0	0			0
+emerge	v. 出现；浮现	1	0	0			0
+oppose	v. 反对；对抗	1	0	0			0

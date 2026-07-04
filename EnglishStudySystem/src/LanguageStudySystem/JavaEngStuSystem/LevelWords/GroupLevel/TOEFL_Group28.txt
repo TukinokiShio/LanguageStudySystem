@@ -1,0 +1,16 @@
+15	0
+renowned	adj. 著名的；有名的	1	0	0			0
+likewise	adv. 同样地；也	1	0	0			0
+exhibit	n./v. 展览；展示	1	0	0			0
+accomplish	v. 完成；实现	1	0	0			0
+compulsory	adj. 强制的；必修的	1	0	0			0
+identical	adj. 相同的；同一的	1	0	0			0
+contend	v. 竞争；主张	1	0	0			0
+expand	v. 扩张；扩展	1	0	0			0
+denote	v. 表示；意味着	1	0	0			0
+discrepancy	n. 差异；不一致	1	0	0			0
+augment	v. 增加；扩大	1	0	0			0
+solicit	v. 恳求；招揽	1	0	0			0
+coherent	adj. 连贯的；一致的	1	0	0			0
+prevail	v. 流行；占优势	1	0	0			0
+coerce	v. 强迫；强制	1	0	0			0

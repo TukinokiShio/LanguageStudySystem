@@ -1,0 +1,16 @@
+15	0
+function	n. 功能；函数 v. 运行	1	0	0			0
+reject	v. 拒绝；排斥	1	0	0			0
+conduct	v. 进行 n. 行为	1	0	0			0
+commit	v. 犯（罪）；承诺	1	0	0			0
+arrest	n./v. 逮捕；拘留	1	0	0			0
+relevant	adj. 相关的；切题的	1	0	0			0
+innocent	adj. 无罪的；天真的	1	0	0			0
+climate	n. 气候；风气	1	0	0			0
+monitor	n./v. 监控；监视	1	0	0			0
+contribute	v. 贡献；捐献	1	0	0			0
+reflect	v. 反映；反射	1	0	0			0
+balance	n. 平衡 v. 使平衡	1	0	0			0
+employ	v. 雇用；使用	1	0	0			0
+commerce	n. 商业；贸易	1	0	0			0
+survive	v. 幸存；存活	1	0	0			0

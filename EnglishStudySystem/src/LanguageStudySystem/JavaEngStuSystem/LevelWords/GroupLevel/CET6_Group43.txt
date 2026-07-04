@@ -1,0 +1,16 @@
+15	0
+verge	n. 边缘 v. 接近	1	0	0			0
+swamp	n. 沼泽 v. 淹没	1	0	0			0
+convict	v. 定罪 n. 囚犯	1	0	0			0
+subtle	adj. 微妙的；精细的	1	0	0			0
+monopoly	n. 垄断；独占	1	0	0			0
+deteriorate	v. 恶化；退化	1	0	0			0
+flutter	v. 拍翅；飘动	1	0	0			0
+fixture	n. 固定装置	1	0	0			0
+intricate	adj. 复杂精细的	1	0	0			0
+leaflet	n. 传单；小册子	1	0	0			0
+peel	v. 剥皮 n. 果皮	1	0	0			0
+hinder	v. 阻碍；妨碍	1	0	0			0
+shatter	v. 粉碎；破灭	1	0	0			0
+reassure	v. 使安心；再保证	1	0	0			0
+pension	n. 养老金；退休金	1	0	0			0

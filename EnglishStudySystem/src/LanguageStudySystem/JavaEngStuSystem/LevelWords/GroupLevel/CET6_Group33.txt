@@ -1,0 +1,16 @@
+15	0
+innovation	n. 创新；革新	1	0	0			0
+invalid	adj. 无效的 n. 病人	1	0	0			0
+feeble	adj. 虚弱的；无力的	1	0	0			0
+intelligible	adj. 可理解的；明白的	1	0	0			0
+promising	adj. 有前途的；有希望的	1	0	0			0
+grin	v. 露齿而笑 n. 咧嘴笑	1	0	0			0
+subsidiary	adj. 辅助的 n. 子公司	1	0	0			0
+pendulum	n. 钟摆；摇摆不定	1	0	0			0
+heighten	v. 提高；增强	1	0	0			0
+attendant	n. 服务员 adj. 伴随的	1	0	0			0
+cater	v. 提供饮食；迎合	1	0	0			0
+speculate	v. 推测；投机	1	0	0			0
+lick	v. 舔 n. 少量	1	0	0			0
+unify	v. 统一；联合	1	0	0			0
+vaccine	n. 疫苗	1	0	0			0

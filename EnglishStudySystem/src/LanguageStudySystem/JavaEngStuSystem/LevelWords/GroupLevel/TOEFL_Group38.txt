@@ -1,0 +1,10 @@
+9	0
+release	n./v. 释放；发布	1	0	0			0
+pursue	v. 追求；追赶	1	0	0			0
+statistics	n. 统计学；统计数字	1	0	0			0
+accompany	v. 陪伴；伴随	1	0	0			0
+equitable	adj. 公平的；公正的	1	0	0			0
+simulate	v. 模拟；假装	1	0	0			0
+temporary	adj. 临时的；暂时的	1	0	0			0
+overlap	v. 重叠 n. 重叠部分	1	0	0			0
+undertake	v. 承担；从事	1	0	0			0

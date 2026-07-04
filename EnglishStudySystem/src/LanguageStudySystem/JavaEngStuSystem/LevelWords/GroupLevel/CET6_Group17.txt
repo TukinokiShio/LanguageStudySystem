@@ -1,0 +1,16 @@
+15	0
+solitary	adj. 孤独的；单个的	1	0	0			0
+irritate	v. 刺激；激怒	1	0	0			0
+subjective	adj. 主观的	1	0	0			0
+specification	n. 规格；规范	1	0	0			0
+haunt	v. 萦绕；常去	1	0	0			0
+vulnerable	adj. 脆弱的；易受伤的	1	0	0			0
+vacant	adj. 空着的；空缺的	1	0	0			0
+remedy	n. 补救办法 v. 补救	1	0	0			0
+petition	n. 请愿书 v. 请愿	1	0	0			0
+diffuse	v. 扩散；传播 adj. 弥漫的	1	0	0			0
+lobby	n. 大厅 v. 游说	1	0	0			0
+susceptible	adj. 易受影响的；敏感的	1	0	0			0
+purify	v. 净化；提纯	1	0	0			0
+threshold	n. 门槛；界限	1	0	0			0
+inclusive	adj. 包含的；包容的	1	0	0			0

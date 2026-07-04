@@ -1,0 +1,16 @@
+15	0
+electricity	n. 电力；电流	1	0	0			0
+facilitation	n. 促进；便利化	1	0	0			0
+broadcast	n./v. 广播；播送	1	0	0			0
+authoritative	adj. 权威的；官方的	1	0	0			0
+abandon	v. 放弃；遗弃	1	0	0			0
+philosophy	n. 哲学；人生观	1	0	0			0
+hospitality	n. 好客；款待	1	0	0			0
+diversification	n. 多样化；多元	1	0	0			0
+complication	n. 复杂；并发症	1	0	0			0
+contamination	n. 污染；玷污	1	0	0			0
+accumulate	v. 积累；积聚	1	0	0			0
+poverty	n. 贫穷；贫困	1	0	0			0
+technician	n. 技术员；技师	1	0	0			0
+likelihood	n. 可能性；概率	1	0	0			0
+termination	n. 终止；结束	1	0	0			0

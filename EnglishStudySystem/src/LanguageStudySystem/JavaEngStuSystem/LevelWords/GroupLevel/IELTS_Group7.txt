@@ -1,0 +1,16 @@
+15	0
+temperature	n. 温度；体温	1	0	0			0
+colonial	adj. 殖民的；殖民地的	1	0	0			0
+encyclopedia	n. 百科全书	1	0	0			0
+exaggeration	n. 夸张；夸大	1	0	0			0
+photography	n. 摄影；摄影术	1	0	0			0
+vulnerability	n. 脆弱性；易受伤	1	0	0			0
+integration	n. 整合；融合	1	0	0			0
+aggressive	adj. 侵略的；好斗的	1	0	0			0
+uncertainty	n. 不确定性；不确定	1	0	0			0
+accommodation	n. 住宿；膳宿	1	0	0			0
+consultation	n. 咨询；商议	1	0	0			0
+deterioration	n. 恶化；退化	1	0	0			0
+determination	n. 决心；决定	1	0	0			0
+ownership	n. 所有权；物主身份	1	0	0			0
+industrialization	n. 工业化	1	0	0			0

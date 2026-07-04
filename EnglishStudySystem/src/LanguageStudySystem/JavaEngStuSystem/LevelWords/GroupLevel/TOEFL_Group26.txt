@@ -1,0 +1,16 @@
+15	0
+demonstrate	v. 证明；示范	1	0	0			0
+exclude	v. 排除；排斥	1	0	0			0
+interact	v. 互动；相互作用	1	0	0			0
+ambiguous	adj. 含糊的；模棱两可的	1	0	0			0
+qualitative	adj. 定性的	1	0	0			0
+oblige	v. 迫使；施恩于	1	0	0			0
+compatible	adj. 兼容的；合得来的	1	0	0			0
+absurd	adj. 荒谬的；可笑的	1	0	0			0
+boom	n. 繁荣 v. 激增	1	0	0			0
+decipher	v. 破译；解读	1	0	0			0
+volume	n. 体积；音量	1	0	0			0
+quantitative	adj. 定量的	1	0	0			0
+infrastructure	n. 基础设施	1	0	0			0
+output	n./v. 输出；产量	1	0	0			0
+encounter	n./v. 遭遇；邂逅	1	0	0			0

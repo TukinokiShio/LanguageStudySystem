@@ -1,0 +1,16 @@
+15	0
+narrative	n. 叙述 adj. 叙事的	1	0	0			0
+eternal	adj. 永恒的；永久的	1	0	0			0
+finite	adj. 有限的；限定的	1	0	0			0
+overthrow	v. 推翻 n. 推翻	1	0	0			0
+fitting	adj. 合适的 n. 配件	1	0	0			0
+patrol	n./v. 巡逻；巡查	1	0	0			0
+nurture	v. 培育 n. 养育	1	0	0			0
+forthcoming	adj. 即将来临的	1	0	0			0
+profound	adj. 深刻的；深邃的	1	0	0			0
+dubious	adj. 可疑的；含糊的	1	0	0			0
+gossip	n. 流言蜚语 v. 说闲话	1	0	0			0
+indignation	n. 愤怒；愤慨	1	0	0			0
+fabricate	v. 制造；捏造	1	0	0			0
+humidity	n. 湿度；潮湿	1	0	0			0
+gauge	n. 量规 v. 测量	1	0	0			0

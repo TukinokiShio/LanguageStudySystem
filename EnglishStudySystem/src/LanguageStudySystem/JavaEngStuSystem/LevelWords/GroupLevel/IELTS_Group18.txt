@@ -1,0 +1,16 @@
+15	0
+achieve	v. 达到；取得	1	0	0			0
+attractive	adj. 有吸引力的	1	0	0			0
+appreciation	n. 欣赏；感激	1	0	0			0
+government	n. 政府；治理	1	0	0			0
+economical	adj. 经济的；节约的	1	0	0			0
+development	n. 发展；开发	1	0	0			0
+announcement	n. 公告；通告	1	0	0			0
+prosecution	n. 起诉；控告	1	0	0			0
+submission	n. 提交；服从	1	0	0			0
+opportunity	n. 机会；时机	1	0	0			0
+depreciation	n. 贬值；折旧	1	0	0			0
+mobilization	n. 动员；调动	1	0	0			0
+population	n. 人口；全体居民	1	0	0			0
+reservation	n. 预订；保留	1	0	0			0
+bankruptcy	n. 破产；倒闭	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+impact	n./v. 影响；冲击	1	0	0			0
+extensive	adj. 广泛的；大量的	1	0	0			0
+process	n. 过程 v. 处理	1	0	0			0
+scheme	n. 计划；方案	1	0	0			0
+recruit	n./v. 招募；招聘	1	0	0			0
+chapter	n. 章；回	1	0	0			0
+device	n. 设备；装置	1	0	0			0
+prospect	n. 前景；可能性	1	0	0			0
+motivate	v. 激励；激发	1	0	0			0
+consist	v. 由…组成；在于	1	0	0			0
+appreciate	v. 欣赏；感激	1	0	0			0
+transform	v. 改变；转换	1	0	0			0
+panel	n. 面板；专家组	1	0	0			0
+version	n. 版本；说法	1	0	0			0
+notion	n. 概念；想法	1	0	0			0

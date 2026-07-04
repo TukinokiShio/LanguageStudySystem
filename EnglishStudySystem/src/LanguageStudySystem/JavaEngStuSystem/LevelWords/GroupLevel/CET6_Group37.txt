@@ -1,0 +1,16 @@
+15	0
+baffle	v. 使困惑；难住	1	0	0			0
+linger	v. 逗留；徘徊	1	0	0			0
+dwell	v. 居住；细想	1	0	0			0
+ingenious	adj. 巧妙的；有独创性的	1	0	0			0
+successor	n. 继任者；接班人	1	0	0			0
+friction	n. 摩擦；冲突	1	0	0			0
+grope	v. 摸索；探索	1	0	0			0
+stagger	v. 蹒跚；使震惊	1	0	0			0
+disguise	v. 伪装 n. 伪装品	1	0	0			0
+notable	adj. 显著的 n. 名人	1	0	0			0
+portray	v. 描绘；扮演	1	0	0			0
+esteem	n./v. 尊重；尊敬	1	0	0			0
+opaque	adj. 不透明的；难以理解的	1	0	0			0
+void	adj. 空的 n. 空白；空虚	1	0	0			0
+diploma	n. 文凭；毕业证书	1	0	0			0

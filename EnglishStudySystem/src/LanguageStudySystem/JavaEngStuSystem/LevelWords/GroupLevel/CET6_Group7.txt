@@ -1,0 +1,16 @@
+15	0
+respective	adj. 各自的；分别的	1	0	0			0
+erase	v. 擦掉；清除	1	0	0			0
+comply	v. 遵守；顺从	1	0	0			0
+reproach	n./v. 责备；批评	1	0	0			0
+salute	n./v. 敬礼；致敬	1	0	0			0
+ultraviolet	adj. 紫外线的	1	0	0			0
+breakdown	n. 崩溃；故障	1	0	0			0
+predominant	adj. 占优势的；主要的	1	0	0			0
+groan	v. 呻吟 n. 呻吟声	1	0	0			0
+erosion	n. 侵蚀；腐蚀	1	0	0			0
+foresee	v. 预见；预知	1	0	0			0
+murmur	v. 低语 n. 低语声	1	0	0			0
+aviation	n. 航空；飞行	1	0	0			0
+corrode	v. 腐蚀；侵蚀	1	0	0			0
+irrespective	adj. 不论的；无关的	1	0	0			0

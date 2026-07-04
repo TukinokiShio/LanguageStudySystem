@@ -1,0 +1,16 @@
+15	0
+engage	v. 从事；订婚	1	0	0			0
+advance	n./v. 前进；进步	1	0	0			0
+extensive	adj. 广泛的；大量的	1	0	0			0
+revenue	n. 收入；税收	1	0	0			0
+ameliorate	v. 改善；改良	1	0	0			0
+enhance	v. 增强；提高	1	0	0			0
+distinct	adj. 截然不同的；清楚的	1	0	0			0
+congregate	v. 聚集；集合	1	0	0			0
+channel	n. 频道；渠道	1	0	0			0
+confine	v. 限制；禁闭	1	0	0			0
+expedite	v. 加速；促进	1	0	0			0
+assert	v. 断言；坚持	1	0	0			0
+concise	adj. 简洁的；简明的	1	0	0			0
+impair	v. 损害；削弱	1	0	0			0
+elicit	v. 引出；探出	1	0	0			0

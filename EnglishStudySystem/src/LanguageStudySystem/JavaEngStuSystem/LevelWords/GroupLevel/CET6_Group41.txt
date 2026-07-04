@@ -1,0 +1,16 @@
+15	0
+dilute	v. 稀释；冲淡	1	0	0			0
+eccentric	adj. 古怪的 n. 怪人	1	0	0			0
+discern	v. 辨别；识别	1	0	0			0
+prone	adj. 有…倾向的；俯卧的	1	0	0			0
+indispensable	adj. 不可或缺的	1	0	0			0
+impulse	n. 冲动；推动力	1	0	0			0
+blunder	n. 大错 v. 犯大错	1	0	0			0
+collaborate	v. 合作；勾结	1	0	0			0
+overflow	v. 溢出 n. 泛滥	1	0	0			0
+adjacent	adj. 邻近的；毗连的	1	0	0			0
+inaugurate	v. 开创；举行就职典礼	1	0	0			0
+entity	n. 实体；存在物	1	0	0			0
+slogan	n. 口号；标语	1	0	0			0
+bibliography	n. 参考书目	1	0	0			0
+beforehand	adv. 预先；事先	1	0	0			0

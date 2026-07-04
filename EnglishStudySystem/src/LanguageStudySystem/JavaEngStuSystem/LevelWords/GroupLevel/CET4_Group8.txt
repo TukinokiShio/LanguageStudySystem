@@ -1,0 +1,16 @@
+15	0
+accent	n. 口音；重音	1	0	0			0
+contain	v. 包含；容纳	1	0	0			0
+potential	adj. 潜在的 n. 潜力	1	0	0			0
+civil	adj. 公民的；文明的	1	0	0			0
+attach	v. 附上；连接	1	0	0			0
+frequency	n. 频率；频繁	1	0	0			0
+conference	n. 会议；讨论会	1	0	0			0
+import	n./v. 进口；输入	1	0	0			0
+virtue	n. 美德；优点	1	0	0			0
+authority	n. 权威；当局	1	0	0			0
+corporation	n. 公司；企业	1	0	0			0
+primary	adj. 主要的；初级的	1	0	0			0
+sufficient	adj. 足够的；充分的	1	0	0			0
+capture	v. 捕获；俘获	1	0	0			0
+award	n. 奖品 v. 授予	1	0	0			0

@@ -1,0 +1,16 @@
+15	0
+exponential	adj. 指数的；指数增长的	1	0	0			0
+subsequent	adj. 随后的；后来的	1	0	0			0
+conventional	adj. 传统的；常规的	1	0	0			0
+readily	adv. 容易地；乐意地	1	0	0			0
+proclaim	v. 宣布；宣告	1	0	0			0
+controversy	n. 争议；争论	1	0	0			0
+initiate	v. 开始；发起	1	0	0			0
+barrier	n. 障碍；屏障	1	0	0			0
+survey	n./v. 调查；测量	1	0	0			0
+implication	n. 含义；暗示	1	0	0			0
+amend	v. 修改；修订	1	0	0			0
+constitute	v. 构成；组成	1	0	0			0
+via	prep. 通过；经由	1	0	0			0
+incorporate	v. 包含；合并	1	0	0			0
+conclusive	adj. 决定性的；结论性的	1	0	0			0

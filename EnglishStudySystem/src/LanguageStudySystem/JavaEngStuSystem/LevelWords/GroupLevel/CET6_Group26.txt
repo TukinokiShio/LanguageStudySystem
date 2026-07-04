@@ -1,0 +1,16 @@
+15	0
+extravagant	adj. 奢侈的；过度的	1	0	0			0
+contrive	v. 发明；设法做到	1	0	0			0
+provoke	v. 激怒；引起	1	0	0			0
+rupture	n. 破裂 v. 使破裂	1	0	0			0
+resistant	adj. 抵抗的；抗…的	1	0	0			0
+foil	n. 箔纸 v. 挫败	1	0	0			0
+intact	adj. 完好无损的；完整的	1	0	0			0
+glide	v. 滑行；滑翔	1	0	0			0
+testify	v. 作证；证明	1	0	0			0
+discourse	n. 论述；话语	1	0	0			0
+startle	v. 使吃惊；惊吓	1	0	0			0
+bewilder	v. 使迷惑；使困惑	1	0	0			0
+verdict	n. 裁决；结论	1	0	0			0
+paralyze	v. 使瘫痪；使无效	1	0	0			0
+violate	v. 违反；侵犯	1	0	0			0

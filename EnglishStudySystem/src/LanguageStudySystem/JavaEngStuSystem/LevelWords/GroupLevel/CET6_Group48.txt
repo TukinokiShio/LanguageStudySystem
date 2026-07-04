@@ -1,0 +1,16 @@
+15	0
+remnant	n. 残余；剩余物	1	0	0			0
+irrigation	n. 灌溉	1	0	0			0
+wrinkle	n. 皱纹 v. 起皱	1	0	0			0
+proficiency	n. 熟练；精通	1	0	0			0
+massacre	n. 大屠杀 v. 屠杀	1	0	0			0
+token	n. 象征；代币	1	0	0			0
+invaluable	adj. 无价的；极其宝贵的	1	0	0			0
+pastime	n. 消遣；娱乐	1	0	0			0
+flare	v. 闪耀 n. 闪光	1	0	0			0
+agitate	v. 搅动；煽动	1	0	0			0
+aesthetic	adj. 美学的；审美的	1	0	0			0
+descendant	n. 后代；子孙	1	0	0			0
+perish	v. 死亡；毁灭	1	0	0			0
+linear	adj. 线性的；直线的	1	0	0			0
+overwhelm	v. 压倒；淹没	1	0	0			0

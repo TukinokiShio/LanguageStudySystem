@@ -1,0 +1,16 @@
+15	0
+quota	n. 配额；限额	1	0	0			0
+trait	n. 特征；特性	1	0	0			0
+hitherto	adv. 迄今；至今	1	0	0			0
+ensue	v. 继而发生；随之而来	1	0	0			0
+ferry	n. 渡轮 v. 摆渡	1	0	0			0
+shuttle	n. 穿梭；航天飞机	1	0	0			0
+drastic	adj. 激烈的；极端的	1	0	0			0
+drought	n. 干旱	1	0	0			0
+stubborn	adj. 顽固的；倔强的	1	0	0			0
+apprehension	n. 理解；忧虑	1	0	0			0
+tedious	adj. 乏味的；冗长的	1	0	0			0
+scandal	n. 丑闻；诽谤	1	0	0			0
+expedition	n. 远征；探险队	1	0	0			0
+questionnaire	n. 问卷；调查表	1	0	0			0
+lounge	n. 休息室 v. 懒坐	1	0	0			0

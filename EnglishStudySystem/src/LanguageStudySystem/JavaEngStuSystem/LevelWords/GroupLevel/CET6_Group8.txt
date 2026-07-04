@@ -1,0 +1,16 @@
+15	0
+bias	n. 偏见 v. 使有偏见	1	0	0			0
+designate	v. 指定；任命	1	0	0			0
+guardian	n. 监护人；保护者	1	0	0			0
+chronic	adj. 慢性的；长期的	1	0	0			0
+humanity	n. 人类；人性	1	0	0			0
+thrill	n. 激动 v. 使兴奋	1	0	0			0
+formulate	v. 制定；规划	1	0	0			0
+degrade	v. 降低；贬低	1	0	0			0
+minimize	v. 最小化；降到最低	1	0	0			0
+affirm	v. 断言；确认	1	0	0			0
+smuggle	v. 走私；偷运	1	0	0			0
+confront	v. 面对；对抗	1	0	0			0
+versatile	adj. 多才多艺的；多功能的	1	0	0			0
+probe	n./v. 探测；调查	1	0	0			0
+alloy	n. 合金 v. 使成合金	1	0	0			0

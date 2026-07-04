@@ -1,0 +1,16 @@
+15	0
+suite	n. 套房；一套	1	0	0			0
+intensify	v. 强化；加剧	1	0	0			0
+expel	v. 驱逐；开除	1	0	0			0
+fling	v. 猛扔；投身于	1	0	0			0
+bless	v. 祝福；保佑	1	0	0			0
+affiliate	v. 使附属 n. 分支机构	1	0	0			0
+elite	n. 精英 adj. 精英的	1	0	0			0
+latitude	n. 纬度；自由	1	0	0			0
+foam	n. 泡沫 v. 起泡	1	0	0			0
+ambiguous	adj. 含糊的；模棱两可的	1	0	0			0
+embed	v. 嵌入；植入	1	0	0			0
+decent	adj. 体面的；正派的	1	0	0			0
+ward	n. 病房 v. 避开	1	0	0			0
+elicit	v. 引出；探出	1	0	0			0
+propel	v. 推进；推动	1	0	0			0

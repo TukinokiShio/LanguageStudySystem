@@ -1,0 +1,16 @@
+15	0
+decline	n./v. 下降；衰退	1	0	0			0
+adequate	adj. 足够的；适当的	1	0	0			0
+stress	n. 压力 v. 强调	1	0	0			0
+exhaust	v. 耗尽；使筋疲力尽	1	0	0			0
+stimulate	v. 刺激；激励	1	0	0			0
+distribute	v. 分配；分发	1	0	0			0
+provoke	v. 激怒；引起	1	0	0			0
+sequence	n. 顺序；序列	1	0	0			0
+disperse	v. 分散；驱散	1	0	0			0
+facilitate	v. 促进；使便利	1	0	0			0
+undergo	v. 经历；遭受	1	0	0			0
+deteriorate	v. 恶化；退化	1	0	0			0
+chronic	adj. 慢性的；长期的	1	0	0			0
+promote	v. 促进；晋升	1	0	0			0
+invoke	v. 调用；援引	1	0	0			0

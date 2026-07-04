@@ -1,0 +1,16 @@
+15	0
+tenant	n. 租户；房客	1	0	0			0
+donate	v. 捐赠；捐献	1	0	0			0
+gasp	v. 喘气 n. 喘息	1	0	0			0
+evaporate	v. 蒸发；消失	1	0	0			0
+permeate	v. 渗透；弥漫	1	0	0			0
+testimony	n. 证词；证据	1	0	0			0
+bleak	adj. 荒凉的；暗淡的	1	0	0			0
+erroneous	adj. 错误的；不正确的	1	0	0			0
+scrutiny	n. 详细审查；细看	1	0	0			0
+incorporate	v. 包含；合并	1	0	0			0
+mock	v. 嘲笑 adj. 模拟的	1	0	0			0
+arrogant	adj. 傲慢的；自大的	1	0	0			0
+triple	adj. 三倍的 v. 成为三倍	1	0	0			0
+integral	adj. 必需的；完整的	1	0	0			0
+collide	v. 碰撞；冲突	1	0	0			0

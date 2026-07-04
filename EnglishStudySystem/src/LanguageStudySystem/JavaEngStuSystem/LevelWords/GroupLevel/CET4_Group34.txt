@@ -1,0 +1,16 @@
+15	0
+vital	adj. 至关重要的	1	0	0			0
+establish	v. 建立；确立	1	0	0			0
+survey	n./v. 调查；测量	1	0	0			0
+enterprise	n. 企业；事业	1	0	0			0
+affect	v. 影响；感动	1	0	0			0
+route	n. 路线；航线	1	0	0			0
+advantage	n. 优势；有利条件	1	0	0			0
+strategy	n. 战略；策略	1	0	0			0
+site	n. 地点；场所	1	0	0			0
+relate	v. 关联；叙述	1	0	0			0
+scan	v. 扫描；浏览	1	0	0			0
+proportion	n. 比例；部分	1	0	0			0
+justice	n. 正义；司法	1	0	0			0
+margin	n. 边缘；利润	1	0	0			0
+perspective	n. 视角；观点	1	0	0			0

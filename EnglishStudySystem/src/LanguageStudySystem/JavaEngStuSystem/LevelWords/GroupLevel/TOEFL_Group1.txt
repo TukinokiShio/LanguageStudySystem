@@ -1,0 +1,16 @@
+15	0
+magnitude	n. 大小；重要性	1	0	0			0
+motivate	v. 激励；激发	1	0	0			0
+reinforce	v. 加强；增强	1	0	0			0
+aesthetic	adj. 美学的；审美的	1	0	0			0
+execute	v. 执行；处决	1	0	0			0
+alter	v. 改变；修改	1	0	0			0
+simultaneous	adj. 同时发生的	1	0	0			0
+expenditure	n. 支出；花费	1	0	0			0
+restrain	v. 抑制；约束	1	0	0			0
+bulk	n. 大量；大部分	1	0	0			0
+integral	adj. 必需的；完整的	1	0	0			0
+feasible	adj. 可行的；可能的	1	0	0			0
+synthesis	n. 合成；综合	1	0	0			0
+significant	adj. 重要的；显著的	1	0	0			0
+condone	v. 宽恕；容忍	1	0	0			0
