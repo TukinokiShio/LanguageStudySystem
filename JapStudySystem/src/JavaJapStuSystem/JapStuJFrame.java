@@ -36,6 +36,9 @@ public class JapStuJFrame extends JFrame
     private JButton btnDeleteAfterTest;
     private JButton btnAddToLocal;
 
+    // 测试本地词库快捷键说明按钮（仅在该功能界面出现）
+    private JButton btnShortcutHelp;
+
     // 编辑专用按钮
     private JButton btnEditJpField;
     private JButton btnEditCnField;
@@ -158,14 +161,98 @@ public class JapStuJFrame extends JFrame
         setStatsLabelVisible(false);
         loadJLPTLevelPreference();
         showStartupStatus();
+        initKeyBindings();
         setSize(1200, 850);
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(true);
     }
 
+    // ==================== 测试本地词库 键盘快捷键 ====================
+    // 通过 KeyEventDispatcher 在键盘事件分发前拦截，避免与获得焦点的按钮自身
+    // 的回车/方向键行为冲突（返回 true 即消费该事件，不再传给按钮）。
+    // 本地测试与 JLPT 共用本套快捷键；JLPT 结果页的「修改/添加本地/删除」键位与本地测试不同。
+    private void initKeyBindings() {
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher() {
+            @Override
+            public boolean dispatchKeyEvent(KeyEvent e) {
+                if (e.getID() != KeyEvent.KEY_PRESSED) return false;
+
+                // 通用：题目已展示，等待显示答案（本地测试 & JLPT）
+                if (state == 2) {
+                    if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                        btnShowAnswer.doClick();
+                        return true;
+                    }
+                }
+                // 通用：已显示答案，等待 记得/不记得（本地测试 & JLPT）
+                else if (state == 3) {
+                    if (e.getKeyCode() == KeyEvent.VK_ENTER
+                            || e.getKeyCode() == KeyEvent.VK_LEFT) {
+                        btnYes.doClick();               // 记得：回车 / ←
+                        return true;
+                    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT
+                            || e.getKeyCode() == KeyEvent.VK_SPACE) {
+                        btnNo.doClick();                // 不记得：→ / 空格
+                        return true;
+                    }
+                }
+                // 通用：测试完成 / JLPT 首页 —— 继续测试（回车 / ←）
+                else if (state == STATE_TEST_RESULT || (jlptMode && state == 0)) {
+                    if (e.getKeyCode() == KeyEvent.VK_ENTER
+                            || e.getKeyCode() == KeyEvent.VK_LEFT) {
+                        btnContinueTest.doClick();       // 继续测试：回车 / ←
+                        return true;
+                    }
+                    if (jlptMode) {
+                        // JLPT 结果页：修改考察点=↑，添加到本地=↓，删除考察点=→
+                        if (e.getKeyCode() == KeyEvent.VK_UP) {
+                            btnEditAfterTest.doClick();
+                            return true;
+                        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+                            btnAddToLocal.doClick();
+                            return true;
+                        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+                            btnDeleteAfterTest.doClick();
+                            return true;
+                        }
+                    } else {
+                        // 本地测试结果页：修改考察点=↓，删除考察点=→
+                        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+                            btnEditAfterTest.doClick();
+                            return true;
+                        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+                            btnDeleteAfterTest.doClick();
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+        });
+    }
+
+    private void showShortcutHelp() {
+        String msg = "<html><body style='font-family:微软雅黑; font-size:14px;'>"
+                + "<b>测试本地词库 · 键盘快捷键</b><br><br>"
+                + "显示答案：<b>Enter（回车）</b><br>"
+                + "记得：<b>Enter</b> / <b>←（左方向键）</b><br>"
+                + "不记得：<b>→（右方向键）</b> / <b>空格</b><br>"
+                + "继续测试：<b>Enter</b> / <b>←（左方向键）</b><br>"
+                + "修改考察点：<b>↓（下方向键）</b><br>"
+                + "删除考察点：<b>→（右方向键）</b><br><br>"
+                + "<b>JLPT 词书 · 键盘快捷键</b>（按键含义相同）<br><br>"
+                + "显示答案 / 记得 / 不记得 / 继续测试：同上<br>"
+                + "修改考察点：<b>↑（上方向键）</b><br>"
+                + "添加到本地：<b>↓（下方向键）</b><br>"
+                + "删除考察点：<b>→（右方向键）</b>"
+                + "</body></html>";
+        JOptionPane.showMessageDialog(this, msg, "快捷键说明",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+
     private void initJFrame() {
-        setTitle("日文学习系统 V3.1.1");
+        setTitle("日文学习系统 V3.3.2");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -273,8 +360,8 @@ public class JapStuJFrame extends JFrame
         row1.add(btnAddWord);
         row1.add(btnEditWord);
         row1.add(btnLocalTest);
-        row1.add(btnImageReco);
         row1.add(btnJLPT);
+        row1.add(btnImageReco);
         btnJLPTLevelSwitch = new JButton("JLPT " + lastJLPTLevel);
         btnJLPTLevelSwitch.setBackground(blue);
         btnJLPTLevelSwitch.addActionListener(e -> {
@@ -287,6 +374,12 @@ public class JapStuJFrame extends JFrame
         row1.add(btnJLPTLevelSwitch);
         row1.add(btnTypeWord);
         row1.add(btnTypeGram);
+        btnShortcutHelp = new JButton("快捷键说明");
+        btnShortcutHelp.setBackground(new Color(255, 250, 230));
+        btnShortcutHelp.setToolTipText("查看测试本地词库的键盘快捷键");
+        btnShortcutHelp.addActionListener(e -> showShortcutHelp());
+        btnShortcutHelp.setVisible(false);  // 默认隐藏，仅进入本地测试时显示
+        row1.add(btnShortcutHelp);
 
         // JLPT 弹出菜单
         jlptMenu = new JPopupMenu();
@@ -368,6 +461,7 @@ public class JapStuJFrame extends JFrame
         editBtnRow.add(btnConvertToGrammar);
 
         topBtnPanel.add(row1);
+
         topBtnPanel.add(row2);
         topBtnPanel.add(editBtnRow);
 
@@ -953,12 +1047,13 @@ public class JapStuJFrame extends JFrame
                 int knownW = (int)(w * knownPctExact / 100);
                 int strangeW = w - masteredW - knownW;
 
-                g2.setColor(new Color(180, 180, 180));     // 陌生灰
-                g2.fillRect(b.left, b.top, strangeW, h);
+                // 从左向右：掌握深蓝 → 了解浅蓝 → 陌生灰
+                g2.setColor(new Color(30, 80, 180));       // 掌握深蓝（最左）
+                g2.fillRect(b.left, b.top, masteredW, h);
                 g2.setColor(new Color(100, 180, 255));     // 了解浅蓝
-                g2.fillRect(b.left + strangeW, b.top, knownW, h);
-                g2.setColor(new Color(30, 80, 180));       // 掌握深蓝
-                g2.fillRect(b.left + strangeW + knownW, b.top, masteredW, h);
+                g2.fillRect(b.left + masteredW, b.top, knownW, h);
+                g2.setColor(new Color(180, 180, 180));     // 陌生灰（最右）
+                g2.fillRect(b.left + masteredW + knownW, b.top, strangeW, h);
 
                 g2.setColor(Color.WHITE);
                 String txt = bar.getString();
@@ -1084,6 +1179,7 @@ public class JapStuJFrame extends JFrame
         btnContinueTest.setVisible(false);
         btnAddToLocal.setVisible(false);
         btnJLPTLevelSwitch.setVisible(false);
+        btnShortcutHelp.setVisible(false);
         setEditButtonsVisible(false);
         btnConvertToGrammar.setVisible(false);
         setTypeButtonsVisible(false);
@@ -1532,6 +1628,7 @@ public class JapStuJFrame extends JFrame
         state = 2;
         resetAllButtonVisibility();
         setTestButtonsVisible(true, false, false);
+        btnShortcutHelp.setVisible(true);
         btnAddToLocal.setVisible(false);
 
         int len = listLen(globalList);
@@ -1582,6 +1679,7 @@ public class JapStuJFrame extends JFrame
             print("点击「继续测试」开始测试");
         }
         print("点击「查看全部」浏览当前组词汇");
+        print("【升级规则】陌生 答对1次→了解；了解 答对2次（每答错2次需多答对1次）→掌握");
 
         state = 0;
         resetAllButtonVisibility();
@@ -1785,6 +1883,7 @@ public class JapStuJFrame extends JFrame
         setTestButtonsVisible(false, false, true);
         btnContinueTest.setVisible(true);
         btnAddToLocal.setVisible(false);
+        btnShortcutHelp.setVisible(true);
         setStatsLabelVisible(true);
         print("\n可点击上方的【继续测试】【修改考察点】【删除考察点】");
     }
@@ -1851,6 +1950,7 @@ public class JapStuJFrame extends JFrame
         btnAddToLocal.setVisible(true);
         btnJLPTLevelSwitch.setVisible(true);
         setStatsLabelVisible(true);
+        print("\n【升级规则】陌生 答对1次→了解；了解 答对2次（每答错2次需多答对1次）→掌握");
         print("\n可点击上方【继续测试】【添加到本地】【修改考察点】【删除考察点】");
     }
 

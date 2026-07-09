@@ -1,0 +1,21 @@
+﻿[2026-07-02 22:44:40.773] [INFO] ========== 打包任务开始 ==========
+[2026-07-02 22:44:40.783] [INFO] 正在检测项目路径...
+[2026-07-02 22:44:40.787] [INFO] 项目根目录: E:\SHIO\LanguageStudySystem\JapStudySystem  ✓
+[2026-07-02 22:44:40.789] [INFO] 历史归档目录: E:\SHIO\LanguageStudySystem\JSS_history  ✓
+[2026-07-02 22:44:40.830] [INFO] Inno Setup 脚本文件: E:\SHIO\JapStudySystem_Setup.iss  ✓
+[2026-07-02 22:44:40.833] [INFO] 正在自动检测 Inno Setup 安装路径...
+[2026-07-02 22:44:40.836] [INFO] 在固定路径找到 Inno Setup: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-07-02 22:44:40.838] [SUCCESS] Inno Setup 路径: E:\SHIO\inno\Inno Setup 6\ISCC.exe
+[2026-07-02 22:44:40.842] [INFO] 正在检测 Java 开发工具...
+[2026-07-02 22:44:40.847] [INFO] 从系统 PATH 找到 javac: C:\Program Files\Common Files\Oracle\Java\javapath\javac.exe
+[2026-07-02 22:44:40.850] [INFO] 使用指定的版本号: C:\Users\d8502\Desktop\EngStuSystem启动.bat - 快捷方式.lnk
+[2026-07-02 22:44:40.852] [SUCCESS] 本次打包版本号: C:\Users\d8502\Desktop\EngStuSystem启动.bat - 快捷方式.lnk
+[2026-07-02 22:44:40.853] [INFO] 已指定 -Version 参数，跳过弹窗，直接使用版本: C:\Users\d8502\Desktop\EngStuSystem启动.bat - 快捷方式.lnk
+[2026-07-02 22:44:40.858] [INFO] 主项目源码目录: E:\SHIO\LanguageStudySystem\JapStudySystem\src\JavaJapStuSystem
+[2026-07-02 22:44:40.859] [INFO] 备选源码目录: E:\SHIO\LanguageStudySystem\JapStudySystem_temp\JapStudySystem\src
+[2026-07-02 22:44:40.865] [INFO] 使用源码目录: E:\SHIO\LanguageStudySystem\JapStudySystem\src\JavaJapStuSystem
+[2026-07-02 22:44:40.872] [INFO] 正在编译 Java 源文件...
+[2026-07-02 22:44:40.873] [INFO] 源文件目录: E:\SHIO\LanguageStudySystem\JapStudySystem\src\JavaJapStuSystem
+[2026-07-02 22:44:40.874] [INFO] 输出目录: E:\SHIO\LanguageStudySystem\JapStudySystem\bin\classes
+[2026-07-02 22:44:41.675] [INFO] javac 版本: javac 24.0.2
+[2026-07-02 22:44:41.677] [INFO] 编译命令: "C:\Program Files\Common Files\Oracle\Java\javapath\javac.exe" -d "E:\SHIO\LanguageStudySystem\JapStudySystem\bin\classes" -encoding UTF-8 @"C:\Users\d8502\AppData\Local\Temp\javac_sources_20260702_224440.txt"
