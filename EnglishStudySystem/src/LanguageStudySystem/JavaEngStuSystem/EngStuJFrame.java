@@ -98,6 +98,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
     private JButton btnRandomTest;
     private JButton btnExit;
     private JButton btnImageReco;
+    private JButton btnHelp;          // 使用说明
+    private JButton btnViewSwitch;    // 查看全部中切换 等级/本地 词库
 
     private JButton btnShowAnswer;
     private JButton btnYes;
@@ -142,7 +144,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
     }
 
     private void initJFrame() {
-        setTitle("英语单词系统 V2.1.0");
+        setTitle("英语单词系统 V2.2.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -230,11 +232,13 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         btnShowAll = new JButton("查看全部");
         btnAddWord = new JButton("添加单词");
         btnEditWord = new JButton("查找单词");
-        btnRandomTest = new JButton("随机测试");
+        btnRandomTest = new JButton("测试本地词库");
         btnExit = new JButton("保存退出");
         btnImageReco = new JButton("图片识别");
         btnLevelStudy = new JButton("等级词书");
         btnLevelSwitch = new JButton("CET4");
+        btnHelp = new JButton("使用说明");
+        btnViewSwitch = new JButton("查看本地词库");
 
         // 设置顶部按钮字体（调小为13号）
         Font topBtnFont = new Font("微软雅黑", Font.BOLD, 13);
@@ -246,15 +250,19 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         btnImageReco.setFont(topBtnFont);
         btnLevelStudy.setFont(topBtnFont);
         btnLevelSwitch.setFont(topBtnFont);
+        btnHelp.setFont(topBtnFont);
+        btnViewSwitch.setFont(topBtnFont);
+        btnViewSwitch.setVisible(false);
 
         topBtnPanel.add(btnShowAll);
         topBtnPanel.add(btnAddWord);
         topBtnPanel.add(btnEditWord);
         topBtnPanel.add(btnRandomTest);
         topBtnPanel.add(btnLevelStudy);
-        topBtnPanel.add(btnLevelSwitch);
         topBtnPanel.add(btnImageReco);
+        topBtnPanel.add(btnHelp);
         topBtnPanel.add(btnExit);
+        topBtnPanel.add(btnLevelSwitch);
 
         btnShowAll.addActionListener(this);
         btnAddWord.addActionListener(this);
@@ -264,6 +272,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         btnImageReco.addActionListener(this);
         btnLevelStudy.addActionListener(this);
         btnLevelSwitch.addActionListener(this);
+        btnHelp.addActionListener(this);
+        btnViewSwitch.addActionListener(this);
 
         // 等级切换按钮初始隐藏
         btnLevelSwitch.setVisible(false);
@@ -401,6 +411,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
     private void showAllWordsAsCards() {
         clearAll();
         levelMode = false;
+        btnLevelSwitch.setVisible(false);
         setLevelProgressVisible(false);
         setStatsLabelVisible(false);
         levelTestStatePanel.setVisible(false);
@@ -415,24 +426,21 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         editTarget = null;
 
         centerWrapPanel.removeAll();
-        centerWrapPanel.add(cardScrollPane, BorderLayout.CENTER);
         cardPanel.removeAll();
 
         EngNode p = globalList.next;
         if (p == null) {
             showArea.setText("暂无单词数据");
-            centerWrapPanel.removeAll();
             centerWrapPanel.add(new JScrollPane(showArea), BorderLayout.CENTER);
-            centerWrapPanel.revalidate();
-            centerWrapPanel.repaint();
-            return;
+        } else {
+            while (p != null) {
+                final EngNode node = p;
+                cardPanel.add(createWordCard(node));
+                p = p.next;
+            }
+            centerWrapPanel.add(cardScrollPane, BorderLayout.CENTER);
         }
-
-        while (p != null) {
-            final EngNode node = p;
-            cardPanel.add(createWordCard(node));
-            p = p.next;
-        }
+        addViewSwitchBar("查看等级词书");
         centerWrapPanel.revalidate();
         centerWrapPanel.repaint();
     }
@@ -600,6 +608,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
 
     private void addWordMode() {
         levelMode = false;
+        btnLevelSwitch.setVisible(false);
         setLevelProgressVisible(false);
         setStatsLabelVisible(false);
         levelTestStatePanel.setVisible(false);
@@ -609,6 +618,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         setTestButtonsVisible(false, false);
         setEditButtonsVisible(false);
         btnDeleteWord.setVisible(false);
+        btnContinueTest.setVisible(false);
+        btnMarkMastered.setVisible(false);
         inputField.setVisible(true);
         btnInputConfirm.setVisible(true);
         print("===== 添加单词 =====");
@@ -617,6 +628,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
 
     private void editWordMode() {
         levelMode = false;
+        btnLevelSwitch.setVisible(false);
         setLevelProgressVisible(false);
         setStatsLabelVisible(false);
         levelTestStatePanel.setVisible(false);
@@ -626,6 +638,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         setTestButtonsVisible(false, false);
         setEditButtonsVisible(false);
         btnDeleteWord.setVisible(false);
+        btnContinueTest.setVisible(false);
+        btnMarkMastered.setVisible(false);
         inputField.setVisible(true);
         btnInputConfirm.setVisible(true);
         if (globalList.next == null) {
@@ -642,6 +656,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
     private void randomTest() {
         // 退出等级模式
         levelMode = false;
+        btnLevelSwitch.setVisible(false);
         setLevelProgressVisible(false);
         setStatsLabelVisible(false);
         levelTestStatePanel.setVisible(false);
@@ -656,6 +671,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         setTestButtonsVisible(true, false);
         setEditButtonsVisible(false);
         btnDeleteWord.setVisible(false);
+        btnContinueTest.setVisible(false);
+        btnMarkMastered.setVisible(false);
         inputField.setVisible(false);
         btnInputConfirm.setVisible(false);
         editTarget = null;
@@ -688,6 +705,7 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
 
     private void enterImageRecognitionMode() {
         levelMode = false;
+        btnLevelSwitch.setVisible(false);
         setLevelProgressVisible(false);
         setStatsLabelVisible(false);
         levelTestStatePanel.setVisible(false);
@@ -696,6 +714,8 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         setTestButtonsVisible(false, false);
         setEditButtonsVisible(false);
         btnDeleteWord.setVisible(false);
+        btnContinueTest.setVisible(false);
+        btnMarkMastered.setVisible(false);
         inputField.setVisible(false);
         btnInputConfirm.setVisible(false);
 
@@ -808,13 +828,11 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         print("添加成功！");
         print("单词:  " + node.word);
         print("释义:  " + node.chinese);
-        print("您可以继续操作其他功能。");
-        state = 0;
-        inputField.setVisible(false);
-        btnInputConfirm.setVisible(false);
-        setTestButtonsVisible(false, false);
-        setEditButtonsVisible(false);
-        btnDeleteWord.setVisible(false);
+        print("即将自动进入下一单词的添加...");
+        // 稍后自动进入添加下一单词
+        javax.swing.Timer timer = new javax.swing.Timer(600, evt -> addWordMode());
+        timer.setRepeats(false);
+        timer.start();
     }
 
     // ==================== 统计与启动状态 ====================
@@ -1606,26 +1624,60 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         editTarget = null;
 
         centerWrapPanel.removeAll();
-        centerWrapPanel.add(cardScrollPane, BorderLayout.CENTER);
         cardPanel.removeAll();
 
         EngNode p = levelList.next;
         if (p == null) {
             showArea.setText("暂无等级词汇数据");
-            centerWrapPanel.removeAll();
             centerWrapPanel.add(new JScrollPane(showArea), BorderLayout.CENTER);
-            centerWrapPanel.revalidate();
-            centerWrapPanel.repaint();
-            return;
+        } else {
+            while (p != null) {
+                final EngNode node = p;
+                cardPanel.add(createLevelWordCard(node));
+                p = p.next;
+            }
+            centerWrapPanel.add(cardScrollPane, BorderLayout.CENTER);
         }
-
-        while (p != null) {
-            final EngNode node = p;
-            cardPanel.add(createLevelWordCard(node));
-            p = p.next;
-        }
+        addViewSwitchBar("查看本地词库");
         centerWrapPanel.revalidate();
         centerWrapPanel.repaint();
+    }
+
+    private void addViewSwitchBar(String label) {
+        btnViewSwitch.setText(label);
+        JPanel bar = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        bar.setBorder(new EmptyBorder(0, 2, 6, 2));
+        bar.add(btnViewSwitch);
+        centerWrapPanel.add(bar, BorderLayout.NORTH);
+    }
+
+    private void showHelpDialog() {
+        String text = "【英语单词系统 使用说明 V2.2.0】\n\n"
+            + "一、词库管理\n"
+            + "• 查看全部：浏览本地词库或全部等级词书的单词卡片；顶部可切换「本地词库 / 等级词书」\n"
+            + "• 添加单词：录入新的本地单词（英文 + 中文释义），添加后自动进入下一词\n"
+            + "• 查找单词：按单词或释义搜索，选中后可修改、删除\n"
+            + "• 图片识别：拖入单词截图，自动调用 AI 识别并批量加入本地词库\n\n"
+            + "二、学习测试\n"
+            + "• 测试本地词库：从本地词库随机抽取单词进行记忆测试；显示答案后选「记得 / 不记得」\n"
+            + "• 等级词书：进入 CET4 / CET6 / IELTS / TOEFL 分级学习\n"
+            + "    - 继续测试：开始或继续当前分组的测试\n"
+            + "    - 等级切换（CET4 按钮）：在四个等级之间切换\n"
+            + "    - 掌握单词：直接将单词标记为已掌握，不再出现于测试\n"
+            + "    - 进入下一组：当前组全部掌握后自动进入下一组\n\n"
+            + "三、数据保存\n"
+            + "• 保存退出：保存本地词库与等级进度并退出程序\n"
+            + "• 本地词库自动保存至 D:/EngStu.txt；等级进度保存至工作目录\n";
+
+        JTextArea ta = new JTextArea(text);
+        ta.setEditable(false);
+        ta.setLineWrap(true);
+        ta.setWrapStyleWord(true);
+        ta.setFont(new Font("微软雅黑", Font.PLAIN, 14));
+        ta.setMargin(new Insets(10, 12, 10, 12));
+        JScrollPane sp = new JScrollPane(ta);
+        sp.setPreferredSize(new Dimension(460, 380));
+        JOptionPane.showMessageDialog(this, sp, "使用说明", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private JPanel createLevelWordCard(EngNode node) {
@@ -1674,6 +1726,13 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
             startLevelMode();
         } else if (obj == btnLevelSwitch) {
             switchLevel();
+        } else if (obj == btnViewSwitch) {
+            if (levelMode) {
+                showAllWordsAsCards();
+            } else {
+                startLevelMode();
+                showLevelAsCards();
+            }
         } else if (obj == btnShowAll) {
             if (levelMode) {
                 showLevelAsCards();
@@ -1685,11 +1744,9 @@ public class EngStuJFrame extends JFrame implements ActionListener, EngImageReco
         } else if (obj == btnEditWord) {
             editWordMode();
         } else if (obj == btnRandomTest) {
-            if (levelMode) {
-                levelTestMode();
-            } else {
-                randomTest();
-            }
+            randomTest();
+        } else if (obj == btnHelp) {
+            showHelpDialog();
         } else if (obj == btnExit) {
             if (levelMode) {
                 saveCurrentGroup();

@@ -1,3 +1,5 @@
 ﻿[20260703_230507] Version=2.1.0 | 安装包: 英语学习系统_2.1.0_Setup.exe | ZIP: EnglishStudySystemV2.1.0.zip
 [20260703_230810] Version=2.1.0 | 安装包: 英语学习系统_2.1.0_Setup.exe | ZIP: EnglishStudySystemV2.1.0.zip
 [20260703_231322] Version=2.1.1 | 安装包: 英语学习系统_2.1.1_Setup.exe | ZIP: EnglishStudySystemV2.1.1.zip
+[20260705_012542] Version=2.1.5 | 安装包: 英语学习系统_2.1.5_Setup.exe | ZIP: EnglishStudySystemV2.1.5.zip
+[20260707_173555] Version=2.2.0 | 安装包: 英语学习系统_2.2.0_Setup.exe | ZIP: EnglishStudySystemV2.2.0.zip
