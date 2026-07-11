@@ -197,6 +197,22 @@ public class JapStuJFrame extends JFrame
                         return true;
                     }
                 }
+                // 添加考察点模式：确认输入=Ctrl+回车；类型选择阶段 单词=←、语法=→
+                else if (state == 1) {
+                    if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_ENTER) {
+                        btnInputConfirm.doClick();      // 确认输入：Ctrl + 回车
+                        return true;
+                    }
+                    if (tmpStep == 2) {                // 已输入日文+中文，等待选择类型
+                        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+                            btnTypeWord.doClick();       // 单词：←
+                            return true;
+                        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+                            btnTypeGram.doClick();       // 语法：→
+                            return true;
+                        }
+                    }
+                }
                 // 通用：测试完成 / JLPT 首页 —— 继续测试（回车 / ←）
                 else if (state == STATE_TEST_RESULT || (jlptMode && state == 0)) {
                     if (e.getKeyCode() == KeyEvent.VK_ENTER
@@ -245,14 +261,17 @@ public class JapStuJFrame extends JFrame
                 + "显示答案 / 记得 / 不记得 / 继续测试：同上<br>"
                 + "修改考察点：<b>↑（上方向键）</b><br>"
                 + "添加到本地：<b>↓（下方向键）</b><br>"
-                + "删除考察点：<b>→（右方向键）</b>"
+                + "删除考察点：<b>→（右方向键）</b><br><br>"
+                + "<b>添加考察点 · 键盘快捷键</b><br><br>"
+                + "确认输入：<b>Ctrl + Enter</b><br>"
+                + "选择类型（单词 / 语法）：<b>←（左方向键）</b> / <b>→（右方向键）</b>"
                 + "</body></html>";
         JOptionPane.showMessageDialog(this, msg, "快捷键说明",
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void initJFrame() {
-        setTitle("日文学习系统 V3.3.2");
+        setTitle("日文学习系统 V3.4.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -1593,7 +1612,7 @@ public class JapStuJFrame extends JFrame
         inputField.setVisible(true);
         btnInputConfirm.setVisible(true);
         print("===== 添加考察点 =====");
-        print("请在上方输入框中输入日文/语法表达，输入完成后点击 确认输入 按钮");
+        print("请在上方输入框中输入日文/语法表达，输入完成后点击“确认输入”按钮或按“ctrl + 回车”");
         print("输入示例：場合");
     }
 
@@ -1612,7 +1631,7 @@ public class JapStuJFrame extends JFrame
             return;
         }
         print("===== 查找考察点 =====");
-        print("请输入日文或中文进行查找，输入完成后点击 确认输入 按钮");
+        print("请输入日文或中文进行查找，输入完成后点击“确认输入”按钮或按“ctrl + 回车”");
     }
 
     // ==================== 本地测试模式 ====================
@@ -2199,7 +2218,7 @@ public class JapStuJFrame extends JFrame
                     tmpCn   = input;
                     tmpStep = 2;
                     printBold("成功输入中文释义：" + input);
-                    print("\n请点击上方按钮选择类型：单词 或 语法");
+                    print("\n请点击上方按钮选择类型“单词”（←键） 或 “语法”（→键）");
                     setTypeButtonsVisible(true);
                 } else if (tmpStep == 3) {
                     tmpEx   = input;
