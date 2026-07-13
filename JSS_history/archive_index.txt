@@ -8,3 +8,4 @@
 [20260708_201853] Version=3.2.0 | 安装包: 日语学习系统_3.2.0_Setup.exe | ZIP: JapStudySystemV3.2.0.zip
 [20260709_194618] Version=3.3.2 | 安装包: 日语学习系统_3.3.2_Setup.exe | ZIP: JapStudySystemV3.3.2.zip
 [20260711_165659] Version=3.4.0 | 安装包: 日语学习系统_3.4.0_Setup.exe | ZIP: JapStudySystemV3.4.0.zip
+[20260713_204858] Version=3.5.0 | 安装包: 日语学习系统_3.5.0_Setup.exe | ZIP: JapStudySystemV3.5.0.zip

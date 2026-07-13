@@ -271,7 +271,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void initJFrame() {
-        setTitle("日文学习系统 V3.4.0");
+        setTitle("日文学习系统 V3.5.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -1599,6 +1599,22 @@ public class JapStuJFrame extends JFrame
         print("点击「JLPT词书」按钮开始 JLPT 学习，或使用本地词库功能。");
     }
 
+    // 添加成功后自动进入下一次添加（不清空已打印的成功提示）
+    private void reenterAddMode() {
+        tmpJp = null; tmpCn = null; tmpEx = null; tmpExc = null;
+        tmpStep = 0;
+        state = 1;
+        resetAllButtonVisibility();            // 收起其它按钮
+        inputField.setText("");
+        inputField.setVisible(true);
+        btnInputConfirm.setVisible(true);
+        setTypeButtonsVisible(false);
+        updateStatsLabel();
+        setStatsLabelVisible(false);
+        print("\n===== 继续添加考察点 =====");
+        print("请输入下一个日文/语法表达，完成后点击 确认输入（或 Ctrl+回车）");
+    }
+
     // ==================== 添加模式 ====================
 
     private void addMode() {
@@ -2187,9 +2203,7 @@ public class JapStuJFrame extends JFrame
             printBold("类型：单词");
             printBold("日文：" + node.japanese);
             printBold("释义：" + node.chinese);
-            state = 0;
-            resetAllButtonVisibility();
-            setStatsLabelVisible(true);
+            reenterAddMode();
         }
         else if (obj == btnTypeGram) {
             if (state != 1 || tmpStep != 2) return;
@@ -2248,9 +2262,7 @@ public class JapStuJFrame extends JFrame
                     printBold("释义：" + node.chinese);
                     printBold("例句：" + node.example);
                     printBold("例句译：" + node.exampleCh);
-                    state = 0;
-                    resetAllButtonVisibility();
-                    setStatsLabelVisible(true);
+                    reenterAddMode();
                 }
             }
             else if (state == 4) {

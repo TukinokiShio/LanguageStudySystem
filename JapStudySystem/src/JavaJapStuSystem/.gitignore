@@ -1,0 +1,18 @@
+# ===== 编译产物（依 CLAUDE.md，产物统一在 CodeProduct/）=====
+*.class
+CodeProduct/out/
+CodeProduct/JapanStudySystem.jar
+CodeProduct/JapStu.jar
+JapStudySystem.jar
+LanguageStudySystem/
+
+# ===== 构建/打包元数据 =====
+CodeProduct/MANIFEST.MF
+
+# ===== 智能体工作数据（非项目源码，不纳入版本库）=====
+.workbuddy/
+
+# ===== 系统/临时文件 =====
+nul
+*.bak
+*.tmp
