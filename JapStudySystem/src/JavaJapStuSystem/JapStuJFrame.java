@@ -105,6 +105,8 @@ public class JapStuJFrame extends JFrame
         int trueTimes;
         String example;
         String exampleCh;
+        String example2 = "";    // 例句2（v3.6.0 新增，列 8）
+        String example2Ch = "";  // 例句2译文（v3.6.0 新增，列 9）
         int masteryState;  // 0=陌生, 1=了解, 2=掌握
         int jlptLevel;     // 0=本地, 1=N5, 2=N4, 3=N3, 4=N2, 5=N1
         int wrongTimes;    // 本次会话中连续答错次数
@@ -271,7 +273,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void initJFrame() {
-        setTitle("日文学习系统 V3.5.0");
+        setTitle("日文学习系统 V3.6.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -633,21 +635,26 @@ public class JapStuJFrame extends JFrame
         Font labelFont = new Font("微软雅黑", Font.BOLD, TABLE_TEXT_SIZE);
 
         java.util.List<Object[]> rows = new ArrayList<>();
-        rows.add(new Object[]{"语法点", node.japanese});
+        rows.add(new Object[]{node.type == 2 ? "语法点" : "单词", node.japanese});
         rows.add(new Object[]{"释义", node.chinese});
 
-        boolean hasExample = node.example != null && !node.example.isEmpty()
-                && !"null".equals(node.example);
-        if (hasExample) {
+        if (hasExample(node.example)) {
             JPanel rubyPanel = JapJFrameKanaPrint.createRubyPanel(
                     node.example, baseFont, rubyFont,
                     new Color(80, 80, 80), CARE_COLOR);
             rows.add(new Object[]{"例句", rubyPanel});
-
-            boolean hasExc = node.exampleCh != null && !node.exampleCh.isEmpty()
-                    && !"null".equals(node.exampleCh);
-            if (hasExc) {
+            if (hasExample(node.exampleCh)) {
                 rows.add(new Object[]{"例句译", node.exampleCh});
+            }
+        }
+        // v3.6.0：例句2
+        if (hasExample(node.example2)) {
+            JPanel rubyPanel2 = JapJFrameKanaPrint.createRubyPanel(
+                    node.example2, baseFont, rubyFont,
+                    new Color(80, 80, 80), CARE_COLOR);
+            rows.add(new Object[]{"例句2", rubyPanel2});
+            if (hasExample(node.example2Ch)) {
+                rows.add(new Object[]{"例句2译", node.example2Ch});
             }
         }
 
@@ -875,37 +882,25 @@ public class JapStuJFrame extends JFrame
         infoPanel.add(titleLabel);
         infoPanel.add(Box.createVerticalStrut(6));
 
-        JLabel cnLabel = new JLabel("释义：" + node.chinese);
-        cnLabel.setFont(new Font("微软雅黑", Font.PLAIN, 15));
-        cnLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        infoPanel.add(cnLabel);
+        // v3.6.0：释义改为可换行文本区 —— 分义项（①②③）后单行 JLabel 放不下
+        JTextArea cnArea = new JTextArea("释义：" + node.chinese);
+        cnArea.setFont(new Font("微软雅黑", Font.PLAIN, 15));
+        cnArea.setLineWrap(true);
+        cnArea.setWrapStyleWord(true);
+        cnArea.setEditable(false);
+        cnArea.setBackground(Color.WHITE);
+        cnArea.setBorder(null);
+        cnArea.setAlignmentX(Component.LEFT_ALIGNMENT);
+        cnArea.setColumns(24);
+        cnArea.setMaximumSize(new Dimension(Integer.MAX_VALUE, cnArea.getPreferredSize().height));
+        infoPanel.add(cnArea);
 
-        if (node.type == 2 && !jlptCard) {
-            infoPanel.add(Box.createVerticalStrut(6));
-            JPanel exampleLine = new JPanel(new BorderLayout(4, 0));
-            exampleLine.setBackground(Color.WHITE);
-            exampleLine.setAlignmentX(Component.LEFT_ALIGNMENT);
-            JLabel exLabel = new JLabel("例句：");
-            exLabel.setFont(new Font("微软雅黑", Font.PLAIN, 14));
-            exampleLine.add(exLabel, BorderLayout.WEST);
-            JPanel rubyExample = JapJFrameKanaPrint.createRubyPanel(
-                    node.example,
-                    new Font("微软雅黑", Font.PLAIN, 14),
-                    new Font("微软雅黑", Font.PLAIN, 10),
-                    new Color(100, 100, 100), Color.WHITE);
-            exampleLine.add(rubyExample, BorderLayout.CENTER);
-            infoPanel.add(exampleLine);
-            infoPanel.add(Box.createVerticalStrut(4));
-            JTextArea excArea = new JTextArea("例句译文：" + node.exampleCh);
-            excArea.setFont(new Font("微软雅黑", Font.PLAIN, 14));
-            excArea.setForeground(new Color(80, 80, 80));
-            excArea.setLineWrap(true);
-            excArea.setWrapStyleWord(true);
-            excArea.setEditable(false);
-            excArea.setBackground(Color.WHITE);
-            excArea.setBorder(null);
-            excArea.setAlignmentX(Component.LEFT_ALIGNMENT);
-            infoPanel.add(excArea);
+        // v3.6.0：例句渲染不再限定「语法 且 非 JLPT」—— 只要有例句就显示
+        if (hasExample(node.example)) {
+            addExampleBlock(infoPanel, node.example, node.exampleCh, "例句");
+        }
+        if (hasExample(node.example2)) {
+            addExampleBlock(infoPanel, node.example2, node.example2Ch, "例句2");
         }
 
         infoPanel.add(Box.createVerticalStrut(6));
@@ -931,7 +926,8 @@ public class JapStuJFrame extends JFrame
         statLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         infoPanel.add(statLabel);
 
-        if (node.type == 2 && !jlptCard) {
+        // v3.6.0：带例句的卡片内容更长，统一包滚动（原仅语法卡包）
+        if (hasExample(node.example) || hasExample(node.example2)) {
             JScrollPane contentScroll = new JScrollPane(infoPanel);
             contentScroll.setBorder(null);
             contentScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -968,6 +964,46 @@ public class JapStuJFrame extends JFrame
         }
 
         return card;
+    }
+
+    // ==================== 例句渲染辅助（v3.6.0） ====================
+
+    /** 例句是否有效：非空、非空白、非历史遗留的 "null" 字面量。 */
+    private static boolean hasExample(String s) {
+        return s != null && !s.trim().isEmpty() && !"null".equals(s.trim());
+    }
+
+    /** 在卡片里渲染一条「例句 + 振假名 + 译文」。 */
+    private void addExampleBlock(JPanel infoPanel, String ex, String exCh, String label) {
+        infoPanel.add(Box.createVerticalStrut(6));
+
+        JPanel exampleLine = new JPanel(new BorderLayout(4, 0));
+        exampleLine.setBackground(Color.WHITE);
+        exampleLine.setAlignmentX(Component.LEFT_ALIGNMENT);
+        JLabel exLabel = new JLabel(label + "：");
+        exLabel.setFont(new Font("微软雅黑", Font.PLAIN, 14));
+        exampleLine.add(exLabel, BorderLayout.WEST);
+        JPanel rubyExample = JapJFrameKanaPrint.createRubyPanel(
+                ex,
+                new Font("微软雅黑", Font.PLAIN, 14),
+                new Font("微软雅黑", Font.PLAIN, 10),
+                new Color(100, 100, 100), Color.WHITE);
+        exampleLine.add(rubyExample, BorderLayout.CENTER);
+        infoPanel.add(exampleLine);
+
+        infoPanel.add(Box.createVerticalStrut(4));
+        JTextArea excArea = new JTextArea("译文：" + exCh);
+        excArea.setFont(new Font("微软雅黑", Font.PLAIN, 14));
+        excArea.setForeground(new Color(80, 80, 80));
+        excArea.setLineWrap(true);
+        excArea.setWrapStyleWord(true);
+        excArea.setEditable(false);
+        excArea.setBackground(Color.WHITE);
+        excArea.setBorder(null);
+        excArea.setAlignmentX(Component.LEFT_ALIGNMENT);
+        excArea.setColumns(24);
+        excArea.setMaximumSize(new Dimension(Integer.MAX_VALUE, excArea.getPreferredSize().height));
+        infoPanel.add(excArea);
     }
 
     // ==================== JLPT 进度条 ====================
@@ -1287,6 +1323,9 @@ public class JapStuJFrame extends JFrame
         node.trueTimes = sp.length > 4 ? Integer.parseInt(sp[4]) : 0;
         node.example   = sp.length > 5 ? sp[5] : "";
         node.exampleCh = sp.length > 6 ? sp[6] : "";
+        // v3.6.0：例句2 / 例句2译文（列 8 / 9）。旧文件没有这两列时保持空串。
+        node.example2   = sp.length > 8 ? sp[8] : "";
+        node.example2Ch = sp.length > 9 ? sp[9] : "";
         if (jlpt && sp.length > 7) {
             node.masteryState = Integer.parseInt(sp[7].trim());
         } else {
@@ -1356,7 +1395,7 @@ public class JapStuJFrame extends JFrame
             while (p != null) {
                 pw.println(p.japanese + "\t" + p.chinese + "\t" + p.type + "\t"
                         + p.examTimes + "\t" + p.trueTimes + "\t" + p.example + "\t" + p.exampleCh
-                        + "\t" + p.masteryState);
+                        + "\t" + p.masteryState + "\t" + p.example2 + "\t" + p.example2Ch);
                 p = p.next;
             }
         } catch (Exception ignored) {}
@@ -1494,7 +1533,7 @@ public class JapStuJFrame extends JFrame
             while (p != null) {
                 pw.println(p.japanese + "\t" + p.chinese + "\t" + p.type + "\t"
                         + p.examTimes + "\t" + p.trueTimes + "\t" + p.example + "\t" + p.exampleCh
-                        + "\t" + p.masteryState);
+                        + "\t" + p.masteryState + "\t" + p.example2 + "\t" + p.example2Ch);
                 p = p.next;
             }
         } catch (Exception ignored) {}
@@ -1971,6 +2010,8 @@ public class JapStuJFrame extends JFrame
         print("\n===== 词汇信息 =====");
         print("单词：" + node.japanese);
         print("释义：" + node.chinese);
+        // v3.6.0：JLPT 测试结果同样展示例句（此前此处只打印单词与释义）
+        embedGrammarInfo(node);
 
         jlptTestStateLabel.setText("状态：" + getMasteryLabel(node.masteryState));
         jlptTestWordLabel.setText("当前单词：" + node.japanese);
@@ -1994,7 +2035,8 @@ public class JapStuJFrame extends JFrame
         String coFile = GROUP_JLPT_DIR + currentJLPTLevel + "_carryover.txt";
         try (PrintWriter pw = new PrintWriter(new FileWriter(coFile, true))) {
             pw.println(node.japanese + "\t" + node.chinese + "\t" + node.type + "\t"
-                    + "0\t0\t" + node.example + "\t" + node.exampleCh + "\t0");
+                    + "0\t0\t" + node.example + "\t" + node.exampleCh + "\t0"
+                    + "\t" + node.example2 + "\t" + node.example2Ch);
         } catch (Exception ignored) {}
         allWrongOver3ThisSession++;
         saveCarryOver();
