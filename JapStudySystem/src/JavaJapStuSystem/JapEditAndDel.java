@@ -74,6 +74,9 @@ public class JapEditAndDel {
         JapStuJFrame.JaNode getGlobalListHead();
         void deleteNodeFromList(JapStuJFrame.JaNode node);
 
+        /** 内容被编辑后，主窗口可从当前临时组移除该条目。 */
+        default void onLocalEntryChanged(JapStuJFrame.JaNode node) {}
+
         /* ── 语法信息块输出（振假名表格） ── */
         void embedGrammarInfo(JapStuJFrame.JaNode node);
 
@@ -192,6 +195,9 @@ public class JapEditAndDel {
                 case 4 -> editTarget.example  = input.trim();
                 case 5 -> editTarget.exampleCh = input.trim();
             }
+            if (editField == 1 || editField == 2 || editField == 4 || editField == 5) {
+                editTarget.enrichState = 0;
+            }
             ctx.print("修改成功！可继续修改或点击 完成修改");
             // 回到编辑模式
             this.internalState = STATE_EDIT_MODE;
@@ -239,6 +245,7 @@ public class JapEditAndDel {
             // 输入完整，执行类型转换
             editTarget.exampleCh = exampleCh;
             editTarget.type = 2; // 正式改为语法类型
+            editTarget.enrichState = 0;
             ctx.print("转换成功！该考察点已变为语法点");
             ctx.print("类型：语法");
             ctx.print("日文：" + editTarget.japanese);
@@ -259,6 +266,7 @@ public class JapEditAndDel {
     public void finishEdit() {
         if (internalState != STATE_EDIT_MODE || editTarget == null) return;
 
+        ctx.onLocalEntryChanged(editTarget);
         ctx.saveToFile();
         ctx.clearAll();
         ctx.print("===== 修改完成！最新信息 =====");

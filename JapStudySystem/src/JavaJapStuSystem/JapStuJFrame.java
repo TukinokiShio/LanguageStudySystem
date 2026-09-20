@@ -5,9 +5,21 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.AtomicMoveNotSupportedException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 public class JapStuJFrame extends JFrame
         implements ActionListener, JapImageRecognition.RecognitionCallback, JapEditAndDel.EditorContext {
@@ -84,6 +96,7 @@ public class JapStuJFrame extends JFrame
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
     private static final int TABLE_TEXT_SIZE = 24;
+    private static final String APP_VERSION = "3.8.0";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -96,6 +109,9 @@ public class JapStuJFrame extends JFrame
     private static final String GROUP_JLPT_SRC_DIR = "D:/长江大学计算机实验室/计算机实验室文件/java/LanguageStudySystem/JavaJapStuSystem/JLPT/GroupJLPT/";
     private static final String GROUP_JLPT_DIR = "D:/JSS/JLPT/GroupJLPT/";
     private static final int GROUP_SIZE = 15;
+    private static final String LOCAL_STATE_DIR = "D:/JSS/LocalTest/";
+    private static final String LOCAL_STATE_FILE = LOCAL_STATE_DIR + "state.txt";
+    private static final int LOCAL_BATCH_SIZE = LocalTestEngine.BATCH_SIZE;
 
     static class JaNode {
         String japanese;
@@ -108,6 +124,8 @@ public class JapStuJFrame extends JFrame
         String example2 = "";    // 例句2（v3.6.0 新增，列 8）
         String example2Ch = "";  // 例句2译文（v3.6.0 新增，列 9）
         int masteryState;  // 0=陌生, 1=了解, 2=掌握
+        int enrichState;   // 0=待富化, 1=已富化
+        long localId;      // 本地词条稳定编号；JLPT 词条保持 0
         int jlptLevel;     // 0=本地, 1=N5, 2=N4, 3=N3, 4=N2, 5=N1
         int wrongTimes;    // 本次会话中连续答错次数
         JaNode next;
@@ -142,6 +160,20 @@ public class JapStuJFrame extends JFrame
     private java.util.List<JaNode> recentTestedWords = new ArrayList<>();
     private static final int RECENT_WINDOW = 10;
 
+    // 本地词库唯一的临时组：数组只记录 localId 和本组计数，不建立静态分组文件。
+    private final long[] localGroupIds = new long[LOCAL_BATCH_SIZE];
+    private final int[] localGroupWrong = new int[LOCAL_BATCH_SIZE];
+    private final int[] localGroupCorrect = new int[LOCAL_BATCH_SIZE];
+    private final int[] localGroupState = new int[LOCAL_BATCH_SIZE];
+    private int localGroupSize = 0;
+    private final List<Integer> localRecentSlots = new ArrayList<>();
+    private final LinkedHashSet<Long> localHardIds = new LinkedHashSet<>();
+    private boolean localGroupActive = false;
+    private boolean localGroupAwaitingNext = false;
+    private int localGroupNumber = 0;
+    private int localCurrentSlot = -1;
+    private String localStateWarning = "";
+
     private static final int STATE_IMAGE_RECOGNITION = 10;
     private static final int STATE_TEST_RESULT = 9;
     private static final int STATE_JLPT_MENU = 11;
@@ -156,6 +188,7 @@ public class JapStuJFrame extends JFrame
         globalList = initList();
         jlptList = initList();
         readFromFile();
+        loadLocalBatchState();
         ensureJLPTWorkDir();
         ensureGroupJLPTWorkDir();
         editAndDel = new JapEditAndDel(this);
@@ -273,7 +306,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void initJFrame() {
-        setTitle("日文学习系统 V3.7.0");
+        setTitle("日文学习系统 V" + APP_VERSION);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -772,7 +805,11 @@ public class JapStuJFrame extends JFrame
             newNode.trueTimes = 0;
             newNode.example   = node.example;
             newNode.exampleCh = node.exampleCh;
+            newNode.example2  = node.example2;
+            newNode.example2Ch = node.example2Ch;
             newNode.masteryState = 0;
+            newNode.enrichState = 0;
+            newNode.localId = nextLocalId();
             newNode.jlptLevel = 0;
             tail.next = newNode;
             tail      = newNode;
@@ -873,7 +910,8 @@ public class JapStuJFrame extends JFrame
                 default: prefix = "【陌生】"; break;
             }
         } else {
-            prefix = node.type == 1 ? "【单词】" : "【语法】";
+            prefix = (node.enrichState == 0 ? "【待富化】" : "")
+                    + (node.type == 1 ? "【单词】" : "【语法】");
         }
 
         JLabel titleLabel = new JLabel(prefix + node.japanese);
@@ -917,6 +955,16 @@ public class JapStuJFrame extends JFrame
             masteryLabel.setForeground(new Color(180, 120, 60));
             masteryLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
             infoPanel.add(masteryLabel);
+            infoPanel.add(Box.createVerticalStrut(4));
+        } else {
+            String localState = node.enrichState == 0
+                    ? "待富化（暂不参与测试）"
+                    : "本组状态：" + getMasteryLabel(node.masteryState);
+            JLabel localStateLabel = new JLabel("状态：" + localState);
+            localStateLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
+            localStateLabel.setForeground(new Color(180, 120, 60));
+            localStateLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+            infoPanel.add(localStateLabel);
             infoPanel.add(Box.createVerticalStrut(4));
         }
 
@@ -1081,6 +1129,69 @@ public class JapStuJFrame extends JFrame
         }
     }
 
+    private void updateLocalProgress() {
+        int groupMastered = 0;
+        int groupHard = 0;
+        int activeKnown = 0;
+        int activeStrange = 0;
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] <= 0L || localGroupWrong[i] > LocalTestEngine.HARD_WRONG_LIMIT) {
+                groupHard++;
+            } else if (localGroupState[i] >= 2) {
+                groupMastered++;
+            } else if (localGroupState[i] == 1) {
+                activeKnown++;
+            } else {
+                activeStrange++;
+            }
+        }
+        int activeTotal = activeKnown + activeStrange;
+        int groupTotal = groupMastered + groupHard + activeTotal;
+        if (groupTotal == 0) {
+            jlptGroupProgressBar.setValue(0);
+            jlptGroupProgressBar.setString("当前批次无活跃词");
+            jlptGroupLabel.setText("活跃池 0/" + LOCAL_BATCH_SIZE);
+        } else {
+            double knownPct = (double) activeKnown / groupTotal * 100;
+            double strangePct = (double) (activeStrange + groupHard) / groupTotal * 100;
+            jlptGroupProgressBar.setString(String.format("活跃池  %.1f%%/%.1f%%",
+                    strangePct, knownPct));
+            paintDualBar(jlptGroupProgressBar, groupMastered, activeKnown,
+                    activeStrange + groupHard, groupTotal);
+            jlptGroupLabel.setText("本组完成 " + (groupMastered + groupHard) + "/" + groupTotal
+                    + "  活跃 " + activeTotal + "  陌生" + activeStrange
+                    + " 了解" + activeKnown + " 困难" + groupHard);
+        }
+
+        int testable = 0, known = 0, strange = 0, mastered = 0;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.enrichState == 1) {
+                if (p.masteryState == 2) mastered++;
+                else if (p.masteryState == 1) known++;
+                else strange++;
+                testable++;
+            }
+            p = p.next;
+        }
+        if (testable == 0) {
+            jlptProgressBar.setValue(0);
+            jlptProgressBar.setString("无已富化可测词");
+            jlptProgressLabel.setText("待富化 " + localPendingEnrichCount()
+                    + "  重试 " + localHardIds.size());
+        } else {
+            double masteredPct = (double) mastered / testable * 100;
+            double knownPct = (double) known / testable * 100;
+            double strangePct = (double) strange / testable * 100;
+            jlptProgressBar.setString(String.format("本地整体  %.1f%%/%.1f%%/%.1f%%",
+                    strangePct, knownPct, masteredPct));
+            paintDualBar(jlptProgressBar, mastered, known, strange, testable);
+            jlptProgressLabel.setText("可测 " + testable + "  已掌握 " + mastered
+                    + "  待富化 " + localPendingEnrichCount()
+                    + "  重试 " + localHardIds.size());
+        }
+    }
+
     private void paintDualBar(JProgressBar bar, int mastered, int known, int strange, int total) {
         if (total == 0) return;
         double masteredPctExact = (double) mastered / total * 100;
@@ -1124,7 +1235,10 @@ public class JapStuJFrame extends JFrame
 
     private void setJLPTProgressVisible(boolean visible) {
         jlptProgressPanel.setVisible(visible);
-        if (visible) updateJLPTProgress();
+        if (visible) {
+            if (jlptMode) updateJLPTProgress();
+            else updateLocalProgress();
+        }
     }
 
     // ==================== EditorContext 接口实现 ====================
@@ -1192,8 +1306,10 @@ public class JapStuJFrame extends JFrame
         if (pre.next == node) {
             pre.next = node.next;
         }
+        unlinkLocalNode(node);
         totalItems = listLen(globalList);
         saveToFile();
+        saveLocalBatchState();
     }
 
     @Override
@@ -1219,7 +1335,11 @@ public class JapStuJFrame extends JFrame
         if (jlptMode) {
             statsLabel.setText("");
         } else {
-            statsLabel.setText("当前在库考察点个数: " + totalItems + "  已掌握: " + masteredItems);
+            statsLabel.setText("本地词库 " + totalItems
+                    + " 条  可测试 " + localTestableCount()
+                    + "  已掌握 " + masteredItems
+                    + "  待富化 " + localPendingEnrichCount()
+                    + "  重试 " + localHardIds.size());
         }
     }
 
@@ -1278,12 +1398,13 @@ public class JapStuJFrame extends JFrame
     // ==================== 文件读写 ====================
 
     private void readFromFile() {
-        try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
+        try (BufferedReader br = Files.newBufferedReader(
+                Paths.get(FILE_PATH), StandardCharsets.UTF_8)) {
             String firstLine = br.readLine();
             JaNode tail = globalList;
             boolean headerParsed = false;
             if (firstLine != null) {
-                String[] headParts = firstLine.split("\t");
+                String[] headParts = firstLine.split("\t", -1);
                 if (headParts.length == 2) {
                     try {
                         totalItems = Integer.parseInt(headParts[0].trim());
@@ -1299,14 +1420,15 @@ public class JapStuJFrame extends JFrame
             }
             String line;
             while ((line = br.readLine()) != null) {
-                line = line.trim();
-                if (line.isEmpty()) continue;
+                if (line.trim().isEmpty()) continue;
                 JaNode node = parseNode(line, false);
                 tail.next = node;
                 tail = node;
             }
             totalItems = listLen(globalList);
             if (!headerParsed) masteredItems = 0;
+            ensureLocalIds();
+            recomputeLocalMasteredCount();
         } catch (Exception e) {
             totalItems = 0;
             masteredItems = 0;
@@ -1314,39 +1436,335 @@ public class JapStuJFrame extends JFrame
     }
 
     private JaNode parseNode(String line, boolean jlpt) {
-        String[] sp = line.split("\t");
-        JaNode node = new JaNode();
-        node.japanese  = sp.length > 0 ? sp[0] : "";
-        node.chinese   = sp.length > 1 ? sp[1] : "";
-        node.type      = sp.length > 2 ? Integer.parseInt(sp[2]) : 1;
-        node.examTimes = sp.length > 3 ? Integer.parseInt(sp[3]) : 0;
-        node.trueTimes = sp.length > 4 ? Integer.parseInt(sp[4]) : 0;
-        node.example   = sp.length > 5 ? sp[5] : "";
-        node.exampleCh = sp.length > 6 ? sp[6] : "";
-        // v3.6.0：例句2 / 例句2译文（列 8 / 9）。旧文件没有这两列时保持空串。
-        node.example2   = sp.length > 8 ? sp[8] : "";
-        node.example2Ch = sp.length > 9 ? sp[9] : "";
-        if (jlpt && sp.length > 7) {
-            node.masteryState = Integer.parseInt(sp[7].trim());
-        } else {
-            node.masteryState = 0;
-        }
-        node.jlptLevel = 0;
-        node.wrongTimes = 0;
-        return node;
+        return LocalDataCodec.parse(line, jlpt);
     }
 
     @Override
     public void saveToFile() {
-        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH))) {
+        totalItems = listLen(globalList);
+        recomputeLocalMasteredCount();
+        try (PrintWriter pw = new PrintWriter(new OutputStreamWriter(
+                new FileOutputStream(FILE_PATH), StandardCharsets.UTF_8))) {
             pw.println(totalItems + "\t" + masteredItems);
             JaNode p = globalList.next;
             while (p != null) {
-                pw.println(p.japanese + "\t" + p.chinese + "\t" + p.type + "\t"
-                        + p.examTimes + "\t" + p.trueTimes + "\t" + p.example + "\t" + p.exampleCh);
+                pw.println(LocalDataCodec.serialize(p));
                 p = p.next;
             }
         } catch (Exception ignored) {}
+    }
+
+    private void ensureLocalIds() {
+        Set<Long> used = new HashSet<>();
+        long max = 0L;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.localId > max) max = p.localId;
+            p = p.next;
+        }
+        p = globalList.next;
+        while (p != null) {
+            if (p.localId <= 0L || !used.add(p.localId)) {
+                do {
+                    p.localId = ++max;
+                } while (!used.add(p.localId));
+            }
+            p = p.next;
+        }
+    }
+
+    private long nextLocalId() {
+        long max = 0L;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.localId > max) max = p.localId;
+            p = p.next;
+        }
+        return max + 1L;
+    }
+
+    private static boolean fullyEnriched(JaNode node) {
+        return node != null
+                && hasExample(node.example)
+                && hasExample(node.exampleCh)
+                && hasExample(node.example2)
+                && hasExample(node.example2Ch);
+    }
+
+    private void recomputeLocalMasteredCount() {
+        masteredItems = 0;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.masteryState >= 2) masteredItems++;
+            p = p.next;
+        }
+    }
+
+    // ==================== 本地动态批次状态 ====================
+
+    private List<JaNode> localNodes() {
+        List<JaNode> result = new ArrayList<>();
+        JaNode p = globalList.next;
+        while (p != null) {
+            result.add(p);
+            p = p.next;
+        }
+        return result;
+    }
+
+    private JaNode findLocalById(long localId) {
+        if (localId <= 0L) return null;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.localId == localId) return p;
+            p = p.next;
+        }
+        return null;
+    }
+
+    private static String joinIds(Collection<Long> ids) {
+        StringBuilder sb = new StringBuilder();
+        if (ids == null) return "";
+        for (Long id : ids) {
+            if (id == null || id <= 0L) continue;
+            if (sb.length() > 0) sb.append(',');
+            sb.append(id);
+        }
+        return sb.toString();
+    }
+
+    private static List<Long> parseIdList(String value) {
+        List<Long> result = new ArrayList<>();
+        if (value == null || value.trim().isEmpty()) return result;
+        for (String token : value.split(",")) {
+            String t = token.trim();
+            if (t.isEmpty()) continue;
+            try {
+                long id = Long.parseLong(t);
+                if (id <= 0L || result.contains(id)) throw new IllegalArgumentException("非法 localId");
+                result.add(id);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("非法 localId");
+            }
+        }
+        return result;
+    }
+
+    private void loadLocalBatchState() {
+        Path statePath = Paths.get(LOCAL_STATE_FILE);
+        if (!Files.exists(statePath)) return;
+        try {
+            List<String> lines = Files.readAllLines(statePath, StandardCharsets.UTF_8);
+            Map<String, String> values = new HashMap<>();
+            for (String line : lines) {
+                if (line == null || line.trim().isEmpty()) continue;
+                int split = line.indexOf('=');
+                if (split <= 0) throw new IllegalArgumentException("状态行缺少等号");
+                values.put(line.substring(0, split).trim(), line.substring(split + 1).trim());
+            }
+            if (!"2".equals(values.get("version"))) {
+                throw new IllegalArgumentException("状态版本不支持");
+            }
+            int loadedBatchNumber = Integer.parseInt(values.getOrDefault("batch", "0"));
+            if (loadedBatchNumber < 0) throw new IllegalArgumentException("批次号非法");
+            clearLocalGroup();
+            String slots = values.getOrDefault("slots", "");
+            if (!slots.isEmpty()) {
+                for (String token : slots.split(",")) {
+                    String[] fields = token.trim().split(":", -1);
+                    if (fields.length != 4) throw new IllegalArgumentException("临时组槽位格式异常");
+                    if (localGroupSize >= LOCAL_BATCH_SIZE) {
+                        throw new IllegalArgumentException("临时组超过15个词");
+                    }
+                    long id = Long.parseLong(fields[0]);
+                    int wrong = Integer.parseInt(fields[1]);
+                    int correct = Integer.parseInt(fields[2]);
+                    int stateValue = Integer.parseInt(fields[3]);
+                    JaNode node = findLocalById(id);
+                    if (id <= 0L || wrong < 0 || correct < 0
+                            || stateValue < 0 || stateValue > 2) {
+                        throw new IllegalArgumentException("临时组计数非法");
+                    }
+                    for (int existing = 0; existing < localGroupSize; existing++) {
+                        if (localGroupIds[existing] == id) {
+                            throw new IllegalArgumentException("临时组存在重复localId");
+                        }
+                    }
+                    // 词被用户删除或改成待富化时，丢弃该槽位，不删除任何词库数据。
+                    if (node == null || !LocalTestEngine.isEnriched(node)) continue;
+                    localGroupIds[localGroupSize] = id;
+                    localGroupWrong[localGroupSize] = wrong;
+                    localGroupCorrect[localGroupSize] = correct;
+                    localGroupState[localGroupSize] = stateValue;
+                    node.masteryState = stateValue;
+                    localGroupSize++;
+                }
+            }
+            for (Long id : parseIdList(values.getOrDefault("hardIds", ""))) {
+                JaNode node = findLocalById(id);
+                if (node != null && LocalTestEngine.isEnriched(node)) localHardIds.add(id);
+            }
+            localGroupNumber = loadedBatchNumber;
+            localGroupActive = localGroupSize > 0;
+            localGroupAwaitingNext = !localGroupActive;
+        } catch (Exception e) {
+            // 状态文件损坏时只清空运行时批次，不碰词库，也不执行任何删除。
+            clearLocalGroup();
+            localHardIds.clear();
+            localGroupAwaitingNext = false;
+            JaNode resetNode = globalList.next;
+            while (resetNode != null) {
+                resetNode.masteryState = 0;
+                resetNode = resetNode.next;
+            }
+            localStateWarning = "本地测试状态文件损坏，已忽略并保留词库数据：" + e.getMessage();
+        }
+    }
+
+    private void saveLocalBatchState() {
+        try {
+            Path dir = Paths.get(LOCAL_STATE_DIR);
+            Files.createDirectories(dir);
+            Path statePath = Paths.get(LOCAL_STATE_FILE);
+            Path tempPath = dir.resolve("state.txt.tmp");
+            List<String> lines = new ArrayList<>();
+            lines.add("version=2");
+            lines.add("status=" + (localGroupActive ? "ACTIVE" : "IDLE"));
+            lines.add("batch=" + localGroupNumber);
+            StringBuilder slots = new StringBuilder();
+            for (int i = 0; i < localGroupSize; i++) {
+                if (slots.length() > 0) slots.append(',');
+                slots.append(localGroupIds[i]).append(':')
+                        .append(localGroupWrong[i]).append(':')
+                        .append(localGroupCorrect[i]).append(':')
+                        .append(localGroupState[i]);
+            }
+            lines.add("slots=" + slots);
+            lines.add("hardIds=" + joinIds(localHardIds));
+            Files.write(tempPath, lines, StandardCharsets.UTF_8);
+            try {
+                Files.move(tempPath, statePath, StandardCopyOption.REPLACE_EXISTING,
+                        StandardCopyOption.ATOMIC_MOVE);
+            } catch (AtomicMoveNotSupportedException e) {
+                Files.move(tempPath, statePath, StandardCopyOption.REPLACE_EXISTING);
+            }
+        } catch (Exception e) {
+            localStateWarning = "本地测试状态保存失败：" + e.getMessage();
+        }
+    }
+
+    private void beginLocalBatch() {
+        clearLocalGroup();
+        JaNode resetNode = globalList.next;
+        while (resetNode != null) {
+            // 本地 masteryState 只反映当前临时组，历史 exam/true 不参与掌握判断。
+            resetNode.masteryState = 0;
+            resetNode = resetNode.next;
+        }
+        List<JaNode> batch = LocalTestEngine.chooseGroup(localNodes(), random);
+        for (JaNode node : batch) {
+            if (localGroupSize >= LOCAL_BATCH_SIZE) break;
+            localGroupIds[localGroupSize] = node.localId;
+            localGroupWrong[localGroupSize] = 0;
+            localGroupCorrect[localGroupSize] = 0;
+            localGroupState[localGroupSize] = 0;
+            localGroupSize++;
+        }
+        localGroupActive = localGroupSize > 0;
+        localGroupAwaitingNext = false;
+        if (localGroupActive) localGroupNumber++;
+        localCurrentSlot = -1;
+        localRecentSlots.clear();
+        saveLocalBatchState();
+    }
+
+    @Override
+    public void onLocalEntryChanged(JapStuJFrame.JaNode node) {
+        if (node == null) return;
+        if (node.enrichState != 0) return;
+        localHardIds.remove(node.localId);
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] == node.localId) {
+                localGroupIds[i] = -1L;
+                localGroupState[i] = 0;
+                localGroupWrong[i] = LocalTestEngine.HARD_WRONG_LIMIT + 1;
+            }
+        }
+        node.masteryState = 0;
+        saveLocalBatchState();
+    }
+
+    private void finishLocalBatchIfEmpty() {
+        if (!localGroupActive) return;
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] > 0L
+                    && localGroupState[i] < 2
+                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+                return;
+            }
+        }
+
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] <= 0L) continue;
+            JaNode node = findLocalById(localGroupIds[i]);
+            if (node != null && localGroupState[i] >= 2
+                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+                unlinkLocalNode(node);
+            } else if (node != null && localGroupWrong[i] > LocalTestEngine.HARD_WRONG_LIMIT) {
+                localHardIds.add(node.localId);
+                node.masteryState = 0;
+            } else if (node != null) {
+                node.masteryState = 0;
+            }
+        }
+        clearLocalGroup();
+        localGroupActive = false;
+        localGroupAwaitingNext = true;
+        totalItems = listLen(globalList);
+        recomputeLocalMasteredCount();
+        saveToFile();
+        saveLocalBatchState();
+    }
+
+    private void unlinkLocalNode(JaNode target) {
+        if (target == null) return;
+        JaNode pre = globalList;
+        while (pre.next != null && pre.next != target) pre = pre.next;
+        if (pre.next == target) pre.next = target.next;
+        localHardIds.remove(target.localId);
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] == target.localId) localGroupIds[i] = -1L;
+        }
+    }
+
+    private void clearLocalGroup() {
+        java.util.Arrays.fill(localGroupIds, 0L);
+        java.util.Arrays.fill(localGroupWrong, 0);
+        java.util.Arrays.fill(localGroupCorrect, 0);
+        java.util.Arrays.fill(localGroupState, 0);
+        localGroupSize = 0;
+        localCurrentSlot = -1;
+        localRecentSlots.clear();
+    }
+
+    private int localPendingEnrichCount() {
+        int count = 0;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (p.enrichState == 0) count++;
+            p = p.next;
+        }
+        return count;
+    }
+
+    private int localTestableCount() {
+        int count = 0;
+        JaNode p = globalList.next;
+        while (p != null) {
+            if (LocalTestEngine.isEnriched(p)) count++;
+            p = p.next;
+        }
+        return count;
     }
 
     private int getJLPTLevelValue() {
@@ -1573,6 +1991,9 @@ public class JapStuJFrame extends JFrame
         File localFile = new File(FILE_PATH);
         if (localFile.exists()) {
             print("本地词库 D:\\JaStu.txt: 存在 | 共 " + totalItems + " 项 | 已掌握 " + masteredItems);
+            print("可测试 " + localTestableCount() + " 项 | 待富化 "
+                    + localPendingEnrichCount() + " 项 | 困难词 " + localHardIds.size());
+            if (!localStateWarning.isEmpty()) print("警告：" + localStateWarning);
             if (totalItems == 0 && globalList.next == null) {
                 print(" 警告：本地词库为空，请添加考察点。");
             }
@@ -1697,37 +2118,65 @@ public class JapStuJFrame extends JFrame
         clearAll();
         switchToTextArea();
         updateStatsLabel();
-        setStatsLabelVisible(false);
-        setJLPTProgressVisible(false);
+        setStatsLabelVisible(true);
+        setJLPTProgressVisible(true);
         state = 2;
         resetAllButtonVisibility();
         setTestButtonsVisible(true, false, false);
         btnShortcutHelp.setVisible(true);
         btnAddToLocal.setVisible(false);
 
-        int len = listLen(globalList);
-        if (len == 0) {
-            print("本地词库无数据，无法进行测试");
+        if (!localGroupActive) beginLocalBatch();
+        if (!localGroupActive || localGroupSize == 0) {
+            print(localPendingEnrichCount() > 0
+                    ? "暂无已富化的可测试词，请先完成本地词库富化"
+                    : "本地词库暂无可测试词");
+            updateLocalProgress();
             state = 0;
             return;
         }
-        if (testedCount >= len) {
-            testedCount = 0;
-            testedIndex = new int[1000];
+
+        int lastSlot = localRecentSlots.isEmpty()
+                ? -1 : localRecentSlots.get(localRecentSlots.size() - 1);
+        int slot = LocalTestEngine.chooseWeightedSlot(
+                localGroupState, localGroupWrong, localGroupIds,
+                localGroupSize, lastSlot, localRecentSlots, random);
+        if (slot < 0) {
+            finishLocalBatchIfEmpty();
+            print("本组测试完成。符合条件的掌握词已删除，困难词保留到词库中。");
+            state = STATE_TEST_RESULT;
+            btnContinueTest.setVisible(true);
+            setTestButtonsVisible(false, false, false);
+            return;
         }
-        int idx;
-        do idx = random.nextInt(len) + 1; while (isTested(idx, testedIndex, testedCount));
-        testedIndex[testedCount++] = idx;
 
-        JaNode p = globalList;
-        for (int i = 0; i < idx; i++) p = p.next;
-        currentTest = p;
-        currentTest.wrongTimes = 0;
+        localCurrentSlot = slot;
+        localRecentSlots.add(slot);
+        if (localRecentSlots.size() > RECENT_WINDOW * 2) {
+            localRecentSlots.remove(0);
+        }
+        currentTest = findLocalById(localGroupIds[slot]);
+        if (currentTest == null) {
+            localGroupIds[slot] = -1L;
+            localTestMode();
+            return;
+        }
+        currentTest.masteryState = localGroupState[slot];
 
-        print("===== 测试本地词库 =====");
-        print(p.type == 1 ? "【单词】" : "【语法】");
-        print(p.japanese);
+        jlptTestStateLabel.setText("本组状态：" + getMasteryLabel(localGroupState[slot]));
+        jlptTestWordLabel.setText("当前单词：" + currentTest.japanese);
+        jlptTestStatePanel.setVisible(true);
+        print("===== 测试本地词库（临时组 " + localGroupNumber + "） =====");
+        print("【" + (currentTest.type == 1 ? "单词" : "语法") + "】");
+        print(currentTest.japanese);
         print("\n请点击上方 显示答案 按钮查看答案");
+    }
+
+    private int findLocalGroupSlot(long localId) {
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] == localId) return i;
+        }
+        return -1;
     }
 
     // ==================== JLPT 模式 ====================
@@ -1930,47 +2379,82 @@ public class JapStuJFrame extends JFrame
     }
 
     private void handleLocalTestResult(JaNode node, boolean correct, double correctRate) {
-        int wrong = node.examTimes - node.trueTimes;
-        int requiredCorrect = 5 + wrong / 2;
-        boolean mastered = node.trueTimes >= requiredCorrect;
+        int slot = localCurrentSlot >= 0 ? localCurrentSlot : findLocalGroupSlot(node.localId);
+        if (slot < 0 || slot >= localGroupSize || localGroupIds[slot] != node.localId) {
+            print("本地临时组状态已变化，本次结果未应用到组状态。");
+            return;
+        }
+
+        if (correct) {
+            localGroupCorrect[slot]++;
+            localGroupState[slot] = LocalTestEngine.nextMasteryState(
+                    localGroupState[slot], localGroupCorrect[slot], localGroupWrong[slot]);
+            node.masteryState = localGroupState[slot];
+        } else {
+            localGroupWrong[slot]++;
+            if (localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT) {
+                localHardIds.add(node.localId);
+                localGroupIds[slot] = -1L;
+                node.masteryState = 0;
+            }
+        }
 
         print("\n=====================================");
-        print("测试结果及统计数据");
+        print("本地临时组测试结果及统计数据");
         print("=====================================");
         print("累计考核：" + node.examTimes + " 次");
         print("正确次数：" + node.trueTimes + " 次");
         print("正确率：" + String.format("%.1f", correctRate) + " %");
+        print("本组答错：" + (slot < localGroupSize ? localGroupWrong[slot] : 0) + " 次");
 
         print("\n===== 考察点信息 =====");
-        if (node.type == 2) {
-            embedGrammarInfo(node);
-        } else {
-            print("单词：" + node.japanese);
-            print("释义：" + node.chinese);
-        }
+        embedGrammarInfo(node);
         print("=====================");
 
-        if (mastered) {
-            print("\n已达到掌握要求，自动从词库移除！");
-            masteredItems++;
-            editAndDel.deleteNode(currentTest);
-            currentTest = null;
-            totalItems = listLen(globalList);
-            updateStatsLabel();
+        if (slot < localGroupSize && localGroupIds[slot] <= 0L) {
+            print("\n本组错误次数超过3次：本词保留，不再参与当前组测试。");
+        } else if (localGroupState[slot] >= 2) {
+            print("\n本组已达到掌握条件，待本组全部结束后统一删除。");
         } else {
-            int remaining = requiredCorrect - node.trueTimes;
-            print("\n还需答对 " + remaining + " 次即可掌握，继续加油！");
+            int required = LocalTestEngine.requiredCorrect(
+                    localGroupState[slot], localGroupWrong[slot]);
+            int remaining = Math.max(0, required - localGroupCorrect[slot]);
+            print("\n本组状态：" + getMasteryLabel(localGroupState[slot])
+                    + "，还需答对 " + remaining + " 次");
         }
-        print("【掌握规则】起始需答对5次，每答错2次则需多答对1次");
+        print("【本组规则】陌生答对1次→了解；了解阶段按错误次数增加所需正确次数；本组错误超过3次则保留。");
 
         saveToFile();
+        saveLocalBatchState();
+        updateStatsLabel();
+        updateLocalProgress();
+        boolean groupFinished = true;
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] > 0L && localGroupState[i] < 2
+                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+                groupFinished = false;
+                break;
+            }
+        }
+        if (groupFinished) {
+            finishLocalBatchIfEmpty();
+            print("\n===== 临时组测试结束 =====");
+            print("掌握且本组错误不超过3次的词已删除；其他词保留。");
+        }
+
+        jlptTestStateLabel.setText("本组状态："
+                + (slot < localGroupSize && localGroupIds[slot] > 0L
+                ? getMasteryLabel(localGroupState[slot]) : "困难词"));
+        jlptTestWordLabel.setText("当前单词：" + node.japanese);
+        jlptTestStatePanel.setVisible(true);
         state = STATE_TEST_RESULT;
         setTestButtonsVisible(false, false, true);
         btnContinueTest.setVisible(true);
         btnAddToLocal.setVisible(false);
         btnShortcutHelp.setVisible(true);
         setStatsLabelVisible(true);
-        print("\n可点击上方的【继续测试】【修改考察点】【删除考察点】");
+        if (groupFinished) setTestButtonsVisible(false, false, false);
+        print("\n可点击上方的【继续测试】；也可以修改或删除当前词条。");
     }
 
     private void handleJLPTTestResult(JaNode node, boolean correct) {
@@ -2080,12 +2564,16 @@ public class JapStuJFrame extends JFrame
         JaNode newNode = new JaNode();
         newNode.japanese = currentTest.japanese;
         newNode.chinese = currentTest.chinese;
-        newNode.type = 1;
+        newNode.type = currentTest.type;
         newNode.examTimes = 0;
         newNode.trueTimes = 0;
-        newNode.example = "";
-        newNode.exampleCh = "";
+        newNode.example = currentTest.example;
+        newNode.exampleCh = currentTest.exampleCh;
+        newNode.example2 = currentTest.example2;
+        newNode.example2Ch = currentTest.example2Ch;
         newNode.masteryState = 0;
+        newNode.enrichState = fullyEnriched(currentTest) ? 1 : 0;
+        newNode.localId = nextLocalId();
         newNode.jlptLevel = 0;
 
         JaNode tail = globalList;
@@ -2158,12 +2646,13 @@ public class JapStuJFrame extends JFrame
                 saveCarryOver();
             }
             saveToFile();
+            if (!jlptMode) saveLocalBatchState();
             System.exit(0);
         }
         else if (obj == btnShowAnswer) {
             if (state != 2 || currentTest == null) return;
             print("\n----- 参考答案 -----");
-            if (currentTest.type == 2 && !jlptMode) {
+            if (!jlptMode) {
                 embedGrammarInfo(currentTest);
             } else {
                 print("释义：" + currentTest.chinese);
@@ -2245,6 +2734,8 @@ public class JapStuJFrame extends JFrame
             node.examTimes = 0;
             node.trueTimes = 0;
             node.masteryState = 0;
+            node.enrichState = 0;
+            node.localId = nextLocalId();
             node.jlptLevel = 0;
             node.next      = globalList.next;
             globalList.next = node;
@@ -2302,6 +2793,8 @@ public class JapStuJFrame extends JFrame
                     node.examTimes = 0;
                     node.trueTimes = 0;
                     node.masteryState = 0;
+                    node.enrichState = 0;
+                    node.localId = nextLocalId();
                     node.jlptLevel = 0;
                     node.next      = globalList.next;
                     globalList.next = node;

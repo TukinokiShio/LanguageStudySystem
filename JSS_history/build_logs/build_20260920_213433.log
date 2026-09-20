@@ -1,0 +1,20 @@
+[INFO] version=3.8.0
+[INFO] date=2026-09-20
+[INFO] base_head=cfe9258d231e3ec590e32bd7a64d482a0d4639ef
+[INFO] changed_program_files=JapStudySystem/src/JavaJapStuSystem/JapStuJFrame.java; JapStudySystem/src/JavaJapStuSystem/JapEditAndDel.java; JapStudySystem/src/JavaJapStuSystem/LocalDataCodec.java; JapStudySystem/src/JavaJapStuSystem/LocalTestEngine.java; JapStudySystem/test/LocalDataCodecTest.java; JapStudySystem/test/LocalStagingReadbackTest.java; JapStudySystem/test/LocalTestEngineTest.java
+[SUCCESS] javac UTF-8 temporary classes: D:\JSS\work\jss_classes_20260920_2140
+[SUCCESS] targeted tests: LocalTestEngineTest, LocalDataCodecTest, LocalStagingReadbackTest rows=238
+[SUCCESS] JAR manifest Main-Class=LanguageStudySystem.JavaJapStuSystem.Test
+[SUCCESS] JAR sha256=CA8493D986C8B1F3FDC231AF1AA79306352385F0C4F0906986CC44E9B5BF09AD
+[SUCCESS] Inno Setup: C:\JSS\日语学习系统_3.8.0_Setup.exe
+[SUCCESS] installer sha256=BC61BF25464AAA423C4C1C8D37A23B35FE082DFFEE7C5784180D6CF10E55F457
+[SUCCESS] installer exit code=0
+[SUCCESS] install target=D:\SHIO_LANGUAGE\jss
+[SUCCESS] installed JAR hash matches build; bundled JRE java version=24.0.2
+[SUCCESS] staging format gate: errors=0, warns=4
+[SUCCESS] staging Java readback: 238 rows, 12 columns, UTF-8/CRLF validated
+[SUCCESS] runtime ZIP sha256=57BFD28833E6BCF156BD545935F39C3AADF903F1ADDC18E9EDF331A8F1257A1A
+[INFO] production_file=D:\JaStu.txt
+[INFO] production_sha256_before_sync=B153C92F3B51E3A5BDE7DFB7A8A423534FCF89BB188EF740699AB5981F5EA0F
+[BLOCKED] production data sync pending semantic review: 33 rows reused, 205 deterministic candidates, including 53 generated grammar rows
+[INFO] production file was not modified by this build
