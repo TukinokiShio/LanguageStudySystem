@@ -273,7 +273,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void initJFrame() {
-        setTitle("日文学习系统 V3.6.0");
+        setTitle("日文学习系统 V3.7.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
     }
@@ -1846,6 +1846,17 @@ public class JapStuJFrame extends JFrame
 
         if (candidates.isEmpty()) return null;
 
+        // v3.7.0：组内可测词 >= 2 时，禁止与刚刚测试选中的词连续重复
+        JaNode lastAsked = recentTestedWords.isEmpty() ? null
+                : recentTestedWords.get(recentTestedWords.size() - 1);
+        if (candidates.size() >= 2 && lastAsked != null) {
+            int li = candidates.indexOf(lastAsked);
+            if (li >= 0) {
+                candidates.remove(li);
+                weights.remove(li);
+            }
+        }
+
         double totalWeight = 0;
         for (double w : weights) totalWeight += w;
 
@@ -2008,8 +2019,7 @@ public class JapStuJFrame extends JFrame
 
         print("\n当前状态：" + getMasteryLabel(node.masteryState));
         print("\n===== 词汇信息 =====");
-        print("单词：" + node.japanese);
-        print("释义：" + node.chinese);
+        // v3.7.0：单词/释义 已由下方信息表完整展示，不再重复打印
         // v3.6.0：JLPT 测试结果同样展示例句（此前此处只打印单词与释义）
         embedGrammarInfo(node);
 
