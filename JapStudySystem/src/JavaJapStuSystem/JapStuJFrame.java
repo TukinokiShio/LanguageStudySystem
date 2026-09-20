@@ -96,7 +96,7 @@ public class JapStuJFrame extends JFrame
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
     private static final int TABLE_TEXT_SIZE = 24;
-    private static final String APP_VERSION = "3.8.1";
+    private static final String APP_VERSION = "3.8.2";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -2380,6 +2380,7 @@ public class JapStuJFrame extends JFrame
             return;
         }
 
+        int beforeState = localGroupState[slot];
         if (correct) {
             localGroupCorrect[slot]++;
             localGroupState[slot] = LocalTestEngine.nextMasteryState(
@@ -2402,11 +2403,25 @@ public class JapStuJFrame extends JFrame
         print("正确率：" + String.format("%.1f", correctRate) + " %");
         print("本组答错：" + (slot < localGroupSize ? localGroupWrong[slot] : 0) + " 次");
 
-        print("\n===== 考察点信息 =====");
+        if (correct && localGroupState[slot] > beforeState) {
+            print("状态提升：" + getMasteryLabel(beforeState) + " -> "
+                    + getMasteryLabel(localGroupState[slot]));
+        } else if (!correct) {
+            print("回答错误！");
+        }
+
+        boolean hardWord = localGroupIds[slot] <= 0L;
+        if (hardWord) {
+            print("当前状态：困难词（本组错误超过3次，保留到后续测试）");
+        } else {
+            print("当前状态：" + getMasteryLabel(localGroupState[slot]));
+        }
+
+        print("\n===== 词汇信息 =====");
         embedGrammarInfo(node);
         print("=====================");
 
-        if (slot < localGroupSize && localGroupIds[slot] <= 0L) {
+        if (hardWord) {
             print("\n本组错误次数超过3次：本词保留，不再参与当前组测试。");
         } else if (localGroupState[slot] >= 2) {
             print("\n本组已达到掌握条件，待本组全部结束后统一删除。");
@@ -2417,7 +2432,8 @@ public class JapStuJFrame extends JFrame
             print("\n本组状态：" + getMasteryLabel(localGroupState[slot])
                     + "，还需答对 " + remaining + " 次");
         }
-        print("【本组规则】陌生答对1次→了解；了解阶段按错误次数增加所需正确次数；本组错误超过3次则保留。");
+        print("\n【升级规则】陌生答对1次→了解；了解答对2次（本组每累计错误2次需多答对1次）→掌握");
+        print("【保留规则】本组累计答错超过3次的词保留，不再参与当前组测试；掌握词在本组结束后统一删除。");
 
         saveToFile();
         saveLocalBatchState();

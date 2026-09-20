@@ -1,0 +1,23 @@
+# JSS v3.8.2 构建记录
+
+- 时间：2026-09-21
+- Git HEAD（构建前）：600e75c
+- 变更：本地测试结果页显示累计考核、正确次数、状态提升、升级/保留规则；本地例句译文补充 JLPT 风格疑难点注释
+- 源码：`JapStudySystem/src/JavaJapStuSystem/JapStuJFrame.java`
+- 数据：`D:\JaStu.txt`，238 条、12 列；备份：`D:\JSS\work\local_enrich\backup\production_before_notes_20260921_0015`
+- 数据闸门：errors=0，warnings=73（均为既有例句/译文长度提示）
+- Java 回读：`LocalStagingReadbackTest: PASS rows=238`
+- 回归测试：`LocalDataCodecTest: PASS`；`LocalTestEngineTest: PASS`
+- 临时编译目录：`D:\JSS\work\jss_runtime_classes_20260921_0010`
+- JAR：`D:\JSS\work\JapanStudySystem_v3.8.2_20260921_0010.jar`
+- JAR SHA256：`D8476A5962FC02508EFB3C5DC26C69642EEB4FC446B46D20D242DB016AF3961F`
+- Manifest：`Main-Class: LanguageStudySystem.JavaJapStuSystem.Test`
+- 安装器：`C:\JSS\日语学习系统_3.8.2_Setup.exe`
+- 安装器 SHA256：`44C204DC3D0C8F0C13AA59A369675240376C53CB04C01FA284D1CD630A39595E`
+- 安装目标：`D:\SHIO_LANGUAGE\jss`
+- 安装退出码：0
+- 安装后 JAR SHA256：`D8476A5962FC02508EFB3C5DC26C69642EE4BFC446B46D20D242DB016AF3961F`
+- 内置 Java：`24.0.2`，可执行
+- 运行时归档：`JSS_history/JapStudySystemV3.8.2.zip`
+- 运行时归档 SHA256：`EBAC4F2988EDBBB9471C8F4CCEF4BDC8323E4BBCDD1CF8537C0C34A850C1A731`
+- GUI 冒烟：未执行，避免在生产词库上自动答题/写回

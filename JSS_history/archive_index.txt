@@ -10,3 +10,4 @@
 [20260711_165659] Version=3.4.0 | 安装包: 日语学习系统_3.4.0_Setup.exe | ZIP: JapStudySystemV3.4.0.zip
 [20260713_204858] Version=3.5.0 | 安装包: 日语学习系统_3.5.0_Setup.exe | ZIP: JapStudySystemV3.5.0.zip
 [20260920_213433] Version=3.8.0 | 动态本地临时组、12列富化状态与本地测试持久化 | 安装包: 日语学习系统_3.8.0_Setup.exe | ZIP: JapStudySystemV3.8.0.zip
+[20260921_0028] Version=3.8.2 | 本地测试结果显示统计与掌握规则、本地例句译文补充 JLPT 风格难点注释 | 安装包: 日语学习系统_3.8.2_Setup.exe | ZIP: JapStudySystemV3.8.2.zip
