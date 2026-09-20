@@ -96,7 +96,7 @@ public class JapStuJFrame extends JFrame
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
     private static final int TABLE_TEXT_SIZE = 24;
-    private static final String APP_VERSION = "3.8.0";
+    private static final String APP_VERSION = "3.8.1";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -1152,10 +1152,8 @@ public class JapStuJFrame extends JFrame
             jlptGroupProgressBar.setString("当前批次无活跃词");
             jlptGroupLabel.setText("活跃池 0/" + LOCAL_BATCH_SIZE);
         } else {
-            double knownPct = (double) activeKnown / groupTotal * 100;
-            double strangePct = (double) (activeStrange + groupHard) / groupTotal * 100;
-            jlptGroupProgressBar.setString(String.format("活跃池  %.1f%%/%.1f%%",
-                    strangePct, knownPct));
+            jlptGroupProgressBar.setString(String.format("掌握%d 了解%d 陌生%d",
+                    groupMastered, activeKnown, activeStrange + groupHard));
             paintDualBar(jlptGroupProgressBar, groupMastered, activeKnown,
                     activeStrange + groupHard, groupTotal);
             jlptGroupLabel.setText("本组完成 " + (groupMastered + groupHard) + "/" + groupTotal
@@ -1180,11 +1178,8 @@ public class JapStuJFrame extends JFrame
             jlptProgressLabel.setText("待富化 " + localPendingEnrichCount()
                     + "  重试 " + localHardIds.size());
         } else {
-            double masteredPct = (double) mastered / testable * 100;
-            double knownPct = (double) known / testable * 100;
-            double strangePct = (double) strange / testable * 100;
-            jlptProgressBar.setString(String.format("本地整体  %.1f%%/%.1f%%/%.1f%%",
-                    strangePct, knownPct, masteredPct));
+            jlptProgressBar.setString(String.format("掌握%d 了解%d 陌生%d",
+                    mastered, known, strange));
             paintDualBar(jlptProgressBar, mastered, known, strange, testable);
             jlptProgressLabel.setText("可测 " + testable + "  已掌握 " + mastered
                     + "  待富化 " + localPendingEnrichCount()
