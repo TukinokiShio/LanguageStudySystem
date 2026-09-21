@@ -20,6 +20,12 @@ final class LocalTestEngine {
         return 0;
     }
 
+    static int remainingCorrect(int masteryState, int groupCorrect, int groupWrong) {
+        if (masteryState >= 2) return 0;
+        return Math.max(0, requiredCorrect(masteryState, groupWrong)
+                - Math.max(0, groupCorrect));
+    }
+
     static int nextMasteryState(int masteryState, int groupCorrect, int groupWrong) {
         if (masteryState == 0 && groupCorrect >= 1) return 1;
         if (masteryState == 1

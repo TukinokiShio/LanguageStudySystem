@@ -83,6 +83,9 @@ public class JapStuJFrame extends JFrame
     private JPanel jlptTestStatePanel;
     private JLabel jlptTestStateLabel;
     private JLabel jlptTestWordLabel;
+    private JPanel localTestSummaryPanel;
+    private JLabel localTestSummaryLabel;
+    private JTextArea localTestRuleArea;
 
     // 编辑按钮行面板
     private JPanel editBtnRow;
@@ -96,7 +99,7 @@ public class JapStuJFrame extends JFrame
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
     private static final int TABLE_TEXT_SIZE = 24;
-    private static final String APP_VERSION = "3.8.2";
+    private static final String APP_VERSION = "3.8.3";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -378,10 +381,38 @@ public class JapStuJFrame extends JFrame
         jlptTestStatePanel.add(Box.createHorizontalStrut(15));
         jlptTestStatePanel.add(jlptTestWordLabel);
 
+        localTestSummaryPanel = new JPanel();
+        localTestSummaryPanel.setLayout(new BoxLayout(localTestSummaryPanel, BoxLayout.Y_AXIS));
+        localTestSummaryPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        localTestSummaryPanel.setBorder(BorderFactory.createEmptyBorder(0, 12, 2, 20));
+        localTestSummaryPanel.setVisible(false);
+
+        localTestSummaryLabel = new JLabel();
+        localTestSummaryLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
+        localTestSummaryLabel.setForeground(new Color(60, 120, 180));
+        localTestSummaryLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        localTestRuleArea = new JTextArea();
+        localTestRuleArea.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+        localTestRuleArea.setForeground(new Color(80, 80, 80));
+        localTestRuleArea.setBackground(northPanel.getBackground());
+        localTestRuleArea.setLineWrap(true);
+        localTestRuleArea.setWrapStyleWord(true);
+        localTestRuleArea.setEditable(false);
+        localTestRuleArea.setFocusable(false);
+        localTestRuleArea.setBorder(null);
+        localTestRuleArea.setRows(2);
+        localTestRuleArea.setAlignmentX(Component.LEFT_ALIGNMENT);
+        localTestRuleArea.setMaximumSize(new Dimension(Integer.MAX_VALUE, 42));
+
+        localTestSummaryPanel.add(localTestSummaryLabel);
+        localTestSummaryPanel.add(localTestRuleArea);
+
         northPanel.add(topBtnPanel);
         northPanel.add(statsPanel);
         northPanel.add(jlptProgressPanel);
         northPanel.add(jlptTestStatePanel);
+        northPanel.add(localTestSummaryPanel);
         northPanel.add(inputPanel);
         add(northPanel, BorderLayout.NORTH);
     }
@@ -658,6 +689,11 @@ public class JapStuJFrame extends JFrame
 
     @Override
     public void embedGrammarInfo(JaNode node) {
+        embedGrammarInfo(node, true);
+    }
+
+    /** 渲染词条信息；本地结算页只复用单词/释义两行，不带例句。 */
+    private void embedGrammarInfo(JaNode node, boolean includeExamples) {
         if (node == null) return;
 
         activeTextPane = null;
@@ -671,7 +707,7 @@ public class JapStuJFrame extends JFrame
         rows.add(new Object[]{node.type == 2 ? "语法点" : "单词", node.japanese});
         rows.add(new Object[]{"释义", node.chinese});
 
-        if (hasExample(node.example)) {
+        if (includeExamples && hasExample(node.example)) {
             JPanel rubyPanel = JapJFrameKanaPrint.createRubyPanel(
                     node.example, baseFont, rubyFont,
                     new Color(80, 80, 80), CARE_COLOR);
@@ -681,7 +717,7 @@ public class JapStuJFrame extends JFrame
             }
         }
         // v3.6.0：例句2
-        if (hasExample(node.example2)) {
+        if (includeExamples && hasExample(node.example2)) {
             JPanel rubyPanel2 = JapJFrameKanaPrint.createRubyPanel(
                     node.example2, baseFont, rubyFont,
                     new Color(80, 80, 80), CARE_COLOR);
@@ -764,6 +800,10 @@ public class JapStuJFrame extends JFrame
         textContentPanel.add(tableMock);
         textContentPanel.revalidate();
         textContentPanel.repaint();
+    }
+
+    private void embedLocalBasicInfo(JaNode node) {
+        embedGrammarInfo(node, false);
     }
 
     // ==================== 接口实现 ====================
@@ -1187,6 +1227,48 @@ public class JapStuJFrame extends JFrame
         }
     }
 
+    private void updateLocalTestSummary(JaNode node, int slot) {
+        if (node == null || slot < 0 || slot >= localGroupSize) {
+            localTestSummaryPanel.setVisible(false);
+            return;
+        }
+
+        int groupState = localGroupState[slot];
+        boolean hardWord = localGroupIds[slot] <= 0L
+                || localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT;
+        String stateText = hardWord ? "困难词" : getMasteryLabel(groupState);
+        double correctRate = node.examTimes == 0 ? 0
+                : (double) node.trueTimes / node.examTimes * 100;
+
+        localTestSummaryLabel.setText(String.format(
+                "累计考核：%d 次    正确次数：%d 次    正确率：%.1f%%    本组答错：%d 次    当前状态：%s",
+                node.examTimes, node.trueTimes, correctRate,
+                localGroupWrong[slot], stateText));
+
+        String advanceText = getLocalAdvanceText(slot);
+
+        localTestRuleArea.setText(
+                "当前进度：" + advanceText + "\n"
+                + "【掌握规则】陌生答对1次→了解；了解答对2次（本组每累计错误2次需多答对1次）→掌握");
+        localTestSummaryPanel.setVisible(true);
+        localTestSummaryPanel.revalidate();
+        localTestSummaryPanel.repaint();
+    }
+
+    private String getLocalAdvanceText(int slot) {
+        if (slot < 0 || slot >= localGroupSize) return "当前临时组状态不可用";
+        if (localGroupIds[slot] <= 0L
+                || localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT) {
+            return "本组已退出；下次重试时从陌生开始";
+        }
+        int groupState = localGroupState[slot];
+        if (groupState >= 2) return "已达到“掌握”";
+        int remaining = LocalTestEngine.remainingCorrect(
+                groupState, localGroupCorrect[slot], localGroupWrong[slot]);
+        String target = groupState == 0 ? "了解" : "掌握";
+        return "还需答对 " + remaining + " 次，达到“" + target + "”";
+    }
+
     private void paintDualBar(JProgressBar bar, int mastered, int known, int strange, int total) {
         if (total == 0) return;
         double masteredPctExact = (double) mastered / total * 100;
@@ -1356,6 +1438,7 @@ public class JapStuJFrame extends JFrame
         inputField.setVisible(false);
         btnInputConfirm.setVisible(false);
         jlptTestStatePanel.setVisible(false);
+        localTestSummaryPanel.setVisible(false);
     }
 
     private void setTestButtonsVisible(boolean showAnswer, boolean showYesNo, boolean showEditDelete) {
@@ -2161,6 +2244,7 @@ public class JapStuJFrame extends JFrame
         jlptTestStateLabel.setText("本组状态：" + getMasteryLabel(localGroupState[slot]));
         jlptTestWordLabel.setText("当前单词：" + currentTest.japanese);
         jlptTestStatePanel.setVisible(true);
+        updateLocalTestSummary(currentTest, slot);
         print("===== 测试本地词库（临时组 " + localGroupNumber + "） =====");
         print("【" + (currentTest.type == 1 ? "单词" : "语法") + "】");
         print(currentTest.japanese);
@@ -2395,13 +2479,20 @@ public class JapStuJFrame extends JFrame
             }
         }
 
+        boolean hardWord = localGroupIds[slot] <= 0L;
+        int resultState = localGroupState[slot];
+        int resultGroupWrong = localGroupWrong[slot];
+        String advanceText = getLocalAdvanceText(slot);
+
+        // 结算页只显示单词、释义和数据；清掉“显示答案”阶段的例句表，避免重复展示。
+        clearAll();
         print("\n=====================================");
         print("本地临时组测试结果及统计数据");
         print("=====================================");
         print("累计考核：" + node.examTimes + " 次");
         print("正确次数：" + node.trueTimes + " 次");
-        print("正确率：" + String.format("%.1f", correctRate) + " %");
-        print("本组答错：" + (slot < localGroupSize ? localGroupWrong[slot] : 0) + " 次");
+        print("正确率：" + String.format("%.1f%%", correctRate));
+        print("本组答错：" + resultGroupWrong + " 次");
 
         if (correct && localGroupState[slot] > beforeState) {
             print("状态提升：" + getMasteryLabel(beforeState) + " -> "
@@ -2410,30 +2501,26 @@ public class JapStuJFrame extends JFrame
             print("回答错误！");
         }
 
-        boolean hardWord = localGroupIds[slot] <= 0L;
         if (hardWord) {
             print("当前状态：困难词（本组错误超过3次，保留到后续测试）");
         } else {
-            print("当前状态：" + getMasteryLabel(localGroupState[slot]));
+            print("当前状态：" + getMasteryLabel(resultState));
         }
 
         print("\n===== 词汇信息 =====");
-        embedGrammarInfo(node);
+        embedLocalBasicInfo(node);
         print("=====================");
 
         if (hardWord) {
             print("\n本组错误次数超过3次：本词保留，不再参与当前组测试。");
-        } else if (localGroupState[slot] >= 2) {
+        } else if (resultState >= 2) {
             print("\n本组已达到掌握条件，待本组全部结束后统一删除。");
-        } else {
-            int required = LocalTestEngine.requiredCorrect(
-                    localGroupState[slot], localGroupWrong[slot]);
-            int remaining = Math.max(0, required - localGroupCorrect[slot]);
-            print("\n本组状态：" + getMasteryLabel(localGroupState[slot])
-                    + "，还需答对 " + remaining + " 次");
         }
+        print("\n" + advanceText);
         print("\n【升级规则】陌生答对1次→了解；了解答对2次（本组每累计错误2次需多答对1次）→掌握");
         print("【保留规则】本组累计答错超过3次的词保留，不再参与当前组测试；掌握词在本组结束后统一删除。");
+
+        updateLocalTestSummary(node, slot);
 
         saveToFile();
         saveLocalBatchState();
@@ -2454,8 +2541,7 @@ public class JapStuJFrame extends JFrame
         }
 
         jlptTestStateLabel.setText("本组状态："
-                + (slot < localGroupSize && localGroupIds[slot] > 0L
-                ? getMasteryLabel(localGroupState[slot]) : "困难词"));
+                + (hardWord ? "困难词" : getMasteryLabel(resultState)));
         jlptTestWordLabel.setText("当前单词：" + node.japanese);
         jlptTestStatePanel.setVisible(true);
         state = STATE_TEST_RESULT;

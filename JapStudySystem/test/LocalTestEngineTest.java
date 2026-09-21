@@ -13,6 +13,7 @@ public final class LocalTestEngineTest {
     public static void main(String[] args) {
         testGroupSizeAndRatio();
         testMasteryTransitions();
+        testRemainingCorrect();
         testHardWordIsNotSelectable();
         testNoImmediateRepeatWhenAlternativesExist();
         System.out.println("LocalTestEngineTest: PASS");
@@ -59,6 +60,17 @@ public final class LocalTestEngineTest {
                 "了解阶段达到正确次数应掌握");
         check(LocalTestEngine.nextMasteryState(1, 2, 2) == 1,
                 "错误两次时未达到额外正确次数不应掌握");
+    }
+
+    private static void testRemainingCorrect() {
+        check(LocalTestEngine.remainingCorrect(0, 0, 0) == 1,
+                "陌生词应还需答对1次达到了解");
+        check(LocalTestEngine.remainingCorrect(1, 1, 0) == 1,
+                "了解阶段答对1次后应还需答对1次达到掌握");
+        check(LocalTestEngine.remainingCorrect(1, 1, 2) == 2,
+                "了解阶段错误两次后应还需答对2次达到掌握");
+        check(LocalTestEngine.remainingCorrect(2, 9, 9) == 0,
+                "掌握词不应显示剩余正确次数");
     }
 
     private static void testHardWordIsNotSelectable() {
