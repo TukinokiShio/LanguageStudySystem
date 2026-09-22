@@ -661,6 +661,16 @@ public class JapStuJFrame extends JFrame
         }
     }
 
+    /**
+     * 让本地测试答案标题只占用其自然高度，避免被答案表上方的空余空间拉伸。
+     * 其他文本内容仍保留可纵向扩展的最大高度。
+     */
+    private void constrainActiveTextPaneToPreferredHeight() {
+        if (activeTextPane == null) return;
+        int preferredHeight = activeTextPane.getPreferredSize().height;
+        activeTextPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, preferredHeight));
+    }
+
     @Override
     public void print(String s) {
         append(s, false);
@@ -743,7 +753,6 @@ public class JapStuJFrame extends JFrame
             rowPanel.setLayout(new BoxLayout(rowPanel, BoxLayout.X_AXIS));
             rowPanel.setBackground(CARE_COLOR);
             rowPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
-            rowPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
             rowPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(210, 200, 180)));
 
             JLabel lblCol = new JLabel(labelText);
@@ -808,14 +817,21 @@ public class JapStuJFrame extends JFrame
                 scrollPane.setAlignmentX(Component.LEFT_ALIGNMENT);
                 int naturalHeight = valArea.getPreferredSize().height + 4;
                 scrollPane.setMinimumSize(new Dimension(0, naturalHeight));
-                scrollPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                scrollPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, naturalHeight));
                 scrollPane.setPreferredSize(new Dimension(0, naturalHeight));
                 rowPanel.add(scrollPane);
             }
 
+            // BoxLayout 会把最大高度为 Integer.MAX_VALUE 的行拉伸到剩余空间；
+            // 行高应锁定为内容的自然高度，避免答案表出现大块空白行。
+            int naturalRowHeight = rowPanel.getPreferredSize().height;
+            rowPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, naturalRowHeight));
             tableMock.add(rowPanel);
         }
 
+        // 同理，表格本身只占用各行合计的自然高度，让下方提示紧邻表格。
+        int naturalTableHeight = tableMock.getPreferredSize().height;
+        tableMock.setMaximumSize(new Dimension(Integer.MAX_VALUE, naturalTableHeight));
         textContentPanel.add(tableMock);
         textContentPanel.revalidate();
         textContentPanel.repaint();
@@ -2794,6 +2810,7 @@ public class JapStuJFrame extends JFrame
                 clearAll();
                 switchToTextArea();
                 print("===== 参考答案 =====");
+                constrainActiveTextPaneToPreferredHeight();
                 embedGrammarInfo(currentTest);
                 appendTestInstruction("请点击上方 记得 或 不记得 按钮进行选择");
             } else {
