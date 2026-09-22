@@ -98,8 +98,9 @@ public class JapStuJFrame extends JFrame
 
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
-    private static final int TABLE_TEXT_SIZE = 24;
-    private static final String APP_VERSION = "3.8.3";
+    // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
+    private static final int TABLE_TEXT_SIZE = 22;
+    private static final String APP_VERSION = "3.8.5";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -218,7 +219,8 @@ public class JapStuJFrame extends JFrame
 
                 // 通用：题目已展示，等待显示答案（本地测试 & JLPT）
                 if (state == 2) {
-                    if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (e.getKeyCode() == KeyEvent.VK_ENTER
+                            || e.getKeyCode() == KeyEvent.VK_LEFT) {
                         btnShowAnswer.doClick();
                         return true;
                     }
@@ -289,7 +291,7 @@ public class JapStuJFrame extends JFrame
     private void showShortcutHelp() {
         String msg = "<html><body style='font-family:微软雅黑; font-size:14px;'>"
                 + "<b>测试本地词库 · 键盘快捷键</b><br><br>"
-                + "显示答案：<b>Enter（回车）</b><br>"
+                + "显示答案：<b>Enter（回车）</b> / <b>←（左方向键）</b><br>"
                 + "记得：<b>Enter</b> / <b>←（左方向键）</b><br>"
                 + "不记得：<b>→（右方向键）</b> / <b>空格</b><br>"
                 + "继续测试：<b>Enter</b> / <b>←（左方向键）</b><br>"
@@ -748,25 +750,38 @@ public class JapStuJFrame extends JFrame
             lblCol.setFont(labelFont);
             lblCol.setBackground(new Color(235, 230, 215));
             lblCol.setOpaque(true);
-            lblCol.setBorder(BorderFactory.createEmptyBorder(4, 6, 4, 6));
+            lblCol.setBorder(BorderFactory.createEmptyBorder(2, 6, 2, 6));
             lblCol.setPreferredSize(new Dimension(100, lblCol.getPreferredSize().height));
             lblCol.setMinimumSize(new Dimension(100, 0));
             lblCol.setMaximumSize(new Dimension(100, Integer.MAX_VALUE));
             rowPanel.add(lblCol);
 
             if (value instanceof JPanel) {
-                JPanel valPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 4));
-                valPanel.setBackground(CARE_COLOR);
-                valPanel.setBorder(BorderFactory.createEmptyBorder(4, 6, 4, 6));
-                valPanel.add((JPanel) value);
-                valPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+                // RubyDisplayPanel 自身实现 Scrollable；先用典型内容宽度完成一次
+                // 真实布局，再按换行后的高度设置行高，避免首选高度仍是单行宽度。
+                JPanel rubyPanel = (JPanel) value;
+                rubyPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+                int typicalRubyWidth = 800;
+                rubyPanel.setSize(new Dimension(typicalRubyWidth, 0));
+                Dimension wrappedSize = rubyPanel.getPreferredSize();
+                int wrappedHeight = Math.max(1, wrappedSize.height);
+                rubyPanel.setPreferredSize(new Dimension(
+                        Math.max(typicalRubyWidth, wrappedSize.width), wrappedHeight));
 
-                JScrollPane valScroll = new JScrollPane(valPanel);
+                // RubyDisplayPanel tracks the viewport width, so an overlong
+                // non-breakable label would otherwise be clipped instead of
+                // activating the horizontal scrollbar. Keep it inside a
+                // normal wrapper so the viewport uses its natural preferred width.
+                JPanel rubyWrapper = new JPanel(new BorderLayout());
+                rubyWrapper.setBackground(CARE_COLOR);
+                rubyWrapper.add(rubyPanel, BorderLayout.CENTER);
+
+                JScrollPane valScroll = new JScrollPane(rubyWrapper);
                 valScroll.setBorder(null);
-                valScroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-                valScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+                valScroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                valScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
                 valScroll.setAlignmentX(Component.LEFT_ALIGNMENT);
-                int prefH = valPanel.getPreferredSize().height + 4;
+                int prefH = wrappedHeight + 4;
                 valScroll.setMinimumSize(new Dimension(0, prefH));
                 valScroll.setMaximumSize(new Dimension(Integer.MAX_VALUE, prefH));
                 valScroll.setPreferredSize(new Dimension(0, prefH));
@@ -774,23 +789,27 @@ public class JapStuJFrame extends JFrame
             } else {
                 JTextArea valArea = new JTextArea((String) value);
                 valArea.setFont(baseFont);
-                valArea.setBorder(BorderFactory.createEmptyBorder(4, 6, 4, 6));
+                valArea.setBorder(BorderFactory.createEmptyBorder(2, 6, 2, 6));
                 valArea.setForeground(new Color(80, 80, 80));
                 valArea.setBackground(CARE_COLOR);
                 valArea.setLineWrap(true);
                 valArea.setWrapStyleWord(true);
                 valArea.setEditable(false);
                 valArea.setAlignmentX(Component.LEFT_ALIGNMENT);
+                // 让首选高度覆盖预计的换行行数；窗口变窄或估算不足时仍保留垂直滚动路径。
+                int estimatedLines = estimateWrappedLines((String) value, 40);
+                valArea.setColumns(40);
+                valArea.setRows(estimatedLines);
 
                 JScrollPane scrollPane = new JScrollPane(valArea);
                 scrollPane.setBorder(null);
                 scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
                 scrollPane.setAlignmentX(Component.LEFT_ALIGNMENT);
-                int lineH = baseFont.getSize() + 14;
-                scrollPane.setMinimumSize(new Dimension(0, lineH));
+                int naturalHeight = valArea.getPreferredSize().height + 4;
+                scrollPane.setMinimumSize(new Dimension(0, naturalHeight));
                 scrollPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
-                scrollPane.setPreferredSize(new Dimension(0, lineH));
+                scrollPane.setPreferredSize(new Dimension(0, naturalHeight));
                 rowPanel.add(scrollPane);
             }
 
@@ -802,8 +821,30 @@ public class JapStuJFrame extends JFrame
         textContentPanel.repaint();
     }
 
+    /** 按答案表的典型可用宽度估算换行行数，供 JTextArea 生成自然首选高度。 */
+    private int estimateWrappedLines(String text, int charsPerLine) {
+        if (text == null || text.isEmpty()) return 1;
+        int lines = 0;
+        for (String line : text.split("\\R", -1)) {
+            lines += Math.max(1, (line.length() + charsPerLine - 1) / charsPerLine);
+        }
+        return Math.max(1, lines);
+    }
+
     private void embedLocalBasicInfo(JaNode node) {
         embedGrammarInfo(node, false);
+    }
+
+    /** 在答案表之后添加紧凑提示，避免新建带有额外 HTML 行距的文本窗格。 */
+    private void appendTestInstruction(String text) {
+        JLabel instruction = new JLabel(text);
+        instruction.setFont(new Font("微软雅黑", Font.PLAIN, TEXT_SIZE));
+        instruction.setForeground(Color.BLACK);
+        instruction.setAlignmentX(Component.LEFT_ALIGNMENT);
+        instruction.setBorder(BorderFactory.createEmptyBorder(10, 0, 4, 0));
+        textContentPanel.add(instruction);
+        textContentPanel.revalidate();
+        textContentPanel.repaint();
     }
 
     // ==================== 接口实现 ====================
@@ -2486,9 +2527,10 @@ public class JapStuJFrame extends JFrame
 
         // 结算页只显示单词、释义和数据；清掉“显示答案”阶段的例句表，避免重复展示。
         clearAll();
-        print("\n=====================================");
-        print("本地临时组测试结果及统计数据");
-        print("=====================================");
+        print("=====本地词库·测试结果及统计数据=====");
+
+        embedLocalBasicInfo(node);  // 单词释义表
+
         print("累计考核：" + node.examTimes + " 次");
         print("正确次数：" + node.trueTimes + " 次");
         print("正确率：" + String.format("%.1f%%", correctRate));
@@ -2498,7 +2540,7 @@ public class JapStuJFrame extends JFrame
             print("状态提升：" + getMasteryLabel(beforeState) + " -> "
                     + getMasteryLabel(localGroupState[slot]));
         } else if (!correct) {
-            print("回答错误！");
+            print("本次回答错误！");
         }
 
         if (hardWord) {
@@ -2507,9 +2549,7 @@ public class JapStuJFrame extends JFrame
             print("当前状态：" + getMasteryLabel(resultState));
         }
 
-        print("\n===== 词汇信息 =====");
-        embedLocalBasicInfo(node);
-        print("=====================");
+
 
         if (hardWord) {
             print("\n本组错误次数超过3次：本词保留，不再参与当前组测试。");
@@ -2748,15 +2788,22 @@ public class JapStuJFrame extends JFrame
         }
         else if (obj == btnShowAnswer) {
             if (state != 2 || currentTest == null) return;
-            print("\n----- 参考答案 -----");
             if (!jlptMode) {
+                // 本地测试答案页不再把题目、答案和提示无限追加到同一滚动流中。
+                // 这样默认窗口打开答案时从参考答案起始，减少一次手动翻页。
+                clearAll();
+                switchToTextArea();
+                print("===== 参考答案 =====");
                 embedGrammarInfo(currentTest);
+                appendTestInstruction("请点击上方 记得 或 不记得 按钮进行选择");
             } else {
+                print("\n----- 参考答案 -----");
                 print("释义：" + currentTest.chinese);
+                print("\n请点击上方 记得 或 不记得 按钮进行选择");
             }
-            print("\n请点击上方 记得 或 不记得 按钮进行选择");
             state = 3;
             setTestButtonsVisible(false, true, false);
+            SwingUtilities.invokeLater(() -> textScrollPane.getVerticalScrollBar().setValue(0));
         }
         else if (obj == btnYes || obj == btnNo) {
             if (state != 3 || currentTest == null) return;

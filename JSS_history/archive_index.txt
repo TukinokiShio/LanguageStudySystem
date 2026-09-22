@@ -12,3 +12,5 @@
 [20260920_213433] Version=3.8.0 | 动态本地临时组、12列富化状态与本地测试持久化 | 安装包: 日语学习系统_3.8.0_Setup.exe | ZIP: JapStudySystemV3.8.0.zip
 [20260921_0028] Version=3.8.2 | 本地测试结果显示统计与掌握规则、本地例句译文补充 JLPT 风格难点注释 | 安装包: 日语学习系统_3.8.2_Setup.exe | ZIP: JapStudySystemV3.8.2.zip
 [20260921_0100] Version=3.8.3 | 本地测试结算页显示单词释义、正确率与达到下一状态所需答对次数，不重复显示例句 | 安装包: 日语学习系统_3.8.3_Setup.exe | ZIP: JapStudySystemV3.8.3.zip
+[20260922_安装目录约定] Version=3.8.4 | 本地词库答案页布局优化、查看答案增加左方向键、默认安装目录固定为 D:\SHIO_LANGUAGE\jss | 安装包: JapaneseStudySystem_3.8.4_Setup.exe | ZIP: JapStudySystemV3.8.4.zip
+[20260922_1617] Version=3.8.5 | 本地词库答案页布局与左方向键体验修订 | 安装包: JapaneseStudySystem_3.8.5_Setup.exe | ZIP: JapStudySystemV3.8.5.zip
