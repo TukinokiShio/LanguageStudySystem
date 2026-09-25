@@ -100,7 +100,7 @@ public class JapStuJFrame extends JFrame
     private static final int TEXT_SIZE = 18;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.8.7";
+    private static final String APP_VERSION = "3.8.8";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -1561,9 +1561,8 @@ public class JapStuJFrame extends JFrame
                 tail = node;
             }
             totalItems = listLen(globalList);
-            if (!headerParsed) masteredItems = 0;
+            masteredItems = LocalMasteryHistory.restoreCount(headerParsed, masteredItems);
             ensureLocalIds();
-            recomputeLocalMasteredCount();
         } catch (Exception e) {
             totalItems = 0;
             masteredItems = 0;
@@ -1577,10 +1576,9 @@ public class JapStuJFrame extends JFrame
     @Override
     public void saveToFile() {
         totalItems = listLen(globalList);
-        recomputeLocalMasteredCount();
         try (PrintWriter pw = new PrintWriter(new OutputStreamWriter(
                 new FileOutputStream(FILE_PATH), StandardCharsets.UTF_8))) {
-            pw.println(totalItems + "\t" + masteredItems);
+            pw.println(LocalMasteryHistory.formatHeader(totalItems, masteredItems));
             JaNode p = globalList.next;
             while (p != null) {
                 pw.println(LocalDataCodec.serialize(p));
@@ -1624,15 +1622,6 @@ public class JapStuJFrame extends JFrame
                 && hasExample(node.exampleCh)
                 && hasExample(node.example2)
                 && hasExample(node.example2Ch);
-    }
-
-    private void recomputeLocalMasteredCount() {
-        masteredItems = 0;
-        JaNode p = globalList.next;
-        while (p != null) {
-            if (p.masteryState >= 2) masteredItems++;
-            p = p.next;
-        }
     }
 
     // ==================== 本地动态批次状态 ====================
@@ -1856,7 +1845,6 @@ public class JapStuJFrame extends JFrame
         localGroupActive = false;
         localGroupAwaitingNext = true;
         totalItems = listLen(globalList);
-        recomputeLocalMasteredCount();
         saveToFile();
         saveLocalBatchState();
     }
@@ -1865,7 +1853,14 @@ public class JapStuJFrame extends JFrame
         if (target == null) return;
         JaNode pre = globalList;
         while (pre.next != null && pre.next != target) pre = pre.next;
-        if (pre.next == target) pre.next = target.next;
+        if (pre.next == target) {
+            int slot = findLocalGroupSlot(target.localId);
+            if (slot >= 0) {
+                masteredItems = LocalMasteryHistory.afterMasteredEntryRemoval(
+                        masteredItems, localGroupState[slot], localGroupWrong[slot]);
+            }
+            pre.next = target.next;
+        }
         localHardIds.remove(target.localId);
         for (int i = 0; i < localGroupSize; i++) {
             if (localGroupIds[i] == target.localId) localGroupIds[i] = -1L;

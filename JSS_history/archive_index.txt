@@ -16,3 +16,4 @@
 [20260922_1617] Version=3.8.5 | 本地词库答案页布局与左方向键体验修订 | 安装包: JapaneseStudySystem_3.8.5_Setup.exe | ZIP: JapStudySystemV3.8.5.zip
 [20260922_发布] Version=3.8.6 | 本地词库答案页标题与表格间距优化，保持表格紧凑自然高度 | 安装包: JapaneseStudySystem_3.8.6_Setup.exe | ZIP: JapStudySystemV3.8.6.zip
 [20260925_修复] Version=3.8.7 | 修复答案页振假名例句普通文本尾部可能被省略的问题 | 安装包: JapaneseStudySystem_3.8.7_Setup.exe | ZIP: JapStudySystemV3.8.7.zip
+[20260926_修复] Version=3.8.8 | 修复本地词库历史掌握数量在读取和保存时被当前临时组状态覆盖的问题 | 安装包: JapaneseStudySystem_3.8.8_Setup.exe | ZIP: JapStudySystemV3.8.8.zip
