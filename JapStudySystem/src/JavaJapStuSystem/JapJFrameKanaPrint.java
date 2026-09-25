@@ -144,16 +144,24 @@ public class JapJFrameKanaPrint {
         applyBackground(spacer, bgColor);
 
         // 外层容器：NORTH = spacer（撑高），SOUTH = 文字（基线对齐）
-        FontMetrics fm = getFontMetrics(font);
-        int textW = fm.stringWidth(text) + 4;
+        // 以该 JLabel 自身的首选宽度为准，包含当前 LAF 的文字度量与边框；
+        // 再留少量余量，降低末尾文字被 Swing 省略的风险。
+        int initialTextW = textLabel.getPreferredSize().width + 4;
         JPanel wrapper = new JPanel(new BorderLayout(0, 0)) {
+            private Dimension plainTextSize() {
+                // Preferred text width can change when the label joins a realized window
+                // with a different graphics configuration; re-read it during layout.
+                int textW = Math.max(initialTextW, textLabel.getPreferredSize().width + 4);
+                return new Dimension(textW, unitH);
+            }
+
             @Override
             public Dimension getPreferredSize() {
-                return new Dimension(textW, unitH);
+                return plainTextSize();
             }
             @Override
             public Dimension getMinimumSize() {
-                return getPreferredSize();
+                return plainTextSize();
             }
         };
         applyBackground(wrapper, bgColor);

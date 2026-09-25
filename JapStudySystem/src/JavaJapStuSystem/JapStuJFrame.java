@@ -100,7 +100,7 @@ public class JapStuJFrame extends JFrame
     private static final int TEXT_SIZE = 18;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.8.6";
+    private static final String APP_VERSION = "3.8.7";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
