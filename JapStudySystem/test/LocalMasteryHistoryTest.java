@@ -8,6 +8,9 @@ public final class LocalMasteryHistoryTest {
         testHeaderCountIsAuthoritative();
         testMissingHeaderStartsAtZero();
         testOnlyCompletedMasteryIncrementsHistory();
+        testProgressIncludesPendingAndCurrentMastery();
+        testProgressRemainsContinuousAfterSettlement();
+        testEmptyAndHistoricalProgressBoundaries();
         System.out.println("LocalMasteryHistoryTest: PASS");
     }
 
@@ -44,6 +47,64 @@ public final class LocalMasteryHistoryTest {
         check(LocalMasteryHistory.afterMasteredEntryRemoval(Integer.MAX_VALUE, 2, 0)
                         == Integer.MAX_VALUE,
                 "计数达到整数上限时不应溢出");
+    }
+
+    private static void testProgressIncludesPendingAndCurrentMastery() {
+        JapStuJFrame.JaNode head = new JapStuJFrame.JaNode();
+        head.next = localNode(0, 0);
+        head.next.next = localNode(1, 1);
+        head.next.next.next = localNode(1, 0);
+        head.next.next.next.next = localNode(1, 2);
+
+        LocalProgressSnapshot progress = LocalProgressSnapshot.calculate(head, 3);
+        check(progress.liveEntries == 4 && progress.pendingEnrich == 1,
+                "待富化词也属于现存词条与总量");
+        check(progress.total == 7 && progress.mastered == 4,
+                "总量应含历史掌握，掌握段应含历史与当前未结算掌握");
+        check(progress.known == 1 && progress.strange == 2,
+                "了解与陌生数只统计当前现存词条");
+    }
+
+    private static void testProgressRemainsContinuousAfterSettlement() {
+        JapStuJFrame.JaNode before = new JapStuJFrame.JaNode();
+        before.next = localNode(1, 2);
+        before.next.next = localNode(1, 1);
+        before.next.next.next = localNode(1, 0);
+        LocalProgressSnapshot active = LocalProgressSnapshot.calculate(before, 2);
+
+        JapStuJFrame.JaNode after = new JapStuJFrame.JaNode();
+        after.next = localNode(1, 1);
+        after.next.next = localNode(1, 0);
+        LocalProgressSnapshot settled = LocalProgressSnapshot.calculate(after, 3);
+        check(active.total == settled.total && active.mastered == settled.mastered,
+                "掌握词从现存词库结算删除后，总量和掌握进度应保持连续");
+    }
+
+    private static void testEmptyAndHistoricalProgressBoundaries() {
+        LocalProgressSnapshot empty = LocalProgressSnapshot.calculate(new JapStuJFrame.JaNode(), 0);
+        check(empty.total == 0 && empty.mastered == 0 && empty.strange == 0,
+                "空词库且没有历史记录时进度应为零");
+        LocalProgressSnapshot historyOnly = LocalProgressSnapshot.calculate(
+                new JapStuJFrame.JaNode(), 5);
+        check(historyOnly.total == 5 && historyOnly.mastered == 5,
+                "现存词库为空但保留历史累计数时，历史数应全部显示为已掌握");
+
+        LocalProgressSnapshot maxHistory = LocalProgressSnapshot.calculateCounts(
+                2, Integer.MAX_VALUE, 9, 9, 9);
+        check(maxHistory.total == (long) Integer.MAX_VALUE + 2
+                        && maxHistory.mastered == (long) Integer.MAX_VALUE + 2
+                        && maxHistory.known == 0 && maxHistory.strange == 0,
+                "历史计数边界与超范围分类输入应安全归一化");
+        LocalProgressSnapshot negative = LocalProgressSnapshot.calculateCounts(-1, -9, -2, -3, -4);
+        check(negative.total == 0 && negative.mastered == 0 && negative.pendingEnrich == 0,
+                "负数历史或计数不得造成负进度");
+    }
+
+    private static JapStuJFrame.JaNode localNode(int enrichState, int masteryState) {
+        JapStuJFrame.JaNode node = new JapStuJFrame.JaNode();
+        node.enrichState = enrichState;
+        node.masteryState = masteryState;
+        return node;
     }
 
     private static void check(boolean condition, String message) {

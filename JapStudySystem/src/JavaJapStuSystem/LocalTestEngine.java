@@ -37,20 +37,16 @@ final class LocalTestEngine {
         return node != null && node.enrichState == 1;
     }
 
-    static double weight(int masteryState, int groupWrong, int recencyDistance) {
+    static double weight(int masteryState, int groupWrong) {
         double result = masteryState == 0 ? 5.0 : 2.0;
         // 只使用当前组信息；历史 examTimes/trueTimes 不参与掌握或抽题权重。
         result += Math.max(0, groupWrong) * 3.0;
-        if (recencyDistance > 0 && recencyDistance <= 10) {
-            result += (11 - recencyDistance) * 1.5;
-        }
         return Math.max(0.01, result);
     }
 
     static int chooseWeightedSlot(int[] states, int[] groupWrong,
                                   long[] ids, int size,
-                                  int lastSlot, List<Integer> recentSlots,
-                                  Random random) {
+                                  int lastSlot, Random random) {
         List<Integer> candidates = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             if (ids[i] <= 0L || states[i] >= 2) continue;
@@ -64,21 +60,15 @@ final class LocalTestEngine {
 
         double total = 0.0;
         for (int slot : candidates) {
-            total += weight(states[slot], groupWrong[slot], recencyDistance(slot, recentSlots));
+            total += weight(states[slot], groupWrong[slot]);
         }
         Random rng = random == null ? new Random() : random;
         double roll = rng.nextDouble() * total;
         for (int slot : candidates) {
-            roll -= weight(states[slot], groupWrong[slot], recencyDistance(slot, recentSlots));
+            roll -= weight(states[slot], groupWrong[slot]);
             if (roll <= 0) return slot;
         }
         return candidates.get(candidates.size() - 1);
-    }
-
-    private static int recencyDistance(int slot, List<Integer> recentSlots) {
-        if (recentSlots == null) return 0;
-        int index = recentSlots.lastIndexOf(slot);
-        return index < 0 ? 0 : recentSlots.size() - index;
     }
 
     static List<JapStuJFrame.JaNode> chooseGroup(List<JapStuJFrame.JaNode> all,

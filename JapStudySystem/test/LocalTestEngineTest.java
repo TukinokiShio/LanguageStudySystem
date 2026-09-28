@@ -16,6 +16,9 @@ public final class LocalTestEngineTest {
         testRemainingCorrect();
         testHardWordIsNotSelectable();
         testNoImmediateRepeatWhenAlternativesExist();
+        testOnlyCandidateMayRepeat();
+        testUnavailablePreviousWordDoesNotBlockSelection();
+        testWeightIgnoresRecency();
         System.out.println("LocalTestEngineTest: PASS");
     }
 
@@ -77,9 +80,8 @@ public final class LocalTestEngineTest {
         int[] states = {0, 0};
         int[] wrong = {4, 0};
         long[] ids = {1, 2};
-        int[] totalWrong = {0, 0};
         int picked = LocalTestEngine.chooseWeightedSlot(
-                states, wrong, ids, 2, -1, new ArrayList<>(), new Random(1));
+                states, wrong, ids, 2, -1, new Random(1));
         check(picked == 1, "本组错误超过3次的困难词不得再次抽取");
     }
 
@@ -87,12 +89,30 @@ public final class LocalTestEngineTest {
         int[] states = {0, 0};
         int[] wrong = {0, 0};
         long[] ids = {1, 2};
-        int[] totalWrong = {0, 0};
-        List<Integer> recent = new ArrayList<>();
-        recent.add(0);
         int picked = LocalTestEngine.chooseWeightedSlot(
-                states, wrong, ids, 2, 0, recent, new Random(1));
+                states, wrong, ids, 2, 0, new Random(1));
         check(picked == 1, "存在两个候选时不得连续抽到同一槽位");
+    }
+
+    private static void testOnlyCandidateMayRepeat() {
+        int picked = LocalTestEngine.chooseWeightedSlot(
+                new int[] {0}, new int[] {0}, new long[] {7}, 1, 0, new Random(2));
+        check(picked == 0, "只剩一个可测词时应允许再次抽到该词");
+    }
+
+    private static void testUnavailablePreviousWordDoesNotBlockSelection() {
+        int picked = LocalTestEngine.chooseWeightedSlot(
+                new int[] {2, 0, 0}, new int[] {0, 0, 0},
+                new long[] {7, 8, 9}, 3, 0, new Random(2));
+        check(picked == 1 || picked == 2,
+                "上次抽中的词已不可测时仍应从当前可测词中抽取");
+    }
+
+    private static void testWeightIgnoresRecency() {
+        check(LocalTestEngine.weight(0, 0) == 5.0,
+                "陌生词权重应保留基础值，不再叠加近期抽中加权");
+        check(LocalTestEngine.weight(1, 2) == 8.0,
+                "了解词仍应保留答错次数加权");
     }
 
     private static void check(boolean condition, String message) {

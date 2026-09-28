@@ -26,6 +26,15 @@ final class LocalDataCodec {
         node.masteryState = sp.length > 7 ? clampMastery(intValue(sp, 7, 0)) : 0;
         node.enrichState = jlpt ? 1 : (intValue(sp, 10, 0) == 1 ? 1 : 0);
         node.localId = jlpt ? 0L : longValue(sp, 11, 0L);
+        if (jlpt) {
+            for (int i = 10; i < sp.length; i++) {
+                String id = JLPTGroupItemId.decode(sp[i]);
+                if (!id.isEmpty()) {
+                    node.jlptGroupItemId = id;
+                    break;
+                }
+            }
+        }
         node.jlptLevel = 0;
         node.wrongTimes = 0;
         return node;

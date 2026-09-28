@@ -8,6 +8,7 @@ public final class LocalDataCodecTest {
         testLegacySevenColumns();
         testTwelveColumnRoundTrip();
         testDuplicateIdsRemainDistinct();
+        testLegacyAndStableJLPTGroupIdentity();
         System.out.println("LocalDataCodecTest: PASS");
     }
 
@@ -55,6 +56,20 @@ public final class LocalDataCodecTest {
                 "同じ\t二\t1\t0\t0\t\t\t0\t\t\t1\t8", false);
         check(first.japanese.equals(second.japanese) && first.localId != second.localId,
                 "重复日文必须由不同localId区分");
+    }
+
+    private static void testLegacyAndStableJLPTGroupIdentity() {
+        String legacyRow = "学校\t学校\t1\t8\t5\t例句\t译文\t1\t例句2\t译文2";
+        JapStuJFrame.JaNode legacy = LocalDataCodec.parse(legacyRow, true);
+        check(legacy.jlptGroupItemId.isEmpty(), "旧10列 JLPT 行应可读取且默认无稳定ID");
+
+        String id = "00000000-0000-0000-0000-000000000010";
+        JapStuJFrame.JaNode restored = LocalDataCodec.parse(
+                legacyRow + "\t" + JLPTGroupItemId.encode(id), true);
+        check(id.equals(restored.jlptGroupItemId),
+                "新 JLPT 行尾稳定ID应在读取时回读");
+        check(restored.masteryState == 1 && restored.enrichState == 1,
+                "增加可选ID列不得改变旧列状态含义");
     }
 
     private static void check(boolean condition, String message) {

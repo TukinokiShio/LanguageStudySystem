@@ -13,7 +13,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -77,6 +76,7 @@ public class JapStuJFrame extends JFrame
     private JPanel jlptProgressPanel;
     private JProgressBar jlptProgressBar;      // 词书整体进度
     private JProgressBar jlptGroupProgressBar;  // 当前分组进度
+    private JLabel jlptProgressTitleLabel;
     private JLabel jlptProgressLabel;
     private JLabel jlptGroupLabel;
 
@@ -100,7 +100,7 @@ public class JapStuJFrame extends JFrame
     private static final int TEXT_SIZE = 18;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.8.8";
+    private static final String APP_VERSION = "3.8.9";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -132,6 +132,7 @@ public class JapStuJFrame extends JFrame
         long localId;      // 本地词条稳定编号；JLPT 词条保持 0
         int jlptLevel;     // 0=本地, 1=N5, 2=N4, 3=N3, 4=N2, 5=N1
         int wrongTimes;    // 本次会话中连续答错次数
+        String jlptGroupItemId = ""; // JLPT 分组词条稳定编号
         JaNode next;
     }
 
@@ -160,9 +161,7 @@ public class JapStuJFrame extends JFrame
     private int allUndoneThisSession = 0;
     private int allWrongOver3ThisSession = 0;
 
-    // 最近测试的词汇（用于加权随机）
-    private java.util.List<JaNode> recentTestedWords = new ArrayList<>();
-    private static final int RECENT_WINDOW = 10;
+    private String jlptLastAskedId = "";
 
     // 本地词库唯一的临时组：数组只记录 localId 和本组计数，不建立静态分组文件。
     private final long[] localGroupIds = new long[LOCAL_BATCH_SIZE];
@@ -170,7 +169,7 @@ public class JapStuJFrame extends JFrame
     private final int[] localGroupCorrect = new int[LOCAL_BATCH_SIZE];
     private final int[] localGroupState = new int[LOCAL_BATCH_SIZE];
     private int localGroupSize = 0;
-    private final List<Integer> localRecentSlots = new ArrayList<>();
+    private long localLastAskedId = 0L;
     private final LinkedHashSet<Long> localHardIds = new LinkedHashSet<>();
     private boolean localGroupActive = false;
     private boolean localGroupAwaitingNext = false;
@@ -357,8 +356,9 @@ public class JapStuJFrame extends JFrame
         jlptProgressLabel = new JLabel();
         jlptProgressLabel.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         jlptProgressLabel.setForeground(new Color(80, 80, 80));
-        jlptProgressLabel.setPreferredSize(new Dimension(500, 20));
-        bookBarRow.add(new JLabel("词书 "));
+        jlptProgressLabel.setPreferredSize(new Dimension(650, 20));
+        jlptProgressTitleLabel = new JLabel("词书 ");
+        bookBarRow.add(jlptProgressTitleLabel);
         bookBarRow.add(jlptProgressBar);
         bookBarRow.add(Box.createHorizontalStrut(10));
         bookBarRow.add(jlptProgressLabel);
@@ -1154,6 +1154,7 @@ public class JapStuJFrame extends JFrame
     // ==================== JLPT 进度条 ====================
 
     private void updateJLPTProgress() {
+        jlptProgressTitleLabel.setText("词书 ");
         // 分组进度
         int groupMastered = 0, groupKnown = 0, groupStrange = 0, groupTotal = 0;
         JaNode p = jlptList.next;
@@ -1227,6 +1228,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void updateLocalProgress() {
+        jlptProgressTitleLabel.setText("本地词库 ");
         int groupMastered = 0;
         int groupHard = 0;
         int activeKnown = 0;
@@ -1258,29 +1260,22 @@ public class JapStuJFrame extends JFrame
                     + " 了解" + activeKnown + " 困难" + groupHard);
         }
 
-        int testable = 0, known = 0, strange = 0, mastered = 0;
-        JaNode p = globalList.next;
-        while (p != null) {
-            if (p.enrichState == 1) {
-                if (p.masteryState == 2) mastered++;
-                else if (p.masteryState == 1) known++;
-                else strange++;
-                testable++;
-            }
-            p = p.next;
-        }
-        if (testable == 0) {
+        LocalProgressSnapshot progress = LocalProgressSnapshot.calculate(globalList, masteredItems);
+        if (progress.total == 0L) {
             jlptProgressBar.setValue(0);
-            jlptProgressBar.setString("无已富化可测词");
-            jlptProgressLabel.setText("待富化 " + localPendingEnrichCount()
-                    + "  重试 " + localHardIds.size());
+            jlptProgressBar.setString("本地词库暂无词条");
+            jlptProgressLabel.setText("总0（现存0+历史0）掌握0 了解0 陌生0 待富化0 重试"
+                    + localHardIds.size());
         } else {
             jlptProgressBar.setString(String.format("掌握%d 了解%d 陌生%d",
-                    mastered, known, strange));
-            paintDualBar(jlptProgressBar, mastered, known, strange, testable);
-            jlptProgressLabel.setText("可测 " + testable + "  已掌握 " + mastered
-                    + "  待富化 " + localPendingEnrichCount()
-                    + "  重试 " + localHardIds.size());
+                    progress.mastered, progress.known, progress.strange));
+            paintDualBar(jlptProgressBar, progress.mastered, progress.known,
+                    progress.strange, progress.total);
+            jlptProgressLabel.setText(String.format(
+                    "总%d（现存%d+历史%d）掌握%d 了解%d 陌生%d 待富化%d 重试%d",
+                    progress.total, progress.liveEntries, progress.historicalMastered,
+                    progress.mastered, progress.known, progress.strange,
+                    progress.pendingEnrich, localHardIds.size()));
         }
     }
 
@@ -1326,8 +1321,8 @@ public class JapStuJFrame extends JFrame
         return "还需答对 " + remaining + " 次，达到“" + target + "”";
     }
 
-    private void paintDualBar(JProgressBar bar, int mastered, int known, int strange, int total) {
-        if (total == 0) return;
+    private void paintDualBar(JProgressBar bar, long mastered, long known, long strange, long total) {
+        if (total <= 0L) return;
         double masteredPctExact = (double) mastered / total * 100;
         double knownPctExact = (double) known / total * 100;
 
@@ -1469,11 +1464,12 @@ public class JapStuJFrame extends JFrame
         if (jlptMode) {
             statsLabel.setText("");
         } else {
-            statsLabel.setText("本地词库 " + totalItems
-                    + " 条  可测试 " + localTestableCount()
-                    + "  已掌握 " + masteredItems
-                    + "  待富化 " + localPendingEnrichCount()
-                    + "  重试 " + localHardIds.size());
+            LocalProgressSnapshot progress = LocalProgressSnapshot.calculate(globalList, masteredItems);
+            statsLabel.setText(String.format(
+                    "本地词库 总%d条（现存%d+历史%d） 可测%d 掌握%d 了解%d 陌生%d 待富化%d 重试%d",
+                    progress.total, progress.liveEntries, progress.historicalMastered,
+                    localTestableCount(), progress.mastered, progress.known, progress.strange,
+                    progress.pendingEnrich, localHardIds.size()));
         }
     }
 
@@ -1679,14 +1675,9 @@ public class JapStuJFrame extends JFrame
         if (!Files.exists(statePath)) return;
         try {
             List<String> lines = Files.readAllLines(statePath, StandardCharsets.UTF_8);
-            Map<String, String> values = new HashMap<>();
-            for (String line : lines) {
-                if (line == null || line.trim().isEmpty()) continue;
-                int split = line.indexOf('=');
-                if (split <= 0) throw new IllegalArgumentException("状态行缺少等号");
-                values.put(line.substring(0, split).trim(), line.substring(split + 1).trim());
-            }
-            if (!"2".equals(values.get("version"))) {
+            Map<String, String> values = LocalTestStateCodec.parse(lines);
+            String stateVersion = values.get("version");
+            if (!LocalTestStateCodec.supportsVersion(stateVersion)) {
                 throw new IllegalArgumentException("状态版本不支持");
             }
             int loadedBatchNumber = Integer.parseInt(values.getOrDefault("batch", "0"));
@@ -1729,6 +1720,8 @@ public class JapStuJFrame extends JFrame
                 if (node != null && LocalTestEngine.isEnriched(node)) localHardIds.add(id);
             }
             localGroupNumber = loadedBatchNumber;
+            localLastAskedId = LocalTestStateCodec.restoreLastAskedId(
+                    stateVersion, values.get("lastAskedId"));
             localGroupActive = localGroupSize > 0;
             localGroupAwaitingNext = !localGroupActive;
         } catch (Exception e) {
@@ -1752,7 +1745,7 @@ public class JapStuJFrame extends JFrame
             Path statePath = Paths.get(LOCAL_STATE_FILE);
             Path tempPath = dir.resolve("state.txt.tmp");
             List<String> lines = new ArrayList<>();
-            lines.add("version=2");
+            lines.add("version=" + LocalTestStateCodec.CURRENT_VERSION);
             lines.add("status=" + (localGroupActive ? "ACTIVE" : "IDLE"));
             lines.add("batch=" + localGroupNumber);
             StringBuilder slots = new StringBuilder();
@@ -1765,6 +1758,7 @@ public class JapStuJFrame extends JFrame
             }
             lines.add("slots=" + slots);
             lines.add("hardIds=" + joinIds(localHardIds));
+            lines.add(LocalTestStateCodec.formatLastAskedId(localLastAskedId));
             Files.write(tempPath, lines, StandardCharsets.UTF_8);
             try {
                 Files.move(tempPath, statePath, StandardCopyOption.REPLACE_EXISTING,
@@ -1798,7 +1792,6 @@ public class JapStuJFrame extends JFrame
         localGroupAwaitingNext = false;
         if (localGroupActive) localGroupNumber++;
         localCurrentSlot = -1;
-        localRecentSlots.clear();
         saveLocalBatchState();
     }
 
@@ -1847,6 +1840,8 @@ public class JapStuJFrame extends JFrame
         totalItems = listLen(globalList);
         saveToFile();
         saveLocalBatchState();
+        updateStatsLabel();
+        updateLocalProgress();
     }
 
     private void unlinkLocalNode(JaNode target) {
@@ -1874,7 +1869,7 @@ public class JapStuJFrame extends JFrame
         java.util.Arrays.fill(localGroupState, 0);
         localGroupSize = 0;
         localCurrentSlot = -1;
-        localRecentSlots.clear();
+        localLastAskedId = 0L;
     }
 
     private int localPendingEnrichCount() {
@@ -1999,12 +1994,14 @@ public class JapStuJFrame extends JFrame
 
     private void loadGroupProgress() {
         File progFile = new File(GROUP_JLPT_DIR + currentJLPTLevel + "_progress.txt");
-        try (BufferedReader br = new BufferedReader(new FileReader(progFile))) {
-            String line = br.readLine();
-            if (line != null) currentGroupIndex = Integer.parseInt(line.trim());
-            if (currentGroupIndex < 1) currentGroupIndex = 1;
+        try {
+            JLPTGroupProgressState.Snapshot progress = JLPTGroupProgressState.parse(
+                    Files.readAllLines(progFile.toPath(), StandardCharsets.UTF_8));
+            currentGroupIndex = progress.groupIndex;
+            jlptLastAskedId = progress.lastAskedId;
         } catch (Exception e) {
             currentGroupIndex = 1;
+            jlptLastAskedId = "";
         }
         countTotalGroups();
     }
@@ -2012,8 +2009,10 @@ public class JapStuJFrame extends JFrame
     private void saveGroupProgress() {
         File outDir = new File(GROUP_JLPT_DIR);
         if (!outDir.exists()) outDir.mkdirs();
-        try (PrintWriter pw = new PrintWriter(new FileWriter(GROUP_JLPT_DIR + currentJLPTLevel + "_progress.txt"))) {
-            pw.println(currentGroupIndex);
+        try {
+            Files.write(Paths.get(GROUP_JLPT_DIR + currentJLPTLevel + "_progress.txt"),
+                    JLPTGroupProgressState.format(currentGroupIndex, jlptLastAskedId),
+                    StandardCharsets.UTF_8);
         } catch (Exception ignored) {}
     }
 
@@ -2044,6 +2043,7 @@ public class JapStuJFrame extends JFrame
             print("读取分组文件失败: " + e.getMessage());
         }
         loadCarryOver(tail);
+        if (ensureJLPTGroupItemIds()) saveCurrentGroup();
         jlptTotalItems = listLen(jlptList);
         groupMastered = (jlptTotalItems > 0 && countNonMastered() == 0);
         updateJLPTProgress();
@@ -2075,16 +2075,31 @@ public class JapStuJFrame extends JFrame
     private void saveCurrentGroup() {
         String groupFile = GROUP_JLPT_DIR + currentJLPTLevel + "_Group" + currentGroupIndex + ".txt";
         int len = listLen(jlptList);
+        ensureJLPTGroupItemIds();
         try (PrintWriter pw = new PrintWriter(new FileWriter(groupFile))) {
             pw.println(len + "\t0");
             JaNode p = jlptList.next;
             while (p != null) {
                 pw.println(p.japanese + "\t" + p.chinese + "\t" + p.type + "\t"
                         + p.examTimes + "\t" + p.trueTimes + "\t" + p.example + "\t" + p.exampleCh
-                        + "\t" + p.masteryState + "\t" + p.example2 + "\t" + p.example2Ch);
+                        + "\t" + p.masteryState + "\t" + p.example2 + "\t" + p.example2Ch
+                        + "\t" + JLPTGroupItemId.encode(p.jlptGroupItemId));
                 p = p.next;
             }
         } catch (Exception ignored) {}
+    }
+
+    private boolean ensureJLPTGroupItemIds() {
+        boolean changed = false;
+        JaNode p = jlptList == null ? null : jlptList.next;
+        while (p != null) {
+            if (!JLPTGroupItemId.isValid(p.jlptGroupItemId)) {
+                p.jlptGroupItemId = JLPTGroupItemId.create();
+                changed = true;
+            }
+            p = p.next;
+        }
+        return changed;
     }
 
     private int countCurrentGroupGroups() {
@@ -2266,13 +2281,15 @@ public class JapStuJFrame extends JFrame
             return;
         }
 
-        int lastSlot = localRecentSlots.isEmpty()
-                ? -1 : localRecentSlots.get(localRecentSlots.size() - 1);
+        int lastSlot = localLastAskedId > 0L
+                ? findLocalGroupSlot(localLastAskedId) : -1;
         int slot = LocalTestEngine.chooseWeightedSlot(
                 localGroupState, localGroupWrong, localGroupIds,
-                localGroupSize, lastSlot, localRecentSlots, random);
+                localGroupSize, lastSlot, random);
         if (slot < 0) {
             finishLocalBatchIfEmpty();
+            updateStatsLabel();
+            updateLocalProgress();
             print("本组测试完成。符合条件的掌握词已删除，困难词保留到词库中。");
             state = STATE_TEST_RESULT;
             btnContinueTest.setVisible(true);
@@ -2281,10 +2298,6 @@ public class JapStuJFrame extends JFrame
         }
 
         localCurrentSlot = slot;
-        localRecentSlots.add(slot);
-        if (localRecentSlots.size() > RECENT_WINDOW * 2) {
-            localRecentSlots.remove(0);
-        }
         currentTest = findLocalById(localGroupIds[slot]);
         if (currentTest == null) {
             localGroupIds[slot] = -1L;
@@ -2292,6 +2305,8 @@ public class JapStuJFrame extends JFrame
             return;
         }
         currentTest.masteryState = localGroupState[slot];
+        localLastAskedId = localGroupIds[slot];
+        saveLocalBatchState();
 
         jlptTestStateLabel.setText("本组状态：" + getMasteryLabel(localGroupState[slot]));
         jlptTestWordLabel.setText("当前单词：" + currentTest.japanese);
@@ -2377,11 +2392,9 @@ public class JapStuJFrame extends JFrame
         }
 
         currentTest = selected;
-        recentTestedWords.add(selected);
-        if (recentTestedWords.size() > RECENT_WINDOW * 2) {
-            recentTestedWords = recentTestedWords.subList(
-                    recentTestedWords.size() - RECENT_WINDOW, recentTestedWords.size());
-        }
+        jlptLastAskedId = selected.jlptGroupItemId;
+        saveCurrentGroup();
+        saveGroupProgress();
 
         String stateStr;
         switch (currentTest.masteryState) {
@@ -2410,67 +2423,15 @@ public class JapStuJFrame extends JFrame
 
     private JaNode weightedRandomSelect() {
         java.util.List<JaNode> candidates = new ArrayList<>();
-        java.util.List<Double> weights = new ArrayList<>();
 
         JaNode p = jlptList.next;
-        int index = 0;
         while (p != null) {
             if (p.masteryState < 2) {
                 candidates.add(p);
-                double w = getWeight(p, index);
-                weights.add(w);
             }
-            index++;
             p = p.next;
         }
-
-        if (candidates.isEmpty()) return null;
-
-        // v3.7.0：组内可测词 >= 2 时，禁止与刚刚测试选中的词连续重复
-        JaNode lastAsked = recentTestedWords.isEmpty() ? null
-                : recentTestedWords.get(recentTestedWords.size() - 1);
-        if (candidates.size() >= 2 && lastAsked != null) {
-            int li = candidates.indexOf(lastAsked);
-            if (li >= 0) {
-                candidates.remove(li);
-                weights.remove(li);
-            }
-        }
-
-        double totalWeight = 0;
-        for (double w : weights) totalWeight += w;
-
-        double r = random.nextDouble() * totalWeight;
-        double cumulative = 0;
-        for (int i = 0; i < candidates.size(); i++) {
-            cumulative += weights.get(i);
-            if (r <= cumulative) return candidates.get(i);
-        }
-        return candidates.get(candidates.size() - 1);
-    }
-
-    private double getWeight(JaNode node, int index) {
-        // 基础权重：陌生=5, 了解=2, 掌握=0
-        double baseWeight;
-        switch (node.masteryState) {
-            case 0: baseWeight = 5.0; break;
-            case 1: baseWeight = 2.0; break;
-            default: baseWeight = 0.0; break;
-        }
-
-        // 答错次数惩罚权重
-        baseWeight += node.wrongTimes * 3.0;
-
-        // 近期被抽到词汇的权重提升（距离越近权重越高）
-        int recencyIndex = recentTestedWords.indexOf(node);
-        if (recencyIndex >= 0) {
-            int distFromEnd = recentTestedWords.size() - recencyIndex;
-            if (distFromEnd <= RECENT_WINDOW) {
-                baseWeight += (RECENT_WINDOW - distFromEnd + 1) * 1.5;
-            }
-        }
-
-        return baseWeight;
+        return JLPTTestEngine.choose(candidates, jlptLastAskedId, random);
     }
 
     // ==================== 图片识别模式 ====================
@@ -2660,6 +2621,7 @@ public class JapStuJFrame extends JFrame
         jlptTestStatePanel.setVisible(true);
 
         saveCurrentGroup();
+        saveGroupProgress();
         updateJLPTProgress();
 
         state = STATE_TEST_RESULT;
@@ -2678,7 +2640,8 @@ public class JapStuJFrame extends JFrame
         try (PrintWriter pw = new PrintWriter(new FileWriter(coFile, true))) {
             pw.println(node.japanese + "\t" + node.chinese + "\t" + node.type + "\t"
                     + "0\t0\t" + node.example + "\t" + node.exampleCh + "\t0"
-                    + "\t" + node.example2 + "\t" + node.example2Ch);
+                    + "\t" + node.example2 + "\t" + node.example2Ch
+                    + "\t" + JLPTGroupItemId.encode(node.jlptGroupItemId));
         } catch (Exception ignored) {}
         allWrongOver3ThisSession++;
         saveCarryOver();
@@ -2765,9 +2728,9 @@ public class JapStuJFrame extends JFrame
             if (jlptMode) {
                 testedCount = 0;
                 testedIndex = new int[1000];
-                recentTestedWords.clear();
                 if (groupMastered && currentGroupIndex < totalGroups) {
                     currentGroupIndex++;
+                    jlptLastAskedId = "";
                     saveGroupProgress();
                     loadCurrentGroup();
                     print("===== 进入下一组：JLPT " + currentJLPTLevel + " Group" + currentGroupIndex + " =====");
