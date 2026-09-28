@@ -98,9 +98,10 @@ public class JapStuJFrame extends JFrame
 
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
+    private static final int PROGRESS_ROW_TITLE_WIDTH = 72;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.8.9";
+    private static final String APP_VERSION = "3.8.10";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -343,7 +344,9 @@ public class JapStuJFrame extends JFrame
         jlptGroupLabel = new JLabel();
         jlptGroupLabel.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         jlptGroupLabel.setForeground(new Color(80, 80, 80));
-        groupBarRow.add(new JLabel("分组 "));
+        JLabel groupProgressTitleLabel = new JLabel("分组 ");
+        groupProgressTitleLabel.setPreferredSize(new Dimension(PROGRESS_ROW_TITLE_WIDTH, 20));
+        groupBarRow.add(groupProgressTitleLabel);
         groupBarRow.add(jlptGroupProgressBar);
         groupBarRow.add(Box.createHorizontalStrut(10));
         groupBarRow.add(jlptGroupLabel);
@@ -358,6 +361,7 @@ public class JapStuJFrame extends JFrame
         jlptProgressLabel.setForeground(new Color(80, 80, 80));
         jlptProgressLabel.setPreferredSize(new Dimension(650, 20));
         jlptProgressTitleLabel = new JLabel("词书 ");
+        jlptProgressTitleLabel.setPreferredSize(new Dimension(PROGRESS_ROW_TITLE_WIDTH, 20));
         bookBarRow.add(jlptProgressTitleLabel);
         bookBarRow.add(jlptProgressBar);
         bookBarRow.add(Box.createHorizontalStrut(10));

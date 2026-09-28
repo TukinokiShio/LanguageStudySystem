@@ -18,3 +18,4 @@
 [20260925_修复] Version=3.8.7 | 修复答案页振假名例句普通文本尾部可能被省略的问题 | 安装包: JapaneseStudySystem_3.8.7_Setup.exe | ZIP: JapStudySystemV3.8.7.zip
 [20260926_修复] Version=3.8.8 | 修复本地词库历史掌握数量在读取和保存时被当前临时组状态覆盖的问题 | 安装包: JapaneseStudySystem_3.8.8_Setup.exe | ZIP: JapStudySystemV3.8.8.zip
 [20260928_2256] Version=3.8.9 | 本地词库进度纳入历史掌握累计数并保持结算连续；JLPT 与本地分组抽题取消近期加权并持久化防连续重复 | 安装包: JapaneseStudySystem_3.8.9_Setup.exe | ZIP: JapStudySystemV3.8.9.zip
+[20260928_2316] Version=3.8.10 | 修复词书与分组进度条水平未对齐，统一进度行标题宽度 | 安装包: JapaneseStudySystem_3.8.10_Setup.exe | ZIP: JapStudySystemV3.8.10.zip
