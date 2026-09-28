@@ -98,10 +98,10 @@ public class JapStuJFrame extends JFrame
 
     private static final Color CARE_COLOR = new Color(255, 251, 240);
     private static final int TEXT_SIZE = 18;
-    private static final int PROGRESS_ROW_TITLE_WIDTH = 72;
+    private static final int PROGRESS_ROW_TITLE_WIDTH = 36;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.8.10";
+    private static final String APP_VERSION = "3.8.11";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -336,7 +336,7 @@ public class JapStuJFrame extends JFrame
         jlptProgressPanel.setBorder(BorderFactory.createEmptyBorder(2, 12, 2, 20));
         jlptProgressPanel.setVisible(false);
 
-        JPanel groupBarRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
+        JPanel groupBarRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 0));
         jlptGroupProgressBar = new JProgressBar(0, 100);
         jlptGroupProgressBar.setPreferredSize(new Dimension(300, 18));
         jlptGroupProgressBar.setStringPainted(true);
@@ -344,14 +344,14 @@ public class JapStuJFrame extends JFrame
         jlptGroupLabel = new JLabel();
         jlptGroupLabel.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         jlptGroupLabel.setForeground(new Color(80, 80, 80));
-        JLabel groupProgressTitleLabel = new JLabel("分组 ");
+        JLabel groupProgressTitleLabel = new JLabel("分组");
         groupProgressTitleLabel.setPreferredSize(new Dimension(PROGRESS_ROW_TITLE_WIDTH, 20));
         groupBarRow.add(groupProgressTitleLabel);
         groupBarRow.add(jlptGroupProgressBar);
         groupBarRow.add(Box.createHorizontalStrut(10));
         groupBarRow.add(jlptGroupLabel);
 
-        JPanel bookBarRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 2));
+        JPanel bookBarRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 2));
         jlptProgressBar = new JProgressBar(0, 100);
         jlptProgressBar.setPreferredSize(new Dimension(300, 18));
         jlptProgressBar.setStringPainted(true);
@@ -360,7 +360,7 @@ public class JapStuJFrame extends JFrame
         jlptProgressLabel.setFont(new Font("微软雅黑", Font.PLAIN, 12));
         jlptProgressLabel.setForeground(new Color(80, 80, 80));
         jlptProgressLabel.setPreferredSize(new Dimension(650, 20));
-        jlptProgressTitleLabel = new JLabel("词书 ");
+        jlptProgressTitleLabel = new JLabel("词书");
         jlptProgressTitleLabel.setPreferredSize(new Dimension(PROGRESS_ROW_TITLE_WIDTH, 20));
         bookBarRow.add(jlptProgressTitleLabel);
         bookBarRow.add(jlptProgressBar);
@@ -1158,7 +1158,7 @@ public class JapStuJFrame extends JFrame
     // ==================== JLPT 进度条 ====================
 
     private void updateJLPTProgress() {
-        jlptProgressTitleLabel.setText("词书 ");
+        jlptProgressTitleLabel.setText("词书");
         // 分组进度
         int groupMastered = 0, groupKnown = 0, groupStrange = 0, groupTotal = 0;
         JaNode p = jlptList.next;
@@ -1232,7 +1232,7 @@ public class JapStuJFrame extends JFrame
     }
 
     private void updateLocalProgress() {
-        jlptProgressTitleLabel.setText("本地词库 ");
+        jlptProgressTitleLabel.setText("词库");
         int groupMastered = 0;
         int groupHard = 0;
         int activeKnown = 0;
@@ -1268,7 +1268,7 @@ public class JapStuJFrame extends JFrame
         if (progress.total == 0L) {
             jlptProgressBar.setValue(0);
             jlptProgressBar.setString("本地词库暂无词条");
-            jlptProgressLabel.setText("总0（现存0+历史0）掌握0 了解0 陌生0 待富化0 重试"
+            jlptProgressLabel.setText("累计入库0 掌握0 了解0 陌生0 待富化0 重试"
                     + localHardIds.size());
         } else {
             jlptProgressBar.setString(String.format("掌握%d 了解%d 陌生%d",
@@ -1276,8 +1276,8 @@ public class JapStuJFrame extends JFrame
             paintDualBar(jlptProgressBar, progress.mastered, progress.known,
                     progress.strange, progress.total);
             jlptProgressLabel.setText(String.format(
-                    "总%d（现存%d+历史%d）掌握%d 了解%d 陌生%d 待富化%d 重试%d",
-                    progress.total, progress.liveEntries, progress.historicalMastered,
+                    "累计入库%d 掌握%d 了解%d 陌生%d 待富化%d 重试%d",
+                    progress.total,
                     progress.mastered, progress.known, progress.strange,
                     progress.pendingEnrich, localHardIds.size()));
         }
@@ -1470,8 +1470,8 @@ public class JapStuJFrame extends JFrame
         } else {
             LocalProgressSnapshot progress = LocalProgressSnapshot.calculate(globalList, masteredItems);
             statsLabel.setText(String.format(
-                    "本地词库 总%d条（现存%d+历史%d） 可测%d 掌握%d 了解%d 陌生%d 待富化%d 重试%d",
-                    progress.total, progress.liveEntries, progress.historicalMastered,
+                    "本地词库 累计入库%d条 可测%d 掌握%d 了解%d 陌生%d 待富化%d 重试%d",
+                    progress.total,
                     localTestableCount(), progress.mastered, progress.known, progress.strange,
                     progress.pendingEnrich, localHardIds.size()));
         }
