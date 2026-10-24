@@ -1815,14 +1815,34 @@ public class JapStuJFrame extends JFrame
         saveLocalBatchState();
     }
 
-    private void finishLocalBatchIfEmpty() {
-        if (!localGroupActive) return;
+    private boolean finishLocalBatchIfEmpty() {
+        if (!localGroupActive) return true;
         for (int i = 0; i < localGroupSize; i++) {
             if (localGroupIds[i] > 0L
                     && localGroupState[i] < 2
                     && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
-                return;
+                return true;
             }
+        }
+
+        List<JaNode> masteredNodes = new ArrayList<>();
+        for (int i = 0; i < localGroupSize; i++) {
+            if (localGroupIds[i] <= 0L
+                    || localGroupState[i] < 2
+                    || localGroupWrong[i] > LocalTestEngine.HARD_WRONG_LIMIT) {
+                continue;
+            }
+            JaNode node = findLocalById(localGroupIds[i]);
+            if (node != null) masteredNodes.add(node);
+        }
+        try {
+            LocalMasteryArchive.append(masteredNodes);
+        } catch (IOException | SecurityException e) {
+            String detail = e.getMessage();
+            print("已掌握词条归档失败（" + LocalMasteryArchive.FILE_PATH + "）："
+                    + (detail == null ? e.getClass().getSimpleName() : detail));
+            print("词条仍保留在本地词库。修复档案写入问题后，点击“继续测试”重试结算。");
+            return false;
         }
 
         for (int i = 0; i < localGroupSize; i++) {
@@ -1846,6 +1866,11 @@ public class JapStuJFrame extends JFrame
         saveLocalBatchState();
         updateStatsLabel();
         updateLocalProgress();
+        if (!masteredNodes.isEmpty()) {
+            print("已将 " + masteredNodes.size() + " 条掌握词归档到 "
+                    + LocalMasteryArchive.FILE_PATH + "。");
+        }
+        return true;
     }
 
     private void unlinkLocalNode(JaNode target) {
@@ -2291,10 +2316,12 @@ public class JapStuJFrame extends JFrame
                 localGroupState, localGroupWrong, localGroupIds,
                 localGroupSize, lastSlot, random);
         if (slot < 0) {
-            finishLocalBatchIfEmpty();
+            boolean finalized = finishLocalBatchIfEmpty();
             updateStatsLabel();
             updateLocalProgress();
-            print("本组测试完成。符合条件的掌握词已删除，困难词保留到词库中。");
+            print(finalized
+                    ? "本组测试完成。掌握词已归档并从本地词库移除，困难词保留。"
+                    : "本组结算未完成；掌握词仍保留在本地词库中，请修复归档写入问题后重试。");
             state = STATE_TEST_RESULT;
             btnContinueTest.setVisible(true);
             setTestButtonsVisible(false, false, false);
@@ -2551,9 +2578,11 @@ public class JapStuJFrame extends JFrame
             }
         }
         if (groupFinished) {
-            finishLocalBatchIfEmpty();
+            boolean finalized = finishLocalBatchIfEmpty();
             print("\n===== 临时组测试结束 =====");
-            print("掌握且本组错误不超过3次的词已删除；其他词保留。");
+            print(finalized
+                    ? "掌握词已归档并从本地词库移除；困难词保留。"
+                    : "归档写入失败，掌握词仍保留在本地词库。点击“继续测试”可重试结算。");
         }
 
         jlptTestStateLabel.setText("本组状态："
