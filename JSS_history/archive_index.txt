@@ -22,3 +22,4 @@
 [20260928_2330] Version=3.8.11 | 本地进度行标题简化为“词库”并收紧与进度条间距；累计总量改标“累计入库” | 安装包: JapaneseStudySystem_3.8.11_Setup.exe | ZIP: JapStudySystemV3.8.11.zip
 [20261024_1630] Version=3.9.0 | 本地掌握词条结算时完整归档到独立 TSV 文件，再从活动词库移除 | 安装包: JapaneseStudySystem_3.9.0_Setup.exe | ZIP: JapStudySystemV3.9.0.zip
 [20261024_1822] Version=3.9.1 | 修正窗口标题仍显示 V3.8.11，统一界面与安装包版本号 | 安装包: JapaneseStudySystem_3.9.1_Setup.exe | ZIP: JapStudySystemV3.9.1.zip
+[20261026_1646] Version=3.10.0 | 本地词库按追加顺序分层组卷、组内均匀分阶段随机练习，困难词达到正确次数后仅保留为了解 | 安装包: JapaneseStudySystem_3.10.0_Setup.exe | ZIP: JapStudySystemV3.10.0.zip

@@ -101,7 +101,7 @@ public class JapStuJFrame extends JFrame
     private static final int PROGRESS_ROW_TITLE_WIDTH = 36;
     // 答案表在默认 1200x850 窗口中需要与测试操作提示同时保持可见。
     private static final int TABLE_TEXT_SIZE = 22;
-    private static final String APP_VERSION = "3.9.1";
+    private static final String APP_VERSION = "3.10.0";
 
     // 本地词库路径
     private static final String FILE_PATH = "D:/JaStu.txt";
@@ -1290,9 +1290,9 @@ public class JapStuJFrame extends JFrame
         }
 
         int groupState = localGroupState[slot];
-        boolean hardWord = localGroupIds[slot] <= 0L
-                || localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT;
-        String stateText = hardWord ? "困难词" : getMasteryLabel(groupState);
+        boolean hardWord = localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT;
+        String stateText = getMasteryLabel(groupState)
+                + (hardWord ? "（困难词）" : "");
         double correctRate = node.examTimes == 0 ? 0
                 : (double) node.trueTimes / node.examTimes * 100;
 
@@ -1305,7 +1305,8 @@ public class JapStuJFrame extends JFrame
 
         localTestRuleArea.setText(
                 "当前进度：" + advanceText + "\n"
-                + "【掌握规则】陌生答对1次→了解；了解答对2次（本组每累计错误2次需多答对1次）→掌握");
+                + "【阶段规则】先覆盖全部陌生词，再练习了解词；了解词答对2次（本组每累计错误2次需多答对1次）→掌握\n"
+                + "【困难词规则】本组错误超过3次时封顶为了解，达到正确次数后本组完成并保留在词库");
         localTestSummaryPanel.setVisible(true);
         localTestSummaryPanel.revalidate();
         localTestSummaryPanel.repaint();
@@ -1313,14 +1314,22 @@ public class JapStuJFrame extends JFrame
 
     private String getLocalAdvanceText(int slot) {
         if (slot < 0 || slot >= localGroupSize) return "当前临时组状态不可用";
-        if (localGroupIds[slot] <= 0L
-                || localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT) {
+        if (localGroupIds[slot] <= 0L) {
             return "本组已退出；下次重试时从陌生开始";
         }
         int groupState = localGroupState[slot];
-        if (groupState >= 2) return "已达到“掌握”";
+        boolean hardWord = localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT;
         int remaining = LocalTestEngine.remainingCorrect(
                 groupState, localGroupCorrect[slot], localGroupWrong[slot]);
+        if (hardWord) {
+            if (LocalTestEngine.isSlotComplete(groupState,
+                    localGroupCorrect[slot], localGroupWrong[slot])) {
+                return "本组正确次数已达标；状态保持“了解”，词条保留在本地词库";
+            }
+            return "还需答对 " + remaining
+                    + " 次完成本组；状态保持“了解”，完成后词条留在本地词库";
+        }
+        if (groupState >= 2) return "已达到“掌握”";
         String target = groupState == 0 ? "了解" : "掌握";
         return "还需答对 " + remaining + " 次，达到“" + target + "”";
     }
@@ -1699,11 +1708,12 @@ public class JapStuJFrame extends JFrame
                     int wrong = Integer.parseInt(fields[1]);
                     int correct = Integer.parseInt(fields[2]);
                     int stateValue = Integer.parseInt(fields[3]);
-                    JaNode node = findLocalById(id);
-                    if (id <= 0L || wrong < 0 || correct < 0
-                            || stateValue < 0 || stateValue > 2) {
+                    if (wrong < 0 || correct < 0 || stateValue < 0 || stateValue > 2) {
                         throw new IllegalArgumentException("临时组计数非法");
                     }
+                    // 旧版本曾用非正 ID 标记退出组的困难词；跳过该槽位，继续恢复其他槽位和 hardIds。
+                    if (id <= 0L) continue;
+                    JaNode node = findLocalById(id);
                     for (int existing = 0; existing < localGroupSize; existing++) {
                         if (localGroupIds[existing] == id) {
                             throw new IllegalArgumentException("临时组存在重复localId");
@@ -1714,14 +1724,25 @@ public class JapStuJFrame extends JFrame
                     localGroupIds[localGroupSize] = id;
                     localGroupWrong[localGroupSize] = wrong;
                     localGroupCorrect[localGroupSize] = correct;
-                    localGroupState[localGroupSize] = stateValue;
-                    node.masteryState = stateValue;
+                    int normalizedState = LocalTestEngine.nextMasteryState(
+                            stateValue, correct, wrong);
+                    localGroupState[localGroupSize] = normalizedState;
+                    node.masteryState = normalizedState;
                     localGroupSize++;
                 }
             }
             for (Long id : parseIdList(values.getOrDefault("hardIds", ""))) {
                 JaNode node = findLocalById(id);
-                if (node != null && LocalTestEngine.isEnriched(node)) localHardIds.add(id);
+                if (node != null && LocalTestEngine.isEnriched(node)) {
+                    localHardIds.add(id);
+                    int slot = findLocalGroupSlot(id);
+                    if (slot < 0) {
+                        node.masteryState = 1;
+                    } else if (localGroupState[slot] == 0) {
+                        localGroupState[slot] = 1;
+                        node.masteryState = 1;
+                    }
+                }
             }
             localGroupNumber = loadedBatchNumber;
             localLastAskedId = LocalTestStateCodec.restoreLastAskedId(
@@ -1754,6 +1775,7 @@ public class JapStuJFrame extends JFrame
             lines.add("batch=" + localGroupNumber);
             StringBuilder slots = new StringBuilder();
             for (int i = 0; i < localGroupSize; i++) {
+                if (localGroupIds[i] <= 0L) continue;
                 if (slots.length() > 0) slots.append(',');
                 slots.append(localGroupIds[i]).append(':')
                         .append(localGroupWrong[i]).append(':')
@@ -1779,8 +1801,8 @@ public class JapStuJFrame extends JFrame
         clearLocalGroup();
         JaNode resetNode = globalList.next;
         while (resetNode != null) {
-            // 本地 masteryState 只反映当前临时组，历史 exam/true 不参与掌握判断。
-            resetNode.masteryState = 0;
+            // 普通词从陌生开始；曾因本组错超过3次而保留的词从了解开始。
+            resetNode.masteryState = localHardIds.contains(resetNode.localId) ? 1 : 0;
             resetNode = resetNode.next;
         }
         List<JaNode> batch = LocalTestEngine.chooseGroup(localNodes(), random);
@@ -1789,7 +1811,8 @@ public class JapStuJFrame extends JFrame
             localGroupIds[localGroupSize] = node.localId;
             localGroupWrong[localGroupSize] = 0;
             localGroupCorrect[localGroupSize] = 0;
-            localGroupState[localGroupSize] = 0;
+            localGroupState[localGroupSize] = localHardIds.contains(node.localId) ? 1 : 0;
+            node.masteryState = localGroupState[localGroupSize];
             localGroupSize++;
         }
         localGroupActive = localGroupSize > 0;
@@ -1806,7 +1829,7 @@ public class JapStuJFrame extends JFrame
         localHardIds.remove(node.localId);
         for (int i = 0; i < localGroupSize; i++) {
             if (localGroupIds[i] == node.localId) {
-                localGroupIds[i] = -1L;
+                localGroupIds[i] = 0L;
                 localGroupState[i] = 0;
                 localGroupWrong[i] = LocalTestEngine.HARD_WRONG_LIMIT + 1;
             }
@@ -1818,20 +1841,16 @@ public class JapStuJFrame extends JFrame
     private boolean finishLocalBatchIfEmpty() {
         if (!localGroupActive) return true;
         for (int i = 0; i < localGroupSize; i++) {
-            if (localGroupIds[i] > 0L
-                    && localGroupState[i] < 2
-                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+            if (localGroupIds[i] > 0L && !LocalTestEngine.isSlotComplete(
+                    localGroupState[i], localGroupCorrect[i], localGroupWrong[i])) {
                 return true;
             }
         }
 
         List<JaNode> masteredNodes = new ArrayList<>();
         for (int i = 0; i < localGroupSize; i++) {
-            if (localGroupIds[i] <= 0L
-                    || localGroupState[i] < 2
-                    || localGroupWrong[i] > LocalTestEngine.HARD_WRONG_LIMIT) {
-                continue;
-            }
+            if (!LocalTestEngine.shouldArchive(
+                    localGroupState[i], localGroupWrong[i])) continue;
             JaNode node = findLocalById(localGroupIds[i]);
             if (node != null) masteredNodes.add(node);
         }
@@ -1848,14 +1867,14 @@ public class JapStuJFrame extends JFrame
         for (int i = 0; i < localGroupSize; i++) {
             if (localGroupIds[i] <= 0L) continue;
             JaNode node = findLocalById(localGroupIds[i]);
-            if (node != null && localGroupState[i] >= 2
-                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+            if (node != null && LocalTestEngine.shouldArchive(
+                    localGroupState[i], localGroupWrong[i])) {
                 unlinkLocalNode(node);
             } else if (node != null && localGroupWrong[i] > LocalTestEngine.HARD_WRONG_LIMIT) {
                 localHardIds.add(node.localId);
-                node.masteryState = 0;
+                node.masteryState = 1;
             } else if (node != null) {
-                node.masteryState = 0;
+                node.masteryState = localGroupState[i];
             }
         }
         clearLocalGroup();
@@ -1887,7 +1906,7 @@ public class JapStuJFrame extends JFrame
         }
         localHardIds.remove(target.localId);
         for (int i = 0; i < localGroupSize; i++) {
-            if (localGroupIds[i] == target.localId) localGroupIds[i] = -1L;
+            if (localGroupIds[i] == target.localId) localGroupIds[i] = 0L;
         }
     }
 
@@ -2312,15 +2331,15 @@ public class JapStuJFrame extends JFrame
 
         int lastSlot = localLastAskedId > 0L
                 ? findLocalGroupSlot(localLastAskedId) : -1;
-        int slot = LocalTestEngine.chooseWeightedSlot(
-                localGroupState, localGroupWrong, localGroupIds,
+        int slot = LocalTestEngine.chooseSlot(
+                localGroupState, localGroupWrong, localGroupCorrect, localGroupIds,
                 localGroupSize, lastSlot, random);
         if (slot < 0) {
             boolean finalized = finishLocalBatchIfEmpty();
             updateStatsLabel();
             updateLocalProgress();
             print(finalized
-                    ? "本组测试完成。掌握词已归档并从本地词库移除，困难词保留。"
+                    ? "本组测试完成。掌握词已归档并移除；困难词达到正确次数后仅保留为了解。"
                     : "本组结算未完成；掌握词仍保留在本地词库中，请修复归档写入问题后重试。");
             state = STATE_TEST_RESULT;
             btnContinueTest.setVisible(true);
@@ -2331,7 +2350,7 @@ public class JapStuJFrame extends JFrame
         localCurrentSlot = slot;
         currentTest = findLocalById(localGroupIds[slot]);
         if (currentTest == null) {
-            localGroupIds[slot] = -1L;
+            localGroupIds[slot] = 0L;
             localTestMode();
             return;
         }
@@ -2511,19 +2530,17 @@ public class JapStuJFrame extends JFrame
         int beforeState = localGroupState[slot];
         if (correct) {
             localGroupCorrect[slot]++;
-            localGroupState[slot] = LocalTestEngine.nextMasteryState(
-                    localGroupState[slot], localGroupCorrect[slot], localGroupWrong[slot]);
-            node.masteryState = localGroupState[slot];
         } else {
             localGroupWrong[slot]++;
-            if (localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT) {
-                localHardIds.add(node.localId);
-                localGroupIds[slot] = -1L;
-                node.masteryState = 0;
-            }
+        }
+        localGroupState[slot] = LocalTestEngine.nextMasteryState(
+                localGroupState[slot], localGroupCorrect[slot], localGroupWrong[slot]);
+        node.masteryState = localGroupState[slot];
+        if (localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT) {
+            localHardIds.add(node.localId);
         }
 
-        boolean hardWord = localGroupIds[slot] <= 0L;
+        boolean hardWord = localGroupWrong[slot] > LocalTestEngine.HARD_WRONG_LIMIT;
         int resultState = localGroupState[slot];
         int resultGroupWrong = localGroupWrong[slot];
         String advanceText = getLocalAdvanceText(slot);
@@ -2539,7 +2556,7 @@ public class JapStuJFrame extends JFrame
         print("正确率：" + String.format("%.1f%%", correctRate));
         print("本组答错：" + resultGroupWrong + " 次");
 
-        if (correct && localGroupState[slot] > beforeState) {
+        if (localGroupState[slot] > beforeState) {
             print("状态提升：" + getMasteryLabel(beforeState) + " -> "
                     + getMasteryLabel(localGroupState[slot]));
         } else if (!correct) {
@@ -2547,21 +2564,22 @@ public class JapStuJFrame extends JFrame
         }
 
         if (hardWord) {
-            print("当前状态：困难词（本组错误超过3次，保留到后续测试）");
+            print("当前状态：了解（困难词）");
         } else {
             print("当前状态：" + getMasteryLabel(resultState));
         }
 
-
-
         if (hardWord) {
-            print("\n本组错误次数超过3次：本词保留，不再参与当前组测试。");
+            print(LocalTestEngine.isSlotComplete(resultState,
+                    localGroupCorrect[slot], resultGroupWrong)
+                    ? "\n困难词已达到本组正确次数；本组结束后仅保留为了解。"
+                    : "\n本组错误已超过3次，状态封顶为了解；继续答题直到达到本组正确次数。" );
         } else if (resultState >= 2) {
             print("\n本组已达到掌握条件，待本组全部结束后统一删除。");
         }
         print("\n" + advanceText);
-        print("\n【升级规则】陌生答对1次→了解；了解答对2次（本组每累计错误2次需多答对1次）→掌握");
-        print("【保留规则】本组累计答错超过3次的词保留，不再参与当前组测试；掌握词在本组结束后统一删除。");
+        print("\n【阶段规则】先覆盖全组陌生词，再练习了解词；了解词答对2次（本组每累计错误2次需多答对1次）→掌握");
+        print("【困难词规则】本组累计答错超过3次后封顶为了解，达到正确次数后完成本组并留在本地词库；掌握词在本组结束后统一归档并移除。");
 
         updateLocalTestSummary(node, slot);
 
@@ -2571,8 +2589,8 @@ public class JapStuJFrame extends JFrame
         updateLocalProgress();
         boolean groupFinished = true;
         for (int i = 0; i < localGroupSize; i++) {
-            if (localGroupIds[i] > 0L && localGroupState[i] < 2
-                    && localGroupWrong[i] <= LocalTestEngine.HARD_WRONG_LIMIT) {
+            if (localGroupIds[i] > 0L && !LocalTestEngine.isSlotComplete(
+                    localGroupState[i], localGroupCorrect[i], localGroupWrong[i])) {
                 groupFinished = false;
                 break;
             }
@@ -2581,12 +2599,12 @@ public class JapStuJFrame extends JFrame
             boolean finalized = finishLocalBatchIfEmpty();
             print("\n===== 临时组测试结束 =====");
             print(finalized
-                    ? "掌握词已归档并从本地词库移除；困难词保留。"
+                    ? "掌握词已归档并从本地词库移除；困难词仅记为了解并保留。"
                     : "归档写入失败，掌握词仍保留在本地词库。点击“继续测试”可重试结算。");
         }
 
-        jlptTestStateLabel.setText("本组状态："
-                + (hardWord ? "困难词" : getMasteryLabel(resultState)));
+        jlptTestStateLabel.setText("本组状态：" + getMasteryLabel(resultState)
+                + (hardWord ? "（困难词）" : ""));
         jlptTestWordLabel.setText("当前单词：" + node.japanese);
         jlptTestStatePanel.setVisible(true);
         state = STATE_TEST_RESULT;

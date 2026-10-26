@@ -1,6 +1,6 @@
 ; JSS project installer. Keep the AppId stable for upgrades.
 #define MyAppName "JapStudySystem"
-#define MyAppVersion "3.9.1"
+#define MyAppVersion "3.10.0"
 #define MyAppPublisher "SHIO, Inc."
 #define MyAppURL "https://github.com/TukinokiShio/LanguageStudySystem"
 #define MyAppScript "run.vbs"
