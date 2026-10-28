@@ -13,8 +13,8 @@ public final class LocalTestEngineTest {
 
     public static void main(String[] args) {
         testSmallGroupsIncludeAllEligibleWords();
-        testRecentFiveAndBothSegmentsAreSampledWithoutReplacement();
-        testShortSecondSegmentDoesNotBorrowFromFirst();
+        testThreeStrataAreSampledWithoutReplacement();
+        testShortStratumDoesNotBorrowFromOtherStrata();
         testUnaskedUnfamiliarWordsAreCoveredFirst();
         testUnfamiliarWordsWaitBeforeKnownWords();
         testKnownStageStartsAfterUnfamiliarStage();
@@ -36,44 +36,45 @@ public final class LocalTestEngineTest {
         }
     }
 
-    private static void testRecentFiveAndBothSegmentsAreSampledWithoutReplacement() {
-        List<JapStuJFrame.JaNode> nodes = nodes(20);
+    private static void testThreeStrataAreSampledWithoutReplacement() {
+        List<JapStuJFrame.JaNode> nodes = nodes(100);
         Collections.reverse(nodes);
-        JapStuJFrame.JaNode pending = node(21, 0);
-        nodes.add(pending);
+        nodes.add(node(101, 0));
+        nodes.add(node(0, 1));
+        nodes.add(node(-1, 1));
+        nodes.add(node(50, 1));
 
         List<JapStuJFrame.JaNode> group = LocalTestEngine.chooseGroup(nodes, new Random(7));
         Set<Long> selected = ids(group);
-        check(group.size() == 15, "20条可测词应组成15词临时组");
+        check(group.size() == 15, "100条可测词应组成15词临时组");
         check(selected.size() == group.size(), "临时组不得重复抽取");
-        for (long id = 16; id <= 20; id++) {
-            check(selected.contains(id), "最近追加的5条词必须进入临时组");
-        }
-        check(countInRange(selected, 1, 10) == 5,
-                "剩余词前70%分段应随机抽取5条");
-        check(countInRange(selected, 11, 15) == 5,
-                "剩余词后30%分段应随机抽取5条");
-        check(!selected.contains(21L), "待富化词不得进入临时组");
+        check(countInRange(selected, 1, 60) == 5,
+                "较旧的前60%应随机抽取5条");
+        check(countInRange(selected, 61, 90) == 5,
+                "中间30%应随机抽取5条");
+        check(countInRange(selected, 91, 100) == 5,
+                "较新的后10%应随机抽取5条");
+        check(selected.equals(Set.of(13L, 16L, 17L, 26L, 44L,
+                        65L, 71L, 82L, 84L, 87L, 91L, 92L, 94L, 97L, 98L)),
+                "Unexpected seeded sample: " + selected);
+        check(!selected.contains(101L), "待富化词不得影响分桶或进入临时组");
+        check(!selected.contains(0L) && !selected.contains(-1L),
+                "无效 localId 不得影响分桶或进入临时组");
     }
 
-    private static void testShortSecondSegmentDoesNotBorrowFromFirst() {
-        for (int count = 16; count <= 18; count++) {
-            List<JapStuJFrame.JaNode> group = LocalTestEngine.chooseGroup(
-                    nodes(count), new Random(count));
-            Set<Long> selected = ids(group);
-            int remaining = count - 5;
-            int split = (int) Math.floor(remaining * 0.70d);
-            int secondStart = split + 1;
-            check(group.size() == 14,
-                    "16至18条可测词时，后30%不足5条，不应从前段补位");
-            check(countInRange(selected, 1, split) == 5,
-                    "前70%分段仍应抽取5条");
-            for (int id = secondStart; id <= remaining; id++) {
-                check(selected.contains((long) id), "后30%不足5条时应全部纳入");
-            }
-            for (int id = count - 4; id <= count; id++) {
-                check(selected.contains((long) id), "最近追加的5条词必须纳入");
-            }
+    private static void testShortStratumDoesNotBorrowFromOtherStrata() {
+        List<JapStuJFrame.JaNode> group = LocalTestEngine.chooseGroup(
+                nodes(16), new Random(16));
+        Set<Long> selected = ids(group);
+        check(group.size() == 12,
+                "16条可测词按9/5/2分段，后10%不足5条时不应跨段补位");
+        check(countInRange(selected, 1, 9) == 5,
+                "前60%分段应随机抽取5条");
+        for (int id = 10; id <= 14; id++) {
+            check(selected.contains((long) id), "中间30%不足或等于5条时应全部纳入");
+        }
+        for (int id = 15; id <= 16; id++) {
+            check(selected.contains((long) id), "后10%不足5条时应全部纳入");
         }
     }
 

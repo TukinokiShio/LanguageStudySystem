@@ -13,7 +13,6 @@ import java.util.Set;
 final class LocalTestEngine {
     static final int BATCH_SIZE = 15;
     static final int HARD_WRONG_LIMIT = 3;
-    private static final int RECENT_COUNT = 5;
     private static final int SEGMENT_SAMPLE_COUNT = 5;
 
     private LocalTestEngine() {}
@@ -101,7 +100,7 @@ final class LocalTestEngine {
     }
 
     /**
-     * 取词优先包含最近追加的5条已富化词；其余词按 localId 分为前70%和后30%，
+     * 按 localId 顺序将已富化词分为前60%、中间30%和后10%，
      * 各自在本段内无放回抽取最多5条。不足时不跨段补位。
      */
     static List<JapStuJFrame.JaNode> chooseGroup(List<JapStuJFrame.JaNode> all,
@@ -119,17 +118,17 @@ final class LocalTestEngine {
         if (eligible.size() <= BATCH_SIZE) return eligible;
 
         Random rng = random == null ? new Random() : random;
-        int recentStart = eligible.size() - RECENT_COUNT;
         List<JapStuJFrame.JaNode> result = new ArrayList<>(BATCH_SIZE);
-        result.addAll(eligible.subList(recentStart, eligible.size()));
-
-        List<JapStuJFrame.JaNode> remaining = eligible.subList(0, recentStart);
-        int firstSegmentSize = (int) Math.floor(remaining.size() * 0.70d);
-        List<JapStuJFrame.JaNode> firstSegment = remaining.subList(0, firstSegmentSize);
-        List<JapStuJFrame.JaNode> secondSegment = remaining.subList(
-                firstSegmentSize, remaining.size());
-        appendRandomSample(result, firstSegment, SEGMENT_SAMPLE_COUNT, rng);
-        appendRandomSample(result, secondSegment, SEGMENT_SAMPLE_COUNT, rng);
+        int firstBoundary = (int) ((long) eligible.size() * 60L / 100L);
+        int secondBoundary = (int) ((long) eligible.size() * 90L / 100L);
+        List<JapStuJFrame.JaNode> olderSegment = eligible.subList(0, firstBoundary);
+        List<JapStuJFrame.JaNode> middleSegment = eligible.subList(
+                firstBoundary, secondBoundary);
+        List<JapStuJFrame.JaNode> newerSegment = eligible.subList(
+                secondBoundary, eligible.size());
+        appendRandomSample(result, olderSegment, SEGMENT_SAMPLE_COUNT, rng);
+        appendRandomSample(result, middleSegment, SEGMENT_SAMPLE_COUNT, rng);
+        appendRandomSample(result, newerSegment, SEGMENT_SAMPLE_COUNT, rng);
         return result;
     }
 
